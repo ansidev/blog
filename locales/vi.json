@@ -1,0 +1,16 @@
+{
+  "about_me": "Về tôi",
+  "button": {
+    "about": "Về tôi",
+    "back": "Quay lại",
+    "go": "Đi",
+    "home": "Trang chủ",
+    "toggle_dark": "Bật/Tắt chế độ nền tối",
+    "toggle_langs": "Đổi ngôn ngữ"
+  },
+  "intro": {
+    "hi": "Hi, {name}!"
+  },
+  "not_found": "Không tìm thấy",
+  "read_more": "Đọc thêm"
+}

@@ -1,0 +1,16 @@
+{
+  "about_me": "About me",
+  "button": {
+    "about": "About",
+    "back": "Back",
+    "go": "GO",
+    "home": "Home",
+    "toggle_dark": "Toggle dark mode",
+    "toggle_langs": "Change languages"
+  },
+  "intro": {
+    "hi": "Hi, {name}!"
+  },
+  "not_found": "Not found",
+  "read_more": "Read more"
+}
