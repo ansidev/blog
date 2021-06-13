@@ -19,4 +19,4 @@
 [[headers]]
   for = "/*.rss"
   [headers.values]
-    Content-Type = "application/rss+xml; charset=utf-8"[[headers]]
+    Content-Type = "application/rss+xml; charset=utf-8"
