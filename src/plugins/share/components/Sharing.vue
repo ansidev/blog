@@ -49,9 +49,9 @@ const defaultConfigs = {
     'vk',
   ],
   buttonSize: 18,
-  iconSize: 16,
+  iconSize: 20,
   iconStyle: 'solid',
-  displayMode: 'both'
+  displayMode: 'both',
 }
 
 const hasPluginConfig = computed(() => typeof pluginConfig === 'object')

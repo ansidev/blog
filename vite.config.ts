@@ -3,10 +3,8 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
-import ViteComponents from 'vite-plugin-components'
+import Components from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-md'
-import WindiCSS from 'vite-plugin-windicss'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Prism from 'markdown-it-prism'
@@ -34,7 +32,7 @@ export default defineConfig({
         return {
           ...route,
           meta: { ...postMeta },
-        };
+        }
       },
     }),
 
@@ -49,11 +47,11 @@ export default defineConfig({
         // https://prismjs.com/
         md.use(Prism)
       },
-      wrapperComponent: 'Article',
+      wrapperComponent: 'Post',
     }),
 
-    // https://github.com/antfu/vite-plugin-components
-    ViteComponents({
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
       dirs: [
         'src/components',
       ],
@@ -62,27 +60,9 @@ export default defineConfig({
       extensions: ['vue', 'md'],
 
       // allow auto import and register components used in markdown
-      customLoaderMatcher: id => {
-        // console.log(id)
-        return id.endsWith('.md')
-      },
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
 
-      // auto import icons
-      customComponentResolvers: [
-        // https://github.com/antfu/vite-plugin-icons
-        ViteIconsResolver({
-          componentPrefix: '',
-          // enabledCollections: ['carbon']
-        }),
-      ],
-    }),
-
-    // https://github.com/antfu/vite-plugin-icons
-    ViteIcons(),
-
-    // https://github.com/antfu/vite-plugin-windicss
-    WindiCSS({
-      safelist: 'prose prose-sm m-auto',
+      dts: true,
     }),
 
     // https://github.com/antfu/vite-plugin-pwa

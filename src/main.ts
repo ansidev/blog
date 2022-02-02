@@ -1,4 +1,4 @@
-import 'windi.css'
+import './tailwind.css'
 import './assets/css/main.scss'
 import { ViteSSG } from 'vite-ssg'
 import generatedRoutes from 'pages-generated'

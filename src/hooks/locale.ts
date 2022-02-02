@@ -1,5 +1,5 @@
-import { Locale } from 'vue-i18n'
-import { WritableComputedRef } from 'vue'
+import type { Locale } from 'vue-i18n'
+import type { WritableComputedRef } from 'vue'
 
 export const switchLocale = (availableLocales: string[], locale: WritableComputedRef<Locale>) => {
   // change to some real logic

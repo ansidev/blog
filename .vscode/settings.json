@@ -6,6 +6,5 @@
   "cSpell.words": [
     "Vitesse"
   ],
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "volar.tsPluginStatus": false
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
