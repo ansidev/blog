@@ -19,6 +19,7 @@
             <div class="pt-10 pb-8 prose dark:prose-dark max-w-none">
               <slot />
             </div>
+            <div id="eop"></div>
             <FacebookComment v-if="isFacebookCommentPluginEnabled" :number-of-posts="5" width="100%" :post-url="postURL" />
           </div>
           <footer>
