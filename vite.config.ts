@@ -41,7 +41,7 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-md
     Markdown({
-      wrapperClasses: 'theme-ansidev-content prose max-w-none text-gray-900 dark:text-gray-50',
+      wrapperClasses: 'theme-ansidev-content',
       headEnabled: true,
       markdownItSetup(md) {
         // https://prismjs.com/
