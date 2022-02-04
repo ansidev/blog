@@ -23,8 +23,10 @@ const iconMap = {
   email: 'bi:envelope-fill',
   github: 'bi:github',
   facebook: 'bi:facebook',
+  telegram: 'bi:telegram',
   twitter: 'bi:twitter',
   linkedin: 'bi:linkedin',
+  reddit: 'bi:reddit',
 }
 
 export default defineComponent({

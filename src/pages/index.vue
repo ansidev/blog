@@ -24,6 +24,9 @@
       {{ t('all_posts') }} &rarr;
     </Link>
   </div>
+  <div v-if="isSubstackNewsletterPluginEnabled" class="flex items-center justify-center py-8">
+    <SubstackNewsletter v-bind="substackNewsletterConfig" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -31,25 +34,27 @@ import { computed, defineComponent, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import siteConfig from '~/site.config'
+import { useSubstackNewsletterConfig } from '~/plugins/substack/hooks'
 
 export default defineComponent({
-  setup() {
-    const { t } = useI18n()
+    name: "IndexPage",
+    setup() {
+        const { t } = useI18n();
+        const siteTitle = ref(siteConfig.title);
+        const siteDescription = ref(siteConfig.description);
 
-    const siteTitle = ref(siteConfig.title)
-    const siteDescription = ref(siteConfig.description)
+        const router = useRouter();
+        const routes = router.getRoutes().filter(route => route.path.startsWith("/posts"));
 
-    const router = useRouter()
-    const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
-    const posts = computed(() => routes
-      .map(r => r.meta)
-      .filter(m => m.type === 'post')
-      .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
-      .slice(0, 10),
-    )
+        const posts = computed(() => routes
+            .map(r => r.meta)
+            .filter(m => m.type === "post")
+            .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
+            .slice(0, 10))
 
-    return { t, siteTitle, siteDescription, posts }
-  },
+        const { isSubstackNewsletterPluginEnabled, substackNewsletterConfig } = useSubstackNewsletterConfig(siteConfig)
+        return { t, siteTitle, siteDescription, posts, isSubstackNewsletterPluginEnabled, substackNewsletterConfig }
+    },
 })
 </script>
 

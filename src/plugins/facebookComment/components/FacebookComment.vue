@@ -1,17 +1,17 @@
 <template>
-  <div v-show="isLoaded" class="fb-comments" :data-href="postURL" :data-width="width" :data-numposts="numberOfPosts" />
+  <div id="fb-root" />
+  <div class="pt-6 pb-6 text-center text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-500">
+    <button type="button" v-if="!isLoaded" @click="loadPlugin">Load comments</button>
+    <div v-show="isLoaded" class="fb-comments" :data-href="postUrl" :data-width="width" :data-numposts="numberOfPosts" />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps, onMounted, nextTick, ref } from 'vue'
-import { config as pluginConfig } from '../index'
+import { onMounted, nextTick, ref, computed } from 'vue'
+import { FacebookCommentPluginConfig } from '../types'
+import siteConfig from '~/site.config'
 
-interface FacebookCommentPluginConfig {
-  version: string
-  appId: string
-  nonce: string
-  lang: string
-}
+const pluginConfig = computed(() => siteConfig.plugins.facebookComment)
 
 const initFacebookCommentPlugin = (pluginConfig: FacebookCommentPluginConfig) => {
   if (window.FB) {
@@ -31,12 +31,12 @@ const initFacebookCommentPlugin = (pluginConfig: FacebookCommentPluginConfig) =>
   document.head.appendChild(externalScript)
 }
 
-const props = defineProps({
+defineProps({
   /**
    * Post URL
    * { string }
    */
-  postURL: String,
+  postUrl: String,
   /**
    * Width of comment container
    * { number, string }
@@ -51,9 +51,17 @@ const props = defineProps({
 
 const isLoaded = ref(false)
 
-onMounted(async() => {
-  initFacebookCommentPlugin(pluginConfig)
+const loadPlugin = async () => {
+  isLoaded.value = false
+  initFacebookCommentPlugin(pluginConfig.value.vendorConfig)
   await nextTick()
   isLoaded.value = true
+}
+
+onMounted(async() => {
+  const config = pluginConfig.value
+  if (config.autoload === true) {
+    loadPlugin()
+  }
 })
 </script>

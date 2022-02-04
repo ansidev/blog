@@ -5,8 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "vite --port 3333 --open",
-    "build": "cross-env NODE_ENV=production vite-ssg build && ts-node ./src/cli/genFeed",
-    "gen:feed": "ts-node ./src/cli/genFeed"
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore src",
+    "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "gen:feed": "ts-node ./src/cli/genFeed",
+    "build": "cross-env NODE_ENV=production vite-ssg build && ts-node ./src/cli/genFeed"
   },
   "dependencies": {
     "@vueuse/core": "^7.5.5",
@@ -38,6 +40,7 @@
     "autoprefixer": "^10.4.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "markdown-it-prism": "^2.2.2",
@@ -58,8 +61,13 @@
     "voie-pages": "^0.4.0"
   },
   "eslintConfig": {
-    "extends": "@antfu/eslint-config",
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/vue3-recommended",
+      "prettier"
+    ],
     "rules": {
+      "curly": "off",
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "off"
     }

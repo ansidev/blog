@@ -19,14 +19,7 @@
             <div class="pt-10 pb-8 prose dark:prose-dark max-w-none">
               <slot />
             </div>
-            <!-- <div class="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-              <Link href={discussUrl(slug)} rel="nofollow">
-                {{ 'Discuss on Twitter' }}
-              </Link>
-              {` • `}
-              <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-            </div>
-            <Comments frontMatter={frontMatter} /> -->
+            <FacebookComment v-if="isFacebookCommentPluginEnabled" :number-of-posts="5" width="100%" :post-url="postURL" />
           </div>
           <footer>
             <div class="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
@@ -38,7 +31,7 @@
                   <Tag v-for="tag in frontmatter.tags" :key="tag" :text="tag" />
                 </div>
               </div>
-              <div class="py-4 xl:py-8">
+              <div v-if="isSharingPluginEnabled" class="py-4 xl:py-8">
                 <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-2">
                   {{ t('share') }}
                 </h2>
@@ -67,8 +60,10 @@ import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import siteConfig from '~/site.config'
+import { isPluginEnabled } from '~/helpers'
 
 export default defineComponent({
+  name: 'PostPage',
   props: {
     /**
      * Frontmatter
@@ -82,10 +77,13 @@ export default defineComponent({
     const router = useRouter()
     const currentRoute = router.currentRoute.value
 
+    const isSharingPluginEnabled = computed(() => isPluginEnabled('sharing'))
     const postTitle = currentRoute.meta.title
     const postURL = computed(() => `${siteConfig.baseURL}${currentRoute.path}`)
 
-    return { t, postTitle, postURL }
+    const isFacebookCommentPluginEnabled = computed(() => isPluginEnabled('facebookComment'))
+
+    return { t, isSharingPluginEnabled, isFacebookCommentPluginEnabled, postTitle, postURL }
   },
 })
 </script>

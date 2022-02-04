@@ -1,13 +1,13 @@
 import { defineAsyncComponent } from 'vue'
-import { UserModule } from '~/types'
+import type { UserModule } from '~/types'
 
 export const config = {
   networks: [
     'email',
     'facebook',
+    'twitter',
     'linkedin',
     'telegram',
-    'twitter',
     'whatsapp',
   ],
   displayMode: 'icon',
