@@ -7,8 +7,8 @@ const selector = siteConfig.plugins.mediumZoom?.selector
 const zoomOptions = siteConfig.plugins.mediumZoom?.zoomOptions
 const delay = siteConfig.plugins.mediumZoom?.delay
 
-export const install: UserModule = ({ app, router }) => {
-  if (!selector) return
+export const install: UserModule = ({ app, router, isClient }) => {
+  if (!isClient || !selector) return
 
   // create zoom instance and provide it
   const zoom = mediumZoom(zoomOptions)
