@@ -33,6 +33,9 @@ export default {
       },
       autoload: false
     },
+    mediumZoom: {
+      selector: '.medium-zoom',
+    },
     substack: {
       username: 'ansidev',
       width: 400,
