@@ -1,16 +1,28 @@
 {
   "about_me": "About me",
+  "all_posts": "All posts",
+  "authors": "Authors",
+  "back_to_home": "Back to home",
   "button": {
     "about": "About",
     "back": "Back",
     "go": "GO",
     "home": "Home",
     "toggle_dark": "Toggle dark mode",
-    "toggle_langs": "Change languages"
+    "toggle_locale": "Change languages",
+    "toggle_mobile_menu": "Toggle mobile menu"
   },
+  "categories": "Categories",
   "intro": {
     "hi": "Hi, {name}!"
   },
+  "name": "Name",
+  "no_categories": "No categories.",
+  "no_posts": "No posts.",
   "not_found": "Not found",
-  "read_more": "Read more"
+  "posted_on": "Posted on",
+  "read_more": "Read more",
+  "search_articles": "Search articles",
+  "share": "Share",
+  "tags": "Tags"
 }

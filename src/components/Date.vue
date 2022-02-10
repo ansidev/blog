@@ -1,38 +1,43 @@
 <template>
   <dl>
     <dt class="sr-only">
-      Published on
+      {{ t('posted_on') }}
     </dt>
-    <dd class="text-base leading-6 font-medium text-gray-500">
+    <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
       <time :datetime="getDateTime()">{{ dateObject.string }}</time>
     </dd>
   </dl>
 </template>
 
-<script setup lang="ts">
-import { computed, defineProps } from 'vue'
+<script lang="ts">
+import { computed, defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const props = defineProps({
-  /**
-   * { time, string }
-   */
-  date: [Object, String],
+export default defineComponent({
+  props: {
+    /**
+    * { time, string }
+    */
+    date: [Object, String],
+  },
+  setup(props) {
+    const { t } = useI18n()
+    const dateObject = computed(() => {
+      const date = new Date(props.date)
+
+      return {
+        time: +date,
+        string: date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        }),
+      }
+    })
+
+    const getDateTime = () => new Date().toISOString()
+
+    return { t, dateObject, getDateTime }
+  },
 })
-
-const dateObject = computed(() => {
-  const date = new Date(props.date)
-
-  return {
-    time: +date,
-    string: date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    }),
-  }
-})
-
-function getDateTime() {
-  return new Date().toISOString()
-}
 </script>

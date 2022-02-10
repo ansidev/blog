@@ -72,7 +72,7 @@ getPosts(true).forEach((post: any) => {
   const file = path.resolve(__dirname, `../../dist${post.href}`)
   const rendered = fs.readFileSync(file, 'utf-8')
   const content = rendered.match(
-    /<div class="theme-ansidev-content[^<>]+>([\s\S]*)<\/div><\/div><footer/
+    /<!--\[--><div class="theme-ansidev-content[^<>]+>([\s\S]*)<\/div><!--\]--><\/div><div id=\"eop\"><\/div>/
   )
 
   feed.addItem({

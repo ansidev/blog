@@ -1,9 +1,8 @@
-import 'windi.css'
+import './tailwind.css'
 import './assets/css/main.scss'
 import { ViteSSG } from 'vite-ssg'
 import generatedRoutes from 'pages-generated'
 import { setupLayouts } from 'layouts-generated'
-
 
 import App from './App.vue'
 

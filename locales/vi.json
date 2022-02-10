@@ -1,16 +1,28 @@
 {
   "about_me": "Về tôi",
+  "all_posts": "Tất cả bài viết",
+  "authors": "Người đăng",
+  "back_to_home": "Quay lại trang chủ",
   "button": {
     "about": "Về tôi",
     "back": "Quay lại",
     "go": "Đi",
     "home": "Trang chủ",
     "toggle_dark": "Bật/Tắt chế độ nền tối",
-    "toggle_langs": "Đổi ngôn ngữ"
+    "toggle_locale": "Đổi ngôn ngữ",
+    "toggle_mobile_menu": "Mở/Đóng thực đơn di động"
   },
+  "categories": "Chủ đề",
   "intro": {
     "hi": "Hi, {name}!"
   },
+  "name": "Tên",
+  "no_categories": "Không có chủ đề nào.",
+  "no_posts": "Không có bài viết nào.",
   "not_found": "Không tìm thấy",
-  "read_more": "Đọc thêm"
+  "posted_on": "Đăng vào",
+  "read_more": "Đọc thêm",
+  "search_articles": "Tìm kiếm bài viết",
+  "share": "Chia sẻ",
+  "tags": "Thẻ"
 }

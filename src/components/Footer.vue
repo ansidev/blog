@@ -1,43 +1,59 @@
 <template>
-  <p class="py-5 text-center text-gray-900 dark:text-gray-300 font-medium">
-    © 2019-present by Le Minh Tri (@ansidev).
-  </p>
-  <nav class="text-xl mt-6">
-    <router-link :class="iconCssClass" to="/" :title="t('button.home')">
-      <carbon-campsite />
-    </router-link>
-
-    <a :class="iconCssClass" :title="t('button.toggle_dark')" @click="toggleDark">
-      <carbon-moon v-if="isDark" />
-      <carbon-sun v-else />
-    </a>
-
-    <a :class="iconCssClass" :title="t('button.toggle_langs')" @click="toggleLocale">
-      <carbon-language />
-    </a>
-
-    <router-link :class="iconCssClass" to="/about" :title="t('button.about')">
-      <carbon-dicom-overlay />
-    </router-link>
-
-    <a :class="iconCssClass" rel="noreferrer" :href="githubProfile" target="_blank" title="GitHub">
-      <carbon-logo-github />
-    </a>
-  </nav>
+  <footer>
+    <div class="flex flex-col items-center mt-16">
+      <div class="flex items-center flex-wrap justify-center mb-3 space-x-4">
+        <div class="mb-3">
+          <Link href="/">
+            <Icon icon="bi:house-heart-fill" :width="32" :height="32" />
+          </Link>
+        </div>
+        <ThemeSwitcher :size="24" class="mb-3" />
+        <LocaleSwitcher :size="24" class="mb-3" />
+        <div class="hidden sm:block">
+          {{ ` • ` }}
+        </div>
+        <SocialIcon v-for="(networkProfile, network) in siteConfig.socialNetworks" :key="network" :kind="network" :href="networkProfile" class="mb-3 hidden sm:block" />
+      </div>
+      <div class="flex items-center flex-wrap justify-center mb-3 space-x-4">
+        <SocialIcon v-for="(networkProfile, network) in siteConfig.socialNetworks" :key="network" :kind="network" :href="networkProfile" class="mb-3 block sm:hidden" />
+      </div>
+      <div class="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div>
+          <Link href="/">
+            {{ siteConfig.title }}
+          </Link>
+        </div>
+        <div>{{ ` • ` }}</div>
+        <div>
+          {{ `© 2019-${new Date().getFullYear()} by` }}
+          <Link href="/">
+            {{ siteConfig.author }}
+          </Link>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { isDark, toggleDark, switchLocale } from '~/utils'
+import { Icon } from '@iconify/vue'
+import { isDark, switchLocale, toggleDark } from '~/hooks'
 import siteConfig from '~/site.config'
 
-const { t, availableLocales, locale } = useI18n()
+export default defineComponent({
+  components: {
+    Icon,
+  },
+  setup() {
+    const { t, availableLocales, locale } = useI18n()
+    const toggleLocale = () => switchLocale(availableLocales, locale)
 
-const toggleLocale = () => switchLocale(availableLocales, locale)
+    const iconCssClass = ref('icon-btn mx-2 text-gray-900 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-200')
+    const githubProfile = siteConfig.socialNetworks.github
 
-const githubProfile = siteConfig.socialNetworks.github
-
-const iconCssClass = ref('icon-btn mx-2 text-gray-900 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-200')
-
+    return { t, toggleLocale, iconCssClass, githubProfile, isDark, toggleDark, siteConfig }
+  },
+})
 </script>
