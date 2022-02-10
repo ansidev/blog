@@ -31,31 +31,21 @@
   </SectionContainer>
 </template>
 <script lang="ts">
-import { computed, defineComponent, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { defineComponent } from 'vue'
+// import { useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue'
 import siteConfig from '~/site.config'
-import { useGA } from '~/plugins/googleAnalytics/hooks'
 
-import { isPluginEnabled } from '~/helpers'
 export default defineComponent({
   name: 'DefaultLayout',
   components: {
     Icon,
   },
   setup() {
-    const router = useRouter()
+    // const router = useRouter()
     // const currentRoute = computed(() => router.currentRoute.value)
 
     // const isIndex = computed(() => currentRoute.path === '/')
-
-    const isGAPluginEnabled = computed(() => isPluginEnabled('googleAnalytics'))
-
-    onMounted(() => {
-      if (isGAPluginEnabled.value) {
-        useGA(siteConfig, router)
-      }
-    })
 
     return { siteConfig }
   },

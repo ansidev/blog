@@ -21,7 +21,7 @@ export default {
   },
   plugins: {
     googleAnalytics: {
-      ga: 'UA-108003633-1'
+      id: 'G-LQSQ92N2Q4'
     },
     sharing: true,
     facebookComment: {
