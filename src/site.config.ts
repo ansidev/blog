@@ -6,6 +6,7 @@ export default {
   headerNavigationItems: [
     { href: '/blog', title: 'Blog' },
     { href: '/categories', title: 'Categories' },
+    { href: '/tags', title: 'Tags' },
     { href: '/categories/projects', title: 'Projects' },
     { href: '/about', title: 'About', icon: 'bi:person-square' },
     { href: '/feed.rss', title: 'RSS', icon: 'bi:rss-fill', disableRouterLink: true },

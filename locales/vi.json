@@ -17,8 +17,9 @@
     "hi": "Hi, {name}!"
   },
   "name": "Tên",
-  "no_categories": "Không có chủ đề nào.",
-  "no_posts": "Không có bài viết nào.",
+  "no_category": "Không có chủ đề nào.",
+  "no_tag": "Không có thẻ nào.",
+  "no_post": "Không có bài viết nào.",
   "not_found": "Không tìm thấy",
   "posted_on": "Đăng vào",
   "read_more": "Đọc thêm",

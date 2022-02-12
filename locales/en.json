@@ -17,8 +17,9 @@
     "hi": "Hi, {name}!"
   },
   "name": "Name",
-  "no_categories": "No categories.",
-  "no_posts": "No posts.",
+  "no_category": "No category.",
+  "no_tag": "No tag.",
+  "no_post": "No post.",
   "not_found": "Not found",
   "posted_on": "Posted on",
   "read_more": "Read more",

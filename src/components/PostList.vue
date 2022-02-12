@@ -5,7 +5,7 @@
     </li>
   </ul>
   <ul v-else class="divide-y divide-gray-200 dark:divide-gray-700 pt-4">
-    {{ t('no_posts') }}
+    {{ t('no_post') }}
   </ul>
 </template>
 
