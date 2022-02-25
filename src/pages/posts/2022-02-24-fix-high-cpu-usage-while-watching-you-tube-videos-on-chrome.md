@@ -20,10 +20,12 @@ High CPU usage while watching YouTube videos on Google Chrome.
 
 # Solution
 
-Disable Skia API.
+1. Disable Skia API.
 
-1. Go to `chrome://flags`.
-2. Search for `Skia API for compositing`.
-3. Change mode to Disabled.
-4. Click Relaunch to restart Google Chrome.
-5. Open a random YouTube videos/livestream and test again.
+  - Go to `chrome://flags`.
+  - Search for `Skia API for compositing`.
+  - Change mode to Disabled.
+  - Click Relaunch to restart Google Chrome.
+  - Open a random YouTube videos/livestream and test again.
+
+2. Switch to using Firefox.
