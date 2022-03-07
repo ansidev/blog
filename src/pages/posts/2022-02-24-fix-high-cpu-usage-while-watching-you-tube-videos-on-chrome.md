@@ -1,31 +1,23 @@
 ---
 type: post
-title: Fix high CPU usage while watching YouTube videos on Google Chrome
+title: Fix kernel_task high CPU usage on macOS
 date: 2022-02-24T00:59:45+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: '@ansidev'
-permalink: /tips-and-tricks/fix-high-cpu-usage-while-watching-you-tube-videos-on-google-chrome
+permalink: /tips-and-tricks/fix-kernel-task-high-cpu-usage-on-mac-os
 categories:
   - Tips and Tricks
+  - macOS
 tags:
-  - Google Chrome
-  - Skia API
-  - YouTube
+  - kernel_task
+  - High CPU usage
 ---
 
 # Problem
 
-High CPU usage while watching YouTube videos on Google Chrome.
+kernel_task takes up lots of CPU.
 
 # Solution
 
-1. Disable Skia API.
-
-  - Go to `chrome://flags`.
-  - Search for `Skia API for compositing`.
-  - Change mode to Disabled.
-  - Click Relaunch to restart Google Chrome.
-  - Open a random YouTube videos/livestream and test again.
-
-2. Switch to using Firefox.
+If there was lot of dust accumulated near the side vents, may be it is the reason. You just need to clean your MacBook.
