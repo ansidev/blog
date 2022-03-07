@@ -1,6 +1,6 @@
 # ansidev 's blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8b156783-574a-4f1a-9540-bab616fe6bf6/deploy-status)](https://app.netlify.com/sites/ansidev/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2862c07d-8cb3-4326-bbf2-b3a07eeda938/deploy-status)](https://app.netlify.com/sites/ansidev/deploys)
 
 ## Introduction
 
