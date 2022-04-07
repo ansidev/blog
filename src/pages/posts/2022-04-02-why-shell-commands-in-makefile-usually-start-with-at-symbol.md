@@ -9,7 +9,7 @@ permalink: /programming/why-shell-commands-in-makefile-usually-start-with-at-sym
 categories:
   - Programming
 tags:
-  - good code
+  - makefile
 ---
 
 Answer:
