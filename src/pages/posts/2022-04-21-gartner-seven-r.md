@@ -1,7 +1,7 @@
 ---
 type: post
 title: Gartner 7R
-date: 2022-04-06T21:00:00+07:00
+date: 2022-04-21T18:38:34+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
