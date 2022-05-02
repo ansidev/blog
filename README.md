@@ -67,7 +67,7 @@ This source code is based on [Vitesse](https://github.com/antfu/vitesse) by [Ant
 - [`vite-ssg`](https://github.com/antfu/vite-ssg) - Server-side generation
 - [Netlify](https://www.netlify.com/) - deploy
 - [VS Code Extensions](./.vscode/extensions.json)
-  - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+  - [Volar](https://marketplace.visualstudio.com/items?itemName=vue.volar)
   - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)
   - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally)
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
