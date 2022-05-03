@@ -11,8 +11,8 @@
     "build": "cross-env NODE_ENV=production vite-ssg build && ts-node ./src/cli/genFeed"
   },
   "dependencies": {
-    "@vueuse/core": "^8.2.5",
-    "@vueuse/head": "^0.7.5",
+    "@vueuse/core": "^8.3.1",
+    "@vueuse/head": "^0.7.6",
     "github-slugger": "^1.4.0",
     "medium-zoom": "^1.0.6",
     "nprogress": "^0.2.0",
