@@ -28,7 +28,7 @@ specifiers:
   markdown-it-prism: ^2.2.3
   medium-zoom: ^1.0.6
   nprogress: ^0.2.0
-  pnpm: ^6.32.4
+  pnpm: ^7.0.0
   postcss: ^8.4.12
   postcss-nested: ^5.0.6
   prettier: ^2.6.2
@@ -85,7 +85,7 @@ devDependencies:
   feed: 4.2.2
   gray-matter: 4.0.3
   markdown-it-prism: 2.2.3
-  pnpm: 6.32.4
+  pnpm: 7.0.0
   postcss: 8.4.12
   postcss-nested: 5.0.6_postcss@8.4.12
   prettier: 2.6.2
@@ -4640,9 +4640,9 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/6.32.4:
-    resolution: {integrity: sha512-rOG+VpOzs6g/MR5HWc8KTlLAx3ljdRJCMQwSg1DE/hzAaqF/Y2zIHH0u6dZw/XnRb9w1U8rOs9MJT9jMt7e+Qw==}
-    engines: {node: '>=12.17'}
+  /pnpm/7.0.0:
+    resolution: {integrity: sha512-5njVSmE/Sz6coyikS6gjwoKWaxxsJ6BY6jL1aqwvnEpNUfFednbHqid3aZ42JszOFaSOz3Qipcfp4ei22G/JEg==}
+    engines: {node: '>=14.19'}
     hasBin: true
     dev: true
 
