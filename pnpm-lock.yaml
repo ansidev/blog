@@ -2121,8 +2121,8 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: true
 
-  /array-includes/3.1.4:
-    resolution: {integrity: sha512-ZTNSQkmWumEbiHO2GF4GmWxYVTiQyJy2XOTa15sdQSrvKn7l+180egQMqlrMOUMCyLMD7pmyQe4mMDUT6Behrw==}
+  /array-includes/3.1.5:
+    resolution: {integrity: sha512-iSDYZMMyTPkiFasVqfuAQnWAYcvO/SeBSCGKePoEthjp4LEMTe4uLc7b025o4jAZpHhihh8xPo99TNWUWWkGDQ==}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
@@ -2276,7 +2276,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001335
-      electron-to-chromium: 1.4.130
+      electron-to-chromium: 1.4.132
       escalade: 3.1.1
       node-releases: 2.0.4
       picocolors: 1.0.0
@@ -2669,8 +2669,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.130:
-    resolution: {integrity: sha512-Xmht+yS42G0QAzLBYFTuCYofQ3NGUBENPyW9hi8PxrVm3E76AVVdFNl3xxTJ8/N2L8XEUb29hOEMGh/GFnZHrA==}
+  /electron-to-chromium/1.4.132:
+    resolution: {integrity: sha512-JYdZUw/1068NWN+SwXQ7w6Ue0bWYGihvSUNNQwurvcDV/SM7vSiGZ3NuFvFgoEiCs4kB8xs3cX2an3wB7d4TBw==}
     dev: true
 
   /emoji-regex/8.0.0:
@@ -2713,8 +2713,8 @@ packages:
       object-inspect: 1.12.0
       object-keys: 1.1.1
       object.assign: 4.1.2
-      string.prototype.trimend: 1.0.4
-      string.prototype.trimstart: 1.0.4
+      string.prototype.trimend: 1.0.5
+      string.prototype.trimstart: 1.0.5
       unbox-primitive: 1.0.2
     dev: true
 
@@ -3050,7 +3050,7 @@ packages:
     peerDependencies:
       eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
     dependencies:
-      array-includes: 3.1.4
+      array-includes: 3.1.5
       array.prototype.flat: 1.3.0
       debug: 2.6.9
       doctrine: 2.1.0
@@ -3122,7 +3122,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
     dependencies:
-      array-includes: 3.1.4
+      array-includes: 3.1.5
       array.prototype.flatmap: 1.3.0
       doctrine: 2.1.0
       eslint: 8.14.0
@@ -4134,7 +4134,7 @@ packages:
     resolution: {integrity: sha512-XzO9luP6L0xkxwhIJMTJQpZo/eeN60K08jHdexfD569AGxeNug6UketeHXEhROoM8aR7EcUoOQmIhcJQjcuq8Q==}
     engines: {node: '>=4.0'}
     dependencies:
-      array-includes: 3.1.4
+      array-includes: 3.1.5
       object.assign: 4.1.2
     dev: true
 
@@ -4268,8 +4268,8 @@ packages:
       prismjs: 1.28.0
     dev: true
 
-  /markdown-it/13.0.0:
-    resolution: {integrity: sha512-WArlIpVFvVwb8t3wgJuOsbMLhNWlzuQM7H2qXmuUEnBtXRqKjLjwFUMbZOyJgHygVZSjvcLR4EcXcRilqMavrA==}
+  /markdown-it/13.0.1:
+    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
@@ -4380,8 +4380,8 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /nanoid/3.3.3:
-    resolution: {integrity: sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==}
+  /nanoid/3.3.4:
+    resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -4735,7 +4735,7 @@ packages:
     resolution: {integrity: sha512-jtL6eTBrza5MPzy8oJLFuUscHDXTV5KcLlqAWHl5q5WYRfnNRGSmOZmOZ1T6Gy7A99mOZfqungmZMpMmCVJ8ZA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.3.3
+      nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
@@ -5147,18 +5147,20 @@ packages:
       side-channel: 1.0.4
     dev: true
 
-  /string.prototype.trimend/1.0.4:
-    resolution: {integrity: sha512-y9xCjw1P23Awk8EvTpcyL2NIr1j7wJ39f+k6lvRnSMz+mz9CGz9NYPelDk42kOz6+ql8xjfK8oYzy3jAP5QU5A==}
+  /string.prototype.trimend/1.0.5:
+    resolution: {integrity: sha512-I7RGvmjV4pJ7O3kdf+LXFpVfdNOxtCW/2C8f6jNiW4+PQchwxkCDzlk1/7p+Wl4bqFIZeF47qAHXLuHHWKAxog==}
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
+      es-abstract: 1.19.5
     dev: true
 
-  /string.prototype.trimstart/1.0.4:
-    resolution: {integrity: sha512-jh6e984OBfvxS50tdY2nRZnoC5/mLFKOREQfw8t5yytkoUsJRNxvI/E39qu1sD0OtWI3OC0XgKSmcWwziwYuZw==}
+  /string.prototype.trimstart/1.0.5:
+    resolution: {integrity: sha512-THx16TJCGlsN0o6dl2o6ncWUsdgnLRSA23rRE5pyGBw/mLr3Ej/R2LaqCtgP8VNMGZsvMWnf9ooZPyY2bHvUFg==}
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.4
+      es-abstract: 1.19.5
     dev: true
 
   /stringify-object/3.3.0:
@@ -5583,7 +5585,7 @@ packages:
       '@types/markdown-it': 12.2.3
       '@vue/runtime-core': 3.2.33
       gray-matter: 4.0.3
-      markdown-it: 13.0.0
+      markdown-it: 13.0.1
       vite: 2.9.7_sass@1.51.0
     dev: true
 
