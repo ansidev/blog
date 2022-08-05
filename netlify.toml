@@ -2,6 +2,7 @@
   # bypass npm auto install
   NPM_FLAGS = "--version"
   NODE_VERSION = "16"
+  YARN_VERSION = "3.2.2"
 
 [build]
   publish = "dist"
