@@ -2465,7 +2465,6 @@ __metadata:
     markdown-it-prism: ^2.2.4
     medium-zoom: ^1.0.6
     nprogress: ^0.2.0
-    pnpm: ^7.0.0
     postcss: ^8.4.13
     postcss-nested: ^5.0.6
     prettier: ^2.6.2
@@ -6585,18 +6584,6 @@ __metadata:
   version: 8.0.0
   resolution: "pluralize@npm:8.0.0"
   checksum: 08931d4a6a4a5561a7f94f67a31c17e6632cb21e459ab3ff4f6f629d9a822984cf8afef2311d2005fbea5d7ef26016ebb090db008e2d8bce39d0a9a9d218736e
-  languageName: node
-  linkType: hard
-
-"pnpm@npm:^7.0.0":
-  version: 7.8.0
-  resolution: "pnpm@npm:7.8.0"
-  dependencies:
-    node-gyp: latest
-  bin:
-    pnpm: bin/pnpm.cjs
-    pnpx: bin/pnpx.cjs
-  checksum: 95effc8f6251bd7e302447ef0f86cc4800f90b261aa1dc0c5484f36f858a2e8175c9a910d49e47d81dae4ef85e25e2f8b7321a4dc4033b5c688f739fe15d442a
   languageName: node
   linkType: hard
 
