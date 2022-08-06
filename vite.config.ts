@@ -1,12 +1,13 @@
-import path from 'path'
 import { defineConfig } from 'vite'
+import { resolve, dirname } from 'node:path'
+import { fileURLToPath } from 'url'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 import Anchor from 'markdown-it-anchor'
 import Prism from 'markdown-it-prism'
 import { getPostMeta } from './src/helpers/post'
@@ -15,9 +16,9 @@ import siteConfig from './src/site.config'
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
-      '~plugins/': `${path.resolve(__dirname, 'plugins')}/`,
-      '~configs/': `${path.resolve(__dirname, 'configs')}/`,
+      '~/': `${resolve(dirname(fileURLToPath(import.meta.url)), 'src')}/`,
+      '~plugins/': `${resolve(dirname(fileURLToPath(import.meta.url)), 'plugins')}/`,
+      '~configs/': `${resolve(dirname(fileURLToPath(import.meta.url)), 'configs')}/`,
     },
   },
   plugins: [
@@ -95,8 +96,8 @@ export default defineConfig({
     }),
 
     // https://github.com/intlify/vite-plugin-vue-i18n
-    VueI18n({
-      include: [path.resolve(__dirname, 'locales/**')],
+    vueI18n({
+      include: [resolve(dirname(fileURLToPath(import.meta.url)), 'locales/**')],
     }),
   ],
   // https://github.com/antfu/vite-ssg
