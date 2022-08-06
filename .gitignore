@@ -4,4 +4,14 @@
 *.local
 dist
 dist-ssr
-node_modules
+node_modules/
+
+# Yarn v3
+# https://next.yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
