@@ -47,6 +47,7 @@
     "happy-dom": "^6.0.4",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-prism": "^2.2.4",
+    "netlify-plugin-cache": "^1.0.3",
     "postcss": "^8.4.13",
     "postcss-nested": "^5.0.6",
     "prettier": "^2.6.2",

@@ -2483,6 +2483,7 @@ __metadata:
     markdown-it-anchor: ^8.6.4
     markdown-it-prism: ^2.2.4
     medium-zoom: ^1.0.6
+    netlify-plugin-cache: ^1.0.3
     nprogress: ^0.2.0
     postcss: ^8.4.13
     postcss-nested: ^5.0.6
@@ -6104,6 +6105,13 @@ __metadata:
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
   checksum: b8ffeb1e262eff7968fc90a2b6767b04cfd9842582a9d0ece0af7049537266e7b2506dfb1d107a32f06dd849ab2aea834d5830f7f4d0e5cb7d36e1ae55d021d9
+  languageName: node
+  linkType: hard
+
+"netlify-plugin-cache@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "netlify-plugin-cache@npm:1.0.3"
+  checksum: 967b9b7855711843ec1412a58be703850e46582e1df3e0edf086b5bcc3ac9b358a307eefed4520eafaeeec9011ecd4bf9b2919261454ece4699754653645891e
   languageName: node
   linkType: hard
 
