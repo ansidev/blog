@@ -2,7 +2,7 @@
 @import 'prism-theme-vars/base.css';
 
 :root {
-  --prism-font-family: 'JetBrains Mono', monospace;
+  --prism-font-family: 'IBM Plex Mono', monospace;
 }
 
 html:not(.dark) {
