@@ -2437,6 +2437,7 @@ __metadata:
     feed: ^4.2.2
     github-slugger: ^1.4.0
     gray-matter: ^4.0.3
+    markdown-it-anchor: ^8.6.4
     markdown-it-prism: ^2.2.4
     medium-zoom: ^1.0.6
     nprogress: ^0.2.0
@@ -5668,6 +5669,16 @@ __metadata:
     socks-proxy-agent: ^7.0.0
     ssri: ^9.0.0
   checksum: 2f6c294179972f56fab40fd8618f07841e06550692bb78f6da16e7afaa9dca78c345b08cf44a77a8907ef3948e4dc77e93eb7492b8381f1217d7ac057a7522f8
+  languageName: node
+  linkType: hard
+
+"markdown-it-anchor@npm:^8.6.4":
+  version: 8.6.4
+  resolution: "markdown-it-anchor@npm:8.6.4"
+  peerDependencies:
+    "@types/markdown-it": "*"
+    markdown-it: "*"
+  checksum: bde310d0202450a228662921df9d9c2e95b3c5762512e8eed1d472fcc812fb20e6b4e98480cda88c8b56b0baf34ac70d6bf8404309c5a2321ebe62da43cd6fe6
   languageName: node
   linkType: hard
 
