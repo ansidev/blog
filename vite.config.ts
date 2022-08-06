@@ -7,6 +7,7 @@ import Components from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import Anchor from 'markdown-it-anchor'
 import Prism from 'markdown-it-prism'
 import { getPostMeta } from './src/helpers/post'
 import siteConfig from './src/site.config'
@@ -44,6 +45,7 @@ export default defineConfig({
       wrapperClasses: 'theme-ansidev-content',
       headEnabled: true,
       markdownItSetup(md) {
+        md.use(Anchor)
         // https://prismjs.com/
         md.use(Prism)
       },
