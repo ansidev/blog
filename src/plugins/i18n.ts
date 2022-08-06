@@ -6,9 +6,7 @@ import { UserModule } from '~/types'
 const messages = Object.fromEntries(
   Object.entries(
     import.meta.globEager('../../locales/*.json'))
-    .map(([key, value]) => {
-      return [key.slice(14, -5), value.default]
-    }),
+      .map(([key, value]) => [key.slice(14, -5), value.default]),
 )
 
 export const install: UserModule = ({ app }) => {
