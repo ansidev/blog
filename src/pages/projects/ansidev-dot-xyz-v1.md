@@ -1,23 +1,26 @@
 ---
-type: post
-title: The new blog
+type: project
+title: ansidev.xyz - v1
+repositoryUrl: https://github.com/ansidev/blog-v1
+showcaseUrl: https://blog-v1.ansidev.xyz/
+license: MIT
+licenseUrl: https://github.com/ansidev/blog-v1/blob/main/LICENSE
+techs:
+  - VuePress
+  - Bootstrap
+  - Netlify
+  - Cloudflare
+developmentStatus: active
 date: 2019-06-25T13:23:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
-permalink: /blog/the-new-blog/
 featuredImage: /uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-desktop.webp
-categories:
-  - Blog
-  - Projects
-  - Own product
-tags:
-  - vuepress
-  - bootstrap css
-  - netlify
-  - cloudflare
-  - google page speed
 ---
+
+My personal blog.
+---
+
 # The new blog
 
 ## Result

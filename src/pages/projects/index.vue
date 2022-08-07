@@ -2,13 +2,13 @@
   <div class="divide-y divide-gray-200 dark:divide-gray-700">
     <div class="pt-6 pb-8 space-y-2 md:space-y-5">
       <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+        class="text-center mb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
       >
-        {{ t('all_posts') }}
+        {{ t('my_projects') }}
       </h1>
       <Search :placeholder="t('search_articles')" @change="(e) => setSearchValue(e.target.value)" />
     </div>
-    <PostList :posts="posts" />
+    <ProjectList :projects="projects" />
   </div>
 </template>
 
@@ -26,13 +26,13 @@ export default defineComponent({
     const { searchValue, setSearchValue } = useSearch()
 
     const router = useRouter()
-    const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
+    const routes = router.getRoutes().filter(route => route.path.startsWith('/projects'))
 
-    const posts = computed(() => {
+    const projects = computed(() => {
       if (searchValue.value.length === 0) {
         return routes
           .map(r => r.meta)
-          .filter(m => m.type === 'post')
+          .filter(m => m.type === 'project')
           .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
       }
 
@@ -45,7 +45,7 @@ export default defineComponent({
         .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
     })
 
-    return { t, setSearchValue, posts }
+    return { t, setSearchValue, projects }
   },
 })
 </script>

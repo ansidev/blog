@@ -29,6 +29,7 @@ declare module '@vue/runtime-core' {
     SectionContainer: typeof import('./src/components/SectionContainer.vue')['default']
     SocialIcon: typeof import('./src/components/SocialIcon.vue')['default']
     Tag: typeof import('./src/components/Tag.vue')['default']
+    Technology: typeof import('./src/components/Technology.vue')['default']
     ThemeSwitcher: typeof import('./src/components/ThemeSwitcher.vue')['default']
   }
 }

@@ -1,6 +1,14 @@
 {
   "about_me": "About me",
   "all_posts": "All posts",
+  "my_projects": "My projects",
+  "license": "License",
+  "technologies": "Technologies",
+  "development_status": {
+    "title": "Development status",
+    "active": "Active",
+    "unmaintained": "Unmaintained"
+  },
   "authors": "Authors",
   "back_to_home": "Back to home",
   "button": {

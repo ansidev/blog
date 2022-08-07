@@ -1,16 +1,23 @@
 ---
-type: post
+type: project
 title: LegoIV Power Tool
+repositoryUrl: https://github.com/ansidev/legoivpowertool
+license: MIT
+techs:
+  - C#
+  - Json.NET
+  - GitHub API
+developmentStatus: unmaintained
 date: 2019-02-07T16:41:02+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
-permalink: /products/legoiv-power-tool/
 featuredImage: /uploads/2019/02/LegoIV_Power_Tool.webp
-categories:
-  - Own product
-  - Projects
 ---
+
+Simple power tool with ModernUI design.
+---
+
 # LegoIV Power Tool
 
 ## Introduction

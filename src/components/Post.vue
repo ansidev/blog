@@ -24,7 +24,22 @@
           </div>
           <footer>
             <div class="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
-              <div v-if="Array.isArray(frontmatter.tags) && frontmatter.tags.length > 0" class="py-4 xl:py-8">
+              <div v-if="frontmatter.type === 'project' && Array.isArray(frontmatter.techs) && frontmatter.techs.length > 0" class="py-4 xl:py-8">
+                <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-3">
+                  {{ t('license') }}: <Link :href="frontmatter.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ frontmatter.license }}</Link>
+                </h2>
+                <div class="flex flex-col flex-wrap mb-3">
+                  <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-1">{{ t('development_status.title') }}</h2>
+                  <span class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ $t(`development_status.${frontmatter.developmentStatus}`) }}</span>
+                </div>
+                <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-2">
+                  {{ t('technologies') }}
+                </h2>
+                <div class="flex flex-wrap">
+                  <Technology v-for="tech in frontmatter.techs" :key="tech" :text="tech" />
+                </div>
+              </div>
+              <div v-if="frontmatter.type === 'post' && Array.isArray(frontmatter.tags) && frontmatter.tags.length > 0" class="py-4 xl:py-8">
                 <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-2">
                   {{ t('tags') }}
                 </h2>

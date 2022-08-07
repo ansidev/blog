@@ -1,6 +1,14 @@
 {
   "about_me": "Về tôi",
   "all_posts": "Tất cả bài viết",
+  "my_projects": "Các dự án của tôi",
+  "license": "Giấy phép",
+  "technologies": "Công nghệ",
+  "development_status": {
+    "title": "Trạng thái dự án",
+    "active": "Đang phát triển",
+    "unmaintained": "Ngừng phát triển"
+  },
   "authors": "Người đăng",
   "back_to_home": "Quay lại trang chủ",
   "button": {
