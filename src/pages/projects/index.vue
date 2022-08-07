@@ -14,9 +14,10 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useSearch } from '~/hooks'
+import { kebabCase } from '~/helpers'
 
 export default defineComponent({
   name: 'ProjectPage',
@@ -26,23 +27,35 @@ export default defineComponent({
     const { searchValue, setSearchValue } = useSearch()
 
     const router = useRouter()
+    const route = useRoute()
     const routes = router.getRoutes().filter(route => route.path.startsWith('/projects'))
 
+    const isProjectPostType = p => p.type === 'project'
+
     const projects = computed(() => {
-      if (searchValue.value.length === 0) {
-        return routes
+      let projectList = routes
           .map(r => r.meta)
-          .filter(m => m.type === 'project')
+          .filter(isProjectPostType)
           .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
+
+      if (route.query.tech && route.query.tech.length > 0) {
+        projectList = projectList
+          .filter(p => Array.isArray(p.techs) && p.techs.length > 0 && p.techs.map(kebabCase).includes(route.query.tech))
       }
 
-      return routes
-        .map(r => r.meta)
-        .filter((m) => {
-          const searchContent = `${m.title} ${m.excerpt} ${Array.isArray(m.categories) && m.categories.length > 0 ? m.categories.join(' ') : ''} ${Array.isArray(m.tags) && m.tags.length > 0 ? m.tags.join(' ') : ''}`
-          return m.type === 'post' && searchContent.toLowerCase().includes(searchValue.value.toLowerCase())
-        })
-        .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
+      if (searchValue.value.length > 0) {
+        const q = searchValue.value.toLowerCase()
+        return projectList.filter((p) => {
+          let searchContent = `${p.title} ${p.excerpt}`
+            if (Array.isArray(p.techs) && p.techs.length > 0) {
+              searchContent += ` ${p.techs.join(' ')}`
+              searchContent += ` ${p.techs.map(kebabCase).join(' ')}`
+            }
+            return isProjectPostType(p) && searchContent.toLowerCase().includes(q)
+          })
+      }
+
+      return projectList
     })
 
     return { t, setSearchValue, projects }
