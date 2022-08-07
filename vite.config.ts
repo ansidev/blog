@@ -7,7 +7,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
-import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Anchor from 'markdown-it-anchor'
 import Prism from 'markdown-it-prism'
 import { getPostMeta } from './src/helpers/post'
@@ -96,7 +96,7 @@ export default defineConfig({
     }),
 
     // https://github.com/intlify/vite-plugin-vue-i18n
-    vueI18n({
+    VueI18n({
       include: [resolve(dirname(fileURLToPath(import.meta.url)), 'locales/**')],
     }),
   ],
