@@ -2495,7 +2495,7 @@ __metadata:
     unplugin-vue-components: ^0.19.3
     vite: ^2.9.8
     vite-plugin-md: ^0.20.2
-    vite-plugin-pages: ^0.23.0
+    vite-plugin-pages: ^0.25.0
     vite-plugin-pwa: ^0.12.0
     vite-plugin-vue-layouts: ^0.7.0
     vite-ssg: ^0.20.0
@@ -4227,6 +4227,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esprima-extract-comments@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "esprima-extract-comments@npm:1.1.0"
+  dependencies:
+    esprima: ^4.0.0
+  checksum: 8d64b08b951a901bf0206b7a66ddd9498f9d00f8341aece5ca5e73efb65549e2ecb6c2d2b35c5432e77c743dd8c243ae43baf8d33128b8055d3ef5efbc18d5f3
+  languageName: node
+  linkType: hard
+
 "esprima@npm:^4.0.0, esprima@npm:^4.0.1":
   version: 4.0.1
   resolution: "esprima@npm:4.0.1"
@@ -4303,6 +4312,16 @@ __metadata:
   dependencies:
     is-extendable: ^0.1.0
   checksum: 8fb58d9d7a511f4baf78d383e637bd7d2e80843bd9cd0853649108ea835208fb614da502a553acc30208e1325240bb7cc4a68473021612496bb89725483656d8
+  languageName: node
+  linkType: hard
+
+"extract-comments@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "extract-comments@npm:1.1.0"
+  dependencies:
+    esprima-extract-comments: ^1.1.0
+    parse-code-context: ^1.0.0
+  checksum: 2ea4faf33260ba43e7c73e7752f06fc781ec972b8cd9da06a19282a602a395f58ef43368eb77cc2bbdcc8187ecb46f0a62eee6a0482cb449726f251668c9a986
   languageName: node
   linkType: hard
 
@@ -6487,6 +6506,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parse-code-context@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "parse-code-context@npm:1.0.0"
+  checksum: d49785bd70d60ab4bd4ca432c9b77b42fa607921c6aee577643d5458234cf47abc5771cac2b1f21f8a18a498140b3d039bd1a24e612bc4e485d761d2e85b6088
+  languageName: node
+  linkType: hard
+
 "parse-entities@npm:^2.0.0":
   version: 2.0.0
   resolution: "parse-entities@npm:2.0.0"
@@ -8168,25 +8194,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pages@npm:^0.23.0":
-  version: 0.23.0
-  resolution: "vite-plugin-pages@npm:0.23.0"
+"vite-plugin-pages@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "vite-plugin-pages@npm:0.25.0"
   dependencies:
     "@types/debug": ^4.1.7
     debug: ^4.3.4
     deep-equal: ^2.0.5
+    extract-comments: ^1.1.0
     fast-glob: ^3.2.11
     json5: ^2.2.1
     local-pkg: ^0.4.1
     picocolors: ^1.0.0
-    yaml: ^2.0.1
+    yaml: ^2.1.1
   peerDependencies:
-    "@vue/compiler-sfc": ^3.0.0
-    vite: ^2.0.0
+    "@vue/compiler-sfc": ^2.7.0 || ^3.0.0
+    vite: ^2.0.0 || ^3.0.0-0
   peerDependenciesMeta:
     "@vue/compiler-sfc":
       optional: true
-  checksum: a63b15194895bbdc020af4fcabc1505977a7746f15cc1d595fb4cb1b2140136446c37fee97661b39ffec6fb6b7127a24c39c57959c11ba55d97fa4e432a9769d
+  checksum: bcfe875745078a20277f9b8d82469f9bb4db81cf3f27f02770bfbb56ce16d08fae48a2382f92e8102aafb529f2cee0accb19a41edd2d36fe4e5453f20ee91901
   languageName: node
   linkType: hard
 
@@ -8903,7 +8930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.0.1":
+"yaml@npm:^2.1.1":
   version: 2.1.1
   resolution: "yaml@npm:2.1.1"
   checksum: f48bb209918aa57cfaf78ef6448d1a1f8187f45c746f933268b7023dc59e5456004611879126c9bb5ea55b0a2b1c2b392dfde436931ece0c703a3d754562bb96
