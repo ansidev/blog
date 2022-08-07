@@ -41,7 +41,7 @@
             {{ t('license') }}: <Link :href="project.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ project.license }}</Link>
           </div>
           <div class="text-gray-500 dark:text-gray-400 mb-3">
-            {{ t('development_status.title') }}: {{ $t(`development_status.${project.developmentStatus}`) }}
+            {{ t('development_status.title') }}: <TwBadge v-bind="getProjectBadgeStyle(project.developmentStatus)">{{ $t(`development_status.${project.developmentStatus}`) }}</TwBadge>
           </div>
           <div class="flex flex-wrap mb-3">
             <Technology v-for="tech in project.techs" :key="tech" :text="tech" />
@@ -66,6 +66,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Icon } from '@iconify/vue'
+import { getProjectBadgeStyle } from '~/helpers'
 
 export default defineComponent({
   components: {
@@ -80,7 +81,7 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
 
-    return { t }
+    return { t, getProjectBadgeStyle }
   },
 })
 </script>

@@ -2,7 +2,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,md}",
@@ -11,8 +10,20 @@ module.exports = {
   safelist: [
     'prose',
     'prose-sm',
+    'bg-gray-100',
+    'bg-green-100',
+    'bg-red-100',
+    'dark:bg-gray-900',
+    'dark:bg-green-900',
+    'dark:bg-red-900',
     'dark:text-gray-100',
     'dark:text-gray-900',
+    'dark:text-green-100',
+    'dark:text-red-100',
+    'text-gray-100',
+    'text-gray-900',
+    'text-green-900',
+    'text-red-900',
     'btn-facebook',
     'btn-twitter',
     'btn-tumblr',

@@ -31,5 +31,6 @@ declare module '@vue/runtime-core' {
     Tag: typeof import('./src/components/Tag.vue')['default']
     Technology: typeof import('./src/components/Technology.vue')['default']
     ThemeSwitcher: typeof import('./src/components/ThemeSwitcher.vue')['default']
+    TwBadge: typeof import('./src/components/TwBadge.vue')['default']
   }
 }
