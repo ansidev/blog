@@ -6,7 +6,7 @@
       >
         {{ t('my_projects') }}
       </h1>
-      <Search :placeholder="t('search_articles')" @change="(e) => setSearchValue(e.target.value)" />
+      <Search class="mx-auto" :placeholder="t('search_projects')" @change="(e) => setSearchValue(e.target.value)" />
     </div>
     <ProjectList :projects="projects" />
   </div>
