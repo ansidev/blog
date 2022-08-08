@@ -28,17 +28,17 @@ export default defineComponent({
     darkBackgroundColor: {
       type: String,
       required: false,
-      default: 'blue-900',
+      default: 'blue-800',
     },
     textColor: {
       type: String,
       required: false,
-      default: 'blue-100',
+      default: 'blue-800',
     },
     darkTextColor: {
       type: String,
       required: false,
-      default: 'blue-900',
+      default: 'blue-100',
     },
     fontSize: {
       type: String,
