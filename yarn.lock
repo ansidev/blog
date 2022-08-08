@@ -2487,7 +2487,7 @@ __metadata:
     tailwindcss: ^3.1.8
     ts-node: ^10.7.0
     typescript: ^4.6.4
-    unplugin-vue-components: ^0.19.3
+    unplugin-vue-components: ^0.21.2
     vite: ^2.9.8
     vite-plugin-md: ^0.20.2
     vite-plugin-pages: ^0.25.0
@@ -8046,34 +8046,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin-vue-components@npm:^0.19.3":
-  version: 0.19.9
-  resolution: "unplugin-vue-components@npm:0.19.9"
+"unplugin-vue-components@npm:^0.21.2":
+  version: 0.21.2
+  resolution: "unplugin-vue-components@npm:0.21.2"
   dependencies:
     "@antfu/utils": ^0.5.2
     "@rollup/pluginutils": ^4.2.1
     chokidar: ^3.5.3
     debug: ^4.3.4
     fast-glob: ^3.2.11
-    local-pkg: ^0.4.1
+    local-pkg: ^0.4.2
     magic-string: ^0.26.2
     minimatch: ^5.1.0
-    resolve: ^1.22.0
-    unplugin: ^0.7.0
+    resolve: ^1.22.1
+    unplugin: ^0.7.2
   peerDependencies:
     "@babel/parser": ^7.15.8
-    "@babel/traverse": ^7.15.4
     vue: 2 || 3
   peerDependenciesMeta:
     "@babel/parser":
       optional: true
-    "@babel/traverse":
-      optional: true
-  checksum: e47405218b3ce70b549b646a0563ef3a64c1d66de00e9f4b101663c6590a5d1aee334b90f4b5e58a2fad26ef9eab2064f9288e32e33dad5e37a3f4db0844ae57
+  checksum: 0a7807752223fdf88757971fc0290329c3cf81ca4896bc313e5b7d9830c7b287eceb96386954aad94dd4970cde90a08149f5730a574eacf6afa0ba5b7f30ba83
   languageName: node
   linkType: hard
 
-"unplugin@npm:^0.7.0":
+"unplugin@npm:^0.7.2":
   version: 0.7.2
   resolution: "unplugin@npm:0.7.2"
   dependencies:
