@@ -6,36 +6,39 @@ showcaseUrl: https://blog-v1.ansidev.xyz/
 license: MIT
 licenseUrl: https://github.com/ansidev/blog-v1/blob/main/LICENSE
 techs:
-  - VuePress
-  - Bootstrap
+  - VitePress
+  - TailwindCSS
   - Netlify
   - Cloudflare
-developmentStatus: active
-date: 2019-06-25T13:23:00+07:00
+developmentStatus: inactive
+date: 2021-01-17T09:00:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
-featuredImage: /uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-desktop.webp
 ---
 
-My personal blog.
+My personal blog (version 1).
 ---
 
-# The new blog
+## Latest news
 
-## Result
+This version of blog is not under active development, but you can still see an archived site at https://blog-v1.ansidev.xyz/.
 
-This is test result from Google Page Speed. I have not optimized yet.
-<img class="medium-zoom" src="/uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-mobile.webp" alt="" />
-<figcaption>Google Page Speed Result for ansidev.xyz (Mobile)</figcaption>
-<img class="medium-zoom" src="/uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-desktop.webp" alt="" />
-<figcaption>Google Page Speed Result for ansidev.xyz (Desktop)</figcaption>
+## Story
+
+I want a simple, speed solution for my personal blog.
+
+Vue author released VitePress, a little brother of VuePress but it was built on top of Vite instead of Vue.
+
+So I decided to try.
+
+The official VueJS blog is using VitePress, so I just forked and customized it.
 
 ## Technologies
 
-Currently, this site is built with:
-- [VuePress 1.x](https://v1.vuepress.vuejs.org/).
-- [Bootstrap CSS 4.x](https://getbootstrap.com/).
+The blog is built with:
+- [VitePress 0.x](https://vitepress.vuejs.org/).
+- [TailwindCss 2.x](https://tailwindcss.com/).
 - [Netlify](https://netlify.com).
 - [Cloudflare](https://cloudflare.com).
 
@@ -43,13 +46,14 @@ Currently, this site is built with:
 
 - PWA application.
 - RSS Feed.
+- Social sharing
+- Medium Zoom for images.
 
 ## TODO:
 
-This blog has many thing to do:
+This blog has many things to do:
 
-- Bootstrap CSS is large so I intend to use an other micro CSS framework to optimize CSS.
 - Dark theme.
-- Integrate Disqus Comment System.
+- Comment system.
 
 ...

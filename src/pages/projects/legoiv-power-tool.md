@@ -8,7 +8,7 @@ techs:
   - Json.NET
   - GitHub API
 developmentStatus: unmaintained
-date: 2019-02-07T16:41:02+07:00
+date: 2014-01-12T09:00:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
