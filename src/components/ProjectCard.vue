@@ -20,7 +20,7 @@
                 <Icon icon="bi:box-arrow-up-right" class="text-dark dark:text-white ml-2" />
               </a>
             </div>
-            <div class="mx-1">
+            <div v-if="project.repositoryUrl" class="mx-1">
               <a
                 class="text-gray-500 transition hover:text-gray-600"
                 target="_blank"
@@ -37,8 +37,10 @@
           {{ project.excerpt }}
         </p>
         <div class="flex flex-col justify-between">
-          <div class="text-gray-500 dark:text-gray-400 mb-3">
-            {{ t('license') }}: <Link :href="project.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ project.license }}</Link>
+          <div v-if="project.license" class="text-gray-500 dark:text-gray-400 mb-3">
+            {{ t('license') }}:
+            <Link v-if="project.licenseUrl" :href="project.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ project.license }}</Link>
+            <span v-else>{{ project.license }}</span>
           </div>
           <div class="text-gray-500 dark:text-gray-400 mb-3">
             {{ t('development_status.title') }}: <TwBadge v-bind="getProjectBadgeStyle(project.developmentStatus)">{{ $t(`development_status.${project.developmentStatus}`) }}</TwBadge>

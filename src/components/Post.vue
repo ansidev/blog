@@ -25,8 +25,10 @@
           <footer>
             <div class="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
               <div v-if="frontmatter.type === 'project' && Array.isArray(frontmatter.techs) && frontmatter.techs.length > 0" class="py-4 xl:py-8">
-                <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-3">
-                  {{ t('license') }}: <Link :href="frontmatter.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ frontmatter.license }}</Link>
+                <h2 v-if="frontmatter.license" class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-3">
+                  {{ t('license') }}:
+                  <Link v-if="frontmatter.licenseUrl" :href="frontmatter.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ frontmatter.license }}</Link>
+                  <span v-else>{{ frontmatter.license }}</span>
                 </h2>
                 <div class="flex flex-col flex-wrap mb-3">
                   <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-1">{{ t('development_status.title') }}</h2>
