@@ -19,7 +19,8 @@
     "home": "Trang chủ",
     "toggle_dark": "Bật/Tắt chế độ nền tối",
     "toggle_locale": "Đổi ngôn ngữ",
-    "toggle_mobile_menu": "Mở/Đóng thực đơn di động"
+    "toggle_mobile_menu": "Mở/Đóng thực đơn di động",
+    "remove": "Xóa"
   },
   "categories": "Chủ đề",
   "intro": {

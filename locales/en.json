@@ -19,7 +19,8 @@
     "home": "Home",
     "toggle_dark": "Toggle dark mode",
     "toggle_locale": "Change languages",
-    "toggle_mobile_menu": "Toggle mobile menu"
+    "toggle_mobile_menu": "Toggle mobile menu",
+    "remove": "Remove"
   },
   "categories": "Categories",
   "intro": {
