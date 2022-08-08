@@ -22,6 +22,7 @@ declare module '@vue/runtime-core' {
     PostList: typeof import('./src/components/PostList.vue')['default']
     ProjectCard: typeof import('./src/components/ProjectCard.vue')['default']
     ProjectList: typeof import('./src/components/ProjectList.vue')['default']
+    ProjectSearch: typeof import('./src/components/ProjectSearch.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

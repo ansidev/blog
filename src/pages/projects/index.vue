@@ -6,7 +6,7 @@
       >
         {{ t('my_projects') }}
       </h1>
-      <Search class="mx-auto" :placeholder="t('search_projects')" @change="(e) => setSearchValue(e.target.value)" />
+      <ProjectSearch />
     </div>
     <ProjectList :projects="projects" />
   </div>
@@ -24,7 +24,7 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
 
-    const { searchValue, setSearchValue } = useSearch()
+    const { searchValue } = useSearch()
 
     const router = useRouter()
     const route = useRoute()
@@ -58,7 +58,7 @@ export default defineComponent({
       return projectList
     })
 
-    return { t, setSearchValue, projects }
+    return { t, projects }
   },
 })
 </script>
