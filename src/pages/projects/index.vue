@@ -43,8 +43,8 @@ export default defineComponent({
           .filter(p => Array.isArray(p.techs) && p.techs.length > 0 && p.techs.map(kebabCase).includes(route.query.tech))
       }
 
-      if (searchValue.value.length > 0) {
-        const q = searchValue.value.toLowerCase()
+      if (route.query.q && route.query.q.length > 0) {
+        const q = route.query.q.toLowerCase()
         return projectList.filter((p) => {
           let searchContent = `${p.title} ${p.excerpt}`
             if (Array.isArray(p.techs) && p.techs.length > 0) {
