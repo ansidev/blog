@@ -2462,7 +2462,7 @@ __metadata:
     vite: ^2.9.8
     vite-plugin-md: ^0.20.2
     vite-plugin-pages: ^0.25.0
-    vite-plugin-pwa: ^0.12.0
+    vite-plugin-pwa: ^0.12.3
     vite-plugin-vue-layouts: ^0.7.0
     vite-ssg: ^0.20.0
     vue: ^3.2.33
@@ -8175,7 +8175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:^0.12.0":
+"vite-plugin-pwa@npm:^0.12.3":
   version: 0.12.3
   resolution: "vite-plugin-pwa@npm:0.12.3"
   dependencies:
