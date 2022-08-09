@@ -3,6 +3,8 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
+export {}
+
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Author: typeof import('./src/components/Author.vue')['default']
@@ -27,5 +29,3 @@ declare module '@vue/runtime-core' {
     ThemeSwitcher: typeof import('./src/components/ThemeSwitcher.vue')['default']
   }
 }
-
-export {}
