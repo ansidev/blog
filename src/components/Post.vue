@@ -62,10 +62,10 @@
             </div>
             <div class="pt-4 xl:pt-8">
               <Link
-                href="/"
+                :href="isProjectDetailPage ? '/projects' : '/'"
                 class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
               >
-                &larr; {{ t('back_to_home') }}
+                &larr; {{ t(isProjectDetailPage ? 'back_to_projects' : 'back_to_home') }}
               </Link>
             </div>
           </footer>
@@ -78,7 +78,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import siteConfig from '~/site.config'
 import { isPluginEnabled, getProjectBadgeStyle } from '~/helpers'
 
@@ -94,16 +94,17 @@ export default defineComponent({
 
   setup() {
     const { t } = useI18n()
-    const router = useRouter()
-    const currentRoute = router.currentRoute.value
+    const route = useRoute()
+    console.log(route.path)
 
+    const postTitle = route.meta.title
+    const postURL = computed(() => `${siteConfig.baseURL}${route.path}`)
+
+    const isProjectDetailPage = computed(() => route.path.startsWith('/projects/'))
     const isSharingPluginEnabled = computed(() => isPluginEnabled('sharing'))
-    const postTitle = currentRoute.meta.title
-    const postURL = computed(() => `${siteConfig.baseURL}${currentRoute.path}`)
-
     const isFacebookCommentPluginEnabled = computed(() => isPluginEnabled('facebookComment'))
 
-    return { t, isSharingPluginEnabled, isFacebookCommentPluginEnabled, getProjectBadgeStyle, postTitle, postURL }
+    return { t, isSharingPluginEnabled, isFacebookCommentPluginEnabled, isProjectDetailPage, getProjectBadgeStyle, postTitle, postURL }
   },
 })
 </script>
