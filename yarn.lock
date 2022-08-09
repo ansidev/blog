@@ -1423,13 +1423,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/json@npm:^2.1.88":
-  version: 2.1.88
-  resolution: "@iconify/json@npm:2.1.88"
+"@iconify-json/bi@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "@iconify-json/bi@npm:1.1.6"
   dependencies:
     "@iconify/types": "*"
-    pathe: ^0.3.0
-  checksum: 1a5c39f763adfc969ffd4938d153a05ab0f2667223a503fd3356caf21ddcecc46799f1424a09125dbdfe4ab70b73605b7b367b311c4606eb84f3a1405e702d2a
+  checksum: 450916eac2d58af562e1bb2ca6f707c8058733ff86adaa5dc902c89dc69fc3ea81fa70122f5b7bd92135ff775ad3fcb17c0b3ef6f1ec97d97626e11d1cc099d2
   languageName: node
   linkType: hard
 
@@ -2123,7 +2122,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-sfc@npm:3.2.37, @vue/compiler-sfc@npm:^3.2.31, @vue/compiler-sfc@npm:^3.2.33":
+"@vue/compiler-sfc@npm:3.2.37, @vue/compiler-sfc@npm:^3.2.31":
   version: 3.2.37
   resolution: "@vue/compiler-sfc@npm:3.2.37"
   dependencies:
@@ -2201,7 +2200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.2.37, @vue/server-renderer@npm:^3.2.33":
+"@vue/server-renderer@npm:3.2.37":
   version: 3.2.37
   resolution: "@vue/server-renderer@npm:3.2.37"
   dependencies:
@@ -2442,7 +2441,7 @@ __metadata:
   resolution: "ansidev-blog@workspace:."
   dependencies:
     "@antfu/eslint-config": ^0.26.0
-    "@iconify/json": ^2.1.88
+    "@iconify-json/bi": ^1.1.6
     "@iconify/vue": ^3.2.1
     "@intlify/vite-plugin-vue-i18n": ^6.0.0
     "@tailwindcss/forms": ^0.5.2
@@ -2453,8 +2452,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.22.0
     "@typescript-eslint/parser": ^5.22.0
     "@vitejs/plugin-vue": ^2.3.2
-    "@vue/compiler-sfc": ^3.2.33
-    "@vue/server-renderer": ^3.2.33
     "@vueuse/core": ^9.1.0
     "@vueuse/head": ^0.7.6
     autoprefixer: ^10.4.7
@@ -6565,13 +6562,6 @@ __metadata:
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
   checksum: 5b1e2daa247062061325b8fdbfd1fb56dde0a448fb1455453276ea18c60685bdad23a445dc148cf87bc216be1573357509b7d4060494a6fd768c7efad833ee45
-  languageName: node
-  linkType: hard
-
-"pathe@npm:^0.3.0":
-  version: 0.3.3
-  resolution: "pathe@npm:0.3.3"
-  checksum: 4d30221a4354b929bcb41a0f572ec47999d4540c9bf951d7e5725bfea8d3761dce40cc42291d078b0d9a838f166d7e22407ffaa9c01c637ab251cd9371f7d38d
   languageName: node
   linkType: hard
 
