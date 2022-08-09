@@ -12,7 +12,7 @@
           {{ `${query}:${value}` }}
         </TwDismissableBadge>
       </div>
-      <div v-if="Array.isArray(projects) && projects.length > 0" class="flex flex-wrap -m-4">
+      <div v-if="Array.isArray(projects) && projects.length > 0" class="grid grid-cols-1 xl:grid-cols-2 gap-1 -m-4">
         <ProjectCard v-for="project of projects" :key="project.slug" :project="project" />
       </div>
       <p v-else class="pt-4">
