@@ -2475,7 +2475,7 @@ __metadata:
     tailwindcss: ^3.1.8
     ts-node: ^10.7.0
     typescript: ^4.6.4
-    unplugin-vue-components: ^0.21.2
+    unplugin-vue-components: ^0.22.2
     vite: ^2.9.8
     vite-plugin-md: ^0.20.2
     vite-plugin-pages: ^0.25.0
@@ -8035,9 +8035,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin-vue-components@npm:^0.21.2":
-  version: 0.21.2
-  resolution: "unplugin-vue-components@npm:0.21.2"
+"unplugin-vue-components@npm:^0.22.2":
+  version: 0.22.2
+  resolution: "unplugin-vue-components@npm:0.22.2"
   dependencies:
     "@antfu/utils": ^0.5.2
     "@rollup/pluginutils": ^4.2.1
@@ -8048,22 +8048,22 @@ __metadata:
     magic-string: ^0.26.2
     minimatch: ^5.1.0
     resolve: ^1.22.1
-    unplugin: ^0.7.2
+    unplugin: ^0.9.0
   peerDependencies:
     "@babel/parser": ^7.15.8
     vue: 2 || 3
   peerDependenciesMeta:
     "@babel/parser":
       optional: true
-  checksum: 0a7807752223fdf88757971fc0290329c3cf81ca4896bc313e5b7d9830c7b287eceb96386954aad94dd4970cde90a08149f5730a574eacf6afa0ba5b7f30ba83
+  checksum: eac1f684391af2a4eea4a85fd9c38178fa888f6dca5645655d178e09b77880a62d0c2913a9f88adec47dfded37551596d7238860198e0956495321e477af2994
   languageName: node
   linkType: hard
 
-"unplugin@npm:^0.7.2":
-  version: 0.7.2
-  resolution: "unplugin@npm:0.7.2"
+"unplugin@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "unplugin@npm:0.9.0"
   dependencies:
-    acorn: ^8.7.1
+    acorn: ^8.8.0
     chokidar: ^3.5.3
     webpack-sources: ^3.2.3
     webpack-virtual-modules: ^0.4.4
@@ -8081,7 +8081,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 5449e8cff143b3c8a47f91a9274e2c9d42bdaa7ab5c95a0ea10db87d8bbde9cd85fca9c63d3c319c5b8730e8a490ce49706620151b69b9566172283c980f44bd
+  checksum: 94fd5fa597e1607831134dd34d18ddcb20d24f473a88ca34dc89b4cd0d4c17ca5eb5987b0152dab52c9ae146fc9a768556a2b89dd8725947c97c95cd6640ca86
   languageName: node
   linkType: hard
 
