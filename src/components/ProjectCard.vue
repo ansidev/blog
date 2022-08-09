@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 md:w-1/2 md" style="max-width: 544px">
+  <div class="p-4">
     <div
       class="h-full overflow-hidden border-2 border-gray-200 rounded-md border-opacity-60 dark:border-gray-700"
     >
