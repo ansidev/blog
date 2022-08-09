@@ -17,7 +17,7 @@ export default {
     facebook: 'https://facebook.com/leminhtri.py',
     telegram: 'https://t.me/ansidev',
     twitter: 'https://twitter.com/ansidev',
-    linkedin: 'https://www.linkedin.com/in/ansi-dev-1b05bb51/',
+    linkedin: 'https://www.linkedin.com/in/tri-le-minh-1b05bb51/',
     reddit: 'https://reddit.com/u/ansidev',
   },
   plugins: {
