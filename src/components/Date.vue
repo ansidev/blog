@@ -3,7 +3,7 @@
     <dt class="sr-only">
       {{ t('posted_on') }}
     </dt>
-    <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+    <dd :class="['font-medium leading-6 text-gray-500 dark:text-gray-400', textSize ? `text-${textSize}` : 'text-base']">
       <time :datetime="getDateTime()">{{ dateObject.string }}</time>
     </dd>
   </dl>
@@ -19,6 +19,10 @@ export default defineComponent({
     * { time, string }
     */
     date: [Object, String],
+    textSize: {
+      type: String,
+      default: null
+    },
   },
   setup(props) {
     const { t } = useI18n()

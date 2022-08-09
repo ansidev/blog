@@ -6,7 +6,7 @@
       >
         {{ t('all_posts') }}
       </h1>
-      <Search :placeholder="t('search_articles')" @change="(e) => setSearchValue(e.target.value)" />
+      <Search :value="searchValue" :placeholder="t('search_articles')" @change="(e) => setSearchValue(e.target.value)" />
     </div>
     <PostList :posts="posts" />
   </div>
@@ -44,7 +44,7 @@ export default defineComponent({
         .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
     })
 
-    return { t, setSearchValue, posts }
+    return { t, setSearchValue, searchValue, posts }
   },
 })
 </script>

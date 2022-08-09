@@ -1,8 +1,18 @@
 {
   "about_me": "About me",
   "all_posts": "All posts",
+  "my_projects": "My projects",
+  "license": "License",
+  "technologies": "Technologies",
+  "development_status": {
+    "title": "Development status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "unmaintained": "Unmaintained"
+  },
   "authors": "Authors",
   "back_to_home": "Back to home",
+  "back_to_projects": "Back to projects",
   "button": {
     "about": "About",
     "back": "Back",
@@ -10,7 +20,8 @@
     "home": "Home",
     "toggle_dark": "Toggle dark mode",
     "toggle_locale": "Change languages",
-    "toggle_mobile_menu": "Toggle mobile menu"
+    "toggle_mobile_menu": "Toggle mobile menu",
+    "remove": "Remove"
   },
   "categories": "Categories",
   "intro": {
@@ -24,6 +35,7 @@
   "posted_on": "Posted on",
   "read_more": "Read more",
   "search_articles": "Search articles",
+  "search_projects": "Search projects",
   "share": "Share",
   "tags": "Tags"
 }

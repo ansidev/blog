@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     Category: typeof import('./src/components/Category.vue')['default']
     Date: typeof import('./src/components/Date.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    Header: typeof import('./src/components/Header.vue')['default']
     Link: typeof import('./src/components/Link.vue')['default']
     LocaleSwitcher: typeof import('./src/components/LocaleSwitcher.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
@@ -19,6 +20,9 @@ declare module '@vue/runtime-core' {
     Post: typeof import('./src/components/Post.vue')['default']
     PostItem: typeof import('./src/components/PostItem.vue')['default']
     PostList: typeof import('./src/components/PostList.vue')['default']
+    ProjectCard: typeof import('./src/components/ProjectCard.vue')['default']
+    ProjectList: typeof import('./src/components/ProjectList.vue')['default']
+    ProjectSearch: typeof import('./src/components/ProjectSearch.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -26,6 +30,9 @@ declare module '@vue/runtime-core' {
     SectionContainer: typeof import('./src/components/SectionContainer.vue')['default']
     SocialIcon: typeof import('./src/components/SocialIcon.vue')['default']
     Tag: typeof import('./src/components/Tag.vue')['default']
+    Technology: typeof import('./src/components/Technology.vue')['default']
     ThemeSwitcher: typeof import('./src/components/ThemeSwitcher.vue')['default']
+    TwBadge: typeof import('./src/components/TwBadge.vue')['default']
+    TwDismissableBadge: typeof import('./src/components/TwDismissableBadge.vue')['default']
   }
 }

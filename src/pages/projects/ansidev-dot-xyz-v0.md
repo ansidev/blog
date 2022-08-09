@@ -1,23 +1,22 @@
 ---
-type: post
-title: The new blog
+type: project
+title: ansidev.xyz - v0
+techs:
+  - VuePress
+  - Bootstrap
+  - Netlify
+  - Cloudflare
+developmentStatus: unmaintained
 date: 2019-06-25T13:23:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
-permalink: /blog/the-new-blog/
 featuredImage: /uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-desktop.webp
-categories:
-  - Blog
-  - Projects
-  - Own product
-tags:
-  - vuepress
-  - bootstrap css
-  - netlify
-  - cloudflare
-  - google page speed
 ---
+
+My personal blog.
+---
+
 # The new blog
 
 ## Result
@@ -43,7 +42,7 @@ Currently, this site is built with:
 
 ## TODO:
 
-This blog has many thing to do:
+This blog has many things to do:
 
 - Bootstrap CSS is large so I intend to use an other micro CSS framework to optimize CSS.
 - Dark theme.

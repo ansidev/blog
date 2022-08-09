@@ -10,10 +10,26 @@ export const getPostMeta = (file: string) => {
     title: data.title,
     path: `${file.replace(/^\/src\/pages/, '').replace(/\.md$/, '')}`,
     date: data.date,
-    type: 'post',
+    type: data.type,
     categories: data.categories,
     tags: data.tags,
     excerpt,
+    repositoryUrl: undefined,
+    showcaseUrl: undefined,
+    licenseUrl: undefined,
+    license: undefined,
+    techs: undefined,
+    developmentStatus: undefined
   }
+
+  if (data.type === 'project') {
+    post.repositoryUrl = data.repositoryUrl
+    post.showcaseUrl = data.showcaseUrl
+    post.licenseUrl = data.licenseUrl
+    post.license = data.license
+    post.techs = data.techs
+    post.developmentStatus = data.developmentStatus
+  }
+
   return post
 }
