@@ -94,3 +94,4 @@ getPosts(true).forEach((post: any) => {
 })
 
 fs.writeFileSync(path.resolve(__dirname, '../../dist/feed.rss'), feed.rss2())
+console.log('[feed-generator] Generated feed.rss successfully!')
