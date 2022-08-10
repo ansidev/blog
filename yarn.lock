@@ -2458,7 +2458,7 @@ __metadata:
     tailwindcss: ^3.1.8
     ts-node: ^10.7.0
     typescript: ^4.6.4
-    unplugin-vue-components: ^0.22.3
+    unplugin-vue-components: ^0.22.4
     vite: ^2.9.8
     vite-plugin-fonts: ^0.6.0
     vite-plugin-md: ^0.20.2
@@ -8019,7 +8019,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin-vue-components@npm:^0.22.3":
+"unplugin-vue-components@npm:^0.22.4":
   version: 0.22.4
   resolution: "unplugin-vue-components@npm:0.22.4"
   dependencies:
