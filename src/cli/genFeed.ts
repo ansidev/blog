@@ -11,7 +11,7 @@ const feed = new Feed({
   id: baseURL,
   link: baseURL,
   language: 'en',
-  image: `${baseURL}/logo.jpg`,
+  image: `${baseURL}/pwa-512x512.png`,
   favicon: `${baseURL}/favicon.ico`,
   copyright:
     'Copyright (c) 2019-present, Le Minh Tri (@ansidev)'
@@ -94,3 +94,4 @@ getPosts(true).forEach((post: any) => {
 })
 
 fs.writeFileSync(path.resolve(__dirname, '../../dist/feed.rss'), feed.rss2())
+console.log('[feed-generator] Generated feed.rss successfully!')
