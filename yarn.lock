@@ -75,7 +75,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config@npm:^0.26.0":
+"@antfu/eslint-config@npm:^0.26.1":
   version: 0.26.1
   resolution: "@antfu/eslint-config@npm:0.26.1"
   dependencies:
@@ -2424,7 +2424,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ansidev-blog@workspace:."
   dependencies:
-    "@antfu/eslint-config": ^0.26.0
+    "@antfu/eslint-config": ^0.26.1
     "@iconify/vue": ^3.2.1
     "@intlify/vite-plugin-vue-i18n": ^6.0.1
     "@tailwindcss/forms": ^0.5.2
