@@ -2460,6 +2460,7 @@ __metadata:
     typescript: ^4.6.4
     unplugin-vue-components: ^0.22.3
     vite: ^2.9.8
+    vite-plugin-fonts: ^0.6.0
     vite-plugin-md: ^0.20.2
     vite-plugin-pages: ^0.25.0
     vite-plugin-pwa: ^0.12.3
@@ -8133,6 +8134,17 @@ __metadata:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
+  languageName: node
+  linkType: hard
+
+"vite-plugin-fonts@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "vite-plugin-fonts@npm:0.6.0"
+  dependencies:
+    fast-glob: ^3.2.11
+  peerDependencies:
+    vite: ^2.0.0 || ^3.0.0
+  checksum: d850eff20fa9235e06de64dbd468c37fb05fb1fdd148a6a188d4298b91b45650f7d1c8330a41d3553f03223a15c75a2a0ac6403e031b81b249d0928d1ddbb781
   languageName: node
   linkType: hard
 

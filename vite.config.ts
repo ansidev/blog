@@ -5,6 +5,7 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
+import { VitePluginFonts } from 'vite-plugin-fonts'
 import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
@@ -100,6 +101,17 @@ export default defineConfig({
     // https://github.com/intlify/vite-plugin-vue-i18n
     VueI18n({
       include: [resolve(dirname(fileURLToPath(import.meta.url)), 'locales/**')],
+    }),
+
+    // https://github.com/stafyniaksacha/vite-plugin-fonts
+    VitePluginFonts({
+      google: {
+        families: [{
+          name: 'IBM Plex Mono',
+          styles: 'ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700',
+          defer: true,
+        }],
+      },
     }),
   ],
   // https://github.com/antfu/vite-ssg
