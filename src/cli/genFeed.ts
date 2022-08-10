@@ -11,7 +11,7 @@ const feed = new Feed({
   id: baseURL,
   link: baseURL,
   language: 'en',
-  image: `${baseURL}/logo.jpg`,
+  image: `${baseURL}/pwa-512x512.png`,
   favicon: `${baseURL}/favicon.ico`,
   copyright:
     'Copyright (c) 2019-present, Le Minh Tri (@ansidev)'
