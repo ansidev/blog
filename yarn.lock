@@ -1987,7 +1987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.22.0, @typescript-eslint/parser@npm:^5.32.0":
+"@typescript-eslint/parser@npm:^5.32.0, @typescript-eslint/parser@npm:^5.33.0":
   version: 5.33.0
   resolution: "@typescript-eslint/parser@npm:5.33.0"
   dependencies:
@@ -2440,7 +2440,7 @@ __metadata:
     "@types/node": ^18.7.1
     "@types/nprogress": ^0.2.0
     "@typescript-eslint/eslint-plugin": ^5.33.0
-    "@typescript-eslint/parser": ^5.22.0
+    "@typescript-eslint/parser": ^5.33.0
     "@vitejs/plugin-vue": ^2.3.2
     "@vueuse/core": ^9.1.0
     "@vueuse/head": ^0.7.9
