@@ -75,7 +75,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config@npm:^0.26.0":
+"@antfu/eslint-config@npm:^0.26.1":
   version: 0.26.1
   resolution: "@antfu/eslint-config@npm:0.26.1"
   dependencies:
@@ -1885,7 +1885,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^18.6.4":
+"@types/node@npm:*":
   version: 18.6.5
   resolution: "@types/node@npm:18.6.5"
   checksum: e3e66c9a84b94010a57c1b9dac882c08484278d74f9d120dbe6a3e45d00740d178bd1d34a5deee28197c94b9f4359153b637bab9b305328e865027e9987a0f3d
@@ -1896,6 +1896,13 @@ __metadata:
   version: 10.17.60
   resolution: "@types/node@npm:10.17.60"
   checksum: 2cdb3a77d071ba8513e5e8306fa64bf50e3c3302390feeaeff1fd325dd25c8441369715dfc8e3701011a72fed5958c7dfa94eb9239a81b3c286caa4d97db6eef
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.7.1":
+  version: 18.7.1
+  resolution: "@types/node@npm:18.7.1"
+  checksum: f1e2b701b107f97be01da4c46845cd23bcdcb2865f9abbb2847546d09587e726ea207daca6f0d1e72196875ef8c62feeeff5f1c1f2070445acd6d1a61d815c7c
   languageName: node
   linkType: hard
 
@@ -1957,7 +1964,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.22.0, @typescript-eslint/eslint-plugin@npm:^5.32.0":
+"@typescript-eslint/eslint-plugin@npm:^5.32.0, @typescript-eslint/eslint-plugin@npm:^5.33.0":
   version: 5.33.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.33.0"
   dependencies:
@@ -1980,7 +1987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.22.0, @typescript-eslint/parser@npm:^5.32.0":
+"@typescript-eslint/parser@npm:^5.32.0, @typescript-eslint/parser@npm:^5.33.0":
   version: 5.33.0
   resolution: "@typescript-eslint/parser@npm:5.33.0"
   dependencies:
@@ -2215,7 +2222,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/head@npm:^0.7.6":
+"@vueuse/head@npm:^0.7.9":
   version: 0.7.9
   resolution: "@vueuse/head@npm:0.7.9"
   peerDependencies:
@@ -2424,22 +2431,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ansidev-blog@workspace:."
   dependencies:
-    "@antfu/eslint-config": ^0.26.0
+    "@antfu/eslint-config": ^0.26.1
     "@iconify/vue": ^3.2.1
     "@intlify/vite-plugin-vue-i18n": ^6.0.1
     "@tailwindcss/forms": ^0.5.2
     "@tailwindcss/typography": ^0.5.4
     "@types/github-slugger": ^1.3.0
-    "@types/node": ^18.6.4
+    "@types/node": ^18.7.1
     "@types/nprogress": ^0.2.0
-    "@typescript-eslint/eslint-plugin": ^5.22.0
-    "@typescript-eslint/parser": ^5.22.0
+    "@typescript-eslint/eslint-plugin": ^5.33.0
+    "@typescript-eslint/parser": ^5.33.0
     "@vitejs/plugin-vue": ^2.3.2
     "@vueuse/core": ^9.1.0
-    "@vueuse/head": ^0.7.6
-    autoprefixer: ^10.4.7
+    "@vueuse/head": ^0.7.9
+    autoprefixer: ^10.4.8
     cross-env: ^7.0.3
-    eslint: ^8.14.0
+    eslint: ^8.21.0
     eslint-config-prettier: ^8.5.0
     feed: ^4.2.2
     github-slugger: ^1.4.0
@@ -2452,24 +2459,24 @@ __metadata:
     nprogress: ^0.2.0
     postcss: ^8.4.16
     postcss-nested: ^5.0.6
-    prettier: ^2.6.2
-    prism-theme-vars: ^0.2.2
+    prettier: ^2.7.1
+    prism-theme-vars: ^0.2.4
     sass: ^1.54.4
     tailwindcss: ^3.1.8
-    ts-node: ^10.7.0
-    typescript: ^4.6.4
-    unplugin-vue-components: ^0.22.3
+    ts-node: ^10.9.1
+    typescript: ^4.7.4
+    unplugin-vue-components: ^0.22.4
     vite: ^2.9.8
     vite-plugin-fonts: ^0.6.0
     vite-plugin-md: ^0.20.2
     vite-plugin-pages: ^0.25.0
     vite-plugin-pwa: ^0.12.3
     vite-plugin-vue-layouts: ^0.7.0
-    vite-ssg: ^0.20.0
-    vue: ^3.2.33
+    vite-ssg: ^0.20.2
+    vue: ^3.2.37
     vue-gtag: ^2.0.1
     vue-i18n: ^9.2.2
-    vue-router: ^4.0.15
+    vue-router: ^4.1.3
   languageName: unknown
   linkType: soft
 
@@ -2609,7 +2616,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.7":
+"autoprefixer@npm:^10.4.8":
   version: 10.4.8
   resolution: "autoprefixer@npm:10.4.8"
   dependencies:
@@ -4116,7 +4123,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.14.0":
+"eslint@npm:^8.21.0":
   version: 8.21.0
   resolution: "eslint@npm:8.21.0"
   dependencies:
@@ -6689,7 +6696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.6.2, prettier@npm:^2.7.1":
+"prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
   bin:
@@ -6712,7 +6719,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-theme-vars@npm:^0.2.2":
+"prism-theme-vars@npm:^0.2.4":
   version: 0.2.4
   resolution: "prism-theme-vars@npm:0.2.4"
   checksum: a98e9da1e335530c5ec864788d7aa317ca2ac2f8376af5cf56fd1f146b8302f556ece4bcca135215194d8b7a11379bdf7367d9fb8ba5119b536c4caeff8f108c
@@ -7755,7 +7762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.7.0":
+"ts-node@npm:^10.9.1":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"
   dependencies:
@@ -7890,7 +7897,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.6.4":
+"typescript@npm:^4.7.4":
   version: 4.7.4
   resolution: "typescript@npm:4.7.4"
   bin:
@@ -7900,7 +7907,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
   resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"
   bin:
@@ -8019,7 +8026,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin-vue-components@npm:^0.22.3":
+"unplugin-vue-components@npm:^0.22.4":
   version: 0.22.4
   resolution: "unplugin-vue-components@npm:0.22.4"
   dependencies:
@@ -8220,7 +8227,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-ssg@npm:^0.20.0":
+"vite-ssg@npm:^0.20.2":
   version: 0.20.2
   resolution: "vite-ssg@npm:0.20.2"
   dependencies:
@@ -8403,7 +8410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-router@npm:^4.0.15":
+"vue-router@npm:^4.1.3":
   version: 4.1.3
   resolution: "vue-router@npm:4.1.3"
   dependencies:
@@ -8414,7 +8421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.2.33":
+"vue@npm:^3.2.37":
   version: 3.2.37
   resolution: "vue@npm:3.2.37"
   dependencies:
