@@ -29,8 +29,9 @@
           class="px-12 py-4"
         >
           <Link
-            :href="hnItem.href"
             class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+            :href="hnItem.href"
+            :disable-router-link="hnItem.disableRouterLink"
             @click="onToggleMobileMenu"
           >
             {{ hnItem.title }}
