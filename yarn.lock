@@ -2437,7 +2437,7 @@ __metadata:
     "@vitejs/plugin-vue": ^2.3.2
     "@vueuse/core": ^9.1.0
     "@vueuse/head": ^0.7.9
-    autoprefixer: ^10.4.7
+    autoprefixer: ^10.4.8
     cross-env: ^7.0.3
     eslint: ^8.14.0
     eslint-config-prettier: ^8.5.0
@@ -2609,7 +2609,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.7":
+"autoprefixer@npm:^10.4.8":
   version: 10.4.8
   resolution: "autoprefixer@npm:10.4.8"
   dependencies:
