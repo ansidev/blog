@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.1.0",
-    "@vueuse/head": "^0.7.6",
+    "@vueuse/head": "^0.7.9",
     "github-slugger": "^1.4.0",
     "medium-zoom": "^1.0.6",
     "nanoid": "^4.0.0",

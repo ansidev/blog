@@ -2215,7 +2215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/head@npm:^0.7.6":
+"@vueuse/head@npm:^0.7.9":
   version: 0.7.9
   resolution: "@vueuse/head@npm:0.7.9"
   peerDependencies:
@@ -2436,7 +2436,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.22.0
     "@vitejs/plugin-vue": ^2.3.2
     "@vueuse/core": ^9.1.0
-    "@vueuse/head": ^0.7.6
+    "@vueuse/head": ^0.7.9
     autoprefixer: ^10.4.7
     cross-env: ^7.0.3
     eslint: ^8.14.0
