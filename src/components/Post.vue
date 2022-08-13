@@ -79,7 +79,6 @@
 import { computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import siteConfig from '~/site.config'
 import { isPluginEnabled, getProjectBadgeStyle } from '~/helpers'
 
 export default defineComponent({
@@ -95,10 +94,9 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     const route = useRoute()
-    console.log(route.path)
 
     const postTitle = route.meta.title
-    const postURL = computed(() => `${siteConfig.baseURL}${route.path}`)
+    const postURL = computed(() => `${import.meta.env.VITE_BASE_URL}${route.path}`)
 
     const isProjectDetailPage = computed(() => route.path.startsWith('/projects/'))
     const isSharingPluginEnabled = computed(() => isPluginEnabled('sharing'))
