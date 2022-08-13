@@ -3,7 +3,7 @@ const path = require('path')
 const { Feed } = require('feed')
 const matter = require('gray-matter')
 
-const baseURL = 'https://ansidev.xyz'
+const baseURL = process.env.VITE_BASE_URL
 
 const feed = new Feed({
   title: 'ansidev\'s blog',
