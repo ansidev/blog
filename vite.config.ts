@@ -11,6 +11,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Anchor from 'markdown-it-anchor'
 import Prism from 'markdown-it-prism'
+import generateSitemap from 'vite-ssg-sitemap'
 import { getPostMeta } from './src/helpers/post'
 import siteConfig from './src/site.config'
 
@@ -72,7 +73,13 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['feed.rss', 'favicon.ico', 'safari-pinned-tab.svg'],
+      includeAssets: [
+        'sitemap.xml',
+        'robots.txt',
+        'feed.rss',
+        'favicon.ico',
+        'safari-pinned-tab.svg'
+      ],
       manifest: {
         name: siteConfig.title,
         short_name: siteConfig.title,
@@ -118,6 +125,7 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
+    onFinished() { generateSitemap() },
   },
 
   optimizeDeps: {

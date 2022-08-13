@@ -6,7 +6,7 @@
 
 [build]
   publish = "dist"
-  command = "touch public/feed.rss && yarn run build"
+  command = "touch public/{sitemap.xml,robots.txt,feed.rss} && yarn run build"
 
 [[redirects]]
   from = "/*"
