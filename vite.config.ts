@@ -9,8 +9,8 @@ import { VitePluginFonts } from 'vite-plugin-fonts'
 import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import Anchor from 'markdown-it-anchor'
-import Prism from 'markdown-it-prism'
+import LinkAttributes from 'markdown-it-link-attributes'
+import Shiki from 'markdown-it-shiki'
 import generateSitemap from 'vite-ssg-sitemap'
 import { getPostMeta } from './src/helpers/post'
 import siteConfig from './src/site.config'
@@ -53,9 +53,20 @@ export default defineConfig(({ mode }) => {
         wrapperClasses: 'theme-ansidev-content',
         headEnabled: true,
         markdownItSetup(md) {
-          md.use(Anchor)
           // https://prismjs.com/
-          md.use(Prism)
+          md.use(Shiki, {
+            theme: {
+              light: 'min-light',
+              dark: 'min-dark',
+            },
+          })
+          md.use(LinkAttributes, {
+            matcher: (link: string) => /^https?:\/\//.test(link),
+            attrs: {
+              target: '_blank',
+              rel: 'noopener',
+            },
+          })
         },
         wrapperComponent: 'Post',
       }),
