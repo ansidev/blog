@@ -3,6 +3,7 @@
   NPM_FLAGS = "--version"
   NODE_VERSION = "16"
   YARN_VERSION = "3.2.2"
+  VITE_BASE_URL = "https://ansidev.xyz"
 
 [build]
   publish = "dist"
@@ -11,11 +12,6 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/feed.rss"
-  to = "/feed.rss"
   status = 200
 
 [[headers]]

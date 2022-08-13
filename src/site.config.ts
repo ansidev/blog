@@ -1,5 +1,7 @@
+export const baseURL = process.env.VITE_BASE_URL
+
 export default {
-  baseURL: 'https://ansidev.xyz',
+  baseURL,
   title: 'ansidev\'s blog',
   author: 'ansidev',
   description: 'Blog of ansidev',
