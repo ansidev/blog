@@ -95,7 +95,6 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     const route = useRoute()
-    console.log(route.path)
 
     const postTitle = route.meta.title
     const postURL = computed(() => `${siteConfig.baseURL}${route.path}`)
