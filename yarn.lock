@@ -2473,6 +2473,7 @@ __metadata:
     vite-plugin-pwa: ^0.12.3
     vite-plugin-vue-layouts: ^0.7.0
     vite-ssg: ^0.20.2
+    vite-ssg-sitemap: ^0.3.2
     vue: ^3.2.37
     vue-gtag: ^2.0.1
     vue-i18n: ^9.2.2
@@ -8238,6 +8239,13 @@ __metadata:
     vue: ^2.6.12 || ^3.2.4
     vue-router: ^3.5.1 || ^ 4.0.11
   checksum: 78f1622a170693348271e5f200de0a505a916b878c47e43b30c2734f946bf289d743bd707687a1b04abdf2a756ccb1985401a1932afb979c621ce327cb7f6749
+  languageName: node
+  linkType: hard
+
+"vite-ssg-sitemap@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "vite-ssg-sitemap@npm:0.3.2"
+  checksum: 9f020f6a0679f4d82dc1657037a4a3b099f0623b51d136b65710eee06aac11a33e7a8900eac70335c65ded8b2fbd9951444ff857606f3d61f50313d5fd6b153a
   languageName: node
   linkType: hard
 
