@@ -94,7 +94,9 @@ export default defineConfig(({ mode }) => {
           'robots.txt',
           'feed.rss',
           'favicon.ico',
-          'safari-pinned-tab.svg'
+          'safari-pinned-tab.svg',
+          'imgs/*.*',
+          'uploads/**/*.*',
         ],
         manifest: {
           name: siteConfig.title,
