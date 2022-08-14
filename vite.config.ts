@@ -148,7 +148,21 @@ export default defineConfig(({ mode }) => {
                   statuses: [0, 200]
                 },
               }
-            }
+            },
+            {
+              urlPattern: /^https:\/\/gravatar\.com\/avatar\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'gravatar-avatar-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
           ]
         }
       }),
