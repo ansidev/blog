@@ -26,7 +26,7 @@ The problem is the output JSON config is not formatted, that's hard to debug the
 
 As a developer, I want the configuration will be formatted or minified (production environment), so our team can debug if there is any problem.
 
-I searched on the internet but there is no command line application that I can use in out GitHub workflows. So I decided to built it.
+I searched on the internet but there is no command line Go CLI application that I can use in our GitHub workflows. So I decided to built it.
 
 ## Technologies
 
