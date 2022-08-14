@@ -6,7 +6,7 @@ author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
 permalink: /docker/how-to-change-character-set-and-collation-setting-mariadb-mysql-docker
-featuredImage: /uploads/2019/09/docker.png
+featuredImage: /uploads/2019/09/docker.webp
 categories:
   - Programming
   - Docker
