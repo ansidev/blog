@@ -6,7 +6,7 @@ author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
 permalink: /java/coding-notes-001/
-featuredImage: /uploads/2019/09/java.png
+featuredImage: /uploads/2019/09/java.webp
 categories:
   - Programming
   - Java

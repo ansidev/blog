@@ -40,6 +40,6 @@ Sau khi search trên Google thì mình tổng hợp được một số tool h�
 
 Dưới đây là hình demo:
 
-<img class="medium-zoom" src="/uploads/2021/02/06/alacritty-themes.png" alt="alacritty-themes" />
+<img class="medium-zoom" src="/uploads/2021/02/06/alacritty-themes.webp" alt="alacritty-themes" />
 
 Hết bài rồi!
