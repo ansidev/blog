@@ -12,8 +12,7 @@ tags:
   - good code
 ---
 
-"Good code is written so that is readable, understandable, covered by automated tests, not over complicated and does well what is intended to do."
----
+> Good code is written so that is readable, understandable, covered by automated tests, not over complicated and does well what is intended to do.
 
 What do you feel makes code good?
 

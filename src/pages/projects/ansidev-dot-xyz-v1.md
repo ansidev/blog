@@ -18,7 +18,8 @@ twitter: "@ansidev"
 ---
 
 My personal blog (version 1).
----
+
+<!-- more -->
 
 ## Latest news
 

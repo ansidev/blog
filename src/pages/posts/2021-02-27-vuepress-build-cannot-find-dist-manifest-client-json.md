@@ -14,7 +14,7 @@ tags:
   - client
 ---
 
-# Vấn đề
+## Vấn đề
 
 Khi chạy lệnh `vuepress build` thì quá trình build bị lỗi sau:
 
@@ -22,7 +22,7 @@ Khi chạy lệnh `vuepress build` thì quá trình build bị lỗi sau:
 Error: Cannot find module 'dist/manifest/client.json'
 ```
 
-# Giải pháp
+## Giải pháp
 
 Set biến môi trường `NODE_ENV`=`production`
 

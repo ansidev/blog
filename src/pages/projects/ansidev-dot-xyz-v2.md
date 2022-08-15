@@ -21,7 +21,8 @@ twitter: "@ansidev"
 ---
 
 My personal blog (version 2).
----
+
+<!-- more -->
 
 ## Story
 

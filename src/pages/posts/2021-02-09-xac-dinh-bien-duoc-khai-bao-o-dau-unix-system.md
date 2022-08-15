@@ -14,12 +14,12 @@ tags:
   - unix
 ---
 
-# Vấn đề
+## Vấn đề
 
 Mình có sử dụng một số plugin trong shell hiện tại, các plugin sẽ khai báo một số custom command, environment variable,  ... nên đôi khi sẽ override các setting riêng của mình.
 Mình cần xác định một custom command, environment variable,  ... được khai báo bởi plugin nào để disable.
 
-# Giải pháp
+## Giải pháp
 
 Tùy thuộc vào shell bạn đang sử dụng mà sẽ có cách khác nhau. Trong phạm vi bài viết, mình chỉ hướng dẫn cho hai shell phổ biến nhất là `bash` và `zsh`.
 

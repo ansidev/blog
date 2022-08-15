@@ -13,8 +13,6 @@ categories:
 tags:
   - notes
 ---
-# Long time no see, Java!
-
 It has been 2 years since I came back to Java programming and there are many changes!
 
 After 2 weeks, there are many notes I want to share with you:

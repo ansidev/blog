@@ -15,8 +15,6 @@ tags:
   - shopee
   - mua hàng online
 ---
-# Chuyện thanh toán bằng AirPay
-
 ## Ngọn nguồn câu chuyện
 
 Chuyện là mình có 2 số điện thoại:
