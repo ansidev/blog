@@ -2508,7 +2508,6 @@ __metadata:
     postcss: ^8.4.16
     postcss-nested: ^5.0.6
     prettier: ^2.7.1
-    prism-theme-vars: ^0.2.4
     sass: ^1.54.4
     shiki: ^0.11.1
     tailwindcss: ^3.1.8
@@ -6822,13 +6821,6 @@ __metadata:
   version: 6.0.0
   resolution: "pretty-bytes@npm:6.0.0"
   checksum: 0bb9f95e617236404b29a8392c6efd82d65805f622f5e809ecd70068102be857d4e3276c86d2a32fa2ef851cc29472e380945dab7bec83ec79bd57a19a10faf7
-  languageName: node
-  linkType: hard
-
-"prism-theme-vars@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "prism-theme-vars@npm:0.2.4"
-  checksum: a98e9da1e335530c5ec864788d7aa317ca2ac2f8376af5cf56fd1f146b8302f556ece4bcca135215194d8b7a11379bdf7367d9fb8ba5119b536c4caeff8f108c
   languageName: node
   linkType: hard
 
