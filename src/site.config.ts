@@ -2,6 +2,7 @@ export default {
   title: 'ansidev\'s blog',
   author: 'ansidev',
   description: 'Blog of ansidev',
+  defaultMetaImage: 'imgs/default_meta_image.jpg',
   headerNavigationItems: [
     { href: '/blog', title: 'Blog' },
     { href: '/categories', title: 'Categories' },
