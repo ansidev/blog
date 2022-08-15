@@ -16,7 +16,7 @@
         >
           <Author :frontmatter="frontmatter" />
           <div class="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-            <div class="pt-10 pb-8 prose dark:prose-dark max-w-none">
+            <div class="pb-8 prose dark:prose-dark max-w-none">
               <slot />
             </div>
             <div id="eop"></div>
