@@ -10,7 +10,7 @@ import siteConfig from '~/site.config'
         <div class="mr-3">
           <Logo />
         </div>
-        <div class="hidden h-6 text-2xl font-semibold sm:block">
+        <div class="hidden sm:block md:hidden lg:block h-6 text-2xl font-semibold">
           {{ siteConfig.title }}
         </div>
       </div>
