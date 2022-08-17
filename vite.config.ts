@@ -7,6 +7,8 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import { VitePluginFonts } from 'vite-plugin-fonts'
 import Markdown from 'vite-plugin-md'
+import link from '@yankeeinlondon/link-builder'
+import meta from '@yankeeinlondon/meta-builder'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import LinkAttributes from 'markdown-it-link-attributes'
@@ -52,6 +54,7 @@ export default defineConfig(({ mode }) => {
       Markdown({
         wrapperClasses: 'theme-ansidev-content',
         headEnabled: true,
+        builders: [link(), meta()],
         markdownItSetup(md) {
           // https://prismjs.com/
           md.use(Shiki, {
