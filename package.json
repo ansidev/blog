@@ -62,17 +62,5 @@
     "vite-ssg": "^0.20.2",
     "vite-ssg-sitemap": "^0.3.2"
   },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:vue/vue3-recommended",
-      "prettier"
-    ],
-    "rules": {
-      "curly": "off",
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "off"
-    }
-  },
   "packageManager": "yarn@3.2.2"
 }
