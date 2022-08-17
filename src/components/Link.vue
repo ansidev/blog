@@ -1,3 +1,21 @@
+<script setup lang="ts">
+const props = defineProps({
+  href: {
+    type: String,
+    required: true,
+    default: '#',
+  },
+  disableRouterLink: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+})
+
+const isInternalLink = props.href && props.href.startsWith('/') && !props.disableRouterLink
+const isAnchorLink = props.href && props.href.startsWith('#')
+</script>
+
 <template>
   <router-link v-if="isInternalLink || isAnchorLink" :to="href" v-bind="$attrs">
     <slot />
@@ -9,28 +27,3 @@
     <slot />
   </a>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  props: {
-    href: {
-      type: String,
-      required: true,
-      default: '#',
-    },
-    disableRouterLink: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
-  },
-  setup(props) {
-    const isInternalLink = props.href && props.href.startsWith('/') && !props.disableRouterLink
-    const isAnchorLink = props.href && props.href.startsWith('#')
-
-    return { isInternalLink, isAnchorLink }
-  },
-})
-</script>

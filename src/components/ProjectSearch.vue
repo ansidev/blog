@@ -1,7 +1,3 @@
-<template>
-  <Search class="mx-auto" :value="searchValue" :placeholder="t('search_projects')" @change="onChangeSearchValue" />
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -20,3 +16,7 @@ export default defineComponent({
   },
 })
 </script>
+
+<template>
+  <Search class="mx-auto" :value="searchValue" :placeholder="t('search_projects')" @change="onChangeSearchValue" />
+</template>

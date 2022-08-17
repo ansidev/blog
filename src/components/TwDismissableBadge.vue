@@ -1,38 +1,3 @@
-<template>
-  <span
-    :id="computedId"
-    :class="[
-      `bg-${backgroundColor}`,
-      `dark:bg-${darkBackgroundColor}`,
-      `text-${textColor}`,
-      `dark:text-${darkTextColor}`,
-      `text-${fontSize}`,
-      `font-${fontWeight}`,
-      rounded ? 'rounded' : '',
-      'inline-flex items-center py-1 px-2'
-    ]"
-  >
-    <slot />
-    <button
-      type="button"
-      :class="[
-        'bg-transparent',
-        `hover:bg-${buttonHoverBackgroundColor}`,
-        `dark:hover:bg-${buttonDarkHoverBackgroundColor}`,
-        `text-${fontSize}`,
-        rounded ? 'rounded' : '',
-        'inline-flex items-center p-0.5 ml-2'
-      ]"
-      :data-dismiss-target="`#${computedId}`"
-      :aria-label="t('button.remove')"
-      @click="remove"
-    >
-      <Icon icon="bi:x" :class="`text-${textColor} dark:text-${darkTextColor}`" />
-      <span class="sr-only">{{ t('button.remove') }}</span>
-    </button>
-  </span>
-</template>
-
 <script lang="ts">
 import { nanoid } from 'nanoid'
 import { defineComponent, toRef } from 'vue'
@@ -107,6 +72,40 @@ export default defineComponent({
     const remove = (e: Event) => emit('removed', e)
 
     return { t, computedId, remove }
-  }
+  },
 })
 </script>
+
+<template>
+  <span
+    :id="computedId"
+    class="inline-flex items-center py-1 px-2"
+    :class="[
+      `bg-${backgroundColor}`,
+      `dark:bg-${darkBackgroundColor}`,
+      `text-${textColor}`,
+      `dark:text-${darkTextColor}`,
+      `text-${fontSize}`,
+      `font-${fontWeight}`,
+      rounded ? 'rounded' : '',
+    ]"
+  >
+    <slot />
+    <button
+      type="button"
+      class="bg-transparent inline-flex items-center p-0.5 ml-2"
+      :class="[
+        `hover:bg-${buttonHoverBackgroundColor}`,
+        `dark:hover:bg-${buttonDarkHoverBackgroundColor}`,
+        `text-${fontSize}`,
+        rounded ? 'rounded' : '',
+      ]"
+      :data-dismiss-target="`#${computedId}`"
+      :aria-label="t('button.remove')"
+      @click="remove"
+    >
+      <Icon icon="bi:x" :class="`text-${textColor} dark:text-${darkTextColor}`" />
+      <span class="sr-only">{{ t('button.remove') }}</span>
+    </button>
+  </span>
+</template>

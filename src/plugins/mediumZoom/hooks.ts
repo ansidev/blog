@@ -15,8 +15,7 @@ export const mediumZoomSymbol: InjectionKey<Zoom> = Symbol('mediumZoom')
  */
 export const useMediumZoom = (): Zoom => {
   const zoom = inject(mediumZoomSymbol)
-  if (!zoom) {
+  if (!zoom)
     throw new Error('useMediumZoom() is called without provider.')
-  }
   return zoom
 }

@@ -19,7 +19,7 @@ export const getPostMeta = (file: string) => {
     licenseUrl: undefined,
     license: undefined,
     techs: undefined,
-    developmentStatus: undefined
+    developmentStatus: undefined,
   }
 
   if (data.type === 'project') {

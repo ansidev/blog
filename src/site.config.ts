@@ -21,7 +21,7 @@ export default {
   },
   plugins: {
     googleAnalytics: {
-      id: 'G-LQSQ92N2Q4'
+      id: 'G-LQSQ92N2Q4',
     },
     sharing: true,
     facebookComment: {
@@ -31,7 +31,7 @@ export default {
         nonce: '41HjKhHD',
         lang: 'vi_VN',
       },
-      autoload: false
+      autoload: false,
     },
     mediumZoom: {
       selector: '.medium-zoom',
@@ -40,7 +40,7 @@ export default {
       username: 'ansidev',
       width: 400,
       height: 200,
-      background: 'auto'
-    }
-  }
+      background: 'auto',
+    },
+  },
 }
