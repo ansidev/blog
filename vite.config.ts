@@ -72,6 +72,7 @@ export default defineConfig(({ mode }) => {
           })
         },
         wrapperComponent: 'Post',
+        excerpt: '<!-- more -->',
       }),
 
       // https://github.com/antfu/unplugin-vue-components

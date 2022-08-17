@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 export const getPostMeta = (file: string) => {
   const postDir = path.resolve(__dirname, '../../')
   const src = fs.readFileSync(path.join(postDir, file), 'utf-8')
-  const { data, excerpt } = matter(src, { excerpt: true })
+  const { data, excerpt } = matter(src, { excerpt: true, excerpt_separator: '<!-- more -->' })
   const post = {
     title: data.title,
     path: `${file.replace(/^\/src\/pages/, '').replace(/\.md$/, '')}`,
