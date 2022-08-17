@@ -13,7 +13,7 @@ export const getPostMeta = (file: string) => {
     type: data.type,
     categories: data.categories,
     tags: data.tags,
-    excerpt,
+    excerpt: excerpt?.replace(/[\r\n]/gm, ''),
     repositoryUrl: undefined,
     showcaseUrl: undefined,
     licenseUrl: undefined,
