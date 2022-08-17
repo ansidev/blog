@@ -1,3 +1,7 @@
+.prose h2:first-child {
+  margin-top: 0;
+}
+
 .prose pre:not(.shiki) {
   padding: 0;
 }

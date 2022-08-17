@@ -1,5 +1,25 @@
+<script setup lang="ts">
+import type { PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
+import type { MdFrontmatter } from '~/types'
+
+defineProps({
+  /**
+   * Frontmatter
+   *
+   * @type { MdFrontmatter }
+   */
+  frontmatter: {
+    type: Object as PropType<MdFrontmatter>,
+    default: () => {},
+  },
+})
+
+const { t } = useI18n()
+</script>
+
 <template>
-  <dl class="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
+  <dl class="pb-6 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
     <dt class="sr-only">
       {{ t('authors') }}
     </dt>
@@ -26,7 +46,7 @@
               <a
                 :href="`https://twitter.com/${frontmatter.twitter}`"
                 target="_blank"
-                rel="noopnener noreferrer"
+                rel="noopener noreferrer"
                 class="link"
               >{{ frontmatter.twitter }}</a>
             </dd>
@@ -36,24 +56,3 @@
     </dd>
   </dl>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
-
-export default defineComponent({
-  props: {
-    /**
-     * Frontmatter
-     * { Object }
-     */
-    frontmatter: { type: Object, default: () => { } },
-  },
-
-  setup() {
-    const { t } = useI18n()
-
-    return { t }
-  },
-})
-</script>

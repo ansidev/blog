@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     MobileMenu: typeof import('./src/components/MobileMenu.vue')['default']
     PageBreadcrumb: typeof import('./src/components/PageBreadcrumb.vue')['default']
     PageBreadcrumbItem: typeof import('./src/components/PageBreadcrumbItem.vue')['default']
+    PageSubtitle: typeof import('./src/components/PageSubtitle.vue')['default']
     PageTitle: typeof import('./src/components/PageTitle.vue')['default']
     Post: typeof import('./src/components/Post.vue')['default']
     PostItem: typeof import('./src/components/PostItem.vue')['default']
@@ -34,6 +35,8 @@ declare module '@vue/runtime-core' {
     Tag: typeof import('./src/components/Tag.vue')['default']
     Technology: typeof import('./src/components/Technology.vue')['default']
     ThemeSwitcher: typeof import('./src/components/ThemeSwitcher.vue')['default']
+    Toc: typeof import('./src/components/Toc.vue')['default']
+    TocItem: typeof import('./src/components/TocItem.vue')['default']
     TwBadge: typeof import('./src/components/TwBadge.vue')['default']
     TwDismissableBadge: typeof import('./src/components/TwDismissableBadge.vue')['default']
   }
