@@ -16,6 +16,8 @@ declare module '@vue/runtime-core' {
     LocaleSwitcher: typeof import('./src/components/LocaleSwitcher.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
     MobileMenu: typeof import('./src/components/MobileMenu.vue')['default']
+    PageBreadcrumb: typeof import('./src/components/PageBreadcrumb.vue')['default']
+    PageBreadcrumbItem: typeof import('./src/components/PageBreadcrumbItem.vue')['default']
     PageTitle: typeof import('./src/components/PageTitle.vue')['default']
     Post: typeof import('./src/components/Post.vue')['default']
     PostItem: typeof import('./src/components/PostItem.vue')['default']
