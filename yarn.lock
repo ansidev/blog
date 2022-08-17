@@ -2294,7 +2294,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yankeeinlondon/builder-api@npm:*":
+"@yankeeinlondon/builder-api@npm:*, @yankeeinlondon/builder-api@npm:^0.4.1":
   version: 0.4.1
   resolution: "@yankeeinlondon/builder-api@npm:0.4.1"
   dependencies:
@@ -2316,6 +2316,31 @@ __metadata:
   peerDependencies:
     happy-dom: ^6.0.4
   checksum: 5832961d9d6465d846b3349ef0f6de0595b5b5c6c286f8532fe91a76f37af63fafc403e6bd7fc679c7d3822b50eea2b8ad7c7513c1c95c56ea33444c7f4c71b2
+  languageName: node
+  linkType: hard
+
+"@yankeeinlondon/link-builder@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@yankeeinlondon/link-builder@npm:1.0.5"
+  dependencies:
+    "@yankeeinlondon/builder-api": ^0.4.1
+    "@yankeeinlondon/happy-wrapper": ^2.5.0
+    pathe: ^0.3.2
+  peerDependencies:
+    markdown-it: ">=13"
+  checksum: bd068d995703413f9e8339a8514484be2924bc22afb529df63a4f52a7341f54e1a8dc0c2efd373cbe5b0b568d6b504754082f315b91c43359b1e752eacef93cf
+  languageName: node
+  linkType: hard
+
+"@yankeeinlondon/meta-builder@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@yankeeinlondon/meta-builder@npm:1.0.6"
+  dependencies:
+    "@yankeeinlondon/builder-api": ^0.4.1
+  peerDependencies:
+    "@rollup/pluginutils": ^4.2.1
+    inferred-types: ^0.22.0
+  checksum: f30604ad4baaeb7d809d7102c0785b7ed5089626fa3c1130ce97abe7950e08eb5e1086cb5ecf11dfae9f932f88862b4a2369eeb5fcbd4850990ae52cc6c7c856
   languageName: node
   linkType: hard
 
@@ -2492,6 +2517,8 @@ __metadata:
     "@vitejs/plugin-vue": ^2.3.4
     "@vueuse/core": ^9.1.0
     "@vueuse/head": ^0.7.9
+    "@yankeeinlondon/link-builder": ^1.0.5
+    "@yankeeinlondon/meta-builder": ^1.0.6
     autoprefixer: ^10.4.8
     cross-env: ^7.0.3
     eslint: ^8.21.0
@@ -6668,6 +6695,13 @@ __metadata:
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
   checksum: 5b1e2daa247062061325b8fdbfd1fb56dde0a448fb1455453276ea18c60685bdad23a445dc148cf87bc216be1573357509b7d4060494a6fd768c7efad833ee45
+  languageName: node
+  linkType: hard
+
+"pathe@npm:^0.3.2":
+  version: 0.3.4
+  resolution: "pathe@npm:0.3.4"
+  checksum: 4ebed2a60e5b7e88b2752137606e228570af2f0e06d5964c92f0b47ada3523842a1c73feb9976a054a47b96789a62ab861fb3b8170e5f80c83b4625e1d42c2d7
   languageName: node
   linkType: hard
 
