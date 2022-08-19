@@ -26,7 +26,7 @@ const handleScroll = () => {
   const e: HTMLElement = tocContent?.value
   const offsetTop = tocAnchor?.value?.offsetTop - 24
 
-  if (window.scrollY > offsetTop) {
+  if (typeof window !== 'undefined' && window.scrollY > offsetTop) {
     e.classList.add('fixed')
     e.style.top = '1.5rem'
   }
@@ -36,10 +36,14 @@ const handleScroll = () => {
   }
 }
 
-window.addEventListener('scroll', handleScroll)
+if (typeof window !== 'undefined') {
+  window.addEventListener('scroll', handleScroll)
+}
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('scroll', handleScroll)
+  }
 })
 </script>
 

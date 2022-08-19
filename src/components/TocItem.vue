@@ -59,9 +59,11 @@ export default defineComponent({
     const headingOffsetCssClass = computed(() => headingCssClassMap[props.level])
 
     watchEffect(() => {
-      const el = document.getElementById(props.slug)
-      if (isActive.value && el) {
-        el.scrollIntoView({ behavior: 'smooth' })
+      if (typeof document !== 'undefined') {
+        const el = document.getElementById(props.slug)
+        if (isActive.value && el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
       }
     })
 
