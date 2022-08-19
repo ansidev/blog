@@ -45,7 +45,7 @@ onUnmounted(() => {
 
 <template>
   <!-- Ported from Nextra Docs Theme with customizations -->
-  <div class="site-toc order-last hidden w-64 flex-shrink-0 px-4 text-sm xl:block">
+  <div class="site-toc order-last hidden flex-shrink-0 px-4 text-sm xl:block">
     <div ref="tocAnchor" class="h-0 m-0 p-0" />
     <div
       ref="tocContent"
