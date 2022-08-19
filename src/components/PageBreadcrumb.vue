@@ -23,9 +23,9 @@ const { t } = useI18n()
   <nav class="hidden md:flex mb-10" aria-label="Breadcrumb">
     <ol class="inline-flex items-center space-x-1 md:space-x-3">
       <li class="inline-flex items-center">
-        <a href="#" class="inline-flex items-center text-normal font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+        <Link href="/" class="inline-flex items-center text-normal font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
           <Icon icon="bi:house-heart-fill" />&nbsp;{{ t('home') }}
-        </a>
+        </Link>
       </li>
       <li v-for="item in items" :key="item.text" :aria-current="item.active ? 'page' : undefined">
         <PageBreadcrumbItem v-bind="{ path: item.path, active: item.active }">
