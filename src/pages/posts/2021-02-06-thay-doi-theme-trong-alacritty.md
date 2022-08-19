@@ -12,17 +12,19 @@ tags:
   - alacritty
   - switch theme
 ---
-Bài viết dành cho ai đang dùng phần mềm Alacritty và muốn thay đổi theme.
----
 
-# Tại sao mình dùng Alacritty?
+Bài viết dành cho ai đang dùng phần mềm Alacritty và muốn thay đổi theme.
+
+<!-- more -->
+
+## Tại sao mình dùng Alacritty?
 
 - Mình dùng macOS.
 - Mình không thích Terminal mặc định của macOS.
 - Mình đã từng thử qua iTerm, Hyper, Terminus nhưng thấy không thích :) .
 - Sau xem qua review và trải nghiệm Alacritty thì xài luôn tới giờ :) .
 
-# Cách chuyển đổi theme trong Alacritty
+## Cách chuyển đổi theme trong Alacritty
 
 Tất nhiên mặc định thì Alacritty đã hỗ trợ sẵn theme rồi, bạn có thể đọc documentation và custom theo ý bạn.
 

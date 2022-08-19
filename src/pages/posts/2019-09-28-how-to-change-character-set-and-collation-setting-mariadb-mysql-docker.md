@@ -17,8 +17,6 @@ tags:
   - character set
   - collation
 ---
-# How to change character set and collation setting MariaDB/MySQL Docker?
-
   ```shell
   FROM mariadb
 

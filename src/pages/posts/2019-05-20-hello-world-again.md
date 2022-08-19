@@ -12,7 +12,6 @@ tags:
   - thông báo
   - blog
 ---
-# Hello world again
 Now, the old site was accidentally deleted.
 
 So you are seeing a new ansidev.xyz.

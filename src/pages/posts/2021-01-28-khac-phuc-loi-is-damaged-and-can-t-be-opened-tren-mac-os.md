@@ -12,13 +12,13 @@ tags:
   - damaged
   - opened
 ---
-# Nguyên nhân
+## Nguyên nhân
 
 Do cơ chế xác thực ứng dụng của Apple, chỉ những ứng dụng được Apple xác thực mới có thể chạy bình thường.
 
-# Giải pháp
+## Giải pháp
 
-## Tắt GateKeeper
+### Tắt GateKeeper
 
 - Mở ứng dụng **Terminal**.
 - Chạy lệnh:
@@ -55,7 +55,7 @@ Kết quả trả về:
 `assessments disabled`: GateKeeper đang tắt.
 
 
-## Thêm ngoại lệ để cho phép ứng dụng chạy
+### Thêm ngoại lệ để cho phép ứng dụng chạy
 
 Trong một số trường hợp, dù đã tắt GateKeeper nhưng vẫn chưa khắc phục được thì bạn có thể thử cách này.
 
@@ -69,5 +69,3 @@ sudo xattr -rd com.apple.quarantine /Applications/AppName.app
 Note: Thay `/Applications/AppName.app` bằng đường dẫn đến app bạn cần thêm ngoại lệ.
 
 - Nhập mật khẩu và nhấn `Enter`.
-
-

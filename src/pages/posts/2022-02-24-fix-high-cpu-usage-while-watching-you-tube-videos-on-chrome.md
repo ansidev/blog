@@ -14,10 +14,10 @@ tags:
   - High CPU usage
 ---
 
-# Problem
+## Problem
 
 kernel_task takes up lots of CPU.
 
-# Solution
+## Solution
 
 If there was lot of dust accumulated near the side vents, may be it is the reason. You just need to clean your MacBook.

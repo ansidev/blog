@@ -15,11 +15,11 @@ tags:
   - mysql
 ---
 
-# Problem
+## Problem
 
 You want to look for tables using the name of columns in them.
 
-# Solution
+## Solution
 
 ```sql
 SELECT DISTINCT

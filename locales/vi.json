@@ -1,4 +1,7 @@
 {
+  "home": "Trang chủ",
+  "posts": "Bài viết",
+  "projects": "Dự án",
   "about_me": "Về tôi",
   "all_posts": "Tất cả bài viết",
   "my_projects": "Các dự án của tôi",
@@ -13,6 +16,7 @@
   "authors": "Người đăng",
   "back_to_home": "Quay lại trang chủ",
   "back_to_projects": "Quay lại danh sách dự án",
+  "table_of_contents": "Mục lục bài viết",
   "button": {
     "about": "Về tôi",
     "back": "Quay lại",
@@ -24,9 +28,6 @@
     "remove": "Xóa"
   },
   "categories": "Chủ đề",
-  "intro": {
-    "hi": "Hi, {name}!"
-  },
   "name": "Tên",
   "no_category": "Không có chủ đề nào.",
   "no_tag": "Không có thẻ nào.",

@@ -2,6 +2,7 @@ export default {
   title: 'ansidev\'s blog',
   author: 'ansidev',
   description: 'Blog of ansidev',
+  defaultMetaImage: 'imgs/default_meta_image.jpg',
   headerNavigationItems: [
     { href: '/blog', title: 'Blog' },
     { href: '/categories', title: 'Categories' },
@@ -21,7 +22,7 @@ export default {
   },
   plugins: {
     googleAnalytics: {
-      id: 'G-LQSQ92N2Q4'
+      id: 'G-LQSQ92N2Q4',
     },
     sharing: true,
     facebookComment: {
@@ -31,7 +32,7 @@ export default {
         nonce: '41HjKhHD',
         lang: 'vi_VN',
       },
-      autoload: false
+      autoload: false,
     },
     mediumZoom: {
       selector: '.medium-zoom',
@@ -40,7 +41,7 @@ export default {
       username: 'ansidev',
       width: 400,
       height: 200,
-      background: 'auto'
-    }
-  }
+      background: 'auto',
+    },
+  },
 }

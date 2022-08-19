@@ -15,11 +15,11 @@ tags:
   - index
 ---
 
-# Problem
+## Problem
 
 Applications don't show up in Spotlight search result.
 
-# Solution
+## Solution
 
 **Turn off spotlight**
 

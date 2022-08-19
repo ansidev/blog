@@ -14,7 +14,7 @@ tags:
   - migrating application strategy
 ---
 
-# Gartner 7R
+## Gartner 7R
 
 This is 7 steps you should practice if you want to modernize your legacy application, recommended by Gartner.
 

@@ -1,17 +1,23 @@
-import { defineConfig, loadEnv } from 'vite'
-import { resolve, dirname } from 'node:path'
+import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'url'
+import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import { VitePluginFonts } from 'vite-plugin-fonts'
 import Markdown from 'vite-plugin-md'
+import link from '@yankeeinlondon/link-builder'
+import meta from '@yankeeinlondon/meta-builder'
+// import toc from './src/builders/toc'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
+import Anchor from 'markdown-it-anchor'
 import generateSitemap from 'vite-ssg-sitemap'
+import frontmatterToc from './src/builders/frontmatter-toc'
+import excerpt from './src/builders/excerpt'
 import { getPostMeta } from './src/helpers/post'
 import siteConfig from './src/site.config'
 
@@ -52,23 +58,38 @@ export default defineConfig(({ mode }) => {
       Markdown({
         wrapperClasses: 'theme-ansidev-content',
         headEnabled: true,
-        markdownItSetup(md) {
-          // https://prismjs.com/
-          md.use(Shiki, {
-            theme: {
-              light: 'min-light',
-              dark: 'min-dark',
+        builders: [
+          excerpt(),
+          frontmatterToc(),
+          // toc(),
+          meta(),
+          link(),
+        ],
+        markdownItUses: [
+          [
+            Shiki,
+            {
+              theme: {
+                light: 'min-light',
+                dark: 'min-dark',
+              },
             },
-          })
-          md.use(LinkAttributes, {
-            matcher: (link: string) => /^https?:\/\//.test(link),
-            attrs: {
-              target: '_blank',
-              rel: 'noopener',
+          ],
+          [
+            LinkAttributes,
+            {
+              matcher: (link: string) => /^https?:\/\//.test(link),
+              attrs: {
+                target: '_blank',
+                rel: 'noopener',
+              },
             },
-          })
-        },
+          ],
+          [Anchor],
+        ],
         wrapperComponent: 'Post',
+        excerpt: '<!-- more -->',
+        excerptExtract: true,
       }),
 
       // https://github.com/antfu/unplugin-vue-components
@@ -130,12 +151,12 @@ export default defineConfig(({ mode }) => {
                 cacheName: 'google-fonts-cache',
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+                  statuses: [0, 200],
+                },
+              },
             },
             {
               urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
@@ -144,12 +165,12 @@ export default defineConfig(({ mode }) => {
                 cacheName: 'gstatic-fonts-cache',
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
+                  statuses: [0, 200],
                 },
-              }
+              },
             },
             {
               urlPattern: /^https:\/\/gravatar\.com\/avatar\/.*/i,
@@ -158,15 +179,15 @@ export default defineConfig(({ mode }) => {
                 cacheName: 'gravatar-avatar-cache',
                 expiration: {
                   maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+                  statuses: [0, 200],
+                },
+              },
             },
-          ]
-        }
+          ],
+        },
       }),
 
       // https://github.com/intlify/vite-plugin-vue-i18n
@@ -191,7 +212,7 @@ export default defineConfig(({ mode }) => {
       formatting: 'minify',
       onFinished() {
         generateSitemap({
-          hostname: env.VITE_BASE_URL
+          hostname: env.VITE_BASE_URL,
         })
       },
     },

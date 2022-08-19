@@ -1,20 +1,3 @@
-<template>
-  <a
-    class="text-sm text-gray-500 transition hover:text-gray-600"
-    target="_blank"
-    rel="noopener noreferrer"
-    :href="computedHref"
-  >
-    <span class="sr-only">{{ kind }}</span>
-    <Icon
-      :icon="computedIcon"
-      :width="size"
-      :height="size"
-      class="fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
-    />
-  </a>
-</template>
-
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { Icon } from '@iconify/vue'
@@ -35,7 +18,10 @@ export default defineComponent({
   },
   props: {
     href: [String],
-    kind: [String],
+    kind: {
+      type: String,
+      default: '',
+    },
     icon: [String],
     size: {
       type: Number,
@@ -68,3 +54,20 @@ export default defineComponent({
   },
 })
 </script>
+
+<template>
+  <a
+    class="text-sm text-gray-500 transition hover:text-gray-600"
+    target="_blank"
+    rel="noopener noreferrer"
+    :href="computedHref"
+  >
+    <span class="sr-only">{{ kind }}</span>
+    <Icon
+      :icon="computedIcon"
+      :width="size"
+      :height="size"
+      class="fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
+    />
+  </a>
+</template>

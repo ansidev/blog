@@ -13,12 +13,12 @@ tags:
   - move to Trash
 ---
 
-# Problem
+## Problem
 
 On Linux, you can move files/folder to Trash from CLI using command called `rm`.
 On macOS, there is also a command called `rm`, but this command will delete your files/folder permanently instead of move them to Trash. By default, you must do it via GUI.
 
-# Solution
+## Solution
 
 Install the [Homebrew](https://brew.sh/) package [trash](https://github.com/macmade/trash) using command:
 

@@ -17,9 +17,10 @@ tags:
 ---
 
 Trong quá trình phát triển ứng dụng với Vue, đôi khi bạn sẽ cần kiểm tra prop có được truyền từ bên ngoài component hay không. Bài viết này sẽ hướng dẫn bạn làm điều đó.
----
 
-# Vấn đề
+<!-- more -->
+
+## Vấn đề
 
 Chúng ta có component Foo.vue
 
@@ -48,7 +49,7 @@ Và bạn sử dụng component này tại một nơi nào đó trong ứng dụ
 
 Vậy làm sao xác định khi nào prop `bar` được truyền giá trị từ ngoài, khi nào thì đang sử dụng giá trị mặc định?
 
-# Cách giải quyết
+## Cách giải quyết
 
 Các giá trị được truyền từ bên ngoài vào được lưu trong biến `this.$options.propsData`.
 

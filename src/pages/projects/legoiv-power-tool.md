@@ -16,7 +16,8 @@ featuredImage: /uploads/2019/02/LegoIV_Power_Tool.webp
 ---
 
 Simple power tool with ModernUI design.
----
+
+<!-- more -->
 
 # LegoIV Power Tool
 

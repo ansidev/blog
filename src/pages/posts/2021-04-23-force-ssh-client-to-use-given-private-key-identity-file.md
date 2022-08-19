@@ -15,11 +15,11 @@ tags:
   - private key
 ---
 
-# Problem
+## Problem
 
 You want force SSH client to use given private key to login to server.
 
-# Solution
+## Solution
 
 ```shell
 ssh -i /path/to/private_key user@server
@@ -37,7 +37,7 @@ If you added some SSH keys into ssh-agent, you need to add parameter `-o "Identi
 ssh -o "IdentitiesOnly=yes" -i /path/to/private_key -p port_number user@server
 ```
 
-# SSH Config File
+## SSH Config File
 
 ```
 Host server_name

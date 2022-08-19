@@ -15,9 +15,9 @@ tags:
 
 My notes about Java collection types comparison.
 
----
+<!-- more -->
 
-# ArrayList vs. LinkedList
+## ArrayList vs. LinkedList
 
 | #            | ArrayList                                                                                                                      | LinkedList                                                                                                                         |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,7 +26,7 @@ My notes about Java collection types comparison.
 | Manipulation | **Slow** because it internally uses an array. If any element is removed from the array, all the bits re shifted in the memory. | **Faster** because it uses a doubly-linked list, so no bit shifting is required in the memory, only the reference link is changed. |
 | When to use? | ArrayList is **better for storing and accessing** data.                                                                        | LinkedList is **better for manipulating** data.                                                                                    |
 
-# ArrayList vs. Vector
+## ArrayList vs. Vector
 
 | #               | ArrayList                                                                                      | Vector                                                                                                                                                                                                   |
 | --------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ My notes about Java collection types comparison.
 | Iteration       | ArrayList uses **Iterator** interface to **traverse** through elements.                        | Vector can use both **Iterator or Enumerator** interface to **traverse** through elements.                                                                                                               |
 | When to use?    | ArrayList is use mostly in **single-thread applications**.                                     | **Collections.synchronizedList()** is preferred to Vector nowadays.                                                                                                                                      |
 
-# List vs. Set
+## List vs. Set
 
 | #            | List                                                                       | Set                                                                    |
 | ------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -47,7 +47,7 @@ My notes about Java collection types comparison.
 | Accessing    | Elements can be accessed based on their position.                          | Access to items from a certain position is not permitted.              |
 | When to use? | Use it when you want to frequently access the elements by using the index. | Set is used when you want to design a collection of distinct elements. |
 
-# Set vs. Map
+## Set vs. Map
 
 | #               | Set                                                                                                                               | Map                                       |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
@@ -55,7 +55,7 @@ My notes about Java collection types comparison.
 | Traversing      | Use Using the keyset() and entryset() methods                                                                                     | Not possible, you must convert Map to Set |
 | Insertion Order | Both Set and Map don't keep the insertion order, however, some of Set's classes, such as LinkedHashSet, keep the insertion order. |                                           |
 
-# HashMap vs. TreeMap
+## HashMap vs. TreeMap
 
 | #                 | HashMap                                                                                                                                | TreeMap                                                                                                                                           |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { Icon } from '@iconify/vue'
+import siteConfig from '~/site.config'
+</script>
+
 <template>
   <footer>
     <div class="flex flex-col items-center mt-16">
@@ -34,26 +39,3 @@
     </div>
   </footer>
 </template>
-
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue'
-import { isDark, switchLocale, toggleDark } from '~/hooks'
-import siteConfig from '~/site.config'
-
-export default defineComponent({
-  components: {
-    Icon,
-  },
-  setup() {
-    const { t, availableLocales, locale } = useI18n()
-    const toggleLocale = () => switchLocale(availableLocales, locale)
-
-    const iconCssClass = ref('icon-btn mx-2 text-gray-900 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-200')
-    const githubProfile = siteConfig.socialNetworks.github
-
-    return { t, toggleLocale, iconCssClass, githubProfile, isDark, toggleDark, siteConfig }
-  },
-})
-</script>

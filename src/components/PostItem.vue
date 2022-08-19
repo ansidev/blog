@@ -1,3 +1,22 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+export default defineComponent({
+  props: {
+    post: {
+      type: Object,
+      required: true,
+    },
+  },
+  setup() {
+    const { t } = useI18n()
+
+    return { t }
+  },
+})
+</script>
+
 <template>
   <article>
     <div class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
@@ -6,7 +25,9 @@
         <div class="space-y-6">
           <div>
             <h2 class="text-2xl font-bold leading-8 tracking-tight mb-2">
-              <Link :href="post.path" class="text-gray-900 dark:text-gray-100">{{ post.title }}</Link>
+              <Link :href="post.path" class="text-gray-900 dark:text-gray-100">
+                {{ post.title }}
+              </Link>
             </h2>
             <div class="flex flex-wrap">
               <Category v-for="category in post.categories" :key="category" :text="category" />
@@ -32,22 +53,3 @@
     </div>
   </article>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
-
-export default defineComponent({
-  props: {
-    post: {
-      type: Object,
-      required: true,
-    },
-  },
-  setup() {
-    const { t } = useI18n()
-
-    return { t }
-  },
-})
-</script>

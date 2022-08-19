@@ -1612,6 +1612,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdit-vue/plugin-headers@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "@mdit-vue/plugin-headers@npm:0.9.1"
+  dependencies:
+    "@mdit-vue/shared": 0.9.1
+    "@mdit-vue/types": 0.9.0
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: fa05116d6b9834a712b494f69f7d260a06c7f0b1c69908d2291549b3cfaebf9ecc69d34bc051b249050e4f5787d8e0ee72d73d7dc10b090c51be99773622c60e
+  languageName: node
+  linkType: hard
+
+"@mdit-vue/shared@npm:0.9.1":
+  version: 0.9.1
+  resolution: "@mdit-vue/shared@npm:0.9.1"
+  dependencies:
+    "@mdit-vue/types": 0.9.0
+    "@types/markdown-it": ^12.2.3
+    markdown-it: ^13.0.1
+  checksum: fe9373c5a87ca83e007c251628f421514833593d42a5241169af40f1fc324b495f74a413a944cefdccf17a7d1e6487ba9271146f5dc7e37c81d6b5b64bb477fa
+  languageName: node
+  linkType: hard
+
+"@mdit-vue/types@npm:0.9.0":
+  version: 0.9.0
+  resolution: "@mdit-vue/types@npm:0.9.0"
+  checksum: 64d86406458ad46b5fa396ad974bac00832f9edd95ad1766afff1ba9af3c9c09a0149512a2ae2e79c2534909dd468d29016f286d3c3d82a2c0547c84447edee8
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1899,7 +1929,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/markdown-it@npm:*":
+"@types/markdown-it@npm:*, @types/markdown-it@npm:^12.2.3":
   version: 12.2.3
   resolution: "@types/markdown-it@npm:12.2.3"
   dependencies:
@@ -2294,7 +2324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yankeeinlondon/builder-api@npm:*":
+"@yankeeinlondon/builder-api@npm:*, @yankeeinlondon/builder-api@npm:^0.4.1":
   version: 0.4.1
   resolution: "@yankeeinlondon/builder-api@npm:0.4.1"
   dependencies:
@@ -2316,6 +2346,31 @@ __metadata:
   peerDependencies:
     happy-dom: ^6.0.4
   checksum: 5832961d9d6465d846b3349ef0f6de0595b5b5c6c286f8532fe91a76f37af63fafc403e6bd7fc679c7d3822b50eea2b8ad7c7513c1c95c56ea33444c7f4c71b2
+  languageName: node
+  linkType: hard
+
+"@yankeeinlondon/link-builder@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@yankeeinlondon/link-builder@npm:1.0.5"
+  dependencies:
+    "@yankeeinlondon/builder-api": ^0.4.1
+    "@yankeeinlondon/happy-wrapper": ^2.5.0
+    pathe: ^0.3.2
+  peerDependencies:
+    markdown-it: ">=13"
+  checksum: bd068d995703413f9e8339a8514484be2924bc22afb529df63a4f52a7341f54e1a8dc0c2efd373cbe5b0b568d6b504754082f315b91c43359b1e752eacef93cf
+  languageName: node
+  linkType: hard
+
+"@yankeeinlondon/meta-builder@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@yankeeinlondon/meta-builder@npm:1.0.6"
+  dependencies:
+    "@yankeeinlondon/builder-api": ^0.4.1
+  peerDependencies:
+    "@rollup/pluginutils": ^4.2.1
+    inferred-types: ^0.22.0
+  checksum: f30604ad4baaeb7d809d7102c0785b7ed5089626fa3c1130ce97abe7950e08eb5e1086cb5ecf11dfae9f932f88862b4a2369eeb5fcbd4850990ae52cc6c7c856
   languageName: node
   linkType: hard
 
@@ -2481,6 +2536,7 @@ __metadata:
     "@antfu/eslint-config": ^0.26.1
     "@iconify/vue": ^3.2.1
     "@intlify/vite-plugin-vue-i18n": ^6.0.1
+    "@mdit-vue/plugin-headers": ^0.9.1
     "@tailwindcss/forms": ^0.5.2
     "@tailwindcss/typography": ^0.5.4
     "@types/github-slugger": ^1.3.0
@@ -2492,6 +2548,8 @@ __metadata:
     "@vitejs/plugin-vue": ^2.3.4
     "@vueuse/core": ^9.1.0
     "@vueuse/head": ^0.7.9
+    "@yankeeinlondon/link-builder": ^1.0.5
+    "@yankeeinlondon/meta-builder": ^1.0.6
     autoprefixer: ^10.4.8
     cross-env: ^7.0.3
     eslint: ^8.21.0
@@ -2500,15 +2558,16 @@ __metadata:
     github-slugger: ^1.4.0
     gray-matter: ^4.0.3
     happy-dom: ^6.0.4
+    markdown-it-anchor: ^8.6.4
     markdown-it-link-attributes: ^4.0.1
     markdown-it-shiki: ^0.5.1
+    markdown-it-toc-done-right: ^4.2.0
     medium-zoom: ^1.0.6
     nanoid: ^4.0.0
     nprogress: ^0.2.0
     postcss: ^8.4.16
     postcss-nested: ^5.0.6
     prettier: ^2.7.1
-    prism-theme-vars: ^0.2.4
     sass: ^1.54.4
     shiki: ^0.11.1
     tailwindcss: ^3.1.8
@@ -5897,6 +5956,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-anchor@npm:^8.6.4":
+  version: 8.6.4
+  resolution: "markdown-it-anchor@npm:8.6.4"
+  peerDependencies:
+    "@types/markdown-it": "*"
+    markdown-it: "*"
+  checksum: bde310d0202450a228662921df9d9c2e95b3c5762512e8eed1d472fcc812fb20e6b4e98480cda88c8b56b0baf34ac70d6bf8404309c5a2321ebe62da43cd6fe6
+  languageName: node
+  linkType: hard
+
 "markdown-it-link-attributes@npm:^4.0.1":
   version: 4.0.1
   resolution: "markdown-it-link-attributes@npm:4.0.1"
@@ -5912,6 +5981,13 @@ __metadata:
     shiki: ^0.10.1
     synckit: ^0.7.0
   checksum: 955d418512843f50ad84cd165c7d6950de5469bec672ebab94f58a21df03b61b2719555e2c160b01b4effdef0f4b8e47a6988870fc589fd990ea0f5b50cfa592
+  languageName: node
+  linkType: hard
+
+"markdown-it-toc-done-right@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "markdown-it-toc-done-right@npm:4.2.0"
+  checksum: 1f6a88a5591ee21fda87aa64ba814e099f5a69f57affdfc222c176959871279907367f18dce962b10e076c6aa61938e137471fdc1dc622327e02b4a6a593c04f
   languageName: node
   linkType: hard
 
@@ -6672,6 +6748,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pathe@npm:^0.3.2":
+  version: 0.3.4
+  resolution: "pathe@npm:0.3.4"
+  checksum: 4ebed2a60e5b7e88b2752137606e228570af2f0e06d5964c92f0b47ada3523842a1c73feb9976a054a47b96789a62ab861fb3b8170e5f80c83b4625e1d42c2d7
+  languageName: node
+  linkType: hard
+
 "pathval@npm:^1.1.1":
   version: 1.1.1
   resolution: "pathval@npm:1.1.1"
@@ -6822,13 +6905,6 @@ __metadata:
   version: 6.0.0
   resolution: "pretty-bytes@npm:6.0.0"
   checksum: 0bb9f95e617236404b29a8392c6efd82d65805f622f5e809ecd70068102be857d4e3276c86d2a32fa2ef851cc29472e380945dab7bec83ec79bd57a19a10faf7
-  languageName: node
-  linkType: hard
-
-"prism-theme-vars@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "prism-theme-vars@npm:0.2.4"
-  checksum: a98e9da1e335530c5ec864788d7aa317ca2ac2f8376af5cf56fd1f146b8302f556ece4bcca135215194d8b7a11379bdf7367d9fb8ba5119b536c4caeff8f108c
   languageName: node
   linkType: hard
 

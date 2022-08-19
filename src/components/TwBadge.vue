@@ -1,20 +1,3 @@
-<template>
-  <span
-    :class="[
-      `bg-${backgroundColor}`,
-      `dark:bg-${darkBackgroundColor}`,
-      `text-${textColor}`,
-      `dark:text-${darkTextColor}`,
-      `text-${fontSize}`,
-      `font-${fontWeight}`,
-      rounded ? 'rounded' : '',
-      'px-2.5 py-0.5'
-    ]"
-  >
-    <slot />
-  </span>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue'
 
@@ -58,3 +41,20 @@ export default defineComponent({
   },
 })
 </script>
+
+<template>
+  <span
+    class="px-2.5 py-0.5"
+    :class="[
+      `bg-${backgroundColor}`,
+      `dark:bg-${darkBackgroundColor}`,
+      `text-${textColor}`,
+      `dark:text-${darkTextColor}`,
+      `text-${fontSize}`,
+      `font-${fontWeight}`,
+      rounded ? 'rounded' : '',
+    ]"
+  >
+    <slot />
+  </span>
+</template>

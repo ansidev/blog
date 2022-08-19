@@ -16,7 +16,8 @@ twitter: "@ansidev"
 ---
 
 JSON Formatter CLI
----
+
+<!-- more -->
 
 ## Story
 

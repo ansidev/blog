@@ -1,3 +1,27 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { Icon } from '@iconify/vue'
+import { getProjectBadgeStyle } from '~/helpers'
+
+export default defineComponent({
+  components: {
+    Icon,
+  },
+  props: {
+    project: {
+      type: Object,
+      required: true,
+    },
+  },
+  setup() {
+    const { t } = useI18n()
+
+    return { t, getProjectBadgeStyle }
+  },
+})
+</script>
+
 <template>
   <div class="p-4">
     <div
@@ -6,7 +30,9 @@
       <div class="p-6">
         <div class="flex flex-row justify-between items-center">
           <div class="my-2">
-            <Link :href="project.path" class="h2 text-2xl font-bold leading-8 tracking-tight mb-3">{{ project.title }}</Link>
+            <Link :href="project.path" class="h2 text-2xl font-bold leading-8 tracking-tight mb-3">
+              {{ project.title }}
+            </Link>
           </div>
           <div class="flex flex-row justify-between">
             <div v-if="project.showcaseUrl" class="mx-1">
@@ -39,11 +65,15 @@
         <div class="flex flex-col justify-between">
           <div v-if="project.license" class="text-gray-500 dark:text-gray-400 mb-3">
             {{ t('license') }}:
-            <Link v-if="project.licenseUrl" :href="project.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{{ project.license }}</Link>
+            <Link v-if="project.licenseUrl" :href="project.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+              {{ project.license }}
+            </Link>
             <span v-else>{{ project.license }}</span>
           </div>
           <div class="text-gray-500 dark:text-gray-400 mb-3">
-            {{ t('development_status.title') }}: <TwBadge v-bind="getProjectBadgeStyle(project.developmentStatus)">{{ $t(`development_status.${project.developmentStatus}`) }}</TwBadge>
+            {{ t('development_status.title') }}: <TwBadge v-bind="getProjectBadgeStyle(project.developmentStatus)">
+              {{ $t(`development_status.${project.developmentStatus}`) }}
+            </TwBadge>
           </div>
           <div class="flex flex-wrap mb-3">
             <Technology v-for="tech in project.techs" :key="tech" :text="tech" />
@@ -63,27 +93,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue'
-import { getProjectBadgeStyle } from '~/helpers'
-
-export default defineComponent({
-  components: {
-    Icon,
-  },
-  props: {
-    project: {
-      type: Object,
-      required: true,
-    },
-  },
-  setup() {
-    const { t } = useI18n()
-
-    return { t, getProjectBadgeStyle }
-  },
-})
-</script>

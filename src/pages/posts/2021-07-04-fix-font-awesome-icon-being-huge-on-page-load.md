@@ -13,11 +13,11 @@ tags:
   - FontAwesome
 ---
 
-# Problem
+## Problem
 
 If you are using FontAwesome in your project, you may face to this problem: FontAwesome icons being huge on page load
 
-# Solution
+## Solution
 
 1. Turn off autoAddCss
 

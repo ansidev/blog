@@ -1,4 +1,7 @@
 {
+  "home": "Home",
+  "posts": "Posts",
+  "projects": "Projects",
   "about_me": "About me",
   "all_posts": "All posts",
   "my_projects": "My projects",
@@ -13,6 +16,7 @@
   "authors": "Authors",
   "back_to_home": "Back to home",
   "back_to_projects": "Back to projects",
+  "table_of_contents": "Table of contents",
   "button": {
     "about": "About",
     "back": "Back",
@@ -24,9 +28,6 @@
     "remove": "Remove"
   },
   "categories": "Categories",
-  "intro": {
-    "hi": "Hi, {name}!"
-  },
   "name": "Name",
   "no_category": "No category.",
   "no_tag": "No tag.",

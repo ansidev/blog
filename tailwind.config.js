@@ -811,6 +811,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        '8xl': '90rem',
+      },
       spacing: {
         '9/16': '56.25%',
       },

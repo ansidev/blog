@@ -17,9 +17,10 @@ tags:
 ---
 
 Trong quá trình phát triển ứng dụng với Nuxt, đôi khi bạn sẽ gặp lỗi này khi build, bài viết này đưa ra hướng giải quyết cho bạn.
----
 
-# Vấn đề
+<!-- more -->
+
+## Vấn đề
 
 Trong một số trường hợp khi build ứng dụng Nuxt ở mode: `universal` hoặc target: `server` đối với các phiên bản mới hơn của Nuxt, bạn sẽ gặp lỗi:
 
@@ -27,12 +28,12 @@ Trong một số trường hợp khi build ứng dụng Nuxt ở mode: `universa
 Failed to execute 'appendChild' on 'Node': This node type does not support this method.
 ```
 
-# Nguyên nhân
+## Nguyên nhân
 
 - Lỗi này là do cấu trúc DOM không đồng nhất khi render trong quá trình build và runtime.
 - Nguyên nhân thường gặp là do bạn đang sử dụng một vài component không hỗ trợ SSR.
 
-# Cách giải quyết
+## Cách giải quyết
 
 - Detect component bị lỗi, cho vào trong thẻ `<client-only>` để Nuxt chỉ render khi runtime.
 - **Lưu ý:** Trong một số trường hợp giải pháp trên sẽ không phải giải pháp thích hợp nhất, bạn cần dựa vào tình huống thực tế để đưa ra cách giải quyết thích hợp nhất.

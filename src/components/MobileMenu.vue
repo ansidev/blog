@@ -1,3 +1,21 @@
+<script setup lang="ts">
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useHead } from '@vueuse/head'
+import { Icon } from '@iconify/vue'
+import siteConfig from '~/site.config'
+
+const { t } = useI18n()
+const showMobileMenu = ref(false)
+const onToggleMobileMenu = () => (showMobileMenu.value = !showMobileMenu.value)
+
+useHead({
+  bodyAttrs: {
+    style: computed(() => showMobileMenu.value ? 'overflow: hidden' : 'overflow: auto'),
+  },
+})
+</script>
+
 <template>
   <div class="md:hidden">
     <button
@@ -14,7 +32,7 @@
       />
     </button>
     <div
-      :class="['fixed w-full h-full top-24 right-0 bg-white dark:bg-gray-900 z-10 transform ease-in-out duration-300', showMobileMenu ? 'translate-x-0' : 'translate-x-full']"
+      class="fixed w-full h-full top-24 right-0 bg-white dark:bg-gray-900 z-10 transform ease-in-out duration-300" :class="[showMobileMenu ? 'translate-x-0' : 'translate-x-full']"
     >
       <button
         type="button"
@@ -41,30 +59,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useHead } from '@vueuse/head'
-import { Icon } from '@iconify/vue'
-import siteConfig from '~/site.config'
-
-export default defineComponent({
-  components: {
-    Icon,
-  },
-  setup() {
-    const { t } = useI18n()
-    const showMobileMenu = ref(false)
-    const onToggleMobileMenu = () => (showMobileMenu.value = !showMobileMenu.value)
-
-    useHead({
-      bodyAttrs: {
-        style: computed(() => showMobileMenu.value ? 'overflow: hidden' : 'overflow: auto'),
-      },
-    })
-
-    return { t, siteConfig, showMobileMenu, onToggleMobileMenu }
-  },
-})
-</script>

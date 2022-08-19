@@ -12,11 +12,11 @@ tags:
   - makefile
 ---
 
-# What is `.PHONY` in makefile?
+## What is `.PHONY` in makefile?
 
 > A phony target is one that is not really the name of a file; rather it is just a name for a recipe to be executed when you make an explicit request.
 
-# Why `.PHONY`?
+## Why `.PHONY`?
 
 There are two benefits of using a phony target:
 
