@@ -1,7 +1,3 @@
-<template>
-  <router-view />
-</template>
-
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
 import { computed } from 'vue'
@@ -11,16 +7,16 @@ import siteConfig from '~/site.config'
 const route = useRoute()
 
 const pageMeta = computed(() => {
-    const title = route.meta.title as string || siteConfig.title
-    const description = route.meta.excerpt as string || route.meta.title as string || siteConfig.description
-    const image = route.meta.metaImage as string || `${import.meta.env.VITE_BASE_URL}/${siteConfig.defaultMetaImage}`
+  const title = route.meta.title as string || siteConfig.title
+  const description = route.meta.excerpt as string || route.meta.title as string || siteConfig.description
+  const image = route.meta.metaImage as string || `${import.meta.env.VITE_BASE_URL}/${siteConfig.defaultMetaImage}`
 
-    return {
-      url: route.path,
-      title: title,
-      description: description,
-      image,
-    }
+  return {
+    url: route.path,
+    title,
+    description,
+    image,
+  }
 })
 
 // https://github.com/vueuse/head
@@ -31,24 +27,28 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: computed(() => pageMeta.value.description)
+      content: computed(() => pageMeta.value.description),
     },
     {
       name: 'og:title',
-      content: computed(() => pageMeta.value.title)
+      content: computed(() => pageMeta.value.title),
     },
     {
       name: 'og:url',
-      content: computed(() => pageMeta.value.url)
+      content: computed(() => pageMeta.value.url),
     },
     {
       name: 'og:description',
-      content: computed(() => pageMeta.value.description)
+      content: computed(() => pageMeta.value.description),
     },
     {
       name: 'og:image',
-      content: computed(() => pageMeta.value.image)
+      content: computed(() => pageMeta.value.image),
     },
   ],
 })
 </script>
+
+<template>
+  <router-view />
+</template>
