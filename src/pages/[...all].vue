@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
+
 <template>
   <div
     class="flex flex-col items-start justify-start md:justify-center md:items-center md:flex-row md:space-x-6 md:mt-24"
@@ -26,19 +32,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from '@vue/runtime-core'
-import { useI18n } from 'vue-i18n'
-
-export default defineComponent({
-  setup() {
-    const { t } = useI18n()
-
-    return { t }
-  },
-})
-</script>
 
 <route lang="yaml">
 meta:

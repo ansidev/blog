@@ -1,35 +1,29 @@
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { getRandomDismissableBadgeStyle } from '~/helpers'
 import { useQuery } from '~/hooks'
 
-export default defineComponent({
-  props: {
-    projects: {
-      type: Array,
-      required: true,
-      default: () => [],
-    },
-  },
-
-  setup() {
-    const { t } = useI18n()
-    const { queryParams, pushQuery } = useQuery()
-
-    const filters = computed(() => {
-      const f = queryParams.value
-      if (Object.keys(f).includes('q')) {
-        delete f.q
-      }
-      return f
-    })
-
-    const onFilterRemoved = (query: string) => pushQuery(query, undefined)
-
-    return { t, filters, getRandomDismissableBadgeStyle, onFilterRemoved }
+defineProps({
+  projects: {
+    type: Array,
+    required: true,
+    default: () => [],
   },
 })
+
+const { t } = useI18n()
+const { queryParams, pushQuery } = useQuery()
+
+const filters = computed(() => {
+  const f = queryParams.value
+  if (Object.keys(f).includes('q')) {
+    delete f.q
+  }
+  return f
+})
+
+const onFilterRemoved = (query: string) => pushQuery(query, undefined)
 </script>
 
 <template>

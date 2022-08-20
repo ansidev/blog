@@ -1,79 +1,72 @@
-<script lang="ts">
+<script setup lang="ts">
 import { nanoid } from 'nanoid'
-import { defineComponent, toRef } from 'vue'
+import { toRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Icon } from '@iconify/vue'
 
-export default defineComponent({
-  components: {
-    Icon,
+const props = defineProps({
+  id: {
+    type: String,
+    required: false,
+    default: '',
   },
-  props: {
-    id: {
-      type: String,
-      required: false,
-      default: '',
-    },
-    backgroundColor: {
-      type: String,
-      required: false,
-      default: 'blue-100',
-    },
-    darkBackgroundColor: {
-      type: String,
-      required: false,
-      default: 'blue-800',
-    },
-    textColor: {
-      type: String,
-      required: false,
-      default: 'blue-800',
-    },
-    darkTextColor: {
-      type: String,
-      required: false,
-      default: 'blue-100',
-    },
-    fontSize: {
-      type: String,
-      required: false,
-      default: 'base',
-    },
-    fontWeight: {
-      type: String,
-      required: false,
-      default: 'normal',
-    },
-    rounded: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
-    buttonHoverBackgroundColor: {
-      type: String,
-      required: false,
-      default: 'blue-200',
-    },
-    buttonDarkHoverBackgroundColor: {
-      type: String,
-      required: false,
-      default: 'blue-900',
-    },
+  backgroundColor: {
+    type: String,
+    required: false,
+    default: 'blue-100',
   },
-  emits: ['removed'],
-  setup(props, { emit }) {
-    const { t } = useI18n()
-    const computedId = toRef(props, 'id')
-
-    if (computedId.value.length === 0) {
-      computedId.value = nanoid()
-    }
-
-    const remove = (e: Event) => emit('removed', e)
-
-    return { t, computedId, remove }
+  darkBackgroundColor: {
+    type: String,
+    required: false,
+    default: 'blue-800',
+  },
+  textColor: {
+    type: String,
+    required: false,
+    default: 'blue-800',
+  },
+  darkTextColor: {
+    type: String,
+    required: false,
+    default: 'blue-100',
+  },
+  fontSize: {
+    type: String,
+    required: false,
+    default: 'base',
+  },
+  fontWeight: {
+    type: String,
+    required: false,
+    default: 'normal',
+  },
+  rounded: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
+  buttonHoverBackgroundColor: {
+    type: String,
+    required: false,
+    default: 'blue-200',
+  },
+  buttonDarkHoverBackgroundColor: {
+    type: String,
+    required: false,
+    default: 'blue-900',
   },
 })
+
+const emit = defineEmits(['removed'])
+
+const { t } = useI18n()
+const computedId = toRef(props, 'id')
+
+if (computedId.value.length === 0) {
+  computedId.value = nanoid()
+}
+
+const remove = (e: Event) => emit('removed', e)
 </script>
 
 <template>

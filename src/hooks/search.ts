@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 export const useSearch = () => {
   const router = useRouter()
@@ -12,7 +12,7 @@ export const useSearch = () => {
 
   const setSearchValue = (val: string) => {
     searchValue.value = val
-    router.push({path: route.fullPath, query: { ...route.query, q: val } })
+    router.push({ path: route.fullPath, query: { ...route.query, q: val } })
   }
 
   return { searchValue, setSearchValue }

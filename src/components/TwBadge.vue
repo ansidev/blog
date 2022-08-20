@@ -1,43 +1,39 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  props: {
-    backgroundColor: {
-      type: String,
-      required: false,
-      default: 'blue-100',
-    },
-    darkBackgroundColor: {
-      type: String,
-      required: false,
-      default: 'blue-800',
-    },
-    textColor: {
-      type: String,
-      required: false,
-      default: 'blue-800',
-    },
-    darkTextColor: {
-      type: String,
-      required: false,
-      default: 'blue-100',
-    },
-    fontSize: {
-      type: String,
-      required: false,
-      default: 'base',
-    },
-    fontWeight: {
-      type: String,
-      required: false,
-      default: 'normal',
-    },
-    rounded: {
-      type: Boolean,
-      required: false,
-      default: true,
-    },
+<script setup lang="ts">
+defineProps({
+  backgroundColor: {
+    type: String,
+    required: false,
+    default: 'blue-100',
+  },
+  darkBackgroundColor: {
+    type: String,
+    required: false,
+    default: 'blue-800',
+  },
+  textColor: {
+    type: String,
+    required: false,
+    default: 'blue-800',
+  },
+  darkTextColor: {
+    type: String,
+    required: false,
+    default: 'blue-100',
+  },
+  fontSize: {
+    type: String,
+    required: false,
+    default: 'base',
+  },
+  fontWeight: {
+    type: String,
+    required: false,
+    default: 'normal',
+  },
+  rounded: {
+    type: Boolean,
+    required: false,
+    default: true,
   },
 })
 </script>

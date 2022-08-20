@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from 'vue'
-import { UserModule } from '~/types'
+import type { UserModule } from '~/types'
 
 export const install: UserModule = ({ app }) => {
   const SubstackNewsletter = defineAsyncComponent(() => import('./components/SubstackNewsletter.vue'))

@@ -14,15 +14,15 @@ const feed = new Feed({
   image: `${baseURL}/pwa-512x512.png`,
   favicon: `${baseURL}/favicon.ico`,
   copyright:
-    'Copyright (c) 2019-present, Le Minh Tri (@ansidev)'
+    'Copyright (c) 2019-present, Le Minh Tri (@ansidev)',
 })
 
 interface Post {
-  title: string,
-  href: string,
-  date: any,
-  excerpt: string,
-  type: string,
+  title: string
+  href: string
+  date: any
+  excerpt: string
+  type: string
   data?: object
 }
 
@@ -35,8 +35,8 @@ const formatDate = (date: any) => {
     string: date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
-    })
+      day: 'numeric',
+    }),
   }
 }
 
@@ -72,7 +72,7 @@ getPosts(true).forEach((post: any) => {
   const file = path.resolve(__dirname, `../../dist${post.href}`)
   const rendered = fs.readFileSync(file, 'utf-8')
   const content = rendered.match(
-    /<!--\[--><div class="theme-ansidev-content[^<>]+>([\s\S]*)<\/div><!--\]--><\/div><div id=\"eop\"><\/div>/
+    /<!--\[--><div class="theme-ansidev-content[^<>]+>([\s\S]*)<\/div><!--\]--><\/div><div id=\"eop\"><\/div>/,
   )
 
   feed.addItem({
@@ -86,12 +86,13 @@ getPosts(true).forEach((post: any) => {
         name: post.data.author,
         link: post.data.twitter
           ? `https://twitter.com/${post.data.twitter}`
-          : undefined
-      }
+          : undefined,
+      },
     ],
-    date: post.data.date
+    date: post.data.date,
   })
 })
 
 fs.writeFileSync(path.resolve(__dirname, '../../dist/feed.rss'), feed.rss2())
+// eslint-disable-next-line no-console
 console.log('[feed-generator] Generated feed.rss successfully!')

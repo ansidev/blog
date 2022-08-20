@@ -1,3 +1,36 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { kebabCase } from '~/helpers'
+
+const { t } = useI18n()
+
+const router = useRouter()
+const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
+
+const categories = computed(() => {
+  const categoryCount: Record<string, number> = {}
+  routes
+    .map(r => r.meta)
+    .filter(m => m.type === 'post')
+    .forEach((m) => {
+      if (Array.isArray(m.categories) && m.categories.length > 0) {
+        m.categories.forEach((category) => {
+          const formattedCategory = kebabCase(category)
+          if (formattedCategory in categoryCount)
+            categoryCount[formattedCategory] += 1
+          else
+            categoryCount[formattedCategory] = 1
+        })
+      }
+    })
+  return categoryCount
+})
+
+const sortedCategories = computed(() => Object.keys(categories.value).sort((a, b) => categories.value[b] - categories.value[a]))
+</script>
+
 <template>
   <div class="divide-y divide-gray-200 dark:divide-gray-700">
     <div class="pt-6 pb-8 space-y-2 md:space-y-5">
@@ -23,45 +56,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-import { kebabCase } from '~/helpers'
-
-export default defineComponent({
-  setup() {
-    const { t } = useI18n()
-
-    const router = useRouter()
-    const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
-
-    const categories = computed(() => {
-      const categoryCount: Record<string, number> = {}
-      routes
-        .map(r => r.meta)
-        .filter(m => m.type === 'post')
-        .forEach((m) => {
-          if (Array.isArray(m.categories) && m.categories.length > 0) {
-            m.categories.forEach((category) => {
-              const formattedCategory = kebabCase(category)
-              if (formattedCategory in categoryCount)
-                categoryCount[formattedCategory] += 1
-              else
-                categoryCount[formattedCategory] = 1
-            })
-          }
-        })
-      return categoryCount
-    })
-
-    const sortedCategories = computed(() => Object.keys(categories.value).sort((a, b) => categories.value[b] - categories.value[a]))
-
-    return { t, kebabCase, categories, sortedCategories }
-  },
-})
-</script>
 
 <route lang="yaml">
 meta:

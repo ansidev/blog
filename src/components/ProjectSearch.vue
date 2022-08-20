@@ -1,20 +1,13 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useSearch } from '~/hooks'
 
-export default defineComponent({
-  setup() {
-    const { t } = useI18n()
-    const { searchValue, setSearchValue } = useSearch()
-    const onChangeSearchValue = (e: Event) => {
-      const val = (e.target as HTMLInputElement).value
-      setSearchValue(val)
-    }
-
-    return { t, onChangeSearchValue, searchValue }
-  },
-})
+const { t } = useI18n()
+const { searchValue, setSearchValue } = useSearch()
+const onChangeSearchValue = (e: Event) => {
+  const val = (e.target as HTMLInputElement).value
+  setSearchValue(val)
+}
 </script>
 
 <template>

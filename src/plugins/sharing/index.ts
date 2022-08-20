@@ -1,7 +1,8 @@
 import { defineAsyncComponent } from 'vue'
+import type { SharingPluginConfig } from './types'
 import type { UserModule } from '~/types'
 
-export const config = {
+export const config: SharingPluginConfig = {
   networks: [
     'email',
     'facebook',

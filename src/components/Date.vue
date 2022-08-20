@@ -15,7 +15,7 @@ const props = defineProps({
 
 const { t } = useI18n()
 const dateObject = computed(() => {
-  const date = !(props.date instanceof Date) ? new Date(props.date) : props.date
+  const date = props.date instanceof Date ? props.date : new Date(props.date as string)
 
   return {
     time: +date,

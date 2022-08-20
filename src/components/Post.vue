@@ -45,11 +45,11 @@ const breadcrumbItems = computed(() => {
             <PageBreadcrumb :items="breadcrumbItems" />
             <PageTitle>{{ frontmatter.title }}</PageTitle>
             <PageSubtitle>{{ frontmatter.excerpt }}</PageSubtitle>
-            <Date :date="frontmatter.date" />
+            <Date :date="(frontmatter as MdFrontmatter).date" />
           </div>
         </header>
         <div class="py-6 divide-y divide-gray-200 lg:divide-y-0 dark:divide-gray-700 lg:grid lg:grid-cols-5 lg:gap-x-4" style="grid-template-rows: auto auto auto auto;">
-          <Author :frontmatter="frontmatter" class="lg:border-b lg:mb-6 lg:col-span-5 xl:col-span-1 xl:row-span-1 xl:mr-4" />
+          <Author :frontmatter="frontmatter as MdFrontmatter" class="lg:border-b lg:mb-6 lg:col-span-5 xl:col-span-1 xl:row-span-1 xl:mr-4" />
           <div class="divide-y divide-gray-200 dark:divide-gray-700 lg:pb-0 lg:col-span-5 xl:row-span-3" :class="[(frontmatter as MdFrontmatter).toc?.length > 0 ? 'xl:col-span-3' : 'xl:col-span-4']">
             <div class="prose dark:prose-dark max-w-none">
               <slot />
@@ -58,14 +58,14 @@ const breadcrumbItems = computed(() => {
             <FacebookComment v-if="isFacebookCommentPluginEnabled" :number-of-posts="5" width="100%" :post-url="postURL" />
           </div>
           <div v-if="(frontmatter as MdFrontmatter).toc?.length > 0" class="hidden xl:block xl:row-span-3">
-            <Toc :toc="frontmatter.toc" />
+            <Toc :toc="(frontmatter as MdFrontmatter).toc" />
           </div>
           <footer class="xl:mr-4 xl:mt-6 space-y-6">
             <div class="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2 space-y-6">
               <div v-if="frontmatter.type === 'project' && Array.isArray(frontmatter.techs) && frontmatter.techs.length > 0">
                 <h2 v-if="frontmatter.license" class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-3">
                   {{ t('license') }}:
-                  <Link v-if="frontmatter.licenseUrl" :href="frontmatter.licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                  <Link v-if="frontmatter.licenseUrl" :href="(frontmatter as ProjectFrontmatter).licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                     {{ frontmatter.license }}
                   </Link>
                   <span v-else>{{ frontmatter.license }}</span>

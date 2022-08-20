@@ -1,22 +1,17 @@
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed } from 'vue'
 import { kebabCase } from '~/helpers'
 
-export default defineComponent({
-  props: {
-    text: {
-      type: String,
-      required: true,
-    },
-  },
-  setup(props) {
-    const computedText = computed(() => props.text.replace(/\s/, '-'))
-    const slug = computed(() => kebabCase(props.text))
-    const link = computed(() => `/projects?tech=${slug.value}`)
-
-    return { computedText, slug, link }
+const props = defineProps({
+  text: {
+    type: String,
+    required: true,
   },
 })
+
+const computedText = computed(() => props.text.replace(/\s/, '-'))
+const slug = computed(() => kebabCase(props.text))
+const link = computed(() => `/projects?tech=${slug.value}`)
 </script>
 
 <template>

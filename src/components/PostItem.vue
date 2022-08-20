@@ -1,20 +1,14 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-export default defineComponent({
-  props: {
-    post: {
-      type: Object,
-      required: true,
-    },
-  },
-  setup() {
-    const { t } = useI18n()
-
-    return { t }
+defineProps({
+  post: {
+    type: Object,
+    required: true,
   },
 })
+
+const { t } = useI18n()
 </script>
 
 <template>

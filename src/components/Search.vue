@@ -1,30 +1,21 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import { Icon } from '@iconify/vue'
 
-export default defineComponent({
-  components: {
-    Icon,
+defineProps({
+  placeholder: {
+    type: String,
+    required: false,
+    default: '',
   },
-  props: {
-    placeholder: {
-      type: String,
-      required: false,
-      default: '',
-    },
-    value: {
-      type: String,
-      required: false,
-      default: null,
-    },
-  },
-  emits: ['change'],
-  setup(_, { emit }) {
-    const onChange = (e: Event) => emit('change', e)
-
-    return { onChange }
+  value: {
+    type: String,
+    required: false,
+    default: null,
   },
 })
+
+const emit = defineEmits(['change'])
+const onChange = (e: Event) => emit('change', e)
 </script>
 
 <template>
