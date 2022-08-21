@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import siteConfig from '~/site.config'
-import { useSubstackNewsletterConfig } from '~/plugins/substack/hooks'
 
 const { t } = useI18n()
 const siteTitle = ref(siteConfig.title)
@@ -14,8 +13,6 @@ const posts = computed(() => routes
   .filter(m => m.type === 'post')
   .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
   .slice(0, 10))
-
-const { isSubstackNewsletterPluginEnabled, substackNewsletterConfig } = useSubstackNewsletterConfig(siteConfig)
 </script>
 
 <template>
@@ -43,9 +40,6 @@ const { isSubstackNewsletterPluginEnabled, substackNewsletterConfig } = useSubst
     >
       {{ t('all_posts') }} &rarr;
     </Link>
-  </div>
-  <div v-if="isSubstackNewsletterPluginEnabled" class="flex items-center justify-center py-8">
-    <SubstackNewsletter v-bind="substackNewsletterConfig" />
   </div>
 </template>
 
