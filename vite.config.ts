@@ -2,6 +2,7 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'url'
 import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
@@ -53,6 +54,27 @@ export default defineConfig(({ mode }) => {
 
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts(),
+
+      // https://github.com/antfu/unplugin-auto-import
+      AutoImport({
+        imports: [
+          'vue',
+          'vue-router',
+          'vue-i18n',
+          'vue/macros',
+          '@vueuse/head',
+          '@vueuse/core',
+          {
+            '@iconify/vue': ['Icon'],
+          },
+        ],
+        dts: 'src/auto-imports.d.ts',
+        dirs: [
+          'src/helpers',
+          'src/hooks',
+        ],
+        vueTemplate: true,
+      }),
 
       // https://github.com/antfu/vite-plugin-md
       Markdown({
