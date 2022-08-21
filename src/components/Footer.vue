@@ -1,11 +1,22 @@
 <script setup lang="ts">
 import siteConfig from '~/site.config'
+import { isPluginEnabled } from '~/helpers'
+import { useSubstackNewsletterConfig } from '~/plugins/substack/hooks'
+
+const isDonationPluginEnabled = computed(() => isPluginEnabled('donation'))
+const { isSubstackNewsletterPluginEnabled, substackNewsletterConfig } = useSubstackNewsletterConfig(siteConfig)
 </script>
 
 <template>
   <footer>
-    <div class="flex flex-col items-center mt-16">
-      <div class="flex items-center flex-wrap justify-center mb-3 space-x-4">
+    <div class="grid grid-cols-2 space-y-6 mb-3">
+      <div v-if="isSubstackNewsletterPluginEnabled" class="flex items-center justify-center">
+        <SubstackNewsletter v-bind="substackNewsletterConfig" />
+      </div>
+      <div v-if="isDonationPluginEnabled" class="flex items-center justify-center space-x-4">
+        <Donation />
+      </div>
+      <div class="flex flex-wrap items-center justify-center space-x-4 col-span-2">
         <div class="mb-3">
           <Link href="/">
             <Icon icon="bi:house-heart-fill" :width="32" :height="32" />
@@ -18,10 +29,10 @@ import siteConfig from '~/site.config'
         </div>
         <SocialIcon v-for="(networkProfile, network) in siteConfig.socialNetworks" :key="network" :kind="network" :href="networkProfile" class="mb-3 hidden sm:block" />
       </div>
-      <div class="flex items-center flex-wrap justify-center mb-3 space-x-4">
-        <SocialIcon v-for="(networkProfile, network) in siteConfig.socialNetworks" :key="network" :kind="network" :href="networkProfile" class="mb-3 block sm:hidden" />
+      <div class="sm:hidden flex flex-wrap items-center justify-center space-x-4 col-span-2">
+        <SocialIcon v-for="(networkProfile, network) in siteConfig.socialNetworks" :key="network" :kind="network" :href="networkProfile" class="mb-3" />
       </div>
-      <div class="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
+      <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400 col-span-2">
         <div>
           <Link href="/">
             {{ siteConfig.title }}

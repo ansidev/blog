@@ -23,6 +23,10 @@ const siteConfig: SiteConfig = {
     reddit: 'https://reddit.com/u/ansidev',
   },
   plugins: {
+    donation: {
+      paypal: 'ansidev',
+      buymeacoffee: 'ansidev',
+    },
     facebookComment: {
       vendorConfig: {
         version: 'v9.0',
