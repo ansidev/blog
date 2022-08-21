@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { useSearch } from '~/hooks'
-
 const { t } = useI18n()
 const { searchValue, setSearchValue } = useSearch()
 const onChangeSearchValue = (e: Event) => {

@@ -1,6 +1,4 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { Icon } from '@iconify/vue'
 import { buildUrlQueryParams } from '../utils/buildUrlQueryParams'
 
 export default defineComponent({

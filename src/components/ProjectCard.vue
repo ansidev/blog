@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue'
-import { getProjectBadgeStyle } from '~/helpers'
-
 defineProps({
   project: {
     type: Object,

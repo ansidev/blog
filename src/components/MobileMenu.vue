@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useHead } from '@vueuse/head'
-import { Icon } from '@iconify/vue'
 import siteConfig from '~/site.config'
 
 const { t } = useI18n()

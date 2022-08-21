@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { kebabCase } from '~/helpers'
-
 const props = defineProps({
   text: {
     type: String,

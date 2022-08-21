@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import siteConfig from '~/site.config'
 import { useSubstackNewsletterConfig } from '~/plugins/substack/hooks'
 

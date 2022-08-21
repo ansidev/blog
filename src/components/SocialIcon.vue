@@ -1,7 +1,4 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { Icon } from '@iconify/vue'
-
 const iconMap = {
   email: 'bi:envelope-fill',
   github: 'bi:github',

@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-import { kebabCase } from '~/helpers'
-
 const { t } = useI18n()
 
 const router = useRouter()

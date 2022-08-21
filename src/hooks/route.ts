@@ -1,6 +1,3 @@
-import { computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-
 export const useQuery = () => {
   const router = useRouter()
   const route = useRoute()

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
 import siteConfig from '~/site.config'
 
 const route = useRoute()

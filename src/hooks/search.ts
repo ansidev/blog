@@ -1,6 +1,3 @@
-import { ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-
 export const useSearch = () => {
   const router = useRouter()
   const route = useRoute()

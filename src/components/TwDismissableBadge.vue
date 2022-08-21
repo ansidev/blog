@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { nanoid } from 'nanoid'
-import { toRef } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue'
 
 const props = defineProps({
   id: {

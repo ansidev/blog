@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue'
 import type { BreadcrumbItem } from '~/types'
 
 defineProps({

@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { getRandomDismissableBadgeStyle } from '~/helpers'
-import { useQuery } from '~/hooks'
-
 defineProps({
   projects: {
     type: Array,

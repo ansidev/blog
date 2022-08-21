@@ -1,8 +1,6 @@
 <script lang="ts">
 import type { PropType } from 'vue'
-import { computed, defineComponent, ref, watchEffect } from 'vue'
 import type { MarkdownItHeader } from '@mdit-vue/types'
-import { useRoute } from 'vue-router'
 
 const headingCssClassMap: Record<number, string> = {
   1: '',
