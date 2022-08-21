@@ -1,4 +1,4 @@
-export const buildUrlQueryParams = (params) => {
+export const buildUrlQueryParams = (params: any) => {
   const esc = encodeURIComponent
   const paramKeys = Object.keys(params)
   if (paramKeys.length < 1)

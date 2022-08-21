@@ -9,17 +9,3 @@
     </div>
   </SectionContainer>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue'
-// import { useRouter } from 'vue-router'
-
-export default defineComponent({
-  name: 'DefaultLayout',
-  // setup() {
-  //   const router = useRouter()
-  //   const currentRoute = computed(() => router.currentRoute.value)
-
-  //   const isIndex = computed(() => currentRoute.path === '/')
-  // },
-})
-</script>

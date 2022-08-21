@@ -1,3 +1,31 @@
+<script setup lang="ts">
+const { t } = useI18n()
+
+const router = useRouter()
+const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
+
+const tags = computed(() => {
+  const tagCount: Record<string, number> = {}
+  routes
+    .map(r => r.meta)
+    .filter(m => m.type === 'post')
+    .forEach((m) => {
+      if (Array.isArray(m.tags) && m.tags.length > 0) {
+        m.tags.forEach((tag) => {
+          const formattedTag = kebabCase(tag)
+          if (formattedTag in tagCount)
+            tagCount[formattedTag] += 1
+          else
+            tagCount[formattedTag] = 1
+        })
+      }
+    })
+  return tagCount
+})
+
+const sortedTags = computed(() => Object.keys(tags.value).sort((a, b) => tags.value[b] - tags.value[a]))
+</script>
+
 <template>
   <div class="divide-y divide-gray-200 dark:divide-gray-700">
     <div class="pt-6 pb-8 space-y-2 md:space-y-5">
@@ -23,45 +51,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-import { kebabCase } from '~/helpers'
-
-export default defineComponent({
-  setup() {
-    const { t } = useI18n()
-
-    const router = useRouter()
-    const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
-
-    const tags = computed(() => {
-      const tagCount: Record<string, number> = {}
-      routes
-        .map(r => r.meta)
-        .filter(m => m.type === 'post')
-        .forEach((m) => {
-          if (Array.isArray(m.tags) && m.tags.length > 0) {
-            m.tags.forEach((tag) => {
-              const formattedTag = kebabCase(tag)
-              if (formattedTag in tagCount)
-                tagCount[formattedTag] += 1
-              else
-                tagCount[formattedTag] = 1
-            })
-          }
-        })
-      return tagCount
-    })
-
-    const sortedTags = computed(() => Object.keys(tags.value).sort((a, b) => tags.value[b] - tags.value[a]))
-
-    return { t, kebabCase, tags, sortedTags }
-  },
-})
-</script>
 
 <route lang="yaml">
 meta:

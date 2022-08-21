@@ -1,4 +1,6 @@
-export default {
+import type { SiteConfig } from './types'
+
+const siteConfig: SiteConfig = {
   title: 'ansidev\'s blog',
   author: 'ansidev',
   description: 'Blog of ansidev',
@@ -21,10 +23,6 @@ export default {
     reddit: 'https://reddit.com/u/ansidev',
   },
   plugins: {
-    googleAnalytics: {
-      id: 'G-LQSQ92N2Q4',
-    },
-    sharing: true,
     facebookComment: {
       vendorConfig: {
         version: 'v9.0',
@@ -34,9 +32,13 @@ export default {
       },
       autoload: false,
     },
+    googleAnalytics: {
+      id: 'G-LQSQ92N2Q4',
+    },
     mediumZoom: {
       selector: '.medium-zoom',
     },
+    sharing: true,
     substack: {
       username: 'ansidev',
       width: 400,
@@ -45,3 +47,5 @@ export default {
     },
   },
 }
+
+export default siteConfig

@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { SiteConfig } from '~/helpers'
+import type { SiteConfig } from '~/types'
 
 export const useSubstackNewsletterConfig = (siteConfig: SiteConfig) => {
   const substackNewsletterConfig = computed(() => siteConfig.plugins?.substack)

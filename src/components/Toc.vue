@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import { computed, onUnmounted, ref } from 'vue'
 import type { MarkdownItHeader } from '@mdit-vue/types'
-import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
   /**

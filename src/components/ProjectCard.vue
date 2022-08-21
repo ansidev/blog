@@ -1,25 +1,12 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue'
-import { getProjectBadgeStyle } from '~/helpers'
-
-export default defineComponent({
-  components: {
-    Icon,
-  },
-  props: {
-    project: {
-      type: Object,
-      required: true,
-    },
-  },
-  setup() {
-    const { t } = useI18n()
-
-    return { t, getProjectBadgeStyle }
+<script setup lang="ts">
+defineProps({
+  project: {
+    type: Object,
+    required: true,
   },
 })
+
+const { t } = useI18n()
 </script>
 
 <template>

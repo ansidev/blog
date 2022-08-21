@@ -1,25 +1,4 @@
-<template>
-  <a
-    :href="shareURL"
-    target="_blank"
-    rel="noopener"
-    :aria-label="networkName"
-    style="padding-left: 0.25rem; padding-right: 0.25rem;"
-  >
-    <Icon
-      v-if="['icon', 'both'].includes(displayMode)"
-      :icon="networkIcon"
-      :width="iconSize"
-      :height="iconSize"
-      class="fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
-    />
-    <template v-if="['text', 'both'].includes(displayMode)">&nbsp;{{ networkName }}</template>
-  </a>
-</template>
-
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { Icon } from '@iconify/vue'
 import { buildUrlQueryParams } from '../utils/buildUrlQueryParams'
 
 export default defineComponent({
@@ -177,5 +156,23 @@ export default defineComponent({
     return { provider, networkName, networkIcon, shareURL }
   },
 })
-
 </script>
+
+<template>
+  <a
+    :href="shareURL"
+    target="_blank"
+    rel="noopener"
+    :aria-label="networkName"
+    style="padding-left: 0.25rem; padding-right: 0.25rem;"
+  >
+    <Icon
+      v-if="['icon', 'both'].includes(displayMode)"
+      :icon="networkIcon"
+      :width="iconSize"
+      :height="iconSize"
+      class="fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
+    />
+    <template v-if="['text', 'both'].includes(displayMode)">&nbsp;{{ networkName }}</template>
+  </a>
+</template>

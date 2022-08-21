@@ -1,11 +1,12 @@
 import mediumZoom from 'medium-zoom'
 import { mediumZoomSymbol } from './hooks'
+import type { MediumZoomPluginConfig } from './types'
 import type { UserModule } from '~/types'
 import siteConfig from '~/site.config'
 
-const selector = siteConfig.plugins.mediumZoom?.selector
-const zoomOptions = siteConfig.plugins.mediumZoom?.zoomOptions
-const delay = siteConfig.plugins.mediumZoom?.delay
+const selector = (siteConfig.plugins.mediumZoom as MediumZoomPluginConfig)?.selector
+const zoomOptions = (siteConfig.plugins.mediumZoom as MediumZoomPluginConfig)?.zoomOptions
+const delay = (siteConfig.plugins.mediumZoom as MediumZoomPluginConfig)?.delay
 
 export const install: UserModule = ({ app, router, isClient }) => {
   if (!isClient || !selector)
