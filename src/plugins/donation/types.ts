@@ -1,6 +1,7 @@
 export declare interface DonationPluginConfig {
-  paypal?: string
   buymeacoffee?: string
+  kofi?: string
+  paypal?: string
   custom?: {
     [key: string]: CustomDonationConfig
   }
