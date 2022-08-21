@@ -2,6 +2,7 @@ import type { MarkdownItHeader } from '@mdit-vue/plugin-headers'
 import type { Frontmatter } from 'vite-plugin-md'
 import type { ViteSSGContext } from 'vite-ssg'
 import type { DomainConfig } from 'vue-gtag'
+import type { DonationPluginConfig } from './plugins/donation/types'
 import type { FacebookCommentPluginConfig } from './plugins/facebookComment/types'
 import type { MediumZoomPluginConfig } from './plugins/mediumZoom/types'
 import type { SubstackPluginConfig } from './plugins/substack/types'
@@ -26,6 +27,7 @@ export declare interface NavItem {
 }
 
 export declare interface SitePlugins {
+  donation?: DonationPluginConfig
   facebookComment?: FacebookCommentPluginConfig
   googleAnalytics?: DomainConfig
   mediumZoom?: MediumZoomPluginConfig
