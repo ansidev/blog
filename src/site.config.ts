@@ -60,6 +60,12 @@ const siteConfig: SiteConfig = {
       height: 200,
       background: 'auto',
     },
+    swetrix: {
+      pid: '0n2j0kWAoVVs',
+      initOptions: {
+        debug: true,
+      },
+    },
   },
 }
 
