@@ -25,6 +25,7 @@ const siteConfig: SiteConfig = {
   plugins: {
     donation: {
       paypal: 'ansidev',
+      kofi: 'ansidev',
       buymeacoffee: 'ansidev',
     },
     facebookComment: {
