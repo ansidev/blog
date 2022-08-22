@@ -1,4 +1,5 @@
 import type { MarkdownItHeader } from '@mdit-vue/plugin-headers'
+import type { SwetrixVuePluginOptions } from 'swetrix-vue/dist/types'
 import type { Frontmatter } from 'vite-plugin-md'
 import type { ViteSSGContext } from 'vite-ssg'
 import type { DomainConfig } from 'vue-gtag'
@@ -33,6 +34,7 @@ export declare interface SitePlugins {
   mediumZoom?: MediumZoomPluginConfig
   sharing?: boolean
   substack?: SubstackPluginConfig
+  swetrix?: SwetrixVuePluginOptions
 }
 
 export declare interface BreadcrumbItem {

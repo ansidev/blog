@@ -212,7 +212,7 @@ export default defineConfig(({ mode }) => {
               urlPattern: /^https:\/\/paypalobjects\.com\/.*/i,
               handler: 'CacheFirst',
               options: {
-                cacheName: 'gravatar-avatar-cache',
+                cacheName: 'paypal-objects-cache',
                 expiration: {
                   maxEntries: 10,
                   maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
@@ -226,7 +226,7 @@ export default defineConfig(({ mode }) => {
               urlPattern: /^https:\/\/cdn.\/buymeacoffee\.com\/.*/i,
               handler: 'CacheFirst',
               options: {
-                cacheName: 'gravatar-avatar-cache',
+                cacheName: 'buymeacoffee-cdn-cache',
                 expiration: {
                   maxEntries: 10,
                   maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days

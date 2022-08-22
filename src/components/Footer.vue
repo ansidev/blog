@@ -10,10 +10,10 @@ const { isSubstackNewsletterPluginEnabled, substackNewsletterConfig } = useSubst
 <template>
   <footer>
     <div class="grid grid-cols-2 space-y-6 mb-3">
-      <div v-if="isSubstackNewsletterPluginEnabled" class="flex items-center justify-center">
+      <div v-if="isSubstackNewsletterPluginEnabled" class="flex items-center justify-center col-span-2 lg:col-span-1">
         <SubstackNewsletter v-bind="substackNewsletterConfig" />
       </div>
-      <div v-if="isDonationPluginEnabled" class="flex items-center justify-center space-x-4">
+      <div v-if="isDonationPluginEnabled" class="flex flex-wrap items-center justify-center space-x-4 space-y-4 col-span-2 lg:col-span-1">
         <Donation />
       </div>
       <div class="flex flex-wrap items-center justify-center space-x-4 col-span-2">

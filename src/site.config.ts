@@ -25,7 +25,18 @@ const siteConfig: SiteConfig = {
   plugins: {
     donation: {
       paypal: 'ansidev',
+      kofi: 'ansidev',
       buymeacoffee: 'ansidev',
+      custom: {
+        momo: {
+          donationBaseUrl: 'https://me.momo.vn',
+          donationId: 'ansidev',
+          donationButtonImage: '/imgs/momo_icon_rectangle_pinkbg_RGB.png',
+          donationButtonStyle: {
+            height: '60px !important',
+          },
+        },
+      },
     },
     facebookComment: {
       vendorConfig: {
@@ -48,6 +59,12 @@ const siteConfig: SiteConfig = {
       width: 400,
       height: 200,
       background: 'auto',
+    },
+    swetrix: {
+      pid: '0n2j0kWAoVVs',
+      initOptions: {
+        debug: true,
+      },
     },
   },
 }
