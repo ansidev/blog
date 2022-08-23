@@ -1,4 +1,4 @@
-import Swetrix from 'swetrix-vue/dist'
+import Swetrix from 'swetrix-vue'
 import type { UserModule } from '~/types'
 import siteConfig from '~/site.config'
 
