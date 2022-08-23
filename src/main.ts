@@ -17,7 +17,7 @@ export const createApp = ViteSSG(
   (ctx) => {
     ctx.app.component('Icon', Icon)
     // install all plugins under `plugins/`
-    Object.values(import.meta.glob<{ install: UserModule }>('./plugins/*.ts', { eager: true })).map(p => p.install?.(ctx))
-    Object.values(import.meta.glob<{ install: UserModule }>('./plugins/**/index.ts', { eager: true })).map(p => p.install?.(ctx))
+    Object.values(import.meta.glob<{ install: UserModule }>('./plugins/*.ts', { eager: true })).forEach(p => p.install?.(ctx))
+    Object.values(import.meta.glob<{ install: UserModule }>('./plugins/**/index.ts', { eager: true })).forEach(p => p.install?.(ctx))
   },
 )

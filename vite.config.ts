@@ -283,7 +283,7 @@ export default defineConfig(({ mode }) => {
 
     ssr: {
       // workaround until they support native ESM
-      noExternal: ['vue-i18n/*'],
+      noExternal: ['workbox-window', 'vue-i18n/*', 'swetrix-vue/*'],
     },
   }
 })
