@@ -6,6 +6,7 @@ showcaseUrl: https://ansidev.xyz/
 license: MIT
 licenseUrl: https://github.com/ansidev/blog/blob/main/LICENSE
 techs:
+  - Typescript
   - Vite
   - Vue3
   - Vue Router
@@ -36,11 +37,12 @@ After some tests, I decided to use Vitesse to build my blog.
 
 The blog v2 is built with:
 
+- [TypeScript](https://typescriptlang.org).
 - [Vite](https://vitejs.dev).
 - [Vue 3](https://vuejs.org).
 - [Vue Router](https://router.vuejs.org).
 - [Vue I18n](https://vue-i18n.intlify.dev/).
-- [TailwindCss](https://tailwindcss.com/).
+- [TailwindCSS](https://tailwindcss.com/).
 - [Bootstrap Icon](https://icons.getbootstrap.com/).
 - [Iconify for Vue](https://docs.iconify.design/icon-components/vue/).
 - [Netlify](https://netlify.com).
@@ -64,14 +66,18 @@ v2:
 - Support multi-language.
 - Newsletter subscription.
 - Search for articles, projects.
+- Table of contents for post.
+- Plugin Donation.
+- Plugin Swetrix Analytics.
+- Fix bugs, optimize code.
 
 ### Blog theme
 - v1: Inspired by [Official VueJS blog](https://github.com/vuejs/blog). This theme is originally included in the blog v1 and I ported it when I upgraded my blog to v2.
 - v2: Inspired by [Tailwind NextJs Starter Blog Theme](https://github.com/timlrx/tailwind-nextjs-starter-blog) by [Timothy](https://github.com/timlrx) with customizations.
 - v2.1: Add Projects page, support searching for projects basically, change the default font.
 
-## TODO:
+## TODO
 
 - Support more project filters.
-
-...
+- Change comment system.
+- ...
