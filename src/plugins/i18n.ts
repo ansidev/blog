@@ -5,7 +5,7 @@ import type { UserModule } from '~/types'
 // https://vitejs.dev/guide/features.html#glob-import
 const messages = Object.fromEntries(
   Object.entries(
-    import.meta.glob<{ default: any }>('../locales/*.json', { eager: true }))
+    import.meta.globEager('../locales/*.json'))
     .map(([key, value]) => [key.slice(11, -5), value.default]),
 )
 
