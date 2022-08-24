@@ -39,7 +39,7 @@
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.34.0",
     "@typescript-eslint/parser": "^5.34.0",
-    "@vitejs/plugin-vue": "^2.3.4",
+    "@vitejs/plugin-vue": "^3.0.0",
     "@yankeeinlondon/link-builder": "^1.0.5",
     "@yankeeinlondon/meta-builder": "^1.0.6",
     "autoprefixer": "^10.4.8",
