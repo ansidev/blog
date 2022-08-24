@@ -37,6 +37,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       Vue({
+        reactivityTransform: true,
         include: [/\.vue$/, /\.md$/],
       }),
 
@@ -242,6 +243,8 @@ export default defineConfig(({ mode }) => {
 
       // https://github.com/intlify/vite-plugin-vue-i18n
       VueI18n({
+        runtimeOnly: true,
+        compositionOnly: true,
         include: [resolve(dirname(fileURLToPath(import.meta.url)), 'locales/**')],
       }),
 
