@@ -2,6 +2,10 @@
   margin-top: 0;
 }
 
+.prose a {
+  overflow-wrap: break-word;
+}
+
 .prose pre:not(.shiki) {
   padding: 0;
 }
