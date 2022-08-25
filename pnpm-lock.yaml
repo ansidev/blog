@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.26.1
   '@iconify/vue': ^3.2.1
   '@intlify/vite-plugin-vue-i18n': ^6.0.1
-  '@mdit-vue/plugin-headers': ^0.10.0
+  '@mdit-vue/plugin-headers': ^0.11.0
   '@rollup/pluginutils': ^4.2.1
   '@tailwindcss/forms': ^0.5.2
   '@tailwindcss/typography': ^0.5.4
@@ -80,7 +80,7 @@ devDependencies:
   '@antfu/eslint-config': 0.26.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@iconify/vue': 3.2.1_vue@3.2.37
   '@intlify/vite-plugin-vue-i18n': 6.0.1_vite@2.9.15+vue-i18n@9.2.2
-  '@mdit-vue/plugin-headers': 0.10.0
+  '@mdit-vue/plugin-headers': 0.11.0
   '@rollup/pluginutils': 4.2.1
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.8
   '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
@@ -1595,25 +1595,25 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@mdit-vue/plugin-headers/0.10.0:
-    resolution: {integrity: sha512-DPrQyv83jVxX3FwmCnemVeBsSdtH4Hz+geDMwbzATtaqzaYDDpuAxoeiLGpTg41EpLe2SPDk94N3OOh0cdV0Lw==}
+  /@mdit-vue/plugin-headers/0.11.0:
+    resolution: {integrity: sha512-Zwf+ahHjlHr+4X4KHdjrtCl2n5CJVLQ/lWaqaILssnZFGy9lmIiRJhFA5rtWj0ijm+UpjNW9pebvB2sF7TD0YA==}
     dependencies:
-      '@mdit-vue/shared': 0.10.0
-      '@mdit-vue/types': 0.10.0
+      '@mdit-vue/shared': 0.11.0
+      '@mdit-vue/types': 0.11.0
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     dev: true
 
-  /@mdit-vue/shared/0.10.0:
-    resolution: {integrity: sha512-rUyu0NVNbaEg4DUiQenh/fam1MLdkItdzEVScN7vP0UzDWOwmGaKwkhlMmkSTW80H63ZlKst0fPe9LaGHImSZg==}
+  /@mdit-vue/shared/0.11.0:
+    resolution: {integrity: sha512-eiGe42y7UYpjO6/8Lg6OpAtzZrRU9k8dhpX1e/kJMTcL+tn+XkqRMJJ8I2pdrOQMSkgvIva5FNAriykqFzkdGg==}
     dependencies:
-      '@mdit-vue/types': 0.10.0
+      '@mdit-vue/types': 0.11.0
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     dev: true
 
-  /@mdit-vue/types/0.10.0:
-    resolution: {integrity: sha512-ROz5zVKt3COpuWUYFnpJh5kIXit9SQeMtimGBlwKJL1xEBNPG3QKD3VZzez5Ng/dBCApianCQhNVZGCza82Myw==}
+  /@mdit-vue/types/0.11.0:
+    resolution: {integrity: sha512-ygCGP7vFpqS02hpZwEe1uz8cfImWX06+zRs08J+tCZRKb6k+easIaIHFtY9ZSxt7j9L/gAPLDo/5RmOT6z0DPQ==}
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
