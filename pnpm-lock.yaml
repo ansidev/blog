@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.26.3
   '@iconify/vue': ^3.2.1
   '@intlify/vite-plugin-vue-i18n': ^6.0.1
-  '@mdit-vue/plugin-headers': ^0.11.0
+  '@mdit-vue/plugin-headers': ^0.11.1
   '@rollup/pluginutils': ^4.2.1
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.7
@@ -80,7 +80,7 @@ devDependencies:
   '@antfu/eslint-config': 0.26.3_yqf6kl63nyoq5megxukfnom5rm
   '@iconify/vue': 3.2.1_vue@3.2.38
   '@intlify/vite-plugin-vue-i18n': 6.0.1_vite@2.9.15+vue-i18n@9.2.2
-  '@mdit-vue/plugin-headers': 0.11.0
+  '@mdit-vue/plugin-headers': 0.11.1
   '@rollup/pluginutils': 4.2.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.1.8
@@ -1600,8 +1600,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@mdit-vue/plugin-headers/0.11.0:
-    resolution: {integrity: sha512-Zwf+ahHjlHr+4X4KHdjrtCl2n5CJVLQ/lWaqaILssnZFGy9lmIiRJhFA5rtWj0ijm+UpjNW9pebvB2sF7TD0YA==}
+  /@mdit-vue/plugin-headers/0.11.1:
+    resolution: {integrity: sha512-eBUonsEkXP2Uf2MIXSWZGCcLCIMSA1XfThJwhzSAosoa7fO5aw52LKCweddmn7zLQvgQh7p7382sFAhCc2KXog==}
     dependencies:
       '@mdit-vue/shared': 0.11.0
       '@mdit-vue/types': 0.11.0
