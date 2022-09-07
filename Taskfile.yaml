@@ -1,12 +1,34 @@
 version: '3'
 
 tasks:
+  install:
+    desc: Install dependencies
+    cmds:
+      - pnpm install
+
+  clean:
+    desc: Clean
+    cmds:
+      - rm public/{sitemap.xml,robots.txt,feed.rss}
+      - rm -r dist
+
+  prebuild:
+    desc: Prebuild
+    cmds:
+      - task: clean
+      - touch public/{sitemap.xml,robots.txt,feed.rss}
+
+  build:
+    desc: Build
+    cmds:
+      - task: install
+      - task: prebuild
+      - pnpm run build
+
   test_update:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
       - ncu -u -f {{.CLI_ARGS}}
-      - pnpm install
-      - pnpm run prebuild
-      - rm -r dist
-      - pnpm run build
+      - task: install
+      - task: build
     silent: true
