@@ -37,7 +37,7 @@
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/node": "^18.7.15",
     "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-vue": "^2.3.4",
     "@yankeeinlondon/link-builder": "^1.0.5",
