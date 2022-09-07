@@ -25,7 +25,7 @@
     "vue-router": "^4.1.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.26.2",
+    "@antfu/eslint-config": "^0.26.3",
     "@iconify/vue": "^3.2.1",
     "@intlify/vite-plugin-vue-i18n": "^6.0.1",
     "@mdit-vue/plugin-headers": "^0.11.0",
