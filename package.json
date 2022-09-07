@@ -47,7 +47,7 @@
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "feed": "^4.2.2",
-    "fp-ts": "^2.12.2",
+    "fp-ts": "^2.12.3",
     "gray-matter": "^4.0.3",
     "happy-dom": "^6.0.4",
     "inferred-types": "^0.22.0",
