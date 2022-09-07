@@ -7,7 +7,7 @@
 
 [build]
   publish = "dist"
-  command = "pnpm run prebuild && pnpm run build"
+  command = "touch public/{sitemap.xml,robots.txt,feed.rss} && pnpm run build"
 
 [[redirects]]
   from = "/*"
