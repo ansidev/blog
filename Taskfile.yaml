@@ -1,0 +1,12 @@
+version: '3'
+
+tasks:
+  test_update:
+    desc: Check whether the new version of the npm package broke the build.
+    cmds:
+      - ncu -u -f {{.CLI_ARGS}}
+      - pnpm install
+      - pnpm run prebuild
+      - rm -r dist
+      - pnpm run build
+    silent: true
