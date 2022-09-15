@@ -41,7 +41,7 @@
     "@vitejs/plugin-vue": "^2.3.4",
     "@yankeeinlondon/link-builder": "^1.0.5",
     "@yankeeinlondon/meta-builder": "^1.0.6",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.11",
     "cross-env": "^7.0.3",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
