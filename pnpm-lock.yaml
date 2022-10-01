@@ -11,7 +11,7 @@ specifiers:
   '@types/github-slugger': ^1.3.0
   '@types/markdown-it': ^12.2.3
   '@types/markdown-it-link-attributes': ^3.0.1
-  '@types/node': ^18.7.15
+  '@types/node': ^18.7.23
   '@types/nprogress': ^0.2.0
   '@typescript-eslint/eslint-plugin': ^5.36.2
   '@typescript-eslint/parser': ^5.36.2
@@ -87,7 +87,7 @@ devDependencies:
   '@types/github-slugger': 1.3.0
   '@types/markdown-it': 12.2.3
   '@types/markdown-it-link-attributes': 3.0.1
-  '@types/node': 18.7.15
+  '@types/node': 18.7.23
   '@types/nprogress': 0.2.0
   '@typescript-eslint/eslint-plugin': 5.36.2_u57jmrsc7a4n3uje5s6luwyq7q
   '@typescript-eslint/parser': 5.36.2_nwctkcr5uyxf47tw7zkgamxmfq
@@ -115,7 +115,7 @@ devDependencies:
   sass: 1.54.9
   shiki: 0.11.1
   tailwindcss: 3.1.8_57znarxsqwmnneadci5z5fd5gu
-  ts-node: 10.9.1_2cznuqqlnikrcghzospa5ibs3e
+  ts-node: 10.9.1_gbhfbbeqrol7fxixnzbkbuanxe
   typescript: 4.8.4
   unplugin-auto-import: 0.11.2_7njuwtbozelhkzgyd6b6hdvdaq
   unplugin-vue-components: 0.22.7_leuj33ohjb7o6mr2xv3ian5nnm
@@ -1769,7 +1769,7 @@ packages:
   /@types/concat-stream/1.6.1:
     resolution: {integrity: sha512-eHE4cQPoj6ngxBZMvVf6Hw7Mh4jMW4U9lpGmS5GBPB9RYxlFg+CHaVN7ErNY4W9XfLIEn20b4VDYaIrbq0q4uA==}
     dependencies:
-      '@types/node': 18.7.15
+      '@types/node': 18.7.23
     dev: true
 
   /@types/debug/4.1.7:
@@ -1785,7 +1785,7 @@ packages:
   /@types/form-data/0.0.33:
     resolution: {integrity: sha512-8BSvG1kGm83cyJITQMZSulnl6QV8jqAGreJsc5tPu1Jq0vTSOiY/k24Wx82JRpWwZSqrala6sd5rWi6aNXvqcw==}
     dependencies:
-      '@types/node': 18.7.15
+      '@types/node': 18.7.23
     dev: true
 
   /@types/github-slugger/1.3.0:
@@ -1839,8 +1839,8 @@ packages:
     resolution: {integrity: sha512-9pLfceRSrKIsv/MISN6RoFWTIzka36Uk2Uuf5a8cHyDYhEgl5Hm5dXoe621KULeBjt+cFsY18mILsWWtJeG80w==}
     dev: false
 
-  /@types/node/18.7.15:
-    resolution: {integrity: sha512-XnjpaI8Bgc3eBag2Aw4t2Uj/49lLBSStHWfqKvIuXD7FIrZyMLWp8KuAFHAqxMZYTF9l08N1ctUn9YNybZJVmQ==}
+  /@types/node/18.7.23:
+    resolution: {integrity: sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==}
     dev: true
 
   /@types/node/8.10.66:
@@ -1862,7 +1862,7 @@ packages:
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 18.7.15
+      '@types/node': 18.7.23
     dev: true
 
   /@types/trusted-types/2.0.2:
@@ -4452,7 +4452,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.7.15
+      '@types/node': 18.7.23
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
@@ -5241,7 +5241,7 @@ packages:
     dependencies:
       lilconfig: 2.0.6
       postcss: 8.4.16
-      ts-node: 10.9.1_2cznuqqlnikrcghzospa5ibs3e
+      ts-node: 10.9.1_gbhfbbeqrol7fxixnzbkbuanxe
       yaml: 1.10.2
     dev: true
 
@@ -5984,7 +5984,7 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /ts-node/10.9.1_2cznuqqlnikrcghzospa5ibs3e:
+  /ts-node/10.9.1_gbhfbbeqrol7fxixnzbkbuanxe:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -6003,7 +6003,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.7.15
+      '@types/node': 18.7.23
       acorn: 8.8.0
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -6506,7 +6506,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.3
       '@types/chai-subset': 1.3.3
-      '@types/node': 18.7.15
+      '@types/node': 18.7.23
       chai: 4.3.6
       debug: 4.3.4
       happy-dom: 6.0.4
