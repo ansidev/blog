@@ -37,7 +37,7 @@
     "@types/node": "^18.7.23",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
+    "@typescript-eslint/parser": "^5.38.1",
     "@vitejs/plugin-vue": "^2.3.4",
     "@yankeeinlondon/link-builder": "^1.0.5",
     "@yankeeinlondon/meta-builder": "^1.0.6",
