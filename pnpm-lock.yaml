@@ -54,7 +54,7 @@ specifiers:
   vite-plugin-fonts: ^0.6.0
   vite-plugin-md: ^0.20.4
   vite-plugin-pages: ^0.26.0
-  vite-plugin-pwa: ^0.12.7
+  vite-plugin-pwa: ^0.12.8
   vite-plugin-vue-layouts: ^0.7.0
   vite-ssg: ^0.20.2
   vite-ssg-sitemap: ^0.4.3
@@ -123,7 +123,7 @@ devDependencies:
   vite-plugin-fonts: 0.6.0_vite@2.9.15
   vite-plugin-md: 0.20.4_jzxyxksnkjrioxnrq573prtfai
   vite-plugin-pages: 0.26.0_vite@2.9.15
-  vite-plugin-pwa: 0.12.7_vite@2.9.15
+  vite-plugin-pwa: 0.12.8_vite@2.9.15
   vite-plugin-vue-layouts: 0.7.0_mdweqbba5rrwhr43iaxi2jjhim
   vite-ssg: 0.20.2_houjmvmvnyar33wzupimh63wpy
   vite-ssg-sitemap: 0.4.3
@@ -6382,13 +6382,13 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-pwa/0.12.7_vite@2.9.15:
-    resolution: {integrity: sha512-salSwS1wWc1niNWfhX2W6gtfXmk+XESMz62w95EHLq6fSM2bDgDm1APmvq1nkDcxH6Onky7HxysCBKMzvOHXYg==}
+  /vite-plugin-pwa/0.12.8_vite@2.9.15:
+    resolution: {integrity: sha512-pSiFHmnJGMQJJL8aJzQ8SaraZBSBPMGvGUkCNzheIq9UQCEk/eP3UmANNmS9eupuhIpTK8AdxTOHcaMcAqAbCA==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0-0
     dependencies:
       debug: 4.3.4
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       pretty-bytes: 6.0.0
       rollup: 2.79.1
       vite: 2.9.15_sass@1.55.0
