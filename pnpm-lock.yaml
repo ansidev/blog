@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.27.0
   '@iconify/vue': ^4.0.0
-  '@intlify/vite-plugin-vue-i18n': ^6.0.1
+  '@intlify/vite-plugin-vue-i18n': ^6.0.3
   '@mdit-vue/plugin-headers': ^0.11.1
   '@rollup/pluginutils': ^4.2.1
   '@tailwindcss/forms': ^0.5.3
@@ -79,7 +79,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.27.0_ypn2ylkkyfa5i233caldtndbqa
   '@iconify/vue': 4.0.0_vue@3.2.40
-  '@intlify/vite-plugin-vue-i18n': 6.0.1_vite@2.9.15+vue-i18n@9.2.2
+  '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@2.9.15+vue-i18n@9.2.2
   '@mdit-vue/plugin-headers': 0.11.1
   '@rollup/pluginutils': 4.2.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
@@ -1503,8 +1503,8 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /@intlify/vite-plugin-vue-i18n/6.0.1_vite@2.9.15+vue-i18n@9.2.2:
-    resolution: {integrity: sha512-FFVcxVU4bR9vdDLNbltM5mrhndnXMErO01i0RrpdyMegEt3Nu/YLoH0sFdjRun7/RY4vaEnhTnFvVf9uO0dQvg==}
+  /@intlify/vite-plugin-vue-i18n/6.0.3_vite@2.9.15+vue-i18n@9.2.2:
+    resolution: {integrity: sha512-6SgNzPAOCR90wvt368lKzi7f/5ZEWJn22UCGvhFsP3XvKqlF3cVzojahgQ6o+LTdCkExeM6wPgd+haFf28E9VQ==}
     engines: {node: '>= 14.6'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -1522,7 +1522,7 @@ packages:
       '@intlify/shared': 9.3.0-beta.6
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       source-map: 0.6.1
       vite: 2.9.15_sass@1.55.0
       vue-i18n: 9.2.2_vue@3.2.40
