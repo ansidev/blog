@@ -24,7 +24,7 @@ Recently, I've practiced to solve LeetCode problems.
 
 I created this starter project while solving them. Hope this can save your time.
 
-If you find this project and my other projects useful to you, consider donating me at:
+If you find this project and my other projects useful to you, consider donating to me at:
 
 - [Paypal](https://paypal.me/ansidev)
 - [Ko-fi](https://ko-fi.com/ansidev)
