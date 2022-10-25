@@ -11,12 +11,14 @@ tasks:
     cmds:
       - rm public/{sitemap.xml,robots.txt,feed.rss}
       - rm -r dist
+    ignore_error: true
 
   prebuild:
     desc: Prebuild
     cmds:
       - task: clean
       - touch public/{sitemap.xml,robots.txt,feed.rss}
+    ignore_error: true
 
   build:
     desc: Build
