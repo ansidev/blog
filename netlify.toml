@@ -23,6 +23,3 @@
   for = "/*.rss"
   [headers.values]
     Content-Type = "application/rss+xml; charset=utf-8"
-
-[[plugins]]
-  package = "/.netlify/netlify-plugin-pnpm"
