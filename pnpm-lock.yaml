@@ -26,7 +26,7 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   feed: ^4.2.2
   fp-ts: ^2.12.3
-  github-slugger: ^1.4.0
+  github-slugger: ^1.5.0
   gray-matter: ^4.0.3
   happy-dom: ^7.0.0
   inferred-types: ^0.23.0
@@ -66,7 +66,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 9.3.0_vue@3.2.40
   '@vueuse/head': 0.9.7_vue@3.2.40
-  github-slugger: 1.4.0
+  github-slugger: 1.5.0
   medium-zoom: 1.0.6
   nanoid: 4.0.0
   nprogress: 0.2.0
@@ -3951,8 +3951,8 @@ packages:
       get-intrinsic: 1.1.2
     dev: true
 
-  /github-slugger/1.4.0:
-    resolution: {integrity: sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ==}
+  /github-slugger/1.5.0:
+    resolution: {integrity: sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==}
     dev: false
 
   /glob-parent/5.1.2:
