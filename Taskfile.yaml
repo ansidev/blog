@@ -30,6 +30,8 @@ tasks:
   test_update:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
+      - git checkout main
+      - git checkout -b deps/{{.CLI_ARGS}}
       - ncu -u -f {{.CLI_ARGS}}
       - task: install
       - task: build
