@@ -29,7 +29,7 @@ specifiers:
   github-slugger: ^2.0.0
   gray-matter: ^4.0.3
   happy-dom: ^7.0.0
-  inferred-types: ^0.26.0
+  inferred-types: ^0.27.0
   markdown-it: ^13.0.1
   markdown-it-anchor: ^8.6.5
   markdown-it-link-attributes: ^4.0.1
@@ -92,8 +92,8 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.39.0_cfd7h3iktziq6hcwahu2qxhjhy
   '@typescript-eslint/parser': 5.39.0_z4bbprzjrhnsfa24uvmcbu7f5q
   '@vitejs/plugin-vue': 2.3.4_vite@2.9.15+vue@3.2.40
-  '@yankeeinlondon/link-builder': 1.0.5_4eoxniamnyiuuobjmjeiiulgvm
-  '@yankeeinlondon/meta-builder': 1.0.6_fnn5q2dj26r6ynskwleaohsw7i
+  '@yankeeinlondon/link-builder': 1.0.5_36h4rpb3uep2yyrch2k4ns76eu
+  '@yankeeinlondon/meta-builder': 1.0.6_oxaf6nx6uyqkv24w2fbopvm6dq
   autoprefixer: 10.4.12_postcss@8.4.18
   cross-env: 7.0.3
   eslint: 8.25.0
@@ -102,7 +102,7 @@ devDependencies:
   fp-ts: 2.12.3
   gray-matter: 4.0.3
   happy-dom: 7.6.0
-  inferred-types: 0.26.0_2kffnxz2vwpo37j7cukrvzegfu
+  inferred-types: 0.27.0_2kffnxz2vwpo37j7cukrvzegfu
   markdown-it: 13.0.1
   markdown-it-anchor: 8.6.5_ea7kj7wzjkld5jo2noyjqxi764
   markdown-it-link-attributes: 4.0.1
@@ -121,7 +121,7 @@ devDependencies:
   unplugin-vue-components: 0.22.9_rollup@3.2.3+vue@3.2.40
   vite: 2.9.15_sass@1.55.0
   vite-plugin-fonts: 0.6.0_vite@2.9.15
-  vite-plugin-md: 0.20.4_ouqw4mxvypphcjiswpiilod2iy
+  vite-plugin-md: 0.20.4_z6ybimn34sjyo5y25tiwksrfoq
   vite-plugin-pages: 0.27.0_vite@2.9.15
   vite-plugin-pwa: 0.12.8_vite@2.9.15
   vite-plugin-vue-layouts: 0.7.0_mdweqbba5rrwhr43iaxi2jjhim
@@ -2139,7 +2139,7 @@ packages:
       - '@vue/composition-api'
       - vue
 
-  /@yankeeinlondon/builder-api/0.4.1_4eoxniamnyiuuobjmjeiiulgvm:
+  /@yankeeinlondon/builder-api/0.4.1_36h4rpb3uep2yyrch2k4ns76eu:
     resolution: {integrity: sha512-O6LS9Zg4xqLVpAgea72mNhZvdy9B2BuIgNdsRvNkmnACG8XvlZtEKryGt2ECI/z+dbQICbHDQFCNtZRBrfSMlA==}
     peerDependencies:
       fp-ts: ^2.12.1
@@ -2149,9 +2149,9 @@ packages:
     dependencies:
       '@yankeeinlondon/happy-wrapper': 2.6.0_2kffnxz2vwpo37j7cukrvzegfu
       fp-ts: 2.12.3
-      inferred-types: 0.26.0_2kffnxz2vwpo37j7cukrvzegfu
+      inferred-types: 0.27.0_2kffnxz2vwpo37j7cukrvzegfu
       markdown-it: 13.0.1
-      vite-plugin-md: 0.20.4_ouqw4mxvypphcjiswpiilod2iy
+      vite-plugin-md: 0.20.4_z6ybimn34sjyo5y25tiwksrfoq
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -2184,12 +2184,12 @@ packages:
       - supports-color
     dev: true
 
-  /@yankeeinlondon/link-builder/1.0.5_4eoxniamnyiuuobjmjeiiulgvm:
+  /@yankeeinlondon/link-builder/1.0.5_36h4rpb3uep2yyrch2k4ns76eu:
     resolution: {integrity: sha512-l67pbMn+YhEcAeeF2HKz3BxAlbWqDSMypeKQwnJqLiDTi91FcPf2z21DV3Wnxq3n2vAmzvpGA74nAk/M8KjwiA==}
     peerDependencies:
       markdown-it: '>=13'
     dependencies:
-      '@yankeeinlondon/builder-api': 0.4.1_4eoxniamnyiuuobjmjeiiulgvm
+      '@yankeeinlondon/builder-api': 0.4.1_36h4rpb3uep2yyrch2k4ns76eu
       '@yankeeinlondon/happy-wrapper': 2.6.0_2kffnxz2vwpo37j7cukrvzegfu
       markdown-it: 13.0.1
       pathe: 0.3.5
@@ -2209,15 +2209,15 @@ packages:
       - vite-plugin-md
     dev: true
 
-  /@yankeeinlondon/meta-builder/1.0.6_fnn5q2dj26r6ynskwleaohsw7i:
+  /@yankeeinlondon/meta-builder/1.0.6_oxaf6nx6uyqkv24w2fbopvm6dq:
     resolution: {integrity: sha512-MGsJ37kKpXX231JPAfTxFQhcv13ZwcG4OxDfEZSgoDX3/h2UjW0xBbJgHntRs3KInIlr5MZAR1xX7TmWFRLd+Q==}
     peerDependencies:
       '@rollup/pluginutils': ^4.2.1
       inferred-types: ^0.22.0
     dependencies:
       '@rollup/pluginutils': 5.0.2_rollup@3.2.3
-      '@yankeeinlondon/builder-api': 0.4.1_4eoxniamnyiuuobjmjeiiulgvm
-      inferred-types: 0.26.0_2kffnxz2vwpo37j7cukrvzegfu
+      '@yankeeinlondon/builder-api': 0.4.1_36h4rpb3uep2yyrch2k4ns76eu
+      inferred-types: 0.27.0_2kffnxz2vwpo37j7cukrvzegfu
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -4210,8 +4210,8 @@ packages:
       common-types: 1.31.1
     dev: true
 
-  /inferred-types/0.26.0_2kffnxz2vwpo37j7cukrvzegfu:
-    resolution: {integrity: sha512-sSLQ+6OWdYYNaA/dJihVUnGp7VjhP3ZCfOWrThjPTq/j6n2SArbcs1AWbK3a9jgdDQfLwgFJ2dhvJYAg73tAeA==}
+  /inferred-types/0.27.0_2kffnxz2vwpo37j7cukrvzegfu:
+    resolution: {integrity: sha512-yVdPVWmDBY3XDUsh8Nz60dtG8vplNrEVDKtU7OXlQCEyW7/xpOIQtEH/jEj/L7rEj7kesOBC4SBu+pX58pJ+3A==}
     dependencies:
       brilliant-errors: 0.6.0_2kffnxz2vwpo37j7cukrvzegfu
     transitivePeerDependencies:
@@ -6345,14 +6345,14 @@ packages:
       vite: 2.9.15_sass@1.55.0
     dev: true
 
-  /vite-plugin-md/0.20.4_ouqw4mxvypphcjiswpiilod2iy:
+  /vite-plugin-md/0.20.4_z6ybimn34sjyo5y25tiwksrfoq:
     resolution: {integrity: sha512-W3Z59/ROS2X6OIwPwV2PjE+QkfW0UVGxyf3Z2JR0OLqGJ+Iy2SGA503m/vmATJv+C3DjeU8Oy8diQx1R+IyRwQ==}
     peerDependencies:
       '@rollup/pluginutils': ^4.2.1
       rollup: ^2.77.0
     dependencies:
       '@rollup/pluginutils': 5.0.2_rollup@3.2.3
-      '@yankeeinlondon/builder-api': 0.4.1_4eoxniamnyiuuobjmjeiiulgvm
+      '@yankeeinlondon/builder-api': 0.4.1_36h4rpb3uep2yyrch2k4ns76eu
       '@yankeeinlondon/happy-wrapper': 2.6.0_2kffnxz2vwpo37j7cukrvzegfu
       gray-matter: 4.0.3
       markdown-it: 13.0.1
