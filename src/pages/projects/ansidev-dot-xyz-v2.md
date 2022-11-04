@@ -6,7 +6,7 @@ showcaseUrl: https://ansidev.xyz/
 license: MIT
 licenseUrl: https://github.com/ansidev/blog/blob/main/LICENSE
 techs:
-  - Typescript
+  - TypeScript
   - Vite
   - Vue3
   - Vue Router
