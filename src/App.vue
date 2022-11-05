@@ -4,12 +4,14 @@ import siteConfig from '~/site.config'
 const route = useRoute()
 
 const pageMeta = computed(() => {
+  const baseURL = import.meta.env.VITE_BASE_URL
+  const url = `${baseURL}${route.path}`
   const title = route.meta.title as string || siteConfig.title
   const description = route.meta.excerpt as string || route.meta.title as string || siteConfig.description
   const image = route.meta.metaImage as string || `${import.meta.env.VITE_BASE_URL}/${siteConfig.defaultMetaImage}`
 
   return {
-    url: route.path,
+    url,
     title,
     description,
     image,
@@ -41,6 +43,12 @@ useHead({
     {
       name: 'og:image',
       content: computed(() => pageMeta.value.image),
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: computed(() => pageMeta.value.url),
     },
   ],
 })
