@@ -52,7 +52,7 @@
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
     "markdown-it-link-attributes": "^4.0.1",
-    "markdown-it-shiki": "^0.5.1",
+    "markdown-it-shiki": "^0.7.0",
     "markdown-it-toc-done-right": "^4.2.0",
     "postcss": "^8.4.18",
     "postcss-nested": "^6.0.0",
