@@ -30,7 +30,7 @@
     "@mdit-vue/plugin-headers": "^0.11.1",
     "@rollup/pluginutils": "^5.0.2",
     "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/typography": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.8",
     "@types/markdown-it": "^12.2.3",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/node": "^18.8.0",
