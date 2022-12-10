@@ -27,7 +27,7 @@ tasks:
       - task: prebuild
       - pnpm run build
 
-  test_update:
+  update_dep:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
       - git switch main
@@ -36,4 +36,16 @@ tasks:
       - ncu -u -f {{.CLI_ARGS}}
       - task: install
       - task: build
+      - git add package.json pnpm-lock.yaml
+    silent: true
+  update_deps:
+    desc: Check whether the new version of the npm packages broke the build.
+    cmds:
+      - git switch main
+      - git pull origin main
+      - git switch deps/upgrade 2>/dev/null || git switch -c deps/upgrade
+      - ncu -u -f {{.CLI_ARGS}}
+      - task: install
+      - task: build
+      - git add package.json pnpm-lock.yaml
     silent: true
