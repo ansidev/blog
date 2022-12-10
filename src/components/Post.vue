@@ -18,7 +18,7 @@ defineProps({
 const baseURL = import.meta.env.VITE_BASE_URL
 const { t } = useI18n()
 const route = useRoute()
-const postTitle = route.meta.title
+const postTitle = route.meta.title as string
 const postURL = computed(() => `${baseURL}${route.path}`)
 const isProjectDetailPage = computed(() => route.path.startsWith('/projects/'))
 const isSharingPluginEnabled = computed(() => isPluginEnabled('sharing'))
@@ -56,22 +56,22 @@ const breadcrumbItems = computed(() => {
           <div v-if="(frontmatter as MdFrontmatter).toc?.length > 0" class="hidden xl:block xl:row-span-3">
             <Toc :toc="(frontmatter as MdFrontmatter).toc" />
           </div>
-          <footer class="xl:mr-4 space-y-6">
-            <div class="mt-3 xl:mt-0 text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2 space-y-6">
+          <footer class="space-y-6 xl:mr-4">
+            <div class="mt-3 space-y-6 text-sm font-medium leading-5 divide-gray-200 xl:mt-0 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
               <div v-if="frontmatter.type === 'project' && Array.isArray(frontmatter.techs) && frontmatter.techs.length > 0">
-                <h2 v-if="frontmatter.repositoryUrl" class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-3">
+                <h2 v-if="frontmatter.repositoryUrl" class="mb-3 text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                   {{ t('source_code') }}:
                   <a
                     class="text-gray-500 transition hover:text-gray-600"
                     target="_blank"
                     rel="noopener noreferrer"
-                    :href="frontmatter.repositoryUrl"
+                    :href="frontmatter.repositoryUrl as string"
                   >
                     <span class="sr-only">github</span>
-                    <Icon icon="bi:github" class="text-dark dark:text-white mb-1 inline" />
+                    <Icon icon="bi:github" class="inline mb-1 text-dark dark:text-white" />
                   </a>
                 </h2>
-                <h2 v-if="frontmatter.license" class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-3">
+                <h2 v-if="frontmatter.license" class="mb-3 text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                   {{ t('license') }}:
                   <Link v-if="frontmatter.licenseUrl" :href="(frontmatter as ProjectFrontmatter).licenseUrl" class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                     {{ frontmatter.license }}
@@ -79,7 +79,7 @@ const breadcrumbItems = computed(() => {
                   <span v-else>{{ frontmatter.license }}</span>
                 </h2>
                 <div class="flex flex-col flex-wrap mb-3">
-                  <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-1">
+                  <h2 class="mb-1 text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                     {{ t('development_status.title') }}
                   </h2>
                   <div class="flex flex-row my-2">
@@ -88,7 +88,7 @@ const breadcrumbItems = computed(() => {
                     </TwBadge>
                   </div>
                 </div>
-                <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-2">
+                <h2 class="mb-2 text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                   {{ t('technologies') }}
                 </h2>
                 <div class="flex flex-wrap">
@@ -96,7 +96,7 @@ const breadcrumbItems = computed(() => {
                 </div>
               </div>
               <div v-if="frontmatter.type === 'post' && Array.isArray(frontmatter.tags) && frontmatter.tags.length > 0">
-                <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-2">
+                <h2 class="mb-2 text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                   {{ t('tags') }}
                 </h2>
                 <div class="flex flex-wrap">
@@ -104,7 +104,7 @@ const breadcrumbItems = computed(() => {
                 </div>
               </div>
               <div v-if="isSharingPluginEnabled" class="xl:pt-6">
-                <h2 class="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400 mb-2">
+                <h2 class="mb-2 text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                   {{ t('share') }}
                 </h2>
                 <div class="flex flex-wrap">
