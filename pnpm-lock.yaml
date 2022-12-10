@@ -48,7 +48,7 @@ specifiers:
   ts-node: ^10.9.1
   typescript: ^4.8.4
   unplugin-auto-import: ^0.12.0
-  unplugin-vue-components: ^0.22.9
+  unplugin-vue-components: ^0.22.11
   vite: ^2.9.15
   vite-plugin-fonts: ^0.7.0
   vite-plugin-md: ^0.20.4
@@ -116,7 +116,7 @@ devDependencies:
   ts-node: 10.9.1_5ra3kupzwcghzakkfdrtyjk72u
   typescript: 4.8.4
   unplugin-auto-import: 0.12.0_7qqg7z2crwpq764hllicv2hzsa
-  unplugin-vue-components: 0.22.9_rollup@3.2.3+vue@3.2.40
+  unplugin-vue-components: 0.22.11_rollup@3.2.3+vue@3.2.40
   vite: 2.9.15_sass@1.55.0
   vite-plugin-fonts: 0.7.0_vite@2.9.15
   vite-plugin-md: 0.20.4_g2iiiazjkl564frkpy65fljcmq
@@ -223,10 +223,6 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
       - typescript
-    dev: true
-
-  /@antfu/utils/0.6.0:
-    resolution: {integrity: sha512-VauUKmo22NYo3y6fIjGjVU7LJyhaedYL9kyabdvIIIl7P+qbNPbQiaLwwk4UOU4McFfA2eg+aIWpEYhkHzsE9Q==}
     dev: true
 
   /@antfu/utils/0.7.0:
@@ -6274,8 +6270,8 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-vue-components/0.22.9_rollup@3.2.3+vue@3.2.40:
-    resolution: {integrity: sha512-qBvooq3EgpjtYicxeccRUGUBBQCCw9rJ0kHPZPOSJd8TBZViSv86vuKLTRDHPyjWtclwOIkVStZJfPdJFhYUMw==}
+  /unplugin-vue-components/0.22.11_rollup@3.2.3+vue@3.2.40:
+    resolution: {integrity: sha512-GTzqPl0Ek8fq8qMufjR6hvtnjnSwMpJ1Rg2Ez9AcKZVp1piWoU/Q4FDnI9wHVKX8eenYL0nqAF3ejYAk1TUfqQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -6284,7 +6280,7 @@ packages:
       '@babel/parser':
         optional: true
     dependencies:
-      '@antfu/utils': 0.6.0
+      '@antfu/utils': 0.7.0
       '@rollup/pluginutils': 5.0.2_rollup@3.2.3
       chokidar: 3.5.3
       debug: 4.3.4
@@ -6293,20 +6289,11 @@ packages:
       magic-string: 0.26.7
       minimatch: 5.1.0
       resolve: 1.22.1
-      unplugin: 0.10.2
+      unplugin: 1.0.0
       vue: 3.2.40
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
-
-  /unplugin/0.10.2:
-    resolution: {integrity: sha512-6rk7GUa4ICYjae5PrAllvcDeuT8pA9+j5J5EkxbMFaV+SalHhxZ7X2dohMzu6C3XzsMT+6jwR/+pwPNR3uK9MA==}
-    dependencies:
-      acorn: 8.8.1
-      chokidar: 3.5.3
-      webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.4.5
     dev: true
 
   /unplugin/1.0.0:
@@ -6665,10 +6652,6 @@ packages:
   /webpack-sources/3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
-    dev: true
-
-  /webpack-virtual-modules/0.4.5:
-    resolution: {integrity: sha512-8bWq0Iluiv9lVf9YaqWQ9+liNgXSHICm+rg544yRgGYaR8yXZTVBaHZkINZSB2yZSWo4b0F6MIxqJezVfOEAlg==}
     dev: true
 
   /webpack-virtual-modules/0.4.6:
