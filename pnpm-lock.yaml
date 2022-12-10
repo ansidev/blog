@@ -19,7 +19,7 @@ specifiers:
   '@vueuse/head': ^1.0.22
   '@yankeeinlondon/link-builder': ^1.0.5
   '@yankeeinlondon/meta-builder': ^1.0.6
-  autoprefixer: ^10.4.12
+  autoprefixer: ^10.4.13
   cross-env: ^7.0.3
   eslint: ^8.29.0
   eslint-config-prettier: ^8.5.0
@@ -92,7 +92,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.4_vite@2.9.15+vue@3.2.40
   '@yankeeinlondon/link-builder': 1.0.5_mvrl64djx2ptlogczdwq6g5cpe
   '@yankeeinlondon/meta-builder': 1.0.6_r6s4veiqwgmxsuntavonlv37fy
-  autoprefixer: 10.4.12_postcss@8.4.19
+  autoprefixer: 10.4.13_postcss@8.4.19
   cross-env: 7.0.3
   eslint: 8.29.0
   eslint-config-prettier: 8.5.0_eslint@8.29.0
@@ -2555,15 +2555,15 @@ packages:
     engines: {node: '>= 4.0.0'}
     dev: true
 
-  /autoprefixer/10.4.12_postcss@8.4.19:
-    resolution: {integrity: sha512-WrCGV9/b97Pa+jtwf5UGaRjgQIg7OK3D06GnoYoZNcG1Xb8Gt3EfuKjlhh9i/VtT16g6PYjZ69jdJ2g8FxSC4Q==}
+  /autoprefixer/10.4.13_postcss@8.4.19:
+    resolution: {integrity: sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001414
+      caniuse-lite: 1.0.30001439
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2724,6 +2724,10 @@ packages:
 
   /caniuse-lite/1.0.30001414:
     resolution: {integrity: sha512-t55jfSaWjCdocnFdKQoO+d2ct9C59UZg4dY3OnUlSZ447r8pUtIKdp0hpAzrGFultmTC+Us+KpKi4GZl/LXlFg==}
+    dev: true
+
+  /caniuse-lite/1.0.30001439:
+    resolution: {integrity: sha512-1MgUzEkoMO6gKfXflStpYgZDlFM7M/ck/bgfVCACO5vnAf0fXoNVHdWtqGU+MYca+4bL9Z5bpOVmR33cWW9G2A==}
     dev: true
 
   /chai/4.3.6:
