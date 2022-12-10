@@ -55,7 +55,7 @@ specifiers:
   vite-plugin-pages: ^0.27.1
   vite-plugin-pwa: ^0.12.8
   vite-plugin-vue-layouts: ^0.7.0
-  vite-ssg: ^0.21.1
+  vite-ssg: ^0.22.0
   vite-ssg-sitemap: ^0.4.3
   vue: ^3.2.40
   vue-gtag: ^2.0.1
@@ -123,7 +123,7 @@ devDependencies:
   vite-plugin-pages: 0.27.1_vite@2.9.15
   vite-plugin-pwa: 0.12.8_vite@2.9.15
   vite-plugin-vue-layouts: 0.7.0_digsks6c3gmj6rpemtif5okcyu
-  vite-ssg: 0.21.1_hdrofcttgksbxfz7xfcgtsncne
+  vite-ssg: 0.22.0_hdrofcttgksbxfz7xfcgtsncne
   vite-ssg-sitemap: 0.4.3
 
 packages:
@@ -2977,8 +2977,8 @@ packages:
       ms: 2.1.2
     dev: true
 
-  /decimal.js/10.4.1:
-    resolution: {integrity: sha512-F29o+vci4DodHYT9UrR5IEbfBw9pE5eSapIJdTqXK5+6hq+t8VRxwQyKlW2i+KDKFkkJQRvFyI/QXD83h8LyQw==}
+  /decimal.js/10.4.3:
+    resolution: {integrity: sha512-VBBaLc1MgL5XpzgIP7ny5Z6Nx3UrRkIViUkPUdtl9aya5amy3De1gsUUSB1g3+3sExYNjCAsAznmukyxCb1GRA==}
     dev: true
 
   /deep-eql/3.0.1:
@@ -4598,8 +4598,8 @@ packages:
       argparse: 2.0.1
     dev: true
 
-  /jsdom/20.0.1:
-    resolution: {integrity: sha512-pksjj7Rqoa+wdpkKcLzQRHhJCEE42qQhl/xLMUKHgoSejaKOdaXEAnqs6uDNwMl/fciHTzKeR8Wm8cw7N+g98A==}
+  /jsdom/20.0.3:
+    resolution: {integrity: sha512-SYhBvTh89tTfCD/CRdSOm13mOBa42iTaTyfyEWBdKcGdPxPtLFBXuHR8XHb33YNYaP+lLbmSvBTsnoesCNJEsQ==}
     engines: {node: '>=14'}
     peerDependencies:
       canvas: ^2.5.0
@@ -4613,7 +4613,7 @@ packages:
       cssom: 0.5.0
       cssstyle: 2.3.0
       data-urls: 3.0.2
-      decimal.js: 10.4.1
+      decimal.js: 10.4.3
       domexception: 4.0.0
       escodegen: 2.0.0
       form-data: 4.0.0
@@ -4626,12 +4626,12 @@ packages:
       saxes: 6.0.0
       symbol-tree: 3.2.4
       tough-cookie: 4.1.2
-      w3c-xmlserializer: 3.0.0
+      w3c-xmlserializer: 4.0.0
       webidl-conversions: 7.0.0
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
-      ws: 8.9.0
+      ws: 8.11.0
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -6438,12 +6438,12 @@ packages:
     resolution: {integrity: sha512-9ZIRBRCgM1Q4RtXXEBHIu8gotbx9LCnHZOZXtdSzR0DnjN9H5IYGY3yGoxI6VX8dScXiluxOODFlNlr7ydyI9A==}
     dev: true
 
-  /vite-ssg/0.21.1_hdrofcttgksbxfz7xfcgtsncne:
-    resolution: {integrity: sha512-P39lT+ndBbN83SsfrDSc/uU9IHp7BUjYy7ly3I0jB0L+CvI1/R/bJTOkFikw2mS0FDkPTUN2bCqD6VTshtsO2w==}
+  /vite-ssg/0.22.0_hdrofcttgksbxfz7xfcgtsncne:
+    resolution: {integrity: sha512-GW8hARA4lT4fEAfxfnSEplV5JKQEM15yTVI8SZefYW69xfBVfujZrlqKqory+kHi7rgm7ZEhH8Uv82pdWETiSQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
-      '@vueuse/head': ^0.5.0 || ^0.6.0 || ^0.7.0 || ^0.8.0 || ^0.9.0
+      '@vueuse/head': ^1.0.0
       critters: ^0.0.16
       vite: ^2.0.0 || ^3.0.0-0
       vue: ^3.2.10
@@ -6454,17 +6454,18 @@ packages:
       vue-router:
         optional: true
     dependencies:
+      '@unhead/dom': 1.0.13
       '@vueuse/head': 1.0.22_vue@3.2.40
       fs-extra: 10.1.0
       html-minifier: 4.0.0
       html5parser: 2.0.2
-      jsdom: 20.0.1
+      jsdom: 20.0.3
       kolorist: 1.6.0
       prettier: 2.8.1
       vite: 2.9.15_sass@1.56.2
       vue: 3.2.40
       vue-router: 4.1.6_vue@3.2.40
-      yargs: 17.6.0
+      yargs: 17.6.2
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -6616,9 +6617,9 @@ packages:
       '@vue/server-renderer': 3.2.40_vue@3.2.40
       '@vue/shared': 3.2.40
 
-  /w3c-xmlserializer/3.0.0:
-    resolution: {integrity: sha512-3WFqGEgSXIyGhOmAFtlicJNMjEps8b1MG31NCA0/vOF9+nKMUW1ckhi9cnNHmf88Rzw5V+dwIwsm2C7X8k9aQg==}
-    engines: {node: '>=12'}
+  /w3c-xmlserializer/4.0.0:
+    resolution: {integrity: sha512-d+BFHzbiCx6zGfz0HyQ6Rg69w9k19nviJspaj4yNscGjrHu94sVP+aRm75yEbCh+r2/yR+7q6hux9LVtbuTGBw==}
+    engines: {node: '>=14'}
     dependencies:
       xml-name-validator: 4.0.0
     dev: true
@@ -6883,8 +6884,8 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /ws/8.9.0:
-    resolution: {integrity: sha512-Ja7nszREasGaYUYCI2k4lCKIRTt+y7XuqVoHR44YpI49TtryyqbqvDMn5eqfW7e6HzTukDRIsXqzVHScqRcafg==}
+  /ws/8.11.0:
+    resolution: {integrity: sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -6958,8 +6959,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /yargs/17.6.0:
-    resolution: {integrity: sha512-8H/wTDqlSwoSnScvV2N/JHfLWOKuh5MVla9hqLjK3nsfyy6Y4kDSYSvkU5YCUEPOSnRXfIyx3Sq+B/IWudTo4g==}
+  /yargs/17.6.2:
+    resolution: {integrity: sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 8.0.1
