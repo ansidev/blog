@@ -39,7 +39,7 @@ specifiers:
   nprogress: ^0.2.0
   postcss: ^8.4.19
   postcss-nested: ^6.0.0
-  prettier: ^2.7.1
+  prettier: ^2.8.1
   rollup: ^3.2.3
   sass: ^1.56.2
   shiki: ^0.11.1
@@ -108,7 +108,7 @@ devDependencies:
   markdown-it-toc-done-right: 4.2.0
   postcss: 8.4.19
   postcss-nested: 6.0.0_postcss@8.4.19
-  prettier: 2.7.1
+  prettier: 2.8.1
   rollup: 3.2.3
   sass: 1.56.2
   shiki: 0.11.1
@@ -5387,8 +5387,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
@@ -6457,7 +6457,7 @@ packages:
       html5parser: 2.0.2
       jsdom: 20.0.1
       kolorist: 1.6.0
-      prettier: 2.7.1
+      prettier: 2.8.1
       vite: 2.9.15_sass@1.56.2
       vue: 3.2.40
       vue-router: 4.1.5_vue@3.2.40
