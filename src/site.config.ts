@@ -45,7 +45,7 @@ const siteConfig: SiteConfig = {
         nonce: '41HjKhHD',
         lang: 'vi_VN',
       },
-      autoload: false,
+      autoload: true,
     },
     googleAnalytics: {
       id: 'G-LQSQ92N2Q4',
