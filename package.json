@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "author": "Le Minh Tri &lt;ansidev@gmail.com&gt;",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@7.18.1",
   "scripts": {
     "dev": "vite --port 3333 --open",

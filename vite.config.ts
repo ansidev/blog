@@ -241,9 +241,9 @@ export default defineConfig(({ mode }) => {
         },
       }),
 
-      // https://github.com/intlify/vite-plugin-vue-i18n
+      // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
       VueI18n({
-        runtimeOnly: true,
+        runtimeOnly: false,
         compositionOnly: true,
         include: [resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**')],
       }),
@@ -279,6 +279,11 @@ export default defineConfig(({ mode }) => {
       exclude: [
         'vue-demi',
       ],
+    },
+
+    ssr: {
+      // workaround until they support native ESM
+      noExternal: ['vue-i18n/*'],
     },
   }
 })
