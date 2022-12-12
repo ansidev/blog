@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "author": "Le Minh Tri &lt;ansidev@gmail.com&gt;",
   "private": true,
+  "packageManager": "pnpm@7.18.1",
   "scripts": {
     "dev": "vite --port 3333 --open",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore src",
