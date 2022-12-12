@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.33.1
   '@iconify/vue': ^4.0.1
-  '@intlify/vite-plugin-vue-i18n': ^6.0.3
+  '@intlify/vite-plugin-vue-i18n': ^7.0.0
   '@mdit-vue/plugin-headers': ^0.11.1
   '@rollup/pluginutils': ^5.0.2
   '@tailwindcss/forms': ^0.5.3
@@ -78,7 +78,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.33.1_6rep66rojmwsn4bfraotajskeu
   '@iconify/vue': 4.0.1_vue@3.2.45
-  '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@2.9.15+vue-i18n@9.2.2
+  '@intlify/vite-plugin-vue-i18n': 7.0.0_vite@2.9.15+vue-i18n@9.2.2
   '@mdit-vue/plugin-headers': 0.11.1
   '@rollup/pluginutils': 5.0.2_rollup@3.7.2
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
@@ -1511,9 +1511,10 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /@intlify/vite-plugin-vue-i18n/6.0.3_vite@2.9.15+vue-i18n@9.2.2:
-    resolution: {integrity: sha512-6SgNzPAOCR90wvt368lKzi7f/5ZEWJn22UCGvhFsP3XvKqlF3cVzojahgQ6o+LTdCkExeM6wPgd+haFf28E9VQ==}
+  /@intlify/vite-plugin-vue-i18n/7.0.0_vite@2.9.15+vue-i18n@9.2.2:
+    resolution: {integrity: sha512-2TbDOQ8XD+vkc0s5OFmr+IY/k4mYMC7pzvx0xGQn+cU/ev314+yi7Z7N7rWcBgiYk1WOUalbGSo3d4nJDxOOyw==}
     engines: {node: '>= 14.6'}
+    deprecated: This plugin support until Vite 3. If you would like to use on Vite 4, please use @intlify/unplugin-vue-i18n
     peerDependencies:
       petite-vue-i18n: '*'
       vite: ^2.9.0 || ^3.0.0

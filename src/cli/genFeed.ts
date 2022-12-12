@@ -1,9 +1,13 @@
-const fs = require('fs')
-const path = require('path')
-const { Feed } = require('feed')
-const matter = require('gray-matter')
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import matter from 'gray-matter'
+import { Feed } from 'feed'
 
-const baseURL = process.env.VITE_BASE_URL
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+const baseURL = process.env.VITE_BASE_URL || ''
 
 const feed = new Feed({
   title: 'ansidev\'s blog',
@@ -21,7 +25,7 @@ interface Post {
   title: string
   href: string
   date: any
-  excerpt: string
+  excerpt?: string
   type: string
   data?: object
 }
@@ -80,7 +84,7 @@ getPosts(true).forEach((post: any) => {
     id: `${baseURL}${post.href}`,
     link: `${baseURL}${post.href}`,
     description: post.excerpt,
-    content: content[1],
+    content: content?.[1],
     author: [
       {
         name: post.data.author,
