@@ -38,6 +38,7 @@ tasks:
       - task: build
       - git add package.json pnpm-lock.yaml
     silent: true
+
   update_deps:
     desc: Check whether the new version of the npm packages broke the build.
     cmds:
