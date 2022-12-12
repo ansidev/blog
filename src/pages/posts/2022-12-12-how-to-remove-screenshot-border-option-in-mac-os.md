@@ -1,6 +1,6 @@
 ---
 type: post
-title: How to remove screenshot border option in macOS
+title: How to remove screenshot border option in macOS?
 date: 2022-12-12T22:07:09+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
