@@ -1,5 +1,6 @@
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'url'
+import dns from 'dns'
 import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -21,6 +22,10 @@ import frontmatterToc from './src/builders/frontmatter-toc'
 import excerpt from './src/builders/excerpt'
 import { getPostMeta } from './src/helpers/post'
 import siteConfig from './src/site.config'
+
+if (process.env.NODE_ENV === 'development') {
+  dns.setDefaultResultOrder('verbatim')
+}
 
 export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
