@@ -71,7 +71,7 @@
     "vite-plugin-fonts": "^0.7.0",
     "vite-plugin-md": "^0.21.0",
     "vite-plugin-pages": "^0.28.0",
-    "vite-plugin-pwa": "^0.12.8",
+    "vite-plugin-pwa": "^0.14.0",
     "vite-plugin-vue-layouts": "^0.7.0",
     "vite-ssg": "^0.22.0",
     "vite-ssg-sitemap": "^0.4.3"
