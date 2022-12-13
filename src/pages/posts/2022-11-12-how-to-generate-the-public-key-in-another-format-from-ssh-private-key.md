@@ -1,11 +1,11 @@
 ---
 type: post
-title: How to generate public key in other format from SSH private key?
+title: How to generate the public key in another format from SSH private key?
 date: 2022-11-12T15:45:13+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
-permalink: /tips-and-tricks/how-to-generate-public-key-in-pem-format-from-ssh-private-key
+permalink: /tips-and-tricks/how-to-generate-the-public-key-in-another-format-from-ssh-private-key
 categories:
   - Tips and Tricks
 tags:
