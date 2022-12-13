@@ -14,7 +14,7 @@ specifiers:
   '@types/nprogress': ^0.2.0
   '@typescript-eslint/eslint-plugin': ^5.39.0
   '@typescript-eslint/parser': ^5.39.0
-  '@vitejs/plugin-vue': ^3.2.0
+  '@vitejs/plugin-vue': ^2.3.4
   '@vueuse/core': ^9.6.0
   '@vueuse/head': ^1.0.22
   '@yankeeinlondon/link-builder': ^1.0.5
@@ -89,7 +89,7 @@ devDependencies:
   '@types/nprogress': 0.2.0
   '@typescript-eslint/eslint-plugin': 5.39.0_rmyd6bfq67alkr6jimw7mspsdm
   '@typescript-eslint/parser': 5.39.0_6rep66rojmwsn4bfraotajskeu
-  '@vitejs/plugin-vue': 3.2.0_vite@4.0.1+vue@3.2.45
+  '@vitejs/plugin-vue': 2.3.4_vite@4.0.1+vue@3.2.45
   '@yankeeinlondon/link-builder': 1.0.5_6ogjsf2kictszn7e5jconos6ji
   '@yankeeinlondon/meta-builder': 1.0.6_klsivon7nbx4rpkog76qd5hobm
   autoprefixer: 10.4.13_postcss@8.4.19
@@ -2404,11 +2404,11 @@ packages:
       hookable: 5.4.2
       vue: 3.2.45
 
-  /@vitejs/plugin-vue/3.2.0_vite@4.0.1+vue@3.2.45:
-    resolution: {integrity: sha512-E0tnaL4fr+qkdCNxJ+Xd0yM31UwMkQje76fsDVBBUCoGOUPexu2VDUYHL8P4CwV+zMvWw6nlRw19OnRKmYAJpw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
+  /@vitejs/plugin-vue/2.3.4_vite@4.0.1+vue@3.2.45:
+    resolution: {integrity: sha512-IfFNbtkbIm36O9KB8QodlwwYvTEsJb4Lll4c2IwB3VHc2gie2mSPtSzL0eYay7X2jd/2WX02FjSGTWR6OPr/zg==}
+    engines: {node: '>=12.0.0'}
     peerDependencies:
-      vite: ^3.0.0
+      vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
       vite: 4.0.1_ffj3u7qmzv3umqzc4qu6nkaus4
