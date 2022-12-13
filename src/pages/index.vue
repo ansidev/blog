@@ -6,12 +6,12 @@ const siteTitle = ref(siteConfig.title)
 const siteDescription = ref(siteConfig.description)
 
 const router = useRouter()
-const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
+const routes = router.getRoutes().filter(route => route.name !== undefined && route.path.startsWith('/posts'))
 
 const posts = computed(() => routes
   .map(r => r.meta)
   .filter(m => m.type === 'post')
-  .sort((p1, p2) => Date.parse(p2.date) - Date.parse(p1.date))
+  .sort((p1, p2) => Date.parse(p2.date as string) - Date.parse(p1.date as string))
   .slice(0, 10))
 </script>
 
