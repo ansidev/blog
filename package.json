@@ -69,7 +69,7 @@
     "unplugin-vue-components": "^0.22.11",
     "vite": "^4.0.0",
     "vite-plugin-fonts": "^0.7.0",
-    "vite-plugin-md": "^0.21.0",
+    "vite-plugin-md": "^0.22.0",
     "vite-plugin-pages": "^0.28.0",
     "vite-plugin-pwa": "^0.14.0",
     "vite-plugin-vue-layouts": "^0.7.0",
