@@ -18,6 +18,7 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
 import Anchor from 'markdown-it-anchor'
 import generateSitemap from 'vite-ssg-sitemap'
+import consola from 'consola'
 import frontmatterToc from './src/builders/frontmatter-toc'
 import excerpt from './src/builders/excerpt'
 import { getPostMeta } from './src/helpers/post'
@@ -269,6 +270,7 @@ export default defineConfig(({ mode }) => {
       script: 'async',
       formatting: 'minify',
       onFinished() {
+        consola.info('Generating sitemap')
         generateSitemap({
           hostname: env.VITE_BASE_URL,
         })
