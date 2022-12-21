@@ -17,6 +17,11 @@ const feed = new Feed({
   language: 'en',
   image: `${baseURL}/pwa-512x512.png`,
   favicon: `${baseURL}/favicon.ico`,
+  author: {
+    name: 'ansidev',
+    email: 'ansidev@gmail.com',
+    link: baseURL,
+  },
   copyright:
     'Copyright (c) 2019-present, Le Minh Tri (@ansidev)',
 })
@@ -44,7 +49,7 @@ const formatDate = (date: any) => {
   }
 }
 
-const getCustomPosts = function getPosts(postType: string, relativePath: string, baseSlug: string, asFeed: boolean) {
+const getCustomPosts = (postType: string, relativePath: string, baseSlug: string, asFeed: boolean) => {
   const postDir = path.resolve(__dirname, relativePath)
   return fs
     .readdirSync(postDir)
@@ -53,7 +58,7 @@ const getCustomPosts = function getPosts(postType: string, relativePath: string,
       const { data, excerpt } = matter(src, { excerpt: true })
       const post: Post = {
         title: data.title,
-        href: `${baseSlug}/${file.replace(/\.md$/, '.html')}`,
+        href: `${baseSlug}/${file.replace(/\.md$/, '')}`,
         date: typeof data.date !== 'undefined' ? formatDate(data.date) : undefined,
         excerpt,
         type: postType,
@@ -73,7 +78,7 @@ const getPosts = (asFeed = false) => {
 }
 
 getPosts(true).forEach((post: any) => {
-  const file = path.resolve(__dirname, `../../dist${post.href}`)
+  const file = path.resolve(__dirname, `../../dist${post.href}.html`)
   const rendered = fs.readFileSync(file, 'utf-8')
   const content = rendered.match(
     /<!--\[--><div class="theme-ansidev-content[^<>]+>([\s\S]*)<\/div><!--\]--><\/div><div id=\"eop\"><\/div>/,
