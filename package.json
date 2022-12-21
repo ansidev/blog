@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore src",
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "gen:feed": "ts-node-esm ./src/cli/genFeed",
-    "build": "cross-env NODE_ENV=production vite-ssg build && pnpm run gen:feed"
+    "build": "cross-env NODE_ENV=production vite-ssg build"
   },
   "dependencies": {
     "@vueuse/core": "^9.6.0",
