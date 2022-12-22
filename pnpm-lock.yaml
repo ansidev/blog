@@ -43,7 +43,7 @@ specifiers:
   rollup: ^3.7.2
   sass: ^1.56.2
   shiki: ^0.12.0
-  swetrix-vue: ^1.1.1
+  swetrix-vue: ^1.1.2
   tailwindcss: ^3.2.4
   ts-node: ^10.9.1
   typescript: ^4.8.4
@@ -69,7 +69,7 @@ dependencies:
   medium-zoom: 1.0.8
   nanoid: 4.0.0
   nprogress: 0.2.0
-  swetrix-vue: 1.1.1_vue@3.2.45
+  swetrix-vue: 1.1.2_vue@3.2.45
   vue: 3.2.45
   vue-gtag: 2.0.1_vue@3.2.45
   vue-i18n: 9.2.2_vue@3.2.45
@@ -6403,8 +6403,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /swetrix-vue/1.1.1_vue@3.2.45:
-    resolution: {integrity: sha512-XW2UWD5Oqp94KJQOUxG7quvwIFYNCE2EDuDMrA083/s8TtkeUuTO2kSnP6OQ2ccExP11UFYK3Uu316OVx1QfBg==}
+  /swetrix-vue/1.1.2_vue@3.2.45:
+    resolution: {integrity: sha512-z6+YKqGLugS7d5cLG6VOPIqsbW3SQ4wcPuuPuUKFhG11z6ON1jUwBNAauFsZm3AAYXXvGn5o4PV6tulZZXh3uw==}
     peerDependencies:
       vue: ^3
     dependencies:
