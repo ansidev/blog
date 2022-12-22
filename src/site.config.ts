@@ -66,6 +66,10 @@ const siteConfig: SiteConfig = {
         debug: true,
       },
     },
+    counterAnalytics: {
+      id: '7fb87b1f-db15-4e04-974c-74ef92033d50',
+      utcOffset: 7,
+    },
   },
 }
 
