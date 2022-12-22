@@ -19,7 +19,7 @@
     "medium-zoom": "^1.0.8",
     "nanoid": "^4.0.0",
     "nprogress": "^0.2.0",
-    "swetrix-vue": "^1.1.1",
+    "swetrix-vue": "^1.1.2",
     "vue": "^3.2.45",
     "vue-gtag": "^2.0.1",
     "vue-i18n": "^9.2.2",
