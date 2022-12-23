@@ -55,7 +55,7 @@ specifiers:
   vite-plugin-pages: ^0.28.0
   vite-plugin-pwa: ^0.14.0
   vite-plugin-vue-layouts: ^0.7.0
-  vite-ssg: ^0.22.0
+  vite-ssg: ^0.22.1
   vite-ssg-sitemap: ^0.4.3
   vue: ^3.2.45
   vue-gtag: ^2.0.1
@@ -123,7 +123,7 @@ devDependencies:
   vite-plugin-pages: 0.28.0_vite@4.0.3
   vite-plugin-pwa: 0.14.0_vite@4.0.3
   vite-plugin-vue-layouts: 0.7.0_g5oyto6e5kdp52ff6xie34ab5m
-  vite-ssg: 0.22.0_li7wvrxy2mzcyrqcsobzlykrwu
+  vite-ssg: 0.22.1_li7wvrxy2mzcyrqcsobzlykrwu
   vite-ssg-sitemap: 0.4.3
 
 packages:
@@ -4412,9 +4412,9 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /fs-extra/10.1.0:
-    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
-    engines: {node: '>=12'}
+  /fs-extra/11.1.0:
+    resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
+    engines: {node: '>=14.14'}
     dependencies:
       graceful-fs: 4.2.10
       jsonfile: 6.1.0
@@ -6964,14 +6964,14 @@ packages:
     resolution: {integrity: sha512-9ZIRBRCgM1Q4RtXXEBHIu8gotbx9LCnHZOZXtdSzR0DnjN9H5IYGY3yGoxI6VX8dScXiluxOODFlNlr7ydyI9A==}
     dev: true
 
-  /vite-ssg/0.22.0_li7wvrxy2mzcyrqcsobzlykrwu:
-    resolution: {integrity: sha512-GW8hARA4lT4fEAfxfnSEplV5JKQEM15yTVI8SZefYW69xfBVfujZrlqKqory+kHi7rgm7ZEhH8Uv82pdWETiSQ==}
+  /vite-ssg/0.22.1_li7wvrxy2mzcyrqcsobzlykrwu:
+    resolution: {integrity: sha512-aiFbedElOR/amu0VPfWNj2oR7V9zX6oS4jzWEkOe5fJuZIV2+FnUyiupoyoo3lv3njgS2GENNpmxijN6tpJsTA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
       '@vueuse/head': ^1.0.0
       critters: ^0.0.16
-      vite: ^2.0.0 || ^3.0.0-0
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0
       vue: ^3.2.10
       vue-router: ^4.0.1
     peerDependenciesMeta:
@@ -6982,7 +6982,7 @@ packages:
     dependencies:
       '@unhead/dom': 1.0.13
       '@vueuse/head': 1.0.22_vue@3.2.45
-      fs-extra: 10.1.0
+      fs-extra: 11.1.0
       html-minifier: 4.0.0
       html5parser: 2.0.2
       jsdom: 20.0.3
