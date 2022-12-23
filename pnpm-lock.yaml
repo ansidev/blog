@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.34.0
   '@iconify/vue': ^4.0.2
-  '@intlify/vite-plugin-vue-i18n': ^7.0.0
+  '@intlify/unplugin-vue-i18n': ^0.8.1
   '@mdit-vue/plugin-headers': ^0.11.2
   '@rollup/pluginutils': ^5.0.2
   '@tailwindcss/forms': ^0.5.3
@@ -78,7 +78,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.34.0_lzzuuodtsqwxnvqeq4g4likcqa
   '@iconify/vue': 4.0.2_vue@3.2.45
-  '@intlify/vite-plugin-vue-i18n': 7.0.0_vite@4.0.3+vue-i18n@9.2.2
+  '@intlify/unplugin-vue-i18n': 0.8.1_vue-i18n@9.2.2
   '@mdit-vue/plugin-headers': 0.11.2
   '@rollup/pluginutils': 5.0.2_rollup@3.8.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
@@ -1641,8 +1641,8 @@ packages:
       vue: 3.2.45
     dev: true
 
-  /@intlify/bundle-utils/3.2.1_vue-i18n@9.2.2:
-    resolution: {integrity: sha512-rf4cLBOnbqmpXVcCdcYHilZpMt1m82syh3WLBJlZvGxN2KkH9HeHVH4+bnibF/SDXCHNh6lM6wTpS/qw+PkcMg==}
+  /@intlify/bundle-utils/3.4.0_vue-i18n@9.2.2:
+    resolution: {integrity: sha512-2UQkqiSAOSPEHMGWlybqWm4G2K0X+FyYho5AwXz6QklSX1EY5EDmOSxZmwscn2qmKBnp6OYsme5kUrnN9xrWzQ==}
     engines: {node: '>= 12'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -1700,29 +1700,33 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /@intlify/vite-plugin-vue-i18n/7.0.0_vite@4.0.3+vue-i18n@9.2.2:
-    resolution: {integrity: sha512-2TbDOQ8XD+vkc0s5OFmr+IY/k4mYMC7pzvx0xGQn+cU/ev314+yi7Z7N7rWcBgiYk1WOUalbGSo3d4nJDxOOyw==}
-    engines: {node: '>= 14.6'}
-    deprecated: This plugin support until Vite 3. If you would like to use on Vite 4, please use @intlify/unplugin-vue-i18n
+  /@intlify/unplugin-vue-i18n/0.8.1_vue-i18n@9.2.2:
+    resolution: {integrity: sha512-BhigujPmP6JL1FSxmpogCaL+REozncHCVkJuUnefz4GWBu3X+pRe5O7PeJn8/g+Iml2ieQJz4ISPMmEbuGQjqQ==}
+    engines: {node: '>= 14.16'}
     peerDependencies:
       petite-vue-i18n: '*'
-      vite: ^2.9.0 || ^3.0.0
       vue-i18n: '*'
+      vue-i18n-bridge: '*'
     peerDependenciesMeta:
       petite-vue-i18n:
         optional: true
-      vite:
-        optional: true
       vue-i18n:
         optional: true
+      vue-i18n-bridge:
+        optional: true
     dependencies:
-      '@intlify/bundle-utils': 3.2.1_vue-i18n@9.2.2
+      '@intlify/bundle-utils': 3.4.0_vue-i18n@9.2.2
       '@intlify/shared': 9.3.0-beta.11
       '@rollup/pluginutils': 4.2.1
+      '@vue/compiler-sfc': 3.2.45
       debug: 4.3.4
       fast-glob: 3.2.12
+      js-yaml: 4.1.0
+      json5: 2.2.1
+      pathe: 1.0.0
+      picocolors: 1.0.0
       source-map: 0.6.1
-      vite: 4.0.3_gneikmxcpj2uc2xuqjosnroj4e
+      unplugin: 1.0.1
       vue-i18n: 9.2.2_vue@3.2.45
     transitivePeerDependencies:
       - supports-color
