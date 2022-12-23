@@ -30,7 +30,7 @@ specifiers:
   happy-dom: ^8.0.0
   inferred-types: ^0.37.0
   markdown-it: ^13.0.1
-  markdown-it-anchor: ^8.6.5
+  markdown-it-anchor: ^8.6.6
   markdown-it-link-attributes: ^4.0.1
   markdown-it-shiki: ^0.7.2
   markdown-it-toc-done-right: ^4.2.0
@@ -102,7 +102,7 @@ devDependencies:
   happy-dom: 8.1.0
   inferred-types: 0.37.6_4obtzicmlasvj5ks4jjatvtfa4
   markdown-it: 13.0.1
-  markdown-it-anchor: 8.6.5_ea7kj7wzjkld5jo2noyjqxi764
+  markdown-it-anchor: 8.6.6_ea7kj7wzjkld5jo2noyjqxi764
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.7.2
   markdown-it-toc-done-right: 4.2.0
@@ -5316,8 +5316,8 @@ packages:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
     dev: true
 
-  /markdown-it-anchor/8.6.5_ea7kj7wzjkld5jo2noyjqxi764:
-    resolution: {integrity: sha512-PI1qEHHkTNWT+X6Ip9w+paonfIQ+QZP9sCeMYi47oqhH+EsW8CrJ8J7CzV19QVOj6il8ATGbK2nTECj22ZHGvQ==}
+  /markdown-it-anchor/8.6.6_ea7kj7wzjkld5jo2noyjqxi764:
+    resolution: {integrity: sha512-jRW30YGywD2ESXDc+l17AiritL0uVaSnWsb26f+68qaW9zgbIIr1f4v2Nsvc0+s0Z2N3uX6t/yAw7BwCQ1wMsA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
