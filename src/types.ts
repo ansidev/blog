@@ -3,6 +3,7 @@ import type { SwetrixVuePluginOptions } from 'swetrix-vue/dist/index'
 import type { Frontmatter } from 'vite-plugin-md'
 import type { ViteSSGContext } from 'vite-ssg'
 import type { DomainConfig } from 'vue-gtag'
+import type { CounterAnalyticsPluginOptions } from 'counter-analytics-vue/dist/index'
 import type { DonationPluginConfig } from './plugins/donation/types'
 import type { FacebookCommentPluginConfig } from './plugins/facebookComment/types'
 import type { MediumZoomPluginConfig } from './plugins/mediumZoom/types'
@@ -35,7 +36,7 @@ export declare interface SitePlugins {
   sharing?: boolean
   substack?: SubstackPluginConfig
   swetrix?: SwetrixVuePluginOptions
-  counter?: SwetrixVuePluginOptions
+  counterAnalytics?: CounterAnalyticsPluginOptions
 }
 
 export declare interface BreadcrumbItem {
