@@ -48,7 +48,7 @@ specifiers:
   ts-node: ^10.9.1
   typescript: ^4.8.4
   unplugin-auto-import: ^0.12.1
-  unplugin-vue-components: ^0.22.11
+  unplugin-vue-components: ^0.22.12
   vite: ^4.0.0
   vite-plugin-fonts: ^0.7.0
   vite-plugin-md: ^0.22.0
@@ -116,7 +116,7 @@ devDependencies:
   ts-node: 10.9.1_5ra3kupzwcghzakkfdrtyjk72u
   typescript: 4.8.4
   unplugin-auto-import: 0.12.1_6jpckgnx4h2adshl3gnhjx4by4
-  unplugin-vue-components: 0.22.11_rollup@3.7.2+vue@3.2.45
+  unplugin-vue-components: 0.22.12_rollup@3.7.2+vue@3.2.45
   vite: 4.0.0_ffj3u7qmzv3umqzc4qu6nkaus4
   vite-plugin-fonts: 0.7.0_vite@4.0.0
   vite-plugin-md: 0.22.1_jqvqrrevug6ia3edjf7tqquuhm
@@ -223,10 +223,6 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
       - typescript
-    dev: true
-
-  /@antfu/utils/0.7.0:
-    resolution: {integrity: sha512-tH38JQEFLOdvZJC32ZbPTvWOQzxEtOQh5jOqBPDLw8sxBr0PFF+f2Csgwb7mRpD0QB1xu+PDoAifIPiCNneeNA==}
     dev: true
 
   /@antfu/utils/0.7.2:
@@ -5441,6 +5437,13 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
+  /minimatch/5.1.2:
+    resolution: {integrity: sha512-bNH9mmM9qsJ2X4r2Nat1B//1dJVcn3+iBLa3IgqJ7EbGaDNepL9QSHOxN4ng33s52VMMhhIfgCYDk3C4ZmlDAg==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: true
@@ -6779,8 +6782,8 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-vue-components/0.22.11_rollup@3.7.2+vue@3.2.45:
-    resolution: {integrity: sha512-GTzqPl0Ek8fq8qMufjR6hvtnjnSwMpJ1Rg2Ez9AcKZVp1piWoU/Q4FDnI9wHVKX8eenYL0nqAF3ejYAk1TUfqQ==}
+  /unplugin-vue-components/0.22.12_rollup@3.7.2+vue@3.2.45:
+    resolution: {integrity: sha512-FxyzsuBvMCYPIk+8cgscGBQ345tvwVu+qY5IhE++eorkyvA4Z1TiD/HCiim+Kbqozl10i4K+z+NCa2WO2jexRA==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -6789,29 +6792,20 @@ packages:
       '@babel/parser':
         optional: true
     dependencies:
-      '@antfu/utils': 0.7.0
+      '@antfu/utils': 0.7.2
       '@rollup/pluginutils': 5.0.2_rollup@3.7.2
       chokidar: 3.5.3
       debug: 4.3.4
       fast-glob: 3.2.12
       local-pkg: 0.4.2
-      magic-string: 0.26.7
-      minimatch: 5.1.0
+      magic-string: 0.27.0
+      minimatch: 5.1.2
       resolve: 1.22.1
-      unplugin: 1.0.0
+      unplugin: 1.0.1
       vue: 3.2.45
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
-
-  /unplugin/1.0.0:
-    resolution: {integrity: sha512-H5UnBUxfhTXBXGo2AwKsl0UaLSHzSNDZNehPQSgdhVfO/t+XAS1Yoj3vmLrrlBrS9ZwtH5tejbX/TCp5DcyCKg==}
-    dependencies:
-      acorn: 8.8.1
-      chokidar: 3.5.3
-      webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.4.6
     dev: true
 
   /unplugin/1.0.1:
@@ -7303,10 +7297,6 @@ packages:
   /webpack-sources/3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
-    dev: true
-
-  /webpack-virtual-modules/0.4.6:
-    resolution: {integrity: sha512-5tyDlKLqPfMqjT3Q9TAqf2YqjwmnUleZwzJi1A5qXnlBCdj2AtOJ6wAWdglTIDOPgOiOrXeBeFcsQ8+aGQ6QbA==}
     dev: true
 
   /webpack-virtual-modules/0.5.0:
