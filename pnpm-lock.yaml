@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.34.0
   '@iconify/vue': ^4.0.2
   '@intlify/vite-plugin-vue-i18n': ^7.0.0
-  '@mdit-vue/plugin-headers': ^0.11.1
+  '@mdit-vue/plugin-headers': ^0.11.2
   '@rollup/pluginutils': ^5.0.2
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.8
@@ -79,7 +79,7 @@ devDependencies:
   '@antfu/eslint-config': 0.34.0_d6qaxtm4z57fslwcbi4d5wrunu
   '@iconify/vue': 4.0.2_vue@3.2.45
   '@intlify/vite-plugin-vue-i18n': 7.0.0_vite@4.0.3+vue-i18n@9.2.2
-  '@mdit-vue/plugin-headers': 0.11.1
+  '@mdit-vue/plugin-headers': 0.11.2
   '@rollup/pluginutils': 5.0.2_rollup@3.8.0
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
@@ -1797,17 +1797,17 @@ packages:
       type-detect: 4.0.8
     dev: true
 
-  /@mdit-vue/plugin-headers/0.11.1:
-    resolution: {integrity: sha512-eBUonsEkXP2Uf2MIXSWZGCcLCIMSA1XfThJwhzSAosoa7fO5aw52LKCweddmn7zLQvgQh7p7382sFAhCc2KXog==}
+  /@mdit-vue/plugin-headers/0.11.2:
+    resolution: {integrity: sha512-hH2zm4m+2tWe7dya/nxbbpB95pa9RjwYxl++kyZuRrqyhNTtsi2HWojX02peQ1nQMKKIWPDHtpeAHGP7dOLKFw==}
     dependencies:
-      '@mdit-vue/shared': 0.11.0
+      '@mdit-vue/shared': 0.11.2
       '@mdit-vue/types': 0.11.0
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     dev: true
 
-  /@mdit-vue/shared/0.11.0:
-    resolution: {integrity: sha512-eiGe42y7UYpjO6/8Lg6OpAtzZrRU9k8dhpX1e/kJMTcL+tn+XkqRMJJ8I2pdrOQMSkgvIva5FNAriykqFzkdGg==}
+  /@mdit-vue/shared/0.11.2:
+    resolution: {integrity: sha512-Z/GS/v9DURZE13Hv41meKzdnprMwenVJoM3t82OE5HIGvtE6QovsZ+mMF/rMvLgaLLMDjT3EwvrrBmemWkHYTQ==}
     dependencies:
       '@mdit-vue/types': 0.11.0
       '@types/markdown-it': 12.2.3
