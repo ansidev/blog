@@ -8,15 +8,16 @@ This source code is based on [Vitesse](https://github.com/antfu/vitesse) by [Ant
 
 ## Features
 
-- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [esbuild](https://github.com/evanw/esbuild) - born with fastness
 - 🗂 [File based routing](./src/pages)
 - 📦 [Components auto importing](./src/components)
 - 📑 [Layout system](./src/layouts)
 - 📲 [PWA](https://github.com/antfu/vite-plugin-pwa)
-- 😃 [Use icons from any icon sets, with no compromise](./src/components)
+- 😃 [Use icons from any icon sets with classes](./src/components)
 - 🌍 [I18n ready](./locales)
 - 🗒 [Markdown Support](https://github.com/antfu/vite-plugin-md)
 - 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
+- 🤙🏻 [Reactivity Transform](https://vuejs.org/guide/extras/reactivity-transform.html) enabled
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
 - 🖨 Static-site generation (SSG) via [vite-ssg](https://github.com/antfu/vite-ssg)
 - 🦾 TypeScript, of course
@@ -43,7 +44,7 @@ This source code is based on [Vitesse](https://github.com/antfu/vitesse) by [Ant
 - [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md) - Markdown as components / components in Markdown
   - [`markdown-it-shiki`](https://github.com/antfu/markdown-it-shiki) - [Shiki](https://github.com/shikijs/shiki) for syntax highlighting
 - [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization
-  - [`vite-plugin-vue-i18n`](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n) - Vite plugin for Vue I18n
+  - [`unplugin-vue-i18n`](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - unplugin for Vue I18n
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
 - [`vite-ssg-sitemap`](https://github.com/jbaubree/vite-ssg-sitemap) - Sitemap generator
 - [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
@@ -52,6 +53,7 @@ This source code is based on [Vitesse](https://github.com/antfu/vitesse) by [Ant
 
 All plugin is located at [./src/plugins](./src/plugins) and their config is saved in [./src/site.config.ts](./src/site.config.ts)`.plugins`.
 
+- [Counter Analytics](./src/plugins/counterAnalytics)
 - [Donation](./src/plugins/donation)
 - [Facebook Comment](./src/plugins/facebookComment)
 - [Google Analytics](./src/plugins/googleAnalytics)
