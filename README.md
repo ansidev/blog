@@ -1,5 +1,6 @@
 # ansidev 's blog
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2862c07d-8cb3-4326-bbf2-b3a07eeda938/deploy-status)](https://app.netlify.com/sites/ansidev/deploys)
 
 ## Introduction
