@@ -27,6 +27,28 @@ tasks:
       - task: prebuild
       - pnpm run build
 
+  posts:
+    desc: List post files
+    cmds:
+      - ls src/pages/posts | grep \.md$ | sed 's/\.md$//' | grep {{.CLI_ARGS}}
+
+  md2html:
+    desc: Generate HTML from markdown
+    cmds:
+      - mkdir .medium || true
+      - echo "Generating HTML..."
+      - md2html -o .medium/{{.CLI_ARGS}}.html src/pages/posts/{{.CLI_ARGS}}.md
+      - echo "Done."
+    silent: true
+
+  post2md:
+    desc: Create draft post on Medium
+    cmds:
+      - echo "Posting a draft post to Medium..."
+      - md-publisher publish .medium/{{.CLI_ARGS}}.html
+      - echo "Done."
+    silent: true
+
   update_dep:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
