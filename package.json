@@ -47,7 +47,7 @@
     "@yankeeinlondon/link-builder": "^1.2.1",
     "@yankeeinlondon/meta-builder": "^1.2.1",
     "autoprefixer": "^10.4.13",
-    "commitizen": "^4.2.6",
+    "commitizen": "^4.3.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.32.0",
