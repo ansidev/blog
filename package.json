@@ -28,7 +28,7 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.34.0",
+    "@antfu/eslint-config": "^0.34.1",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@iconify/vue": "^4.0.2",
@@ -50,8 +50,8 @@
     "commitizen": "^4.2.6",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.30.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
     "feed": "^4.2.2",
     "fp-ts": "^2.13.1",
     "gray-matter": "^4.0.3",
