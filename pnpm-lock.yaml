@@ -9,7 +9,7 @@ specifiers:
   '@mdit-vue/plugin-headers': ^0.11.2
   '@rollup/pluginutils': ^5.0.2
   '@tailwindcss/forms': ^0.5.3
-  '@tailwindcss/typography': ^0.5.8
+  '@tailwindcss/typography': ^0.5.9
   '@types/markdown-it': ^12.2.3
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/node': ^18.11.18
@@ -92,7 +92,7 @@ devDependencies:
   '@mdit-vue/plugin-headers': 0.11.2
   '@rollup/pluginutils': 5.0.2_rollup@3.10.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
-  '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
+  '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
   '@types/markdown-it': 12.2.3
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/node': 18.11.18
@@ -2189,8 +2189,8 @@ packages:
       tailwindcss: 3.2.4_aesdjsunmf4wiehhujt67my7tu
     dev: true
 
-  /@tailwindcss/typography/0.5.8_tailwindcss@3.2.4:
-    resolution: {integrity: sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==}
+  /@tailwindcss/typography/0.5.9_tailwindcss@3.2.4:
+    resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
