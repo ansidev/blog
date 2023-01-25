@@ -33,7 +33,7 @@ specifiers:
   github-slugger: ^2.0.0
   gray-matter: ^4.0.3
   happy-dom: ^8.1.1
-  husky: ^8.0.2
+  husky: ^8.0.3
   inferred-types: ^0.37.6
   markdown-it: ^13.0.1
   markdown-it-anchor: ^8.6.6
@@ -112,7 +112,7 @@ devDependencies:
   fp-ts: 2.13.1
   gray-matter: 4.0.3
   happy-dom: 8.1.1
-  husky: 8.0.2
+  husky: 8.0.3
   inferred-types: 0.37.6_avv3sqdiddx5dua2lv64jjki64
   markdown-it: 13.0.1
   markdown-it-anchor: 8.6.6_ea7kj7wzjkld5jo2noyjqxi764
@@ -5113,8 +5113,8 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky/8.0.2:
-    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
