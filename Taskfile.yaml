@@ -53,24 +53,26 @@ tasks:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
       - task: init_dep_branch
-        vars: { BRANCH_NAME: '{{.CLI_ARGS}}' }
+        vars:
+          BRANCH_NAME: '{{.CLI_ARGS}}'
       - ncu -u -f {{.CLI_ARGS}}
-      - task: install
       - task: build
       - task: commit_dep_changes
-        vars: { PACKAGE_NAME: '{{.CLI_ARGS}}' }
+        vars:
+          PACKAGE_NAME: '{{.CLI_ARGS}}'
     silent: true
 
   update_deps:
     desc: Check whether the new version of the npm packages broke the build.
     cmds:
       - task: init_dep_branch
-        vars: { BRANCH_NAME: 'upgrade' }
+        vars:
+          BRANCH_NAME: 'upgrade'
       - ncu -u -f {{.CLI_ARGS}}
-      - task: install
       - task: build
       - task: commit_dep_changes
-        vars: { PACKAGE_NAME: '{{.CLI_ARGS}}' }
+        vars:
+          PACKAGE_NAME: '{{.CLI_ARGS}}'
     silent: true
 
   init_dep_branch:
@@ -87,9 +89,11 @@ tasks:
       PACKAGE_VERSION:
         sh: npm view {{.PACKAGE_NAME}} version
     cmds:
-      - git add package.json pnpm-lock.yaml
+      - git add package.json pnpm-lock.yaml src/auto-imports.d.ts
       - |
         git commit -m "build(deps): update {{.PACKAGE_NAME}} to version {{.PACKAGE_VERSION}}"
+      - task: push_current
+      - task: create_pr_current
     silent: true
 
   push_current:
@@ -101,8 +105,23 @@ tasks:
       - git push -u origin {{.BRANCH_NAME}}
     silent: true
 
+  create_pr_current:
+    desc: Create GitHub pull request for the current git branch
+    vars:
+      BRANCH_NAME:
+        sh: git branch --show
+    cmds:
+      - task: create_pr
+        vars:
+          BASE: 'main'
+          HEAD: '{{.BRANCH_NAME}}'
+    silent: true
+
   create_pr:
     desc: Create GitHub pull request
+    vars:
+      PR_TITLE:
+        sh: git log {{.BASE}}..{{.HEAD}} --pretty=format:%s | tail -1
     cmds:
-      - gh pr create --base main --title "$(git log main..$(git branch --show) --pretty=format:%s | tail -1)" --fill
+      - gh pr create --base "{{.BASE}}" --head "{{.HEAD}}" --title "{{.PR_TITLE}}" --fill
     silent: true
