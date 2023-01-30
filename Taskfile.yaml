@@ -100,3 +100,9 @@ tasks:
     cmds:
       - git push -u origin {{.BRANCH_NAME}}
     silent: true
+
+  create_pr:
+    desc: Create GitHub pull request
+    cmds:
+      - gh pr create --base main --title "$(git log main..$(git branch --show) --pretty=format:%s | tail -1)" --fill
+    silent: true
