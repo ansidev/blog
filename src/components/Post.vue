@@ -126,3 +126,9 @@ const breadcrumbItems = computed(() => {
     </article>
   </SectionContainer>
 </template>
+
+<style>
+.theme-ansidev-content {
+  overflow-x: auto;
+}
+</style>
