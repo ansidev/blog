@@ -4,7 +4,7 @@
   "author": "Le Minh Tri &lt;ansidev@gmail.com&gt;",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@7.26.3",
+  "packageManager": "pnpm@7.27.0",
   "scripts": {
     "dev": "vite --port 3333 --open",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore src",
