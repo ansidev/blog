@@ -6,7 +6,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.4.2
   '@iconify/vue': ^4.1.0
   '@intlify/unplugin-vue-i18n': ^0.8.1
-  '@mdit-vue/plugin-headers': ^0.11.2
+  '@mdit-vue/plugin-headers': ^0.12.0
   '@rollup/pluginutils': ^5.0.2
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.9
@@ -89,7 +89,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.4.2
   '@iconify/vue': 4.1.0_vue@3.2.45
   '@intlify/unplugin-vue-i18n': 0.8.1_vue-i18n@9.2.2
-  '@mdit-vue/plugin-headers': 0.11.2
+  '@mdit-vue/plugin-headers': 0.12.0
   '@rollup/pluginutils': 5.0.2_rollup@3.12.0
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -2035,25 +2035,25 @@ packages:
       type-detect: 4.0.8
     dev: true
 
-  /@mdit-vue/plugin-headers/0.11.2:
-    resolution: {integrity: sha512-hH2zm4m+2tWe7dya/nxbbpB95pa9RjwYxl++kyZuRrqyhNTtsi2HWojX02peQ1nQMKKIWPDHtpeAHGP7dOLKFw==}
+  /@mdit-vue/plugin-headers/0.12.0:
+    resolution: {integrity: sha512-7qR63J2uc/rXbjHT77WoYBm9imwzx1tVESmRK+Uth6kqFvSWAXAFPcm4PBatGEE8TgzhklPs5BTcQtQhmmsyaw==}
     dependencies:
-      '@mdit-vue/shared': 0.11.2
-      '@mdit-vue/types': 0.11.0
+      '@mdit-vue/shared': 0.12.0
+      '@mdit-vue/types': 0.12.0
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     dev: true
 
-  /@mdit-vue/shared/0.11.2:
-    resolution: {integrity: sha512-Z/GS/v9DURZE13Hv41meKzdnprMwenVJoM3t82OE5HIGvtE6QovsZ+mMF/rMvLgaLLMDjT3EwvrrBmemWkHYTQ==}
+  /@mdit-vue/shared/0.12.0:
+    resolution: {integrity: sha512-E+sGSubhvnp+Gmb2hJXFDxdLwwQD1H52EVbA4yrxxI5q/cwtnPIN2eJU3zlZB9KcvzXYDFFwt/x2mfhK8RZKBg==}
     dependencies:
-      '@mdit-vue/types': 0.11.0
+      '@mdit-vue/types': 0.12.0
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     dev: true
 
-  /@mdit-vue/types/0.11.0:
-    resolution: {integrity: sha512-ygCGP7vFpqS02hpZwEe1uz8cfImWX06+zRs08J+tCZRKb6k+easIaIHFtY9ZSxt7j9L/gAPLDo/5RmOT6z0DPQ==}
+  /@mdit-vue/types/0.12.0:
+    resolution: {integrity: sha512-mrC4y8n88BYvgcgzq9bvTlDgFyi2zuvzmPilRvRc3Uz1iIvq8mDhxJ0rHKFUNzPEScpDvJdIujqiDrulMqiudA==}
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
