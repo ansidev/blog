@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-import { useSearch } from '~/hooks'
+import { usePost, useSearch } from '~/hooks'
 
 const { t } = useI18n()
 
 const { searchValue, setSearchValue } = useSearch()
 
-const router = useRouter()
-const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
+const routes = usePost('/posts')
 
 const posts = computed(() => {
   if (searchValue.value.length === 0) {

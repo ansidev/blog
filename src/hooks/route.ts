@@ -8,3 +8,10 @@ export const useQuery = () => {
 
   return { queryParams, pushQuery }
 }
+
+export const usePost = (pathPrefix: string) => {
+  const router = useRouter()
+  return router.getRoutes()
+    .filter(route => route.name !== undefined
+       && route.path.startsWith(pathPrefix))
+}

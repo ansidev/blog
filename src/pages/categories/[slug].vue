@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { usePost } from '~/hooks'
+
 const { t } = useI18n()
 
 const { searchValue, setSearchValue } = useSearch()
@@ -6,8 +8,7 @@ const { searchValue, setSearchValue } = useSearch()
 const route = useRoute()
 const slug = computed(() => route.params.slug)
 
-const router = useRouter()
-const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
+const routes = usePost('/posts')
 
 const postFilter = (m: any) => {
   const isPost = m.type === 'post'
