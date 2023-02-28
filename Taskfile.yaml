@@ -26,11 +26,13 @@ tasks:
       - task: install
       - task: prebuild
       - pnpm run build
+    silent: true
 
   posts:
     desc: List post files
     cmds:
       - ls src/pages/posts | grep \.md$ | sed 's/\.md$//' | grep {{.CLI_ARGS}}
+    silent: true
 
   md2html:
     desc: Generate HTML from markdown

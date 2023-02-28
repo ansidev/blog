@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { usePost } from '~/hooks'
+
 const { t } = useI18n()
 
-const router = useRouter()
-const routes = router.getRoutes().filter(route => route.path.startsWith('/posts'))
+const routes = usePost('/posts')
 
 const tags = computed(() => {
   const tagCount: Record<string, number> = {}

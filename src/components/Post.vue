@@ -20,7 +20,7 @@ const { t } = useI18n()
 const route = useRoute()
 const postTitle = route.meta.title
 const postURL = computed(() => `${baseURL}${route.path}`)
-const isProjectDetailPage = computed(() => route.path.startsWith('/projects/'))
+const isProjectDetailPage = computed(() => route.name !== undefined && route.path.startsWith('/projects/'))
 const isSharingPluginEnabled = computed(() => isPluginEnabled('sharing'))
 const isFacebookCommentPluginEnabled = computed(() => isPluginEnabled('facebookComment'))
 const breadcrumbItems = computed(() => {

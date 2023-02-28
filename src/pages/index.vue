@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import { usePost } from '~/hooks'
 import siteConfig from '~/site.config'
 
 const { t } = useI18n()
 const siteTitle = ref(siteConfig.title)
 const siteDescription = ref(siteConfig.description)
 
-const router = useRouter()
-const routes = router.getRoutes().filter(route => route.name !== undefined && route.path.startsWith('/posts'))
+const routes = usePost('/posts')
 
 const posts = computed(() => routes
   .map(r => r.meta)

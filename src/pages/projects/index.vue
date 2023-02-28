@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { usePost } from '~/hooks'
+
 const { t } = useI18n()
 
-const router = useRouter()
 const route = useRoute()
-const routes = router.getRoutes().filter(route => route.path.startsWith('/projects'))
+const routes = usePost('/projects')
 
 const isProjectPostType = p => p.type === 'project'
 
