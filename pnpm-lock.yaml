@@ -20,7 +20,7 @@ specifiers:
   '@vueuse/core': ^9.12.0
   '@vueuse/head': ^1.0.23
   '@yankeeinlondon/link-builder': ^1.2.1
-  '@yankeeinlondon/meta-builder': ^1.2.1
+  '@yankeeinlondon/meta-builder': ^1.4.0
   autoprefixer: ^10.4.13
   commitizen: ^4.3.0
   counter-analytics-vue: ^1.0.0
@@ -101,7 +101,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.49.0_4vsywjlpuriuw3tl5oq6zy5a64
   '@vitejs/plugin-vue': 2.3.4_vite@4.0.4+vue@3.2.47
   '@yankeeinlondon/link-builder': 1.2.1_rq5ttxgt66zo4jxxteupto5gje
-  '@yankeeinlondon/meta-builder': 1.2.1_k6ubjsx6uos3g33oapw3ityely
+  '@yankeeinlondon/meta-builder': 1.4.0_k6ubjsx6uos3g33oapw3ityely
   autoprefixer: 10.4.13_postcss@8.4.21
   commitizen: 4.3.0
   cross-env: 7.0.3
@@ -2911,8 +2911,8 @@ packages:
       - terser
     dev: true
 
-  /@yankeeinlondon/meta-builder/1.2.1_k6ubjsx6uos3g33oapw3ityely:
-    resolution: {integrity: sha512-RVXCrO6hVPwETq2K345EmHuqyUG4OWo+PCw+he6CXjEJThJJwwaqvccfJbPEmjUAdTGdxtYTzRchI9oiyNnTAw==}
+  /@yankeeinlondon/meta-builder/1.4.0_k6ubjsx6uos3g33oapw3ityely:
+    resolution: {integrity: sha512-YTr77Mj9ktztLPCO4Br5OP9MGx5nkBJknAtusotJ/8igyqbxwTQuZOAk8HRD5FbpD6J8A8X5Hg9DzOMzF9EIEA==}
     dependencies:
       '@yankeeinlondon/builder-api': 1.4.1_k6ubjsx6uos3g33oapw3ityely
       inferred-types: 0.37.6_rq5ttxgt66zo4jxxteupto5gje
