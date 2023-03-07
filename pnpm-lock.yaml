@@ -36,7 +36,7 @@ specifiers:
   husky: ^8.0.3
   inferred-types: ^0.37.6
   markdown-it: ^13.0.1
-  markdown-it-anchor: ^8.6.6
+  markdown-it-anchor: ^8.6.7
   markdown-it-link-attributes: ^4.0.1
   markdown-it-shiki: ^0.8.0
   markdown-it-toc-done-right: ^4.2.0
@@ -115,7 +115,7 @@ devDependencies:
   husky: 8.0.3
   inferred-types: 0.37.6_rq5ttxgt66zo4jxxteupto5gje
   markdown-it: 13.0.1
-  markdown-it-anchor: 8.6.6_ea7kj7wzjkld5jo2noyjqxi764
+  markdown-it-anchor: 8.6.7_ea7kj7wzjkld5jo2noyjqxi764
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.8.0
   markdown-it-toc-done-right: 4.2.0
@@ -6316,8 +6316,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /markdown-it-anchor/8.6.6_ea7kj7wzjkld5jo2noyjqxi764:
-    resolution: {integrity: sha512-jRW30YGywD2ESXDc+l17AiritL0uVaSnWsb26f+68qaW9zgbIIr1f4v2Nsvc0+s0Z2N3uX6t/yAw7BwCQ1wMsA==}
+  /markdown-it-anchor/8.6.7_ea7kj7wzjkld5jo2noyjqxi764:
+    resolution: {integrity: sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
