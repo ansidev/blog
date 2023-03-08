@@ -51,7 +51,7 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.33.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.7.0",
     "feed": "^4.2.2",
     "fp-ts": "^2.13.1",
     "gray-matter": "^4.0.3",
