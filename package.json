@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
-    "@vueuse/head": "^1.1.19",
+    "@vueuse/head": "^1.1.23",
     "counter-analytics-vue": "^1.0.0",
     "github-slugger": "^2.0.0",
     "medium-zoom": "^1.0.8",
