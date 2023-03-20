@@ -52,7 +52,7 @@ specifiers:
   swetrix-vue: ^2.0.1
   tailwindcss: ^3.2.7
   ts-node: ^10.9.1
-  tsx: ^3.12.5
+  tsx: ^3.12.6
   typescript: ^5.0.2
   unplugin-auto-import: ^0.15.1
   unplugin-vue-components: ^0.24.1
@@ -127,7 +127,7 @@ devDependencies:
   shiki: 0.14.1
   tailwindcss: 3.2.7_aesdjsunmf4wiehhujt67my7tu
   ts-node: 10.9.1_sxidjv3cojnrggmso45tj7hldi
-  tsx: 3.12.5
+  tsx: 3.12.6
   typescript: 5.0.2
   unplugin-auto-import: 0.15.1_d7swsfwspmydckk2drba5moyfa
   unplugin-vue-components: 0.24.1_rollup@3.20.0+vue@3.2.47
@@ -7509,8 +7509,8 @@ packages:
       typescript: 5.0.2
     dev: true
 
-  /tsx/3.12.5:
-    resolution: {integrity: sha512-/TLj30xF1zcN9JkoFCyROtIQUi8cRQG+AFchsg5YkWou3+RXxTZS/ffWB3nCxyZPoBqF2+8ohs07N815dNb1wQ==}
+  /tsx/3.12.6:
+    resolution: {integrity: sha512-q93WgS3lBdHlPgS0h1i+87Pt6n9K/qULIMNYZo07nSeu2z5QE2CellcAZfofVXBo2tQg9av2ZcRMQ2S2i5oadQ==}
     hasBin: true
     dependencies:
       '@esbuild-kit/cjs-loader': 2.4.2
