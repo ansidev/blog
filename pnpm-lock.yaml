@@ -60,7 +60,7 @@ specifiers:
   vite-plugin-fonts: ^0.7.0
   vite-plugin-md: ^0.21.5
   vite-plugin-pages: ^0.29.0
-  vite-plugin-pwa: ^0.14.4
+  vite-plugin-pwa: ^0.14.5
   vite-plugin-vue-layouts: ^0.8.0
   vite-ssg: ^0.22.1
   vite-ssg-sitemap: ^0.4.3
@@ -135,7 +135,7 @@ devDependencies:
   vite-plugin-fonts: 0.7.0_vite@4.2.1
   vite-plugin-md: 0.21.5_khvepyo4zdq3ofnhpdbv5nxyye
   vite-plugin-pages: 0.29.0_vite@4.2.1
-  vite-plugin-pwa: 0.14.4_vite@4.2.1
+  vite-plugin-pwa: 0.14.5_vite@4.2.1
   vite-plugin-vue-layouts: 0.8.0_asesa6ksds7mbxqm7d5qamvm34
   vite-ssg: 0.22.1_ducazv67qbupwf5wp4evz2t54u
   vite-ssg-sitemap: 0.4.3
@@ -1894,8 +1894,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.16
-      '@intlify/shared': 9.3.0-beta.16
+      '@intlify/message-compiler': 9.3.0-beta.17
+      '@intlify/shared': 9.3.0-beta.17
       acorn: 8.8.2
       estree-walker: 2.0.2
       jsonc-eslint-parser: 1.4.1
@@ -1927,11 +1927,11 @@ packages:
       '@intlify/shared': 9.2.2
       source-map: 0.6.1
 
-  /@intlify/message-compiler/9.3.0-beta.16:
-    resolution: {integrity: sha512-CGQI3xRcs1ET75eDQ0DUy3MRYOqTauRIIgaMoISKiF83gqRWg93FqN8lGMKcpBqaF4tI0JhsfosCaGiBL9+dnw==}
+  /@intlify/message-compiler/9.3.0-beta.17:
+    resolution: {integrity: sha512-i7hvVIRk1Ax2uKa9xLRJCT57to08OhFMhFXXjWN07rmx5pWQYQ23MfX1xgggv9drnWTNhqEiD+u4EJeHoS5+Ww==}
     engines: {node: '>= 14'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.16
+      '@intlify/shared': 9.3.0-beta.17
       source-map: 0.6.1
     dev: true
 
@@ -1939,8 +1939,8 @@ packages:
     resolution: {integrity: sha512-wRwTpsslgZS5HNyM7uDQYZtxnbI12aGiBZURX3BTR9RFIKKRWpllTsgzHWvj3HKm3Y2Sh5LPC1r0PDCKEhVn9Q==}
     engines: {node: '>= 14'}
 
-  /@intlify/shared/9.3.0-beta.16:
-    resolution: {integrity: sha512-kXbm4svALe3lX+EjdJxfnabOphqS4yQ1Ge/iIlR8tvUiYRCoNz3hig1M4336iY++Dfx5ytEQJPNjIcknNIuvig==}
+  /@intlify/shared/9.3.0-beta.17:
+    resolution: {integrity: sha512-mscf7RQsUTOil35jTij4KGW1RC9SWQjYScwLxP53Ns6g24iEd5HN7ksbt9O6FvTmlQuX77u+MXpBdfJsGqizLQ==}
     engines: {node: '>= 14'}
     dev: true
 
@@ -1960,7 +1960,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 5.3.1_vue-i18n@9.2.2
-      '@intlify/shared': 9.3.0-beta.16
+      '@intlify/shared': 9.3.0-beta.17
       '@rollup/pluginutils': 5.0.2_rollup@3.20.0
       '@vue/compiler-sfc': 3.2.47
       debug: 4.3.4
@@ -7881,8 +7881,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-pwa/0.14.4_vite@4.2.1:
-    resolution: {integrity: sha512-M7Ct0so8OlouMkTWgXnl8W1xU95glITSKIe7qswZf1tniAstO2idElGCnsrTJ5NPNSx1XqfTCOUj8j94S6FD7Q==}
+  /vite-plugin-pwa/0.14.5_vite@4.2.1:
+    resolution: {integrity: sha512-LH3VCtoWx0scfim8Ph+daVl45uVRyWzXn3C3GUq92uWUui1p8eh+DjTQ23Pvb7SJ0SJtxZ99LCpOLCkFkaxokg==}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0
     dependencies:
