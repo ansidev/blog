@@ -5,7 +5,7 @@ specifiers:
   '@commitlint/cli': ^17.5.0
   '@commitlint/config-conventional': ^17.4.4
   '@iconify/vue': ^4.1.0
-  '@intlify/unplugin-vue-i18n': ^0.9.3
+  '@intlify/unplugin-vue-i18n': ^0.10.0
   '@mdit-vue/plugin-headers': ^0.12.0
   '@rollup/pluginutils': ^5.0.2
   '@tailwindcss/forms': ^0.5.3
@@ -88,7 +88,7 @@ devDependencies:
   '@commitlint/cli': 17.5.0
   '@commitlint/config-conventional': 17.4.4
   '@iconify/vue': 4.1.0_vue@3.2.47
-  '@intlify/unplugin-vue-i18n': 0.9.3_7tgenywqhdk77mi3csada2rdfe
+  '@intlify/unplugin-vue-i18n': 0.10.0_7tgenywqhdk77mi3csada2rdfe
   '@mdit-vue/plugin-headers': 0.12.0
   '@rollup/pluginutils': 5.0.2_rollup@3.20.0
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
@@ -1477,8 +1477,8 @@ packages:
       '@commitlint/types': 17.4.4
     dev: true
 
-  /@commitlint/load/17.4.4:
-    resolution: {integrity: sha512-z6uFIQ7wfKX5FGBe1AkOF4l/ShOQsaa1ml/nLMkbW7R/xF8galGS7Zh0yHvzVp/srtfS0brC+0bUfQfmpMPFVQ==}
+  /@commitlint/load/17.5.0:
+    resolution: {integrity: sha512-l+4W8Sx4CD5rYFsrhHH8HP01/8jEP7kKf33Xlx2Uk2out/UKoKPYMOIRcDH5ppT8UXLMV+x6Wm5osdRKKgaD1Q==}
     engines: {node: '>=v14'}
     requiresBuild: true
     dependencies:
@@ -1496,30 +1496,6 @@ packages:
       resolve-from: 5.0.0
       ts-node: 10.9.1_345kigqis4fipgyy5xb3ndshmq
       typescript: 4.9.5
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-    dev: true
-    optional: true
-
-  /@commitlint/load/17.5.0:
-    resolution: {integrity: sha512-l+4W8Sx4CD5rYFsrhHH8HP01/8jEP7kKf33Xlx2Uk2out/UKoKPYMOIRcDH5ppT8UXLMV+x6Wm5osdRKKgaD1Q==}
-    engines: {node: '>=v14'}
-    dependencies:
-      '@commitlint/config-validator': 17.4.4
-      '@commitlint/execute-rule': 17.4.0
-      '@commitlint/resolve-extends': 17.4.4
-      '@commitlint/types': 17.4.4
-      '@types/node': 18.15.5
-      chalk: 4.1.2
-      cosmiconfig: 8.0.0
-      cosmiconfig-typescript-loader: 4.3.0_7fjloxi3szjdeatq35iahk7zcy
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
-      resolve-from: 5.0.0
-      ts-node: 10.9.1_zlbzrxdj56n2qhafx752nt3nlm
-      typescript: 5.0.2
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -1906,8 +1882,8 @@ packages:
       vue: 3.2.47
     dev: true
 
-  /@intlify/bundle-utils/5.3.1_vue-i18n@9.2.2:
-    resolution: {integrity: sha512-Lfrl3zlVmUy9Gqf9K9uuCCdhd5WxjkSQWIdEYQn1Uso4bjy4iHq9GZQYyvoA6+KFiDoVOS0LE3T+c7jwhLkqgg==}
+  /@intlify/bundle-utils/5.4.0_vue-i18n@9.2.2:
+    resolution: {integrity: sha512-oJbibbP5djdQYTv0cQC4PYRHPpS5nF/KZ7MWM1/yhdsGzjvCekJHWk25MCQIIOrfQ+aw5tKi2t66KpYEUki/tw==}
     engines: {node: '>= 12'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -1921,6 +1897,7 @@ packages:
       '@intlify/message-compiler': 9.3.0-beta.17
       '@intlify/shared': 9.3.0-beta.17
       acorn: 8.8.2
+      escodegen: 2.0.0
       estree-walker: 2.0.2
       jsonc-eslint-parser: 1.4.1
       magic-string: 0.30.0
@@ -1968,8 +1945,8 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /@intlify/unplugin-vue-i18n/0.9.3_7tgenywqhdk77mi3csada2rdfe:
-    resolution: {integrity: sha512-23DMh2r0qA7UZfaQhF09ZHhifgTyKcbmVsCo+qHvu9q1EU8OF18VlhxMHMksDR5NBDvRXj3Lmu8lT84XDrUlSw==}
+  /@intlify/unplugin-vue-i18n/0.10.0_7tgenywqhdk77mi3csada2rdfe:
+    resolution: {integrity: sha512-Sf8fe26/d8rBNcg+zBSb7RA1uyhrG9zhIM+CRX6lqcznMDjLRr/1tuVaJ9E6xqJkzjfPgRzNcCqwMt6rpNkL7Q==}
     engines: {node: '>= 14.16'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -1983,7 +1960,7 @@ packages:
       vue-i18n-bridge:
         optional: true
     dependencies:
-      '@intlify/bundle-utils': 5.3.1_vue-i18n@9.2.2
+      '@intlify/bundle-utils': 5.4.0_vue-i18n@9.2.2
       '@intlify/shared': 9.3.0-beta.17
       '@rollup/pluginutils': 5.0.2_rollup@3.20.0
       '@vue/compiler-sfc': 3.2.47
@@ -3535,21 +3512,6 @@ packages:
       semver: 7.0.0
     dev: true
 
-  /cosmiconfig-typescript-loader/4.3.0_7fjloxi3szjdeatq35iahk7zcy:
-    resolution: {integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==}
-    engines: {node: '>=12', npm: '>=6'}
-    peerDependencies:
-      '@types/node': '*'
-      cosmiconfig: '>=7'
-      ts-node: '>=10'
-      typescript: '>=3'
-    dependencies:
-      '@types/node': 18.15.5
-      cosmiconfig: 8.0.0
-      ts-node: 10.9.1_zlbzrxdj56n2qhafx752nt3nlm
-      typescript: 5.0.2
-    dev: true
-
   /cosmiconfig-typescript-loader/4.3.0_ycmcvgie5c4ufymdvfl6ce7js4:
     resolution: {integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==}
     engines: {node: '>=12', npm: '>=6'}
@@ -3564,7 +3526,6 @@ packages:
       ts-node: 10.9.1_345kigqis4fipgyy5xb3ndshmq
       typescript: 4.9.5
     dev: true
-    optional: true
 
   /cosmiconfig/8.0.0:
     resolution: {integrity: sha512-da1EafcpH6b/TD8vDRaWV7xFINlHlF6zKsGwS1TsuVJTZRkquaS5HTMq7uq6h31619QjbsYl21gVDOm32KM1vQ==}
@@ -3649,7 +3610,7 @@ packages:
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 17.4.4
+      '@commitlint/load': 17.5.0
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -7491,7 +7452,6 @@ packages:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
-    optional: true
 
   /ts-node/10.9.1_zlbzrxdj56n2qhafx752nt3nlm:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
@@ -7623,7 +7583,6 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
-    optional: true
 
   /typescript/5.0.2:
     resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
