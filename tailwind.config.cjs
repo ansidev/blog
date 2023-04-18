@@ -890,6 +890,9 @@ module.exports = {
               fontWeight: '600',
               color: theme('colors.gray.500'),
             },
+            'ol': {
+              marginLeft: '1.25em',
+            },
             'ul li::marker': {
               backgroundColor: theme('colors.gray.500'),
             },
