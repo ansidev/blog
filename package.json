@@ -75,7 +75,7 @@
     "typescript": "^5.0.4",
     "unplugin-auto-import": "^0.15.3",
     "unplugin-vue-components": "^0.24.1",
-    "vite": "^4.2.1",
+    "vite": "^4.2.2",
     "vite-plugin-fonts": "^0.7.0",
     "vite-plugin-md": "^0.21.5",
     "vite-plugin-pages": "^0.29.0",
