@@ -53,7 +53,7 @@
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "feed": "^4.2.2",
-    "fp-ts": "^2.13.1",
+    "fp-ts": "^2.13.2",
     "gray-matter": "^4.0.3",
     "happy-dom": "^9.8.2",
     "husky": "^8.0.3",
