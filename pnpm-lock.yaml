@@ -202,8 +202,8 @@ devDependencies:
     specifier: ^0.22.2
     version: 0.22.2(@vueuse/head@1.1.26)(vite@4.3.3)(vue-router@4.1.6)(vue@3.2.47)
   vite-ssg-sitemap:
-    specifier: ^0.4.3
-    version: 0.4.3
+    specifier: ^0.5.0
+    version: 0.5.0
 
 packages:
 
@@ -8050,8 +8050,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-ssg-sitemap@0.4.3:
-    resolution: {integrity: sha512-9ZIRBRCgM1Q4RtXXEBHIu8gotbx9LCnHZOZXtdSzR0DnjN9H5IYGY3yGoxI6VX8dScXiluxOODFlNlr7ydyI9A==}
+  /vite-ssg-sitemap@0.5.0:
+    resolution: {integrity: sha512-tNwWXLtUqEaTXmAcpiGV05PBsEovEZb/jigJPcpu9N9ik5hA5icvX26j7UdfQ1V5nLLgikAlJN4yxLX8nBPFhw==}
     dev: true
 
   /vite-ssg@0.22.2(@vueuse/head@1.1.26)(vite@4.3.3)(vue-router@4.1.6)(vue@3.2.47):
