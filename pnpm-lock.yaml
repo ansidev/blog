@@ -139,8 +139,8 @@ devDependencies:
     specifier: ^4.0.1
     version: 4.0.1
   markdown-it-shiki:
-    specifier: ^0.8.1
-    version: 0.8.1
+    specifier: ^0.9.0
+    version: 0.9.0
   markdown-it-toc-done-right:
     specifier: ^4.2.0
     version: 4.2.0
@@ -6107,8 +6107,8 @@ packages:
     resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
     dev: true
 
-  /markdown-it-shiki@0.8.1:
-    resolution: {integrity: sha512-x3R9nxmOMGai+ZWNL+KpiA6f39xplB7ssyeOrptwlMVPRSMVBnKFi66acIqqbUjK2o8caH48B+sWwL0/8ljAOA==}
+  /markdown-it-shiki@0.9.0:
+    resolution: {integrity: sha512-TyP5YbDnFu3T7MPwC8jFs1swzAXqALy50MPPdis2tNc5MQ0UxSqhARFfMzEJN21mE0ihAngi2kqDzKR5+ZsMqg==}
     dependencies:
       shiki: 0.14.2
       synckit: 0.8.5
