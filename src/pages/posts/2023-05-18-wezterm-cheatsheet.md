@@ -87,7 +87,8 @@ config.keys = {
     key = 't',
     mods = 'CMD|SHIFT',
     action = act.ShowTabNavigator,
-  }
+  },
+  -- other keys
 }
 ```
 
@@ -111,6 +112,33 @@ config.keys = {
         end
       end),
     },
-  }
+  },
+  -- other keys
+}
+```
+
+### Open WezTerm config file quickly
+
+This key binding will open WezTerm configuration file using Neovim. Replace Neovim by your favorite text editor.
+
+```lua
+local act = wezterm.action
+
+config.keys = {
+  {
+    key = ',',
+    mods = 'CMD',
+    action = act.SpawnCommandInNewTab {
+      cwd = os.getenv('WEZTERM_CONFIG_DIR'),
+      set_environment_variables = {
+        TERM = 'screen-256color',
+      },
+      args = {
+        '/usr/local/bin/nvim',
+        os.getenv('WEZTERM_CONFIG_FILE'),
+      },
+    },
+  },
+  -- other keys
 }
 ```
