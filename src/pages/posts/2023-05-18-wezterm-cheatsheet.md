@@ -1,7 +1,7 @@
 ---
 type: post
 title: WezTerm cheatsheet
-date: 2023-05-13T09:30:05+07:00
+date: 2023-05-18T15:00:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
@@ -19,12 +19,16 @@ My personal WezTerm configurations.
 
 ## Why WezTerm?
 
-I have used Alacritty for a long time. However, Alacritty does not support tab.
+I have used Alacritty for a long time. And it has several issues:
+
+- It does not support tab.
+- It does not support splitting pane. This issue can be resolved by using tmux, however, I struggled with conflict key bindings since I use Neovim inside tmux.
 
 Recently, I switched to WezTerm
 
-- It supports tab.
+- It supports both tab and splitting panes.
 - WezTerm configurations is using Lua, which is also used for Neovim configurations. It's more flexible than Alacritty.
+- Since tmux is unnecessary, the key bindings issue can be resolved using Lua configurations.
 
 ## Configurations
 
