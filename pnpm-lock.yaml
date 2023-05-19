@@ -190,8 +190,8 @@ devDependencies:
     specifier: ^0.21.5
     version: 0.21.5(@vitejs/plugin-vue@2.3.4)(happy-dom@9.19.2)(sass@1.62.1)(vite@4.3.8)
   vite-plugin-pages:
-    specifier: ^0.29.1
-    version: 0.29.1(vite@4.3.8)
+    specifier: ^0.30.1
+    version: 0.30.1(vite@4.3.8)
   vite-plugin-pwa:
     specifier: ^0.14.7
     version: 0.14.7(vite@4.3.8)(workbox-build@6.5.4)(workbox-window@6.5.4)
@@ -3865,14 +3865,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /define-properties@1.1.4:
-    resolution: {integrity: sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      has-property-descriptors: 1.0.0
-      object-keys: 1.1.1
-    dev: true
-
   /define-properties@1.2.0:
     resolution: {integrity: sha512-xvqAVKGfT1+UAvPwKTVw/njhdQ8ZhXK4lI0bCIuCMrp2up9nPnaDftrLtmpTazqd1o+UY4zgzU+avtMbDP+ldA==}
     engines: {node: '>= 0.4'}
@@ -6508,7 +6500,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.4
+      define-properties: 1.2.0
     dev: true
 
   /object-keys@1.1.1:
@@ -6521,7 +6513,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.4
+      define-properties: 1.2.0
       has-symbols: 1.0.3
       object-keys: 1.1.1
     dev: true
@@ -8082,8 +8074,8 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-pages@0.29.1(vite@4.3.8):
-    resolution: {integrity: sha512-zPf4YIBuv2nOwvtEFeS+Ac4O7Ngoz5x9P0zaj0xPfCObTGEIvo/30//D2FG24UB6YedrFOaJjLq/BS/M/JDKEA==}
+  /vite-plugin-pages@0.30.1(vite@4.3.8):
+    resolution: {integrity: sha512-PHneaWBKA4MaUn0/KTBG+dGT+5V5VhTnOnMCE+HJmixxEkFj7PrgSVGFJjWvgHUflrRE7p2O67iC5cIWLzPDyQ==}
     peerDependencies:
       '@vue/compiler-sfc': ^2.7.0 || ^3.0.0
       vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0
