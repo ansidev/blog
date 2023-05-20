@@ -27,12 +27,12 @@ I have used Alacritty for a long time. And it has several issues:
 Recently, I switched to WezTerm
 
 - It supports both tab and splitting panes.
-- WezTerm configurations is using Lua, which is also used for Neovim configurations. It's more flexible than Alacritty.
+- WezTerm is using Lua for configuration, which is also used for Neovim configurations. It's more flexible than Alacritty.
 - Since tmux is unnecessary, the key bindings issue can be resolved using Lua configurations.
 
 ## Configurations
 
-These configuration is tested on macOS.
+These configurations are tested on macOS.
 
 Base configurations:
 
