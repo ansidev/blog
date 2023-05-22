@@ -73,7 +73,7 @@
     "ts-node": "^10.9.1",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
-    "unplugin-auto-import": "^0.16.1",
+    "unplugin-auto-import": "^0.16.2",
     "unplugin-vue-components": "^0.24.1",
     "vite": "^4.3.8",
     "vite-plugin-fonts": "^0.7.0",
