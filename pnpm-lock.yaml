@@ -182,8 +182,8 @@ devDependencies:
     specifier: ^0.16.4
     version: 0.16.4(@vueuse/core@10.1.2)(rollup@3.23.1)
   unplugin-vue-components:
-    specifier: ^0.25.0
-    version: 0.25.0(rollup@3.23.1)(vue@3.3.4)
+    specifier: ^0.25.1
+    version: 0.25.1(rollup@3.23.1)(vue@3.3.4)
   vite:
     specifier: ^4.3.9
     version: 4.3.9(@types/node@18.16.16)(sass@1.62.1)
@@ -324,8 +324,8 @@ packages:
     resolution: {integrity: sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==}
     dev: true
 
-  /@antfu/utils@0.7.3:
-    resolution: {integrity: sha512-sAPXKvlJFVQB4cvmdGoUa9IAavzRrm7N2ctxdD1GuAEIOZu8BRrv2SUzquGXTpRDUa0sY7OkkVHqhi6ySMnMTg==}
+  /@antfu/utils@0.7.4:
+    resolution: {integrity: sha512-qe8Nmh9rYI/HIspLSTwtbMFPj6dISG6+dJnOguTlPNXtCvS2uezdxscVBb7/3DrmNbQK49TDqpkSQ1chbRGdpQ==}
     dev: true
 
   /@apideck/better-ajv-errors@0.3.6(ajv@8.11.0):
@@ -7800,8 +7800,8 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-vue-components@0.25.0(rollup@3.23.1)(vue@3.3.4):
-    resolution: {integrity: sha512-HxrQ4GMSS1RwVww2av3a42cABo/v5AmTRN9iARv6e/xwkrfTyHhLh84kFwXxKkXK61vxDHxaryn694mQmkiVBg==}
+  /unplugin-vue-components@0.25.1(rollup@3.23.1)(vue@3.3.4):
+    resolution: {integrity: sha512-kzS2ZHVMaGU2XEO2keYQcMjNZkanDSGDdY96uQT9EPe+wqSZwwgbFfKVJ5ti0+8rGAcKHColwKUvctBhq2LJ3A==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -7813,7 +7813,7 @@ packages:
       '@nuxt/kit':
         optional: true
     dependencies:
-      '@antfu/utils': 0.7.3
+      '@antfu/utils': 0.7.4
       '@rollup/pluginutils': 5.0.2(rollup@3.23.1)
       chokidar: 3.5.3
       debug: 4.3.4
