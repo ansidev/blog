@@ -194,8 +194,8 @@ devDependencies:
     specifier: ^0.21.5
     version: 0.21.5(@vitejs/plugin-vue@2.3.4)(happy-dom@9.20.3)(sass@1.62.1)(vite@4.3.9)
   vite-plugin-pages:
-    specifier: ^0.30.1
-    version: 0.30.1(vite@4.3.9)
+    specifier: ^0.31.0
+    version: 0.31.0(vite@4.3.9)
   vite-plugin-pwa:
     specifier: ^0.16.3
     version: 0.16.3(vite@4.3.9)(workbox-build@7.0.0)(workbox-window@7.0.0)
@@ -2309,8 +2309,8 @@ packages:
     resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
     dev: true
 
-  /@types/debug@4.1.7:
-    resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+  /@types/debug@4.1.8:
+    resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
     dependencies:
       '@types/ms': 0.7.31
     dev: true
@@ -6675,7 +6675,7 @@ packages:
       lilconfig: 2.1.0
       postcss: 8.4.24
       ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.3)
-      yaml: 2.2.2
+      yaml: 2.3.1
     dev: true
 
   /postcss-nested@6.0.1(postcss@8.4.24):
@@ -7950,8 +7950,8 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-pages@0.30.1(vite@4.3.9):
-    resolution: {integrity: sha512-PHneaWBKA4MaUn0/KTBG+dGT+5V5VhTnOnMCE+HJmixxEkFj7PrgSVGFJjWvgHUflrRE7p2O67iC5cIWLzPDyQ==}
+  /vite-plugin-pages@0.31.0(vite@4.3.9):
+    resolution: {integrity: sha512-fw3onBfVTXQI7rOzAbSZhmfwvk50+3qNnGZpERjmD93c8nEjrGLyd53eFXYMxcJV4KA1vzi4qIHt2+6tS4dEMw==}
     peerDependencies:
       '@vue/compiler-sfc': ^2.7.0 || ^3.0.0
       vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0
@@ -7959,7 +7959,7 @@ packages:
       '@vue/compiler-sfc':
         optional: true
     dependencies:
-      '@types/debug': 4.1.7
+      '@types/debug': 4.1.8
       debug: 4.3.4
       deep-equal: 2.2.1
       extract-comments: 1.1.0
@@ -7968,7 +7968,7 @@ packages:
       local-pkg: 0.4.3
       picocolors: 1.0.0
       vite: 4.3.9(@types/node@18.16.16)(sass@1.62.1)
-      yaml: 2.2.2
+      yaml: 2.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8586,7 +8586,7 @@ packages:
     dependencies:
       eslint-visitor-keys: 3.4.1
       lodash: 4.17.21
-      yaml: 2.2.2
+      yaml: 2.3.1
     dev: true
 
   /yaml@1.10.2:
@@ -8594,8 +8594,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml@2.2.2:
-    resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
+  /yaml@2.3.1:
+    resolution: {integrity: sha512-2eHWfjaoXgTBC2jNM1LRef62VQa0umtvRiDSk6HSzW7RvS5YtkabJrwYLLEKWBc8a5U2PTSCs+dJjUTJdlHsWQ==}
     engines: {node: '>= 14'}
     dev: true
 
