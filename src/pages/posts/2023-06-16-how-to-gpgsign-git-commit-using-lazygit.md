@@ -1,7 +1,7 @@
 ---
 type: post
 title: How to gpgsign git commit using lazygit?
-date: 2023-05-18T15:00:00+07:00
+date: 2023-06-16T18:30:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
