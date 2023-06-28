@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@vueuse/core':
-    specifier: ^10.2.0
-    version: 10.2.0(vue@3.3.4)
+    specifier: ^10.2.1
+    version: 10.2.1(vue@3.3.4)
   '@vueuse/head':
     specifier: ^1.1.26
     version: 1.1.26(vue@3.3.4)
@@ -180,7 +180,7 @@ devDependencies:
     version: 5.1.5
   unplugin-auto-import:
     specifier: ^0.16.4
-    version: 0.16.4(@vueuse/core@10.2.0)(rollup@3.25.3)
+    version: 0.16.4(@vueuse/core@10.2.1)(rollup@3.25.3)
   unplugin-vue-components:
     specifier: ^0.25.1
     version: 0.25.1(rollup@3.25.3)(vue@3.3.4)
@@ -2720,12 +2720,12 @@ packages:
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
 
-  /@vueuse/core@10.2.0(vue@3.3.4):
-    resolution: {integrity: sha512-aHBnoCteIS3hFu7ZZkVB93SanVDY6t4TIb7XDLxJT/HQdAZz+2RdIEJ8rj5LUoEJr7Damb5+sJmtpCwGez5ozQ==}
+  /@vueuse/core@10.2.1(vue@3.3.4):
+    resolution: {integrity: sha512-c441bfMbkAwTNwVRHQ0zdYZNETK//P84rC01aP2Uy/aRFCiie9NE/k9KdIXbno0eDYP5NPUuWv0aA/I4Unr/7w==}
     dependencies:
       '@types/web-bluetooth': 0.0.17
-      '@vueuse/metadata': 10.2.0
-      '@vueuse/shared': 10.2.0(vue@3.3.4)
+      '@vueuse/metadata': 10.2.1
+      '@vueuse/shared': 10.2.1(vue@3.3.4)
       vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -2742,11 +2742,11 @@ packages:
       '@unhead/vue': 1.1.26(vue@3.3.4)
       vue: 3.3.4
 
-  /@vueuse/metadata@10.2.0:
-    resolution: {integrity: sha512-IR7Mkq6QSgZ38q/2ZzOt+Zz1OpcEsnwE64WBumDQ+RGKrosFCtUA2zgRrOqDEzPBXrVB+4HhFkwDjQMu0fDBKw==}
+  /@vueuse/metadata@10.2.1:
+    resolution: {integrity: sha512-3Gt68mY/i6bQvFqx7cuGBzrCCQu17OBaGWS5JdwISpMsHnMKKjC2FeB5OAfMcCQ0oINfADP3i9A4PPRo0peHdQ==}
 
-  /@vueuse/shared@10.2.0(vue@3.3.4):
-    resolution: {integrity: sha512-dIeA8+g9Av3H5iF4NXR/sft4V6vys76CpZ6hxwj8eMXybXk2WRl3scSsOVi+kQ9SX38COR7AH7WwY83UcuxbSg==}
+  /@vueuse/shared@10.2.1(vue@3.3.4):
+    resolution: {integrity: sha512-QWHq2bSuGptkcxx4f4M/fBYC3Y8d3M2UYyLsyzoPgEoVzJURQ0oJeWXu79OiLlBb8gTKkqe4mO85T/sf39mmiw==}
     dependencies:
       vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
@@ -7772,7 +7772,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unplugin-auto-import@0.16.4(@vueuse/core@10.2.0)(rollup@3.25.3):
+  /unplugin-auto-import@0.16.4(@vueuse/core@10.2.1)(rollup@3.25.3):
     resolution: {integrity: sha512-xdgBa9NAS3JG8HjkAZHSbGSMlrjKpaWKXGUzaF6RzEtr980RCl1t0Zsu0skUInNYrEQfqaHc7aGWPv41DLTK/w==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -7786,7 +7786,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.7.2
       '@rollup/pluginutils': 5.0.2(rollup@3.25.3)
-      '@vueuse/core': 10.2.0(vue@3.3.4)
+      '@vueuse/core': 10.2.1(vue@3.3.4)
       local-pkg: 0.4.3
       magic-string: 0.30.0
       minimatch: 9.0.1
