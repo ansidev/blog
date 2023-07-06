@@ -63,7 +63,7 @@
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-shiki": "^0.8.1",
     "markdown-it-toc-done-right": "^4.2.0",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.25",
     "postcss-nested": "^6.0.1",
     "prettier": "^3.0.0",
     "rollup": "^3.26.1",
