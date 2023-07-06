@@ -39,8 +39,8 @@ dependencies:
     specifier: ^9.2.2
     version: 9.2.2(vue@3.3.4)
   vue-router:
-    specifier: ^4.2.3
-    version: 4.2.3(vue@3.3.4)
+    specifier: ^4.2.4
+    version: 4.2.4(vue@3.3.4)
 
 devDependencies:
   '@antfu/eslint-config':
@@ -201,10 +201,10 @@ devDependencies:
     version: 0.16.4(vite@4.4.1)(workbox-build@7.0.0)(workbox-window@7.0.0)
   vite-plugin-vue-layouts:
     specifier: ^0.8.0
-    version: 0.8.0(vite@4.4.1)(vue-router@4.2.3)(vue@3.3.4)
+    version: 0.8.0(vite@4.4.1)(vue-router@4.2.4)(vue@3.3.4)
   vite-ssg:
     specifier: ^0.23.0
-    version: 0.23.0(@unhead/vue@1.1.26)(vite@4.4.1)(vue-router@4.2.3)(vue@3.3.4)
+    version: 0.23.0(@unhead/vue@1.1.26)(vite@4.4.1)(vue-router@4.2.4)(vue@3.3.4)
   vite-ssg-sitemap:
     specifier: ^0.5.1
     version: 0.5.1
@@ -8061,7 +8061,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-vue-layouts@0.8.0(vite@4.4.1)(vue-router@4.2.3)(vue@3.3.4):
+  /vite-plugin-vue-layouts@0.8.0(vite@4.4.1)(vue-router@4.2.4)(vue@3.3.4):
     resolution: {integrity: sha512-UZW2nSV2LraTSe7gsAL46hfdi7a0X1RvkGGoJVtA2O8beu7anzpXFwQLou8+kHy31CzVycT4gIPySBsHhtBN5g==}
     peerDependencies:
       vite: ^2.5.0 || ^3.0.0-0 || ^4.0.0
@@ -8073,7 +8073,7 @@ packages:
       fast-glob: 3.2.12
       vite: 4.4.1(@types/node@18.16.19)(sass@1.63.6)
       vue: 3.3.4
-      vue-router: 4.2.3(vue@3.3.4)
+      vue-router: 4.2.4(vue@3.3.4)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8082,7 +8082,7 @@ packages:
     resolution: {integrity: sha512-X3ZImSVpFMypBTIhaTqEOdKj7tO9n7Puzd8vsxuQluFUyu6x/e2Dzv8qk5qZsC34ZR6iHt0wa2sPhDu1OjdOsA==}
     dev: true
 
-  /vite-ssg@0.23.0(@unhead/vue@1.1.26)(vite@4.4.1)(vue-router@4.2.3)(vue@3.3.4):
+  /vite-ssg@0.23.0(@unhead/vue@1.1.26)(vite@4.4.1)(vue-router@4.2.4)(vue@3.3.4):
     resolution: {integrity: sha512-15hH++eI98dNVuIu1ZaziL24arFsUWDepII6DPWe4dq6DPO6iDo0qW1BjdKz4htXu3CTbNaJzBqsL9PwZBOL8g==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -8108,7 +8108,7 @@ packages:
       prettier: 2.8.8
       vite: 4.4.1(@types/node@18.16.19)(sass@1.63.6)
       vue: 3.3.4
-      vue-router: 4.2.3(vue@3.3.4)
+      vue-router: 4.2.4(vue@3.3.4)
       yargs: 17.7.2
     transitivePeerDependencies:
       - bufferutil
@@ -8308,8 +8308,8 @@ packages:
       '@vue/devtools-api': 6.2.1
       vue: 3.3.4
 
-  /vue-router@4.2.3(vue@3.3.4):
-    resolution: {integrity: sha512-ynQ/edCZNUC/9koONOSgxGJbEBXZ1nUA0lKI3xTiOd3Ywe4QRCf2q8pGCG1v5ovdzPggoq3M09FxNCZTM9pZfw==}
+  /vue-router@4.2.4(vue@3.3.4):
+    resolution: {integrity: sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
