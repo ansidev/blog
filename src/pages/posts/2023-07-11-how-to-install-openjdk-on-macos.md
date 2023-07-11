@@ -25,14 +25,14 @@ Steps:
 
    Configure manually:
 
-   - Add the below line to `~/.zshrc` (remember to replace `{OPENJDK_VERSION}` by the installed OpenJDK version).
+   - Add the below line to `~/.zshrc`:
      ```
-     export JAVA_HOME="/usr/local/Cellar/openjdk/{OPENJDK_VERSION}/libexec/openjdk.jdk/Contents/Home"
+     export JAVA_HOME="/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
      ```
 
    - Restart your terminal.
 
    Or you can run the below command:
    ```
-   echo "export JAVA_HOME=\"/usr/local/Cellar/openjdk/${$(brew list --version openjdk)/openjdk\ /}/libexec/openjdk.jdk/Contents/Home\"" >> ~/.zshrc && exec zsh
+   echo -e "\nexport JAVA_HOME=\"$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home\"" >> ${ZDOTDIR:-~}/.zshrc && exec zsh
    ```
