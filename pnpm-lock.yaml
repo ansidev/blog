@@ -155,8 +155,8 @@ devDependencies:
     specifier: ^6.0.1
     version: 6.0.1(postcss@8.4.27)
   prettier:
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: ^3.0.1
+    version: 3.0.1
   rollup:
     specifier: ^3.27.0
     version: 3.27.0
@@ -6782,8 +6782,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier@3.0.0:
-    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+  /prettier@3.0.1:
+    resolution: {integrity: sha512-fcOWSnnpCrovBsmFZIGIy9UqK2FaI7Hqax+DIO0A9UxeVoY4iweyaFjS5TavZN97Hfehph0nhsZnjlVKzEQSrQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -8114,7 +8114,7 @@ packages:
       html5parser: 2.0.2
       jsdom: 22.1.0
       kolorist: 1.8.0
-      prettier: 3.0.0
+      prettier: 3.0.1
       vite: 4.4.8(@types/node@18.17.1)(sass@1.64.2)
       vue: 3.3.4
       vue-router: 4.2.4(vue@3.3.4)
