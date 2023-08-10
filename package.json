@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.2",
-    "@commitlint/cli": "^17.7.0",
+    "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@iconify/vue": "^4.1.1",
     "@intlify/unplugin-vue-i18n": "^0.12.2",
