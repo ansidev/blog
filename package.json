@@ -50,7 +50,7 @@
     "commitizen": "^4.3.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "feed": "^4.2.2",
     "fp-ts": "^2.16.1",
