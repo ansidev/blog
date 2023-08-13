@@ -34,7 +34,7 @@
     "@iconify/vue": "^4.1.1",
     "@intlify/unplugin-vue-i18n": "^0.12.2",
     "@mdit-vue/plugin-headers": "^0.12.0",
-    "@rollup/pluginutils": "^5.0.2",
+    "@rollup/pluginutils": "^5.0.3",
     "@tailwindcss/forms": "^0.5.4",
     "@tailwindcss/typography": "^0.5.9",
     "@types/markdown-it": "^13.0.0",
