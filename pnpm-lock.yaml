@@ -59,8 +59,8 @@ devDependencies:
     specifier: ^0.12.2
     version: 0.12.2(rollup@3.29.2)(vue-i18n@9.2.2)
   '@mdit-vue/plugin-headers':
-    specifier: ^0.12.0
-    version: 0.12.0
+    specifier: ^0.12.1
+    version: 0.12.1
   '@rollup/pluginutils':
     specifier: ^5.0.3
     version: 5.0.3(rollup@3.29.2)
@@ -2163,20 +2163,20 @@ packages:
       type-detect: 4.0.8
     dev: true
 
-  /@mdit-vue/plugin-headers@0.12.0:
-    resolution: {integrity: sha512-7qR63J2uc/rXbjHT77WoYBm9imwzx1tVESmRK+Uth6kqFvSWAXAFPcm4PBatGEE8TgzhklPs5BTcQtQhmmsyaw==}
+  /@mdit-vue/plugin-headers@0.12.1:
+    resolution: {integrity: sha512-DXAw/iWW8f3qUYMDHgQmamL+XGjnaoeRzdvDseLRyr7gXX4xpYO9OIhe/pv9LzSvUoY7UGYmn4kFeI+0qpWJ+g==}
     dependencies:
-      '@mdit-vue/shared': 0.12.0
+      '@mdit-vue/shared': 0.12.1
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 12.2.3
+      '@types/markdown-it': 13.0.0
       markdown-it: 13.0.1
     dev: true
 
-  /@mdit-vue/shared@0.12.0:
-    resolution: {integrity: sha512-E+sGSubhvnp+Gmb2hJXFDxdLwwQD1H52EVbA4yrxxI5q/cwtnPIN2eJU3zlZB9KcvzXYDFFwt/x2mfhK8RZKBg==}
+  /@mdit-vue/shared@0.12.1:
+    resolution: {integrity: sha512-bXgd0KThe4jC2leCFDFsyrudXIckvTwV4WnQK/rRMrXq0/BAuVdSNdIv1LGCWZxD5+oDyPyEPd0lalTIFwqsmg==}
     dependencies:
       '@mdit-vue/types': 0.12.0
-      '@types/markdown-it': 12.2.3
+      '@types/markdown-it': 13.0.0
       markdown-it: 13.0.1
     dev: true
 
