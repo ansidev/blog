@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import { MdFrontmatter, ProjectFrontmatter } from '~/types'
-import type { BreadcrumbItem, PostFrontmatter } from '~/types'
+import type { BreadcrumbItem, MdFrontmatter, PostFrontmatter, ProjectFrontmatter } from '~/types'
 
 defineProps({
   /**
