@@ -38,7 +38,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/markdown-it": "^13.0.2",
     "@types/markdown-it-link-attributes": "^3.0.2",
-    "@types/node": "^18.18.1",
+    "@types/node": "^18.18.2",
     "@types/nprogress": "^0.2.1",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
