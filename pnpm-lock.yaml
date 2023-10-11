@@ -164,8 +164,8 @@ devDependencies:
     specifier: ^1.69.2
     version: 1.69.2
   shiki:
-    specifier: ^0.14.4
-    version: 0.14.4
+    specifier: ^0.14.5
+    version: 0.14.5
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3(ts-node@10.9.1)
@@ -6125,7 +6125,7 @@ packages:
   /markdown-it-shiki@0.8.1:
     resolution: {integrity: sha512-x3R9nxmOMGai+ZWNL+KpiA6f39xplB7ssyeOrptwlMVPRSMVBnKFi66acIqqbUjK2o8caH48B+sWwL0/8ljAOA==}
     dependencies:
-      shiki: 0.14.4
+      shiki: 0.14.5
       synckit: 0.8.5
     dev: true
 
@@ -7182,8 +7182,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shiki@0.14.4:
-    resolution: {integrity: sha512-IXCRip2IQzKwxArNNq1S+On4KPML3Yyn8Zzs/xRgcgOWIr8ntIK3IKzjFPfjy/7kt9ZMjc+FItfqHRBg8b6tNQ==}
+  /shiki@0.14.5:
+    resolution: {integrity: sha512-1gCAYOcmCFONmErGTrS1fjzJLA7MGZmKzrBNX7apqSwhyITJg2O102uFzXUeBxNnEkDA9vHIKLyeKq0V083vIw==}
     dependencies:
       ansi-sequence-parser: 1.1.0
       jsonc-parser: 3.2.0
