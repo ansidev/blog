@@ -71,8 +71,8 @@ devDependencies:
     specifier: ^13.0.2
     version: 13.0.2
   '@types/markdown-it-link-attributes':
-    specifier: ^3.0.2
-    version: 3.0.2
+    specifier: ^3.0.3
+    version: 3.0.3
   '@types/node':
     specifier: ^18.18.5
     version: 18.18.5
@@ -2481,8 +2481,8 @@ packages:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
     dev: true
 
-  /@types/markdown-it-link-attributes@3.0.2:
-    resolution: {integrity: sha512-jTFAOOjIwHultKsrA/ni761/KOExLBr0R7IQr5Pp8KLhf06xs+7L3EHEXUcnlDCQtnDEBiC/Bz650+IcfNKbMw==}
+  /@types/markdown-it-link-attributes@3.0.3:
+    resolution: {integrity: sha512-ompf4EozXPruyyVS9apakwJzVZK6p2CYoLEE+iIRfjISn1ERcY14l2wj0VwKpNX3MvMhOnk0Ov13T9oJ09OUgA==}
     dependencies:
       '@types/markdown-it': 13.0.2
     dev: true
