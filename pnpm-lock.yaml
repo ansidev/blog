@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.3)
   '@types/markdown-it':
-    specifier: ^13.0.4
-    version: 13.0.4
+    specifier: ^13.0.5
+    version: 13.0.5
   '@types/markdown-it-link-attributes':
     specifier: ^3.0.3
     version: 3.0.3
@@ -138,7 +138,7 @@ devDependencies:
     version: 13.0.2
   markdown-it-anchor:
     specifier: ^8.6.7
-    version: 8.6.7(@types/markdown-it@13.0.4)(markdown-it@13.0.2)
+    version: 8.6.7(@types/markdown-it@13.0.5)(markdown-it@13.0.2)
   markdown-it-link-attributes:
     specifier: ^4.0.1
     version: 4.0.1
@@ -2125,7 +2125,7 @@ packages:
     dependencies:
       '@mdit-vue/shared': 1.0.0
       '@mdit-vue/types': 1.0.0
-      '@types/markdown-it': 13.0.4
+      '@types/markdown-it': 13.0.5
       markdown-it: 13.0.2
     dev: true
 
@@ -2133,7 +2133,7 @@ packages:
     resolution: {integrity: sha512-nbYBfmEi+pR2Lm0Z6TMVX2/iBjfr/kGEsHW8CC0rQw+3+sG5dY6VG094HuFAkiAmmvZx9DZZb+7ZMWp9vkwCRw==}
     dependencies:
       '@mdit-vue/types': 1.0.0
-      '@types/markdown-it': 13.0.4
+      '@types/markdown-it': 13.0.5
       markdown-it: 13.0.2
     dev: true
 
@@ -2453,7 +2453,7 @@ packages:
   /@types/markdown-it-link-attributes@3.0.3:
     resolution: {integrity: sha512-ompf4EozXPruyyVS9apakwJzVZK6p2CYoLEE+iIRfjISn1ERcY14l2wj0VwKpNX3MvMhOnk0Ov13T9oJ09OUgA==}
     dependencies:
-      '@types/markdown-it': 13.0.4
+      '@types/markdown-it': 13.0.5
     dev: true
 
   /@types/markdown-it@12.2.3:
@@ -2463,8 +2463,8 @@ packages:
       '@types/mdurl': 1.0.2
     dev: true
 
-  /@types/markdown-it@13.0.4:
-    resolution: {integrity: sha512-FAIUdEXrCDnQmAAmJC+UeW/3p0eCI4QZ/+W0lX/h83VD3v78IgTFYftjnAeXS8H0g4PFQCgipc51cQDA8tjgLw==}
+  /@types/markdown-it@13.0.5:
+    resolution: {integrity: sha512-QhJP7hkq3FCrFNx0szMNCT/79CXfcEgUIA3jc5GBfeXqoKsk3R8JZm2wRXJ2DiyjbPE4VMFOSDemLFcUTZmHEQ==}
     dependencies:
       '@types/linkify-it': 3.0.2
       '@types/mdurl': 1.0.2
@@ -6186,13 +6186,13 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /markdown-it-anchor@8.6.7(@types/markdown-it@13.0.4)(markdown-it@13.0.2):
+  /markdown-it-anchor@8.6.7(@types/markdown-it@13.0.5)(markdown-it@13.0.2):
     resolution: {integrity: sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
     dependencies:
-      '@types/markdown-it': 13.0.4
+      '@types/markdown-it': 13.0.5
       markdown-it: 13.0.2
     dev: true
 
