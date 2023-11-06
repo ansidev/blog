@@ -18,7 +18,7 @@
     "counter-analytics-vue": "^1.0.0",
     "github-slugger": "^2.0.0",
     "medium-zoom": "^1.0.8",
-    "nanoid": "^5.0.2",
+    "nanoid": "^5.0.3",
     "nprogress": "^0.2.0",
     "swetrix-vue": "^2.0.1",
     "vue": "^3.3.7",
