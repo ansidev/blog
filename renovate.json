@@ -8,6 +8,10 @@
       "matchPackagePatterns": [
         "*"
       ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
       "rangeStrategy": "bump"
     }
   ]
