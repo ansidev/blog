@@ -1,7 +1,5 @@
 [build.environment]
-  # bypass npm auto install
-  NPM_FLAGS = "--prefix=/dev/null --version"
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
   VITE_BASE_URL = "https://ansidev.xyz"
 
 [build]
