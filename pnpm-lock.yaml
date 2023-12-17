@@ -200,8 +200,8 @@ devDependencies:
     specifier: ^0.17.0
     version: 0.17.0(vite@5.0.5)(workbox-build@7.0.0)(workbox-window@7.0.0)
   vite-plugin-vue-layouts:
-    specifier: ^0.9.0
-    version: 0.9.1(vite@5.0.5)(vue-router@4.2.5)(vue@3.3.7)
+    specifier: ^0.10.0
+    version: 0.10.0(vite@5.0.5)(vue-router@4.2.5)(vue@3.3.7)
   vite-ssg:
     specifier: ^0.23.4
     version: 0.23.4(vite@5.0.5)(vue-router@4.2.5)(vue@3.3.7)
@@ -8490,8 +8490,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-vue-layouts@0.9.1(vite@5.0.5)(vue-router@4.2.5)(vue@3.3.7):
-    resolution: {integrity: sha512-63ekxLgrs/hpqchAF6oDFZqdT3xl0p7wOHKkwIR+34jxStQmUiX70/2SchhHICMy7b8VFrY06SxpRVxyd2876A==}
+  /vite-plugin-vue-layouts@0.10.0(vite@5.0.5)(vue-router@4.2.5)(vue@3.3.7):
+    resolution: {integrity: sha512-95hG4rm3EZq1w56b+rlAC+9AxIeytaOFeBS2KDIa2ZJHyDxiWaqf/v93uLCuqkP7ye6W78B/0b7Xo4/y7mocgQ==}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.4
