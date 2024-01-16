@@ -131,8 +131,8 @@ devDependencies:
     specifier: ^8.0.3
     version: 8.0.3
   inferred-types:
-    specifier: ^0.40.0
-    version: 0.40.2(typescript@5.2.2)
+    specifier: ^0.41.0
+    version: 0.41.0(typescript@5.2.2)
   markdown-it:
     specifier: ^14.0.0
     version: 14.0.0
@@ -3064,7 +3064,7 @@ packages:
   /@vue/compiler-core@3.3.4:
     resolution: {integrity: sha512-cquyDNvZ6jTbf/+x+AgM2Arrp6G4Dzbb0R64jiG804HRMfRiFXWI6kqUVqZ6ZR0bQhIoQjB4+2bhNtVwndW15g==}
     dependencies:
-      '@babel/parser': 7.23.0
+      '@babel/parser': 7.23.6
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
       source-map-js: 1.0.2
@@ -3111,7 +3111,7 @@ packages:
   /@vue/compiler-sfc@3.3.4:
     resolution: {integrity: sha512-6y/d8uw+5TkCuzBkgLS0v3lSM3hJDntFEiUORM11pQ/hKvkhSKZrXW6i69UyXlJQisJxuUEJKAWEqWbWsLeNKQ==}
     dependencies:
-      '@babel/parser': 7.23.0
+      '@babel/parser': 7.23.6
       '@vue/compiler-core': 3.3.4
       '@vue/compiler-dom': 3.3.4
       '@vue/compiler-ssr': 3.3.4
@@ -3119,7 +3119,7 @@ packages:
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
       magic-string: 0.30.5
-      postcss: 8.4.31
+      postcss: 8.4.32
       source-map-js: 1.0.2
     dev: true
 
@@ -3177,7 +3177,7 @@ packages:
   /@vue/reactivity-transform@3.3.4:
     resolution: {integrity: sha512-MXgwjako4nu5WFLAjpBnCj/ieqcjE2aJBINUNQzkZQfzIZA4xn+0fV1tIYBJvvva3N3OvKGofRLvQIwEQPpaXw==}
     dependencies:
-      '@babel/parser': 7.23.0
+      '@babel/parser': 7.23.6
       '@vue/compiler-core': 3.3.4
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
@@ -5766,8 +5766,8 @@ packages:
       - terser
     dev: true
 
-  /inferred-types@0.40.2(typescript@5.2.2):
-    resolution: {integrity: sha512-F4zlINpX4yF0cIY6qBFNROzxS38HpMXIjtYjZ9wg0Xh9Hj5pUUTe3k5zB/s4q8EOBMHO5hWr+oh/gzxL40Wf6w==}
+  /inferred-types@0.41.0(typescript@5.2.2):
+    resolution: {integrity: sha512-UgTCVKnx59hvl+wBRyG4EfRk1kBuGE8RQuLpfoQmsQywX/f0tNHrH+699M4MidFcDWkHAs2rhxAdKv2NOyUVOQ==}
     dependencies:
       vue: 3.4.6(typescript@5.2.2)
     transitivePeerDependencies:
