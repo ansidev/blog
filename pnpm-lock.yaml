@@ -60,7 +60,7 @@ devDependencies:
     version: 2.0.0
   '@rollup/pluginutils':
     specifier: ^5.0.5
-    version: 5.0.5(rollup@4.2.0)
+    version: 5.1.0(rollup@4.2.0)
   '@tailwindcss/forms':
     specifier: ^0.5.6
     version: 0.5.7(tailwindcss@3.3.5)
@@ -2230,7 +2230,7 @@ packages:
     dependencies:
       '@intlify/bundle-utils': 7.4.0(vue-i18n@9.6.4)
       '@intlify/shared': 9.4.1
-      '@rollup/pluginutils': 5.0.5(rollup@4.2.0)
+      '@rollup/pluginutils': 5.1.0(rollup@4.2.0)
       '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
       fast-glob: 3.3.1
@@ -2414,21 +2414,6 @@ packages:
       estree-walker: 1.0.1
       picomatch: 2.3.1
       rollup: 2.79.1
-    dev: true
-
-  /@rollup/pluginutils@5.0.5(rollup@4.2.0):
-    resolution: {integrity: sha512-6aEYR910NyP73oHiJglti74iRyOwgFU4x3meH/H8OJx6Ry0j6cOVZ5X/wTvub7G7Ao6qaHBEaNsV3GLJkSsF+Q==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.0
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
-      rollup: 4.2.0
     dev: true
 
   /@rollup/pluginutils@5.1.0(rollup@4.2.0):
@@ -2651,10 +2636,6 @@ packages:
 
   /@types/estree@0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
-    dev: true
-
-  /@types/estree@1.0.0:
-    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
   /@types/estree@1.0.5:
@@ -6357,6 +6338,7 @@ packages:
   /jiti@1.21.0:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
+    requiresBuild: true
     dev: true
 
   /js-tokens@4.0.0:
@@ -8736,7 +8718,7 @@ packages:
         optional: true
     dependencies:
       '@antfu/utils': 0.7.6
-      '@rollup/pluginutils': 5.0.5(rollup@4.2.0)
+      '@rollup/pluginutils': 5.1.0(rollup@4.2.0)
       chokidar: 3.5.3
       debug: 4.3.4
       fast-glob: 3.3.2
