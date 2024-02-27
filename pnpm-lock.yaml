@@ -93,10 +93,10 @@ devDependencies:
     version: 2.0.0(vue@3.4.20)
   '@yankeeinlondon/link-builder':
     specifier: ^1.2.1
-    version: 1.2.1(happy-dom@13.0.0)(sass@1.69.5)
+    version: 1.2.1(happy-dom@13.0.0)(sass@1.71.1)
   '@yankeeinlondon/meta-builder':
     specifier: ^1.4.0
-    version: 1.4.0(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12)
+    version: 1.4.0(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12)
   autoprefixer:
     specifier: ^10.4.16
     version: 10.4.17(postcss@8.4.35)
@@ -162,7 +162,7 @@ devDependencies:
     version: 4.2.0
   sass:
     specifier: ^1.69.5
-    version: 1.69.5
+    version: 1.71.1
   shiki:
     specifier: ^0.14.5
     version: 0.14.7
@@ -186,13 +186,13 @@ devDependencies:
     version: 0.26.0(rollup@4.2.0)(vue@3.4.20)
   vite:
     specifier: ^5.0.5
-    version: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+    version: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
   vite-plugin-fonts:
     specifier: ^0.7.0
     version: 0.7.0(vite@5.0.12)
   vite-plugin-md:
     specifier: ^0.21.5
-    version: 0.21.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12)
+    version: 0.21.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12)
   vite-plugin-pages:
     specifier: ^0.32.0
     version: 0.32.0(@vue/compiler-sfc@3.4.20)(vite@5.0.12)
@@ -3144,7 +3144,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
       vue: 3.4.20(typescript@5.2.2)
     dev: true
 
@@ -3301,13 +3301,13 @@ packages:
       - '@vue/composition-api'
       - vue
 
-  /@yankeeinlondon/builder-api@1.2.2(happy-dom@13.0.0)(sass@1.69.5):
+  /@yankeeinlondon/builder-api@1.2.2(happy-dom@13.0.0)(sass@1.71.1):
     resolution: {integrity: sha512-EDeZbbHdRjm0rqXJhdqeRrSdeo9qza/iPVA31k2jJrRc3sil4gzd1tiMN3qANLetg04x8M+tlfvH0S51a4z5rA==}
     dependencies:
       '@types/markdown-it': 12.2.3
-      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.69.5)
+      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.71.1)
       fp-ts: 2.16.2
-      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.69.5)
+      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.71.1)
       markdown-it: 13.0.2
     transitivePeerDependencies:
       - '@edge-runtime/vm'
@@ -3325,15 +3325,15 @@ packages:
       - terser
     dev: true
 
-  /@yankeeinlondon/builder-api@1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12):
+  /@yankeeinlondon/builder-api@1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12):
     resolution: {integrity: sha512-qc6HyfqtuS06FvA5rK0L62Nmc1LnarVOt8/V/mTX2DBZlpTfIDpudpbE/7/kxjme9pP4PFMCk7cPSrprLEorjw==}
     dependencies:
       '@types/markdown-it': 12.2.3
-      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.69.5)
+      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.71.1)
       fp-ts: 2.16.2
-      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.69.5)
+      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.71.1)
       markdown-it: 13.0.2
-      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12)
+      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitejs/plugin-vue'
@@ -3352,16 +3352,16 @@ packages:
       - vite
     dev: true
 
-  /@yankeeinlondon/gray-matter@6.1.1(happy-dom@13.0.0)(sass@1.69.5):
+  /@yankeeinlondon/gray-matter@6.1.1(happy-dom@13.0.0)(sass@1.71.1):
     resolution: {integrity: sha512-TLtRc/mxI74ahP3s+fJpIi+lBFAhuJuVjiQhmyi/xEwJ2pDepuWMRXT6UfJOA1cGkZ5/XGa9NFw/SQR6M5jfoQ==}
     engines: {node: '>=14.0'}
     dependencies:
-      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.69.5)
+      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.71.1)
       js-yaml: 4.1.0
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
-      vitest: 0.25.8(happy-dom@13.0.0)(sass@1.69.5)
+      vitest: 0.25.8(happy-dom@13.0.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -3377,12 +3377,12 @@ packages:
       - terser
     dev: true
 
-  /@yankeeinlondon/happy-wrapper@2.10.1(sass@1.69.5):
+  /@yankeeinlondon/happy-wrapper@2.10.1(sass@1.71.1):
     resolution: {integrity: sha512-kS3HT26QSQqcZa8Me2yrb6oc/j0BTmTRR76ITRGcYlO8G1snz9wii1eCrBTx+gAo58P+e3UkxB8PTVrmjTowVA==}
     dependencies:
       fp-ts: 2.16.2
       happy-dom: 8.9.0
-      native-dash: 1.24.0(happy-dom@8.9.0)(sass@1.69.5)
+      native-dash: 1.24.0(happy-dom@8.9.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -3398,11 +3398,11 @@ packages:
       - terser
     dev: true
 
-  /@yankeeinlondon/link-builder@1.2.1(happy-dom@13.0.0)(sass@1.69.5):
+  /@yankeeinlondon/link-builder@1.2.1(happy-dom@13.0.0)(sass@1.71.1):
     resolution: {integrity: sha512-ohQQ42CE/LaUpPLoWy6KQ+55wVpPIQYh2fWvcnFSLHPsRsCHBP0Taf7fXbBTEnQvlOrX0ot+GOAKu5J2p7YC6g==}
     dependencies:
-      '@yankeeinlondon/builder-api': 1.2.2(happy-dom@13.0.0)(sass@1.69.5)
-      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.69.5)
+      '@yankeeinlondon/builder-api': 1.2.2(happy-dom@13.0.0)(sass@1.71.1)
+      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -3419,11 +3419,11 @@ packages:
       - terser
     dev: true
 
-  /@yankeeinlondon/meta-builder@1.4.0(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12):
+  /@yankeeinlondon/meta-builder@1.4.0(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12):
     resolution: {integrity: sha512-YTr77Mj9ktztLPCO4Br5OP9MGx5nkBJknAtusotJ/8igyqbxwTQuZOAk8HRD5FbpD6J8A8X5Hg9DzOMzF9EIEA==}
     dependencies:
-      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12)
-      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.69.5)
+      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12)
+      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitejs/plugin-vue'
@@ -3528,14 +3528,6 @@ packages:
 
   /any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
-    dev: true
-
-  /anymatch@3.1.2:
-    resolution: {integrity: sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y/GNK7v0aa8rY816xWjZ7rJdA5XdMcpVFTKMq+RvWg==}
-    engines: {node: '>= 8'}
-    dependencies:
-      normalize-path: 3.0.0
-      picomatch: 2.3.1
     dev: true
 
   /anymatch@3.1.3:
@@ -3744,14 +3736,14 @@ packages:
       fill-range: 7.0.1
     dev: true
 
-  /brilliant-errors@0.7.3(happy-dom@13.0.0)(sass@1.69.5):
+  /brilliant-errors@0.7.3(happy-dom@13.0.0)(sass@1.71.1):
     resolution: {integrity: sha512-WT9BkAze4SUOJfr7LUwJWNDAvynEAvUMvMPuFKu8QQKnRq+WMx3DAtHfOBJjHmHRxf748JY3CNVytSk6HH2yGg==}
     engines: {node: '>=14.0.0'}
     dependencies:
       bumpp: 8.2.1
       callsites: 4.1.0
-      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.69.5)
-      vitest: 0.25.8(happy-dom@13.0.0)(sass@1.69.5)
+      inferred-types: 0.37.6(happy-dom@13.0.0)(sass@1.71.1)
+      vitest: 0.25.8(happy-dom@13.0.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -3767,14 +3759,14 @@ packages:
       - terser
     dev: true
 
-  /brilliant-errors@0.7.3(happy-dom@8.9.0)(sass@1.69.5):
+  /brilliant-errors@0.7.3(happy-dom@8.9.0)(sass@1.71.1):
     resolution: {integrity: sha512-WT9BkAze4SUOJfr7LUwJWNDAvynEAvUMvMPuFKu8QQKnRq+WMx3DAtHfOBJjHmHRxf748JY3CNVytSk6HH2yGg==}
     engines: {node: '>=14.0.0'}
     dependencies:
       bumpp: 8.2.1
       callsites: 4.1.0
-      inferred-types: 0.37.6(happy-dom@8.9.0)(sass@1.69.5)
-      vitest: 0.25.8(happy-dom@8.9.0)(sass@1.69.5)
+      inferred-types: 0.37.6(happy-dom@8.9.0)(sass@1.71.1)
+      vitest: 0.25.8(happy-dom@8.9.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -3964,7 +3956,7 @@ packages:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
     dependencies:
-      anymatch: 3.1.2
+      anymatch: 3.1.3
       braces: 3.0.2
       glob-parent: 5.1.2
       is-binary-path: 2.1.0
@@ -5861,8 +5853,8 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immutable@4.1.0:
-    resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
     dev: true
 
   /import-fresh@3.3.0:
@@ -5883,10 +5875,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /inferred-types@0.37.6(happy-dom@13.0.0)(sass@1.69.5):
+  /inferred-types@0.37.6(happy-dom@13.0.0)(sass@1.71.1):
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
     dependencies:
-      brilliant-errors: 0.7.3(happy-dom@13.0.0)(sass@1.69.5)
+      brilliant-errors: 0.7.3(happy-dom@13.0.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -5902,10 +5894,10 @@ packages:
       - terser
     dev: true
 
-  /inferred-types@0.37.6(happy-dom@8.9.0)(sass@1.69.5):
+  /inferred-types@0.37.6(happy-dom@8.9.0)(sass@1.71.1):
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
     dependencies:
-      brilliant-errors: 0.7.3(happy-dom@8.9.0)(sass@1.69.5)
+      brilliant-errors: 0.7.3(happy-dom@8.9.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -6935,11 +6927,11 @@ packages:
     hasBin: true
     dev: false
 
-  /native-dash@1.24.0(happy-dom@8.9.0)(sass@1.69.5):
+  /native-dash@1.24.0(happy-dom@8.9.0)(sass@1.71.1):
     resolution: {integrity: sha512-jEoxTHqlFSMsHrkWkOnieBdxjpZVLTJWLK3/VTVQsBXKCbrth0yeiqBIsiW+Rz1skXhNnPQ4r9tyLU0TSm2WpQ==}
     dependencies:
-      brilliant-errors: 0.7.3(happy-dom@8.9.0)(sass@1.69.5)
-      inferred-types: 0.37.6(happy-dom@8.9.0)(sass@1.69.5)
+      brilliant-errors: 0.7.3(happy-dom@8.9.0)(sass@1.71.1)
+      inferred-types: 0.37.6(happy-dom@8.9.0)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -7829,13 +7821,13 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.69.5:
-    resolution: {integrity: sha512-qg2+UCJibLr2LCVOt3OlPhr/dqVHWOa9XtZf2OjbLs/T4VPSJ00udtgJxH3neXZm+QqX8B+3cU7RaLqp1iVfcQ==}
+  /sass@1.71.1:
+    resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
-      chokidar: 3.5.3
-      immutable: 4.1.0
+      chokidar: 3.6.0
+      immutable: 4.3.5
       source-map-js: 1.0.2
     dev: true
 
@@ -8853,20 +8845,20 @@ packages:
       vite: ^2.0.0 || ^3.0.0 || ^4.0.0
     dependencies:
       fast-glob: 3.2.12
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
     dev: true
 
-  /vite-plugin-md@0.21.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12):
+  /vite-plugin-md@0.21.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12):
     resolution: {integrity: sha512-gxiiSq2PmU2zUY5ZAFLEGmDFRV6J6gF85ns3hcvtgERibNST4gWxRSabqSZbGbHp3LEBwwK7C1CRLsl46yEiWg==}
     peerDependencies:
       vite: ^4.0.0
     dependencies:
-      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12)
-      '@yankeeinlondon/gray-matter': 6.1.1(happy-dom@13.0.0)(sass@1.69.5)
-      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.69.5)
+      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12)
+      '@yankeeinlondon/gray-matter': 6.1.1(happy-dom@13.0.0)(sass@1.71.1)
+      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.71.1)
       markdown-it: 13.0.2
       source-map-js: 1.0.2
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitejs/plugin-vue'
@@ -8884,19 +8876,19 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-md@0.22.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12):
+  /vite-plugin-md@0.22.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12):
     resolution: {integrity: sha512-ex6yQfan2teBT2uMzoIlDHRhKTOsNiyvblA9eLU/+uygpg4KikJPFeyBX300LqQ3pZ9qGHz35qoGJ0oLw47eZg==}
     peerDependencies:
       '@vitejs/plugin-vue': '>=2.3.4'
       vite: ^4.0.0 || ^3.0.0
     dependencies:
       '@vitejs/plugin-vue': 2.3.4(vite@5.0.12)(vue@3.4.20)
-      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.69.5)(vite@5.0.12)
-      '@yankeeinlondon/gray-matter': 6.1.1(happy-dom@13.0.0)(sass@1.69.5)
-      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.69.5)
+      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@2.3.4)(happy-dom@13.0.0)(sass@1.71.1)(vite@5.0.12)
+      '@yankeeinlondon/gray-matter': 6.1.1(happy-dom@13.0.0)(sass@1.71.1)
+      '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.71.1)
       markdown-it: 13.0.2
       source-map-js: 1.0.2
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -8931,7 +8923,7 @@ packages:
       json5: 2.2.3
       local-pkg: 0.5.0
       picocolors: 1.0.0
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
       yaml: 2.3.4
     transitivePeerDependencies:
       - supports-color
@@ -8952,7 +8944,7 @@ packages:
       debug: 4.3.4
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
       workbox-build: 7.0.0
       workbox-window: 7.0.0
     transitivePeerDependencies:
@@ -8968,7 +8960,7 @@ packages:
     dependencies:
       debug: 4.3.4
       fast-glob: 3.3.2
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
       vue: 3.4.20(typescript@5.2.2)
       vue-router: 4.2.5(vue@3.4.20)
     transitivePeerDependencies:
@@ -9002,7 +8994,7 @@ packages:
       jsdom: 23.2.0
       kolorist: 1.8.0
       prettier: 3.2.5
-      vite: 5.0.12(@types/node@20.11.20)(sass@1.69.5)
+      vite: 5.0.12(@types/node@20.11.20)(sass@1.71.1)
       vue: 3.4.20(typescript@5.2.2)
       vue-router: 4.2.5(vue@3.4.20)
       yargs: 17.7.2
@@ -9013,7 +9005,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /vite@4.5.2(@types/node@20.11.20)(sass@1.69.5):
+  /vite@4.5.2(@types/node@20.11.20)(sass@1.71.1):
     resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -9045,12 +9037,12 @@ packages:
       esbuild: 0.18.20
       postcss: 8.4.35
       rollup: 3.29.4
-      sass: 1.69.5
+      sass: 1.71.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
 
-  /vite@5.0.12(@types/node@20.11.20)(sass@1.69.5):
+  /vite@5.0.12(@types/node@20.11.20)(sass@1.71.1):
     resolution: {integrity: sha512-4hsnEkG3q0N4Tzf1+t6NdN9dg/L3BM+q8SWgbSPnJvrgH2kgdyzfVJwbR1ic69/4uMJJ/3dqDZZE5/WwqW8U1w==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -9082,12 +9074,12 @@ packages:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.2.0
-      sass: 1.69.5
+      sass: 1.71.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@0.25.8(happy-dom@13.0.0)(sass@1.69.5):
+  /vitest@0.25.8(happy-dom@13.0.0)(sass@1.71.1):
     resolution: {integrity: sha512-X75TApG2wZTJn299E/TIYevr4E9/nBo1sUtZzn0Ci5oK8qnpZAZyhwg0qCeMSakGIWtc6oRwcQFyFfW14aOFWg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -9123,7 +9115,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 4.5.2(@types/node@20.11.20)(sass@1.69.5)
+      vite: 4.5.2(@types/node@20.11.20)(sass@1.71.1)
     transitivePeerDependencies:
       - less
       - lightningcss
@@ -9134,7 +9126,7 @@ packages:
       - terser
     dev: true
 
-  /vitest@0.25.8(happy-dom@8.9.0)(sass@1.69.5):
+  /vitest@0.25.8(happy-dom@8.9.0)(sass@1.71.1):
     resolution: {integrity: sha512-X75TApG2wZTJn299E/TIYevr4E9/nBo1sUtZzn0Ci5oK8qnpZAZyhwg0qCeMSakGIWtc6oRwcQFyFfW14aOFWg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -9170,7 +9162,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 4.5.2(@types/node@20.11.20)(sass@1.69.5)
+      vite: 4.5.2(@types/node@20.11.20)(sass@1.71.1)
     transitivePeerDependencies:
       - less
       - lightningcss
