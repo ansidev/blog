@@ -120,7 +120,7 @@ devDependencies:
     version: 4.2.2
   fp-ts:
     specifier: ^2.16.1
-    version: 2.16.2
+    version: 2.16.5
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
@@ -3528,7 +3528,7 @@ packages:
     dependencies:
       '@types/markdown-it': 12.2.3
       '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.71.1)
-      fp-ts: 2.16.2
+      fp-ts: 2.16.5
       inferred-types: 0.37.6(happy-dom@13.6.2)(sass@1.71.1)
       markdown-it: 13.0.2
     transitivePeerDependencies:
@@ -3552,7 +3552,7 @@ packages:
     dependencies:
       '@types/markdown-it': 12.2.3
       '@yankeeinlondon/happy-wrapper': 2.10.1(sass@1.71.1)
-      fp-ts: 2.16.2
+      fp-ts: 2.16.5
       inferred-types: 0.37.6(happy-dom@13.6.2)(sass@1.71.1)
       markdown-it: 13.0.2
       vite-plugin-md: 0.22.5(@vitejs/plugin-vue@2.3.4)(happy-dom@13.6.2)(sass@1.71.1)(vite@5.1.7)
@@ -3602,7 +3602,7 @@ packages:
   /@yankeeinlondon/happy-wrapper@2.10.1(sass@1.71.1):
     resolution: {integrity: sha512-kS3HT26QSQqcZa8Me2yrb6oc/j0BTmTRR76ITRGcYlO8G1snz9wii1eCrBTx+gAo58P+e3UkxB8PTVrmjTowVA==}
     dependencies:
-      fp-ts: 2.16.2
+      fp-ts: 2.16.5
       happy-dom: 8.9.0
       native-dash: 1.24.0(happy-dom@8.9.0)(sass@1.71.1)
     transitivePeerDependencies:
@@ -5677,8 +5677,8 @@ packages:
       mime-types: 2.1.35
     dev: true
 
-  /fp-ts@2.16.2:
-    resolution: {integrity: sha512-CkqAjnIKFqvo3sCyoBTqgJvF+bHrSik584S9nhTjtBESLx26cbtVMR/T9a6ApChOcSDAaM3JydDmWDUn4EEXng==}
+  /fp-ts@2.16.5:
+    resolution: {integrity: sha512-N8T8PwMSeTKKtkm9lkj/zSTAnPC/aJIIrQhnHxxkL0KLsRCNUPANksJOlMXxcKKCo7H1ORP3No9EMD+fP0tsdA==}
     dev: true
 
   /fraction.js@4.3.7:
