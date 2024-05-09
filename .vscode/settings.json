@@ -11,5 +11,9 @@
   "files.associations": {
     "*.css": "postcss"
   },
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "vite.browserType": "embedded",
+  "vite.devCommand": "pnpm dev",
+  "vite.buildCommand": "pnpm build",
+  "vite.port": 5173
 }
