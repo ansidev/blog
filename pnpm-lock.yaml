@@ -66,7 +66,7 @@ devDependencies:
     version: 0.5.7(tailwindcss@3.4.1)
   '@tailwindcss/typography':
     specifier: ^0.5.10
-    version: 0.5.10(tailwindcss@3.4.1)
+    version: 0.5.13(tailwindcss@3.4.1)
   '@types/markdown-it':
     specifier: ^13.0.5
     version: 13.0.7
@@ -2822,8 +2822,8 @@ packages:
       tailwindcss: 3.4.1(ts-node@10.9.2)
     dev: true
 
-  /@tailwindcss/typography@0.5.10(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
+  /@tailwindcss/typography@0.5.13(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
