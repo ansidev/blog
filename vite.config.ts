@@ -13,7 +13,6 @@ import link from '@yankeeinlondon/link-builder'
 import meta from '@yankeeinlondon/meta-builder'
 // import toc from './src/builders/toc'
 import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
 import Anchor from 'markdown-it-anchor'
@@ -244,13 +243,6 @@ export default defineConfig(({ mode }) => {
             },
           ],
         },
-      }),
-
-      // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
-      VueI18n({
-        runtimeOnly: false,
-        compositionOnly: true,
-        include: [resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**')],
       }),
 
       // https://github.com/stafyniaksacha/vite-plugin-fonts
