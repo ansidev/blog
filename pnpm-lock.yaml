@@ -164,8 +164,8 @@ devDependencies:
     specifier: ^1.69.5
     version: 1.71.1
   shiki:
-    specifier: ^0.14.5
-    version: 0.14.7
+    specifier: ^1.0.0
+    version: 1.5.1
   tailwindcss:
     specifier: ^3.3.5
     version: 3.4.1(ts-node@10.9.2)
@@ -2731,6 +2731,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@shikijs/core@1.5.1:
+    resolution: {integrity: sha512-xjV63pRUBvxA1LsxOUhRKLPh0uUjwBLzAKLdEuYSLIylo71sYuwDcttqNP01Ib1TZlLfO840CXHPlgUUsYFjzg==}
+    dev: true
 
   /@stylistic/eslint-plugin-js@1.6.2(eslint@8.57.0):
     resolution: {integrity: sha512-ndT6X2KgWGxv8101pdMOxL8pihlYIHcOv3ICd70cgaJ9exwkPn8hJj4YQwslxoAlre1TFHnXd/G1/hYXgDrjIA==}
@@ -8146,6 +8150,12 @@ packages:
       jsonc-parser: 3.2.1
       vscode-oniguruma: 1.7.0
       vscode-textmate: 8.0.0
+    dev: true
+
+  /shiki@1.5.1:
+    resolution: {integrity: sha512-vx4Ds3M3B9ZEmLeSXqBAB85osBWV8ErZfP69kuFQZozPgHc33m7spLTCUkcjwEjFm3gk3F9IdXMv8kX+v9xDHA==}
+    dependencies:
+      '@shikijs/core': 1.5.1
     dev: true
 
   /side-channel@1.0.4:
