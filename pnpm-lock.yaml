@@ -54,7 +54,7 @@ devDependencies:
     version: 4.1.2(vue@3.4.27)
   '@mdit-vue/plugin-headers':
     specifier: ^2.0.0
-    version: 2.0.0
+    version: 2.1.2
   '@rollup/pluginutils':
     specifier: ^5.0.5
     version: 5.1.0(rollup@4.12.0)
@@ -579,6 +579,7 @@ packages:
   /@babel/helper-validator-identifier@7.22.20:
     resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
     engines: {node: '>=6.9.0'}
+    requiresBuild: true
     dev: true
 
   /@babel/helper-validator-identifier@7.24.5:
@@ -2304,25 +2305,25 @@ packages:
       type-detect: 4.0.8
     dev: true
 
-  /@mdit-vue/plugin-headers@2.0.0:
-    resolution: {integrity: sha512-ITMMPCnLEYHHgj3XEUL2l75jsNn8guxNqr26YrMSi1f5zcgq4XVy1LIvfwvJ1puqM6Cc5v4BHk3oAyorAi7l1A==}
+  /@mdit-vue/plugin-headers@2.1.2:
+    resolution: {integrity: sha512-YkBTlHeG4seTcXqrVPvPY6utvkHd2qs7QGU5aM3S5CxUH5l0/SzIRv+irhFMfIRsXQ7zwx2vJVSwJz+n2TFhSA==}
     dependencies:
-      '@mdit-vue/shared': 2.0.0
-      '@mdit-vue/types': 2.0.0
-      '@types/markdown-it': 13.0.8
-      markdown-it: 14.0.0
+      '@mdit-vue/shared': 2.1.2
+      '@mdit-vue/types': 2.1.0
+      '@types/markdown-it': 14.1.1
+      markdown-it: 14.1.0
     dev: true
 
-  /@mdit-vue/shared@2.0.0:
-    resolution: {integrity: sha512-PdxpQpbyTazeo2JT87qms6RPZIzyJd+gwuB+1jSwLDI7+0u5g79y2XgTAbZromSVgY2f3UU5HWdwaLbV9w4uOw==}
+  /@mdit-vue/shared@2.1.2:
+    resolution: {integrity: sha512-5+YHKRyULDqMZsYq+8Ttev0P/osgAoNm2OPYrJtvxLfc1jyrZNiDUCjO2jec7Nk3qyGVZe6FKtXTNLVE+ZRhZw==}
     dependencies:
-      '@mdit-vue/types': 2.0.0
-      '@types/markdown-it': 13.0.8
-      markdown-it: 14.0.0
+      '@mdit-vue/types': 2.1.0
+      '@types/markdown-it': 14.1.1
+      markdown-it: 14.1.0
     dev: true
 
-  /@mdit-vue/types@2.0.0:
-    resolution: {integrity: sha512-1BeEB+DbtmDMUAfvbNUj5Hso8cSl2sBVK2iTyOMAqhfDVLdh+/9+D0JmQHaCeUk/vuJoMhOwbweZvh55wHxm4w==}
+  /@mdit-vue/types@2.1.0:
+    resolution: {integrity: sha512-TMBB/BQWVvwtpBdWD75rkZx4ZphQ6MN0O4QB2Bc0oI5PC2uE57QerhNxdRZ7cvBHE2iY2C+BUNUziCfJbjIRRA==}
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -2760,6 +2761,13 @@ packages:
     dependencies:
       '@types/linkify-it': 3.0.5
       '@types/mdurl': 1.0.5
+    dev: true
+
+  /@types/markdown-it@14.1.1:
+    resolution: {integrity: sha512-4NpsnpYl2Gt1ljyBGrKMxFYAYvpqbnnkgP/i/g+NLpjEUa3obn1XJCur9YbEXKDAkaXqsR1LbDnGEJ0MmKFxfg==}
+    dependencies:
+      '@types/linkify-it': 5.0.0
+      '@types/mdurl': 2.0.0
     dev: true
 
   /@types/mdast@3.0.15:
@@ -6573,6 +6581,18 @@ packages:
       uc.micro: 2.0.0
     dev: true
 
+  /markdown-it@14.1.0:
+    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+      entities: 4.5.0
+      linkify-it: 5.0.0
+      mdurl: 2.0.0
+      punycode.js: 2.3.1
+      uc.micro: 2.1.0
+    dev: true
+
   /mdast-util-from-markdown@0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==}
     dependencies:
@@ -8287,6 +8307,10 @@ packages:
 
   /uc.micro@2.0.0:
     resolution: {integrity: sha512-DffL94LsNOccVn4hyfRe5rdKa273swqeA5DJpMOeFmEn1wCDc7nAbbB0gXlgBCL7TNzeTv6G7XVWzan7iJtfig==}
+    dev: true
+
+  /uc.micro@2.1.0:
+    resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
     dev: true
 
   /ufo@1.5.3:
