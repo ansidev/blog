@@ -5,9 +5,9 @@ const { t } = useI18n()
 const showMobileMenu = ref(false)
 const onToggleMobileMenu = () => (showMobileMenu.value = !showMobileMenu.value)
 
-useHead({
+useServerHead({
   bodyAttrs: {
-    style: computed(() => showMobileMenu.value ? 'overflow: hidden' : 'overflow: auto'),
+    style: computed(() => showMobileMenu.value ? 'overflow: hidden' : 'overflow: auto').value,
   },
 })
 </script>

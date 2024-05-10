@@ -18,37 +18,34 @@ const pageMeta = computed(() => {
   }
 })
 
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
-useHead({
-  title: computed(() => pageMeta.value.title),
+useServerHead({
+  title: computed(() => pageMeta.value.title).value,
   meta: [
     {
       name: 'description',
-      content: computed(() => pageMeta.value.description),
+      content: computed(() => pageMeta.value.description).value,
     },
     {
       name: 'og:title',
-      content: computed(() => pageMeta.value.title),
+      content: computed(() => pageMeta.value.title).value,
     },
     {
       name: 'og:url',
-      content: computed(() => pageMeta.value.url),
+      content: computed(() => pageMeta.value.url).value,
     },
     {
       name: 'og:description',
-      content: computed(() => pageMeta.value.description),
+      content: computed(() => pageMeta.value.description).value,
     },
     {
       name: 'og:image',
-      content: computed(() => pageMeta.value.image),
+      content: computed(() => pageMeta.value.image).value,
     },
   ],
   link: [
     {
       rel: 'canonical',
-      href: computed(() => pageMeta.value.url),
+      href: computed(() => pageMeta.value.url).value,
     },
   ],
 })
