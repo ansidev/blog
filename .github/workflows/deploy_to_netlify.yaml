@@ -75,7 +75,7 @@ jobs:
         with:
           node-version: 20
           package-manager: pnpm
-          package-manager-version: 8
+          package-manager-version: 9
           skip-lint: true
           skip-test: true
 
