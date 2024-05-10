@@ -20,7 +20,7 @@ My personal notes after creating GitHub Actions.
 
 ## Story
 
-I have started learing GitHub Action for over 1 year.
+I have started learning GitHub Action for over 1 year.
 
 As a beginner, I was writing GitHub workflows for my own projects to automate repetitive tasks.
 
