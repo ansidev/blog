@@ -16,6 +16,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Shiki from 'markdown-it-shiki'
 import Anchor from 'markdown-it-anchor'
+import VueDevTools from 'vite-plugin-vue-devtools'
 import generateSitemap from 'vite-ssg-sitemap'
 import frontmatterToc from './src/builders/frontmatter-toc'
 import excerpt from './src/builders/excerpt'
@@ -255,6 +256,9 @@ export default defineConfig(({ mode }) => {
           }],
         },
       }),
+
+      // https://github.com/webfansplz/vite-plugin-vue-devtools
+      VueDevTools(),
     ],
     // https://github.com/antfu/vite-ssg
     ssgOptions: {
