@@ -6,6 +6,7 @@ import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import { unheadComposablesImports } from 'unhead'
 import Components from 'unplugin-vue-components/vite'
 import Fonts from 'unplugin-fonts/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -64,6 +65,7 @@ export default defineConfig(({ mode }) => {
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         imports: [
+          unheadComposablesImports[0],
           'vue',
           'vue-router',
           'vue-i18n',
@@ -275,6 +277,7 @@ export default defineConfig(({ mode }) => {
       include: [
         'vue',
         'vue-router',
+        '@unhead/vue',
         '@vueuse/core',
       ],
       exclude: [
