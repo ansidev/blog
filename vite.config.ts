@@ -7,7 +7,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
-import { VitePluginFonts } from 'vite-plugin-fonts'
+import Fonts from 'unplugin-fonts/vite'
 import Markdown from 'vite-plugin-md'
 import link from '@yankeeinlondon/link-builder'
 import meta from '@yankeeinlondon/meta-builder'
@@ -245,8 +245,8 @@ export default defineConfig(({ mode }) => {
         },
       }),
 
-      // https://github.com/stafyniaksacha/vite-plugin-fonts
-      VitePluginFonts({
+      // https://github.com/cssninjaStudio/unplugin-fonts
+      Fonts({
         google: {
           families: [{
             name: 'IBM Plex Mono',
