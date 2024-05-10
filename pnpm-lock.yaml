@@ -186,12 +186,12 @@ importers:
       unplugin-vue-components:
         specifier: ^0.27.0
         version: 0.27.0(@babel/parser@7.24.5)(rollup@4.17.2)(vue@3.4.27(typescript@5.4.5))
+      unplugin-vue-markdown:
+        specifier: ^0.26.2
+        version: 0.26.2(rollup@4.17.2)(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0))
       vite:
         specifier: ^5.0.5
         version: 5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0)
-      vite-plugin-md:
-        specifier: ^0.21.5
-        version: 0.21.5(happy-dom@13.10.1)(jsdom@24.0.0)(sass@1.77.0)(terser@5.31.0)(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0))
       vite-plugin-pages:
         specifier: ^0.32.0
         version: 0.32.1(@vue/compiler-sfc@3.4.27)(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0))
@@ -1438,6 +1438,12 @@ packages:
   '@jsdevtools/ez-spawn@3.0.4':
     resolution: {integrity: sha512-f5DRIOZf7wxogefH03RjMPMdBF7ADTWUMoOs9kaJo06EfwF+aFhMZMDZxHg/Xe12hptN9xoZjGso2fdjapBRIA==}
     engines: {node: '>=10'}
+
+  '@mdit-vue/plugin-component@2.1.2':
+    resolution: {integrity: sha512-n1HcAC82l912HhtiMSxl5pQLKBYbPok/IcdGRD49rTt53NXBqct68qo58+7jvsj+f8Lmo7kjD+em3tP4BSgl0A==}
+
+  '@mdit-vue/plugin-frontmatter@2.1.2':
+    resolution: {integrity: sha512-2YOVOsMRtf11bZ6mEB4xoWD6RG5X0Ex+g/1c1iXoYUMUahlZnz9flXUM6WAE++HsLR3Wkvd5FNhGUArrcxn0dA==}
 
   '@mdit-vue/plugin-headers@2.1.2':
     resolution: {integrity: sha512-YkBTlHeG4seTcXqrVPvPY6utvkHd2qs7QGU5aM3S5CxUH5l0/SzIRv+irhFMfIRsXQ7zwx2vJVSwJz+n2TFhSA==}
@@ -4239,10 +4245,6 @@ packages:
   smob@1.5.0:
     resolution: {integrity: sha512-g6T+p7QO8npa+/hNx9ohv1E5pVCmWrVCUzUXJyLdMmftX6ER0oiWY/w9knEonLpnOp6b6FenKnMfR8gqwWdwig==}
 
-  source-map-js@1.0.2:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
-    engines: {node: '>=0.10.0'}
-
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
@@ -4660,6 +4662,11 @@ packages:
       '@nuxt/kit':
         optional: true
 
+  unplugin-vue-markdown@0.26.2:
+    resolution: {integrity: sha512-FjmhLZ+RRx7PFmfBCTwNUZLAj0Y9z0y/j79rTgYuXH9u+K6tZBFB+GpFFBm+4yMQ0la3MNCl7KHbaSvfna2bEA==}
+    peerDependencies:
+      vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0
+
   unplugin@1.10.1:
     resolution: {integrity: sha512-d6Mhq8RJeGA8UfKCu54Um4lFA0eSaRa3XxdAJg8tIdxbu1ubW0hBCZUL7yI2uGyYCRndvbK8FLHzqy2XKfeMsg==}
     engines: {node: '>=14.0.0'}
@@ -4691,11 +4698,6 @@ packages:
 
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
-
-  vite-plugin-md@0.21.5:
-    resolution: {integrity: sha512-gxiiSq2PmU2zUY5ZAFLEGmDFRV6J6gF85ns3hcvtgERibNST4gWxRSabqSZbGbHp3LEBwwK7C1CRLsl46yEiWg==}
-    peerDependencies:
-      vite: ^4.0.0
 
   vite-plugin-md@0.22.5:
     resolution: {integrity: sha512-ex6yQfan2teBT2uMzoIlDHRhKTOsNiyvblA9eLU/+uygpg4KikJPFeyBX300LqQ3pZ9qGHz35qoGJ0oLw47eZg==}
@@ -6305,6 +6307,18 @@ snapshots:
       cross-spawn: 7.0.3
       string-argv: 0.3.1
       type-detect: 4.0.8
+
+  '@mdit-vue/plugin-component@2.1.2':
+    dependencies:
+      '@types/markdown-it': 14.1.1
+      markdown-it: 14.1.0
+
+  '@mdit-vue/plugin-frontmatter@2.1.2':
+    dependencies:
+      '@mdit-vue/types': 2.1.0
+      '@types/markdown-it': 14.1.1
+      gray-matter: 4.0.3
+      markdown-it: 14.1.0
 
   '@mdit-vue/plugin-headers@2.1.2':
     dependencies:
@@ -9589,8 +9603,6 @@ snapshots:
 
   smob@1.5.0: {}
 
-  source-map-js@1.0.2: {}
-
   source-map-js@1.2.0: {}
 
   source-map-support@0.5.21:
@@ -10060,6 +10072,19 @@ snapshots:
       - rollup
       - supports-color
 
+  unplugin-vue-markdown@0.26.2(rollup@4.17.2)(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0)):
+    dependencies:
+      '@mdit-vue/plugin-component': 2.1.2
+      '@mdit-vue/plugin-frontmatter': 2.1.2
+      '@mdit-vue/types': 2.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@4.17.2)
+      '@types/markdown-it': 14.1.1
+      markdown-it: 14.1.0
+      unplugin: 1.10.1
+      vite: 5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0)
+    transitivePeerDependencies:
+      - rollup
+
   unplugin@1.10.1:
     dependencies:
       acorn: 8.11.3
@@ -10094,29 +10119,6 @@ snapshots:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
-
-  vite-plugin-md@0.21.5(happy-dom@13.10.1)(jsdom@24.0.0)(sass@1.77.0)(terser@5.31.0)(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0)):
-    dependencies:
-      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@2.3.4(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0))(vue@3.4.27(typescript@5.4.5)))(happy-dom@13.10.1)(jsdom@24.0.0)(sass@1.77.0)(terser@5.31.0)(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0))
-      '@yankeeinlondon/gray-matter': 6.1.1(happy-dom@13.10.1)(jsdom@24.0.0)(sass@1.77.0)(terser@5.31.0)
-      '@yankeeinlondon/happy-wrapper': 2.10.1(jsdom@24.0.0)(sass@1.77.0)(terser@5.31.0)
-      markdown-it: 13.0.2
-      source-map-js: 1.0.2
-      vite: 5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0)
-    transitivePeerDependencies:
-      - '@edge-runtime/vm'
-      - '@vitest/browser'
-      - '@vitest/ui'
-      - encoding
-      - happy-dom
-      - jsdom
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
 
   vite-plugin-md@0.22.5(@vitejs/plugin-vue@2.3.4(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0))(vue@3.4.27(typescript@5.4.5)))(happy-dom@13.10.1)(jsdom@24.0.0)(sass@1.77.0)(terser@5.31.0)(vite@5.1.7(@types/node@20.12.11)(sass@1.77.0)(terser@5.31.0)):
     dependencies:
