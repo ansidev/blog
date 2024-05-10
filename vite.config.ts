@@ -10,8 +10,8 @@ import { unheadComposablesImports } from 'unhead'
 import Components from 'unplugin-vue-components/vite'
 import Fonts from 'unplugin-fonts/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
-import link from '@yankeeinlondon/link-builder'
-import meta from '@yankeeinlondon/meta-builder'
+// import link from '@yankeeinlondon/link-builder'
+// import meta from '@yankeeinlondon/meta-builder'
 // import toc from './src/builders/toc'
 import { VitePWA } from 'vite-plugin-pwa'
 import LinkAttributes from 'markdown-it-link-attributes'
@@ -19,8 +19,8 @@ import Shiki from 'markdown-it-shiki'
 import Anchor from 'markdown-it-anchor'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import generateSitemap from 'vite-ssg-sitemap'
-import frontmatterToc from './src/builders/frontmatter-toc'
-import excerpt from './src/builders/excerpt'
+// import frontmatterToc from './src/builders/frontmatter-toc'
+// import excerpt from './src/builders/excerpt'
 import { getPostMeta } from './src/helpers/post'
 import siteConfig from './src/site.config'
 
@@ -70,7 +70,6 @@ export default defineConfig(({ mode }) => {
           'vue-router',
           'vue-i18n',
           'vue/macros',
-          '@vueuse/head',
           '@vueuse/core',
           {
             '@iconify/vue': ['Icon'],
@@ -84,21 +83,22 @@ export default defineConfig(({ mode }) => {
         vueTemplate: true,
       }),
 
-      // https://github.com/antfu/vite-plugin-md
+      // https://github.com/unplugin/unplugin-vue-markdown
       Markdown({
         wrapperClasses: 'theme-ansidev-content',
         headEnabled: true,
-        builders: [
-          excerpt(),
-          frontmatterToc(),
-          // toc(),
-          meta(),
-          link(),
-        ],
+        // builders: [
+        //   excerpt(),
+        //   frontmatterToc(),
+        //   toc(),
+        //   meta(),
+        //   link(),
+        // ],
         markdownItUses: [
           [
             Shiki,
             {
+              defaultColor: false,
               theme: {
                 light: 'min-light',
                 dark: 'min-dark',
@@ -118,8 +118,7 @@ export default defineConfig(({ mode }) => {
           [Anchor],
         ],
         wrapperComponent: 'Post',
-        excerpt: '<!-- more -->',
-        excerptExtract: true,
+        excerpt: false,
       }),
 
       // https://github.com/antfu/unplugin-vue-components
@@ -266,6 +265,9 @@ export default defineConfig(({ mode }) => {
     ssgOptions: {
       script: 'async',
       formatting: 'minify',
+      crittersOptions: {
+        reduceInlineStyles: false,
+      },
       onFinished() {
         generateSitemap({
           hostname: env.VITE_BASE_URL,
@@ -275,6 +277,7 @@ export default defineConfig(({ mode }) => {
 
     optimizeDeps: {
       include: [
+        'nanoid',
         'vue',
         'vue-router',
         '@unhead/vue',
@@ -287,7 +290,7 @@ export default defineConfig(({ mode }) => {
 
     ssr: {
       // workaround until they support native ESM
-      noExternal: ['vue-i18n/*'],
+      noExternal: ['/vue-i18n/'],
     },
   }
 })

@@ -17,9 +17,9 @@ const isAnchorLink = props.href && props.href.startsWith('#')
 </script>
 
 <template>
-  <router-link v-if="isInternalLink || isAnchorLink" :to="href" v-bind="$attrs">
+  <RouterLink v-if="isInternalLink || isAnchorLink" :to="href" v-bind="$attrs">
     <slot />
-  </router-link>
+  </RouterLink>
   <a v-else-if="disableRouterLink" target="_self" :href="href" v-bind="$attrs">
     <slot />
   </a>

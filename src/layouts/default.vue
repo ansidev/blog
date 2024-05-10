@@ -3,7 +3,7 @@
     <div class="flex flex-col justify-between h-screen">
       <main class="mb-auto">
         <Header />
-        <router-view />
+        <RouterView />
       </main>
       <Footer />
     </div>
