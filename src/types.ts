@@ -4,6 +4,7 @@ import type { Frontmatter } from 'vite-plugin-md'
 import type { ViteSSGContext } from 'vite-ssg'
 import type { DomainConfig } from 'vue-gtag'
 import type { CounterAnalyticsPluginOptions } from 'counter-analytics-vue/dist/index'
+import type { DisqusPluginConfig } from './plugins/disqus/types'
 import type { DonationPluginConfig } from './plugins/donation/types'
 import type { FacebookCommentPluginConfig } from './plugins/facebookComment/types'
 import type { MediumZoomPluginConfig } from './plugins/mediumZoom/types'
@@ -31,6 +32,7 @@ export declare interface NavItem {
 export declare interface SitePlugins {
   donation?: DonationPluginConfig
   facebookComment?: FacebookCommentPluginConfig
+  disqus?: DisqusPluginConfig
   googleAnalytics?: DomainConfig
   mediumZoom?: MediumZoomPluginConfig
   sharing?: boolean

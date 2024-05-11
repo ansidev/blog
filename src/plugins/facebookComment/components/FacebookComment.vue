@@ -45,14 +45,14 @@ const isLoaded = ref(false)
 
 const loadPlugin = async () => {
   isLoaded.value = false
-  initFacebookCommentPlugin(pluginConfig.value.vendorConfig)
+  initFacebookCommentPlugin(pluginConfig?.value?.vendorConfig as FacebookCommentConfig)
   await nextTick()
   isLoaded.value = true
 }
 
 onMounted(async () => {
   const config = pluginConfig.value
-  if (config.autoload === true) {
+  if (config?.autoload === true) {
     loadPlugin()
   }
 })

@@ -21,11 +21,11 @@ const postTitle = route.meta.title
 const postURL = computed(() => `${baseURL}${route.path}`)
 const isProjectDetailPage = computed(() => route.name !== undefined && route.path.startsWith('/projects/'))
 const isSharingPluginEnabled = computed(() => isPluginEnabled('sharing'))
-const isFacebookCommentPluginEnabled = computed(() => isPluginEnabled('facebookComment'))
+const isDisqusPluginEnabled = computed(() => isPluginEnabled('disqus'))
 const breadcrumbItems = computed(() => {
   const v: BreadcrumbItem[] = [
     { text: isProjectDetailPage.value ? t('projects') : t('posts'), path: isProjectDetailPage.value ? '/projects' : '/blog', active: false },
-    { text: postTitle, active: true },
+    { text: postTitle as string, active: true },
   ]
   return v
 })
@@ -50,7 +50,7 @@ const breadcrumbItems = computed(() => {
               <slot />
             </div>
             <div id="eop" />
-            <FacebookComment v-if="isFacebookCommentPluginEnabled" :number-of-posts="5" width="100%" :post-url="postURL" />
+            <Disqus v-if="isDisqusPluginEnabled" :page-url="postURL" :page-identifier="postURL" />
           </div>
           <div v-if="(frontmatter as MdFrontmatter).toc?.length > 0" class="hidden xl:block xl:row-span-3">
             <Toc :toc="(frontmatter as MdFrontmatter).toc" />
