@@ -15,5 +15,6 @@
   "vite.browserType": "embedded",
   "vite.devCommand": "pnpm dev",
   "vite.buildCommand": "pnpm build",
-  "vite.port": 5173
+  "vite.port": 5173,
+  "scss.lint.unknownAtRules": "ignore"
 }
