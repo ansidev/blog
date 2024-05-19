@@ -119,7 +119,7 @@ importers:
         version: 4.2.2
       fp-ts:
         specifier: ^2.16.5
-        version: 2.16.5
+        version: 2.16.6
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
@@ -2735,8 +2735,8 @@ packages:
     resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
     engines: {node: '>= 6'}
 
-  fp-ts@2.16.5:
-    resolution: {integrity: sha512-N8T8PwMSeTKKtkm9lkj/zSTAnPC/aJIIrQhnHxxkL0KLsRCNUPANksJOlMXxcKKCo7H1ORP3No9EMD+fP0tsdA==}
+  fp-ts@2.16.6:
+    resolution: {integrity: sha512-v7w209VPj4L6pPn/ftFRJu31Oa8QagwcVw7BZmLCUWU4AQoc954rX9ogSIahDf67Pg+GjPbkW/Kn9XWnlWJG0g==}
 
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
@@ -6727,7 +6727,7 @@ snapshots:
     dependencies:
       '@types/markdown-it': 12.2.3
       '@yankeeinlondon/happy-wrapper': 2.10.1(jsdom@24.0.0)(sass@1.77.2)(terser@5.31.0)
-      fp-ts: 2.16.5
+      fp-ts: 2.16.6
       inferred-types: 0.37.6(happy-dom@14.11.0)(jsdom@24.0.0)(sass@1.77.2)(terser@5.31.0)
       markdown-it: 13.0.2
     transitivePeerDependencies:
@@ -6749,7 +6749,7 @@ snapshots:
     dependencies:
       '@types/markdown-it': 12.2.3
       '@yankeeinlondon/happy-wrapper': 2.10.1(jsdom@24.0.0)(sass@1.77.2)(terser@5.31.0)
-      fp-ts: 2.16.5
+      fp-ts: 2.16.6
       inferred-types: 0.37.6(happy-dom@14.11.0)(jsdom@24.0.0)(sass@1.77.2)(terser@5.31.0)
       markdown-it: 13.0.2
       vite-plugin-md: 0.22.5(@vitejs/plugin-vue@5.0.4(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0))(vue@3.4.27(typescript@5.4.5)))(happy-dom@14.11.0)(jsdom@24.0.0)(sass@1.77.2)(terser@5.31.0)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0))
@@ -6794,7 +6794,7 @@ snapshots:
 
   '@yankeeinlondon/happy-wrapper@2.10.1(jsdom@24.0.0)(sass@1.77.2)(terser@5.31.0)':
     dependencies:
-      fp-ts: 2.16.5
+      fp-ts: 2.16.6
       happy-dom: 8.9.0
       native-dash: 1.24.0(happy-dom@8.9.0)(jsdom@24.0.0)(sass@1.77.2)(terser@5.31.0)
     transitivePeerDependencies:
@@ -8040,7 +8040,7 @@ snapshots:
       combined-stream: 1.0.8
       mime-types: 2.1.35
 
-  fp-ts@2.16.5: {}
+  fp-ts@2.16.6: {}
 
   fraction.js@4.3.7: {}
 
