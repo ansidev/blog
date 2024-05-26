@@ -130,8 +130,8 @@ importers:
         specifier: ^9.0.11
         version: 9.0.11
       inferred-types:
-        specifier: ^0.42.1
-        version: 0.42.1(typescript@5.4.5)
+        specifier: ^0.43.0
+        version: 0.43.2
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -2855,6 +2855,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -3034,8 +3035,8 @@ packages:
   inferred-types@0.37.6:
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
 
-  inferred-types@0.42.1:
-    resolution: {integrity: sha512-tR7Hjsmr8z7PrfOZ5FnShcoXCyZNcMF/F1ZxGeJSTaqbwXSDZVoCQRpjlhE9vcUoccqgmjuaoHbDjeBaTIjq6A==}
+  inferred-types@0.43.2:
+    resolution: {integrity: sha512-hdQAkzA/9f2IIDrbxuBKS1ANtF2Pa1+4nisfGdXGEgXegIO7Eah+SzF9+51U81SyH7xivP6wr2khV6aniR2F+g==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -8433,11 +8434,7 @@ snapshots:
       - supports-color
       - terser
 
-  inferred-types@0.42.1(typescript@5.4.5):
-    dependencies:
-      vue: 3.4.27(typescript@5.4.5)
-    transitivePeerDependencies:
-      - typescript
+  inferred-types@0.43.2: {}
 
   inflight@1.0.6:
     dependencies:
