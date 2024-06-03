@@ -164,7 +164,7 @@ importers:
         version: 1.77.4
       shiki:
         specifier: ^1.5.1
-        version: 1.6.1
+        version: 1.6.2
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3(ts-node@10.9.2(@types/node@20.14.0)(typescript@5.4.5))
@@ -1618,8 +1618,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@shikijs/core@1.6.1':
-    resolution: {integrity: sha512-CqYyepN4SnBopaoXYwng4NO8riB5ask/LTCkhOFq+GNGtr2X+aKeD767eYdqYukeixEUvv4bXdyTYVaogj7KBw==}
+  '@shikijs/core@1.6.2':
+    resolution: {integrity: sha512-guW5JeDzZ7uwOjTfCOFZ2VtVXk5tmkMzBYbKGfXsmAH1qYOej49L5jQDcGmwd6/OgvpmWhzO2GNJkQIFnbwLPQ==}
 
   '@stylistic/eslint-plugin-js@2.1.0':
     resolution: {integrity: sha512-gdXUjGNSsnY6nPyqxu6lmDTtVrwCOjun4x8PUn0x04d5ucLI74N3MT1Q0UhdcOR9No3bo5PGDyBgXK+KmD787A==}
@@ -4273,8 +4273,8 @@ packages:
   shiki@0.14.7:
     resolution: {integrity: sha512-dNPAPrxSc87ua2sKJ3H5dQ/6ZaY8RNnaAqK+t0eG7p0Soi2ydiqbGOTaZCqaYvA/uZYfS1LJnemt3Q+mSfcPCg==}
 
-  shiki@1.6.1:
-    resolution: {integrity: sha512-1Pu/A1rtsG6HZvQm4W0NExQ45e02og+rPog7PDaFDiMumZgOYnZIu4JtGQeAIfMwdbKSjJQoCUr79vDLKUUxWA==}
+  shiki@1.6.2:
+    resolution: {integrity: sha512-X3hSm5GzzBd/BmPmGfkueOUADLyBoZo1ojYQXhd+NU2VJn458yt4duaS0rVzC+WtqftSV7mTVvDw+OB9AHi3Eg==}
 
   side-channel@1.0.6:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
@@ -6682,7 +6682,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
-  '@shikijs/core@1.6.1': {}
+  '@shikijs/core@1.6.2': {}
 
   '@stylistic/eslint-plugin-js@2.1.0(eslint@9.4.0)':
     dependencies:
@@ -7127,7 +7127,7 @@ snapshots:
 
   '@yankeeinlondon/gray-matter@6.1.1(happy-dom@14.12.0)(jsdom@24.0.0)(sass@1.77.4)(terser@5.31.0)':
     dependencies:
-      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@24.0.0)(sass@1.77.4)(terser@5.31.0)
+      inferred-types: 0.37.6(happy-dom@14.12.0)(jsdom@24.0.0)(sass@1.77.4)(terser@5.31.0)
       js-yaml: 4.1.0
       kind-of: 6.0.3
       section-matter: 1.0.0
@@ -9784,9 +9784,9 @@ snapshots:
       vscode-oniguruma: 1.7.0
       vscode-textmate: 8.0.0
 
-  shiki@1.6.1:
+  shiki@1.6.2:
     dependencies:
-      '@shikijs/core': 1.6.1
+      '@shikijs/core': 1.6.2
 
   side-channel@1.0.6:
     dependencies:
