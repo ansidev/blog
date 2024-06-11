@@ -155,7 +155,7 @@ importers:
         version: 6.0.1(postcss@8.4.38)
       prettier:
         specifier: ^3.2.5
-        version: 3.3.1
+        version: 3.3.2
       rollup:
         specifier: ^4.17.2
         version: 4.18.0
@@ -4194,8 +4194,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.3.1:
-    resolution: {integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==}
+  prettier@3.3.2:
+    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7472,7 +7472,7 @@ snapshots:
 
   '@yankeeinlondon/gray-matter@6.1.1(happy-dom@14.12.0)(jsdom@24.0.0)(sass@1.77.4)(terser@5.31.1)':
     dependencies:
-      inferred-types: 0.37.6(happy-dom@14.12.0)(jsdom@24.0.0)(sass@1.77.4)(terser@5.31.1)
+      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@24.0.0)(sass@1.77.4)(terser@5.31.1)
       js-yaml: 4.1.0
       kind-of: 6.0.3
       section-matter: 1.0.0
@@ -9893,7 +9893,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.3.1: {}
+  prettier@3.3.2: {}
 
   pretty-bytes@5.6.0: {}
 
@@ -10817,7 +10817,7 @@ snapshots:
       html5parser: 2.0.2
       jsdom: 24.0.0
       kolorist: 1.8.0
-      prettier: 3.3.1
+      prettier: 3.3.2
       vite: 5.2.13(@types/node@20.14.2)(sass@1.77.4)(terser@5.31.1)
       vue: 3.4.27(typescript@5.4.5)
       yargs: 17.7.2
