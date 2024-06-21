@@ -173,7 +173,7 @@ importers:
         version: 10.9.2(@types/node@20.14.6)(typescript@5.4.5)
       tsx:
         specifier: ^4.9.3
-        version: 4.15.6
+        version: 4.15.7
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -4499,8 +4499,8 @@ packages:
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
-  tsx@4.15.6:
-    resolution: {integrity: sha512-is0VQQlfNZRHEuSSTKA6m4xw74IU4AizmuB6lAYLRt9XtuyeQnyJYexhNZOPCB59SqC4JzmSzPnHGBXxf3k0hA==}
+  tsx@4.15.7:
+    resolution: {integrity: sha512-u3H0iSFDZM3za+VxkZ1kywdCeHCn+8/qHQS1MNoO2sONDgD95HlWtt8aB23OzeTmFP9IU4/8bZUdg58Uu5J4cg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -7003,7 +7003,7 @@ snapshots:
 
   '@yankeeinlondon/gray-matter@6.1.1(happy-dom@14.12.3)(jsdom@24.0.0)(sass@1.77.6)(terser@5.31.1)':
     dependencies:
-      inferred-types: 0.37.6(happy-dom@14.12.3)(jsdom@24.0.0)(sass@1.77.6)(terser@5.31.1)
+      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@24.0.0)(sass@1.77.6)(terser@5.31.1)
       js-yaml: 4.1.0
       kind-of: 6.0.3
       section-matter: 1.0.0
@@ -10003,7 +10003,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsx@4.15.6:
+  tsx@4.15.7:
     dependencies:
       esbuild: 0.21.5
       get-tsconfig: 4.7.5
