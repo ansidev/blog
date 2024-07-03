@@ -173,7 +173,7 @@ importers:
         version: 10.9.2(@types/node@20.14.9)(typescript@5.5.3)
       tsx:
         specifier: ^4.9.3
-        version: 4.16.0
+        version: 4.16.1
       typescript:
         specifier: ^5.4.5
         version: 5.5.3
@@ -1828,6 +1828,11 @@ packages:
 
   acorn@8.12.0:
     resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.12.1:
+    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -4470,8 +4475,8 @@ packages:
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
-  tsx@4.16.0:
-    resolution: {integrity: sha512-MPgN+CuY+4iKxGoJNPv+1pyo5YWZAQ5XfsyobUG+zoKG7IkvCPLZDEyoIb8yLS2FcWci1nlxAqmvPlFWD5AFiQ==}
+  tsx@4.16.1:
+    resolution: {integrity: sha512-UAKkKOFMJI4M3U4xTJuoqECBMydJbqwNuACoMvwHjqDhbQyo/SYd8ZYNCpF5F8rAjcdKrO+z9CbvBlBiFKhBLA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -7020,6 +7025,8 @@ snapshots:
   acorn@8.11.3: {}
 
   acorn@8.12.0: {}
+
+  acorn@8.12.1: {}
 
   agent-base@7.1.1:
     dependencies:
@@ -9798,7 +9805,7 @@ snapshots:
   terser@5.31.1:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.12.0
+      acorn: 8.12.1
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -9888,7 +9895,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsx@4.16.0:
+  tsx@4.16.1:
     dependencies:
       esbuild: 0.21.5
       get-tsconfig: 4.7.5
