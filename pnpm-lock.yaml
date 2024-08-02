@@ -208,8 +208,8 @@ importers:
         specifier: ^0.23.7
         version: 0.23.8(vite@5.3.5(@types/node@20.14.14)(sass@1.77.8)(terser@5.31.3))(vue-router@4.4.2(vue@3.4.35(typescript@5.5.4)))(vue@3.4.35(typescript@5.5.4))
       vite-ssg-sitemap:
-        specifier: ^0.7.0
-        version: 0.7.1
+        specifier: ^0.8.0
+        version: 0.8.0
 
 packages:
 
@@ -4904,8 +4904,8 @@ packages:
       vue: ^3.2.4
       vue-router: ^4.0.11
 
-  vite-ssg-sitemap@0.7.1:
-    resolution: {integrity: sha512-5yzGZi9NRREbhObUBCHkzAtth3vaWs7JxQFXugTUjD11IREYN9jATrdp7rGqFcDXVZoZuTAyfT57OYNskEvWFQ==}
+  vite-ssg-sitemap@0.8.0:
+    resolution: {integrity: sha512-YKzUYk3ZleZn0ghZAvUoqv6BWlsu2KErliLOB1foSkYhyukhAKVgs4aF2DWKYn9Q/oKyQNymyB5eMa0Dp/t6og==}
 
   vite-ssg@0.23.8:
     resolution: {integrity: sha512-uWjdxL2PrvmbUxj7K+YFR8hTuhUZ90r2PrP73evsN/XarjQzKvIbbopqczyGUSAdRXggN3C4sdnk4jqDOGbF4A==}
@@ -7288,7 +7288,7 @@ snapshots:
 
   '@yankeeinlondon/gray-matter@6.1.1(happy-dom@14.12.3)(jsdom@24.1.0)(sass@1.77.8)(terser@5.31.3)':
     dependencies:
-      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@24.1.0)(sass@1.77.8)(terser@5.31.3)
+      inferred-types: 0.37.6(happy-dom@14.12.3)(jsdom@24.1.0)(sass@1.77.8)(terser@5.31.3)
       js-yaml: 4.1.0
       kind-of: 6.0.3
       section-matter: 1.0.0
@@ -10660,7 +10660,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-ssg-sitemap@0.7.1: {}
+  vite-ssg-sitemap@0.8.0: {}
 
   vite-ssg@0.23.8(vite@5.3.5(@types/node@20.14.14)(sass@1.77.8)(terser@5.31.3))(vue-router@4.4.2(vue@3.4.35(typescript@5.5.4)))(vue@3.4.35(typescript@5.5.4)):
     dependencies:
