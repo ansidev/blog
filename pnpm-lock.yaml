@@ -131,7 +131,7 @@ importers:
         version: 9.1.5
       inferred-types:
         specifier: ^0.47.0
-        version: 0.47.0
+        version: 0.47.1
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -299,8 +299,8 @@ packages:
     resolution: {integrity: sha512-3LEEcj3PVW8pW2R1SR1M89g/qrYk/m/mB/tLqn7dn4sbBUQyTqnlod+II2U4dqiGtUmkcnAmkMDralTFZttRiw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/generator@7.25.4':
-    resolution: {integrity: sha512-NFtZmZsyzDPJnk9Zg3BbTfKKc9UlHYzD0E//p2Z3B9nCwwtJW9T0gVbCz8+fBngnn4zf1Dr3IK8PHQQHq0lDQw==}
+  '@babel/generator@7.25.5':
+    resolution: {integrity: sha512-abd43wyLfbWoxC6ahM8xTkqLpGB2iWBVyuKC9/srhFunCd1SDNrV1s72bBpK4hLj8KLzHBBcOblvLQZBNw9r3w==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-annotate-as-pure@7.24.7':
@@ -3294,8 +3294,8 @@ packages:
   inferred-types@0.37.6:
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
 
-  inferred-types@0.47.0:
-    resolution: {integrity: sha512-NaSxEHAZp5BzotFguuhfjI+9PrPbNz3CA2jk3Of4YDIOsPK8fXqrpmeN9cvuA3GV4U2wMtbjWoo9/r+6DOBGVg==}
+  inferred-types@0.47.1:
+    resolution: {integrity: sha512-E7z3DPp61KCM71nWa+Wg9icwUFsPlfoDNh4CJVHG9v1GCmrmKx4VhSk2Gejlwmu956MG1kKPK7j6zbsTcRCoOQ==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -5466,7 +5466,7 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 2.5.2
 
-  '@babel/generator@7.25.4':
+  '@babel/generator@7.25.5':
     dependencies:
       '@babel/types': 7.25.4
       '@jridgewell/gen-mapping': 0.3.5
@@ -6253,7 +6253,7 @@ snapshots:
   '@babel/traverse@7.25.4':
     dependencies:
       '@babel/code-frame': 7.24.7
-      '@babel/generator': 7.25.4
+      '@babel/generator': 7.25.5
       '@babel/parser': 7.25.4
       '@babel/template': 7.25.0
       '@babel/types': 7.25.4
@@ -9001,7 +9001,7 @@ snapshots:
       - supports-color
       - terser
 
-  inferred-types@0.47.0: {}
+  inferred-types@0.47.1: {}
 
   inflight@1.0.6:
     dependencies:
