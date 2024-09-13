@@ -40,7 +40,7 @@ importers:
         version: 10.0.1(vue@3.5.4(typescript@5.6.2))
       vue-router:
         specifier: ^4.3.2
-        version: 4.4.4(vue@3.5.4(typescript@5.6.2))
+        version: 4.4.5(vue@3.5.4(typescript@5.6.2))
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.0.0
@@ -194,7 +194,7 @@ importers:
         version: 5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0)
       vite-plugin-pages:
         specifier: ^0.32.1
-        version: 0.32.3(@vue/compiler-sfc@3.5.4)(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.4(vue@3.5.4(typescript@5.6.2)))
+        version: 0.32.3(@vue/compiler-sfc@3.5.4)(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.5(vue@3.5.4(typescript@5.6.2)))
       vite-plugin-pwa:
         specifier: ^0.20.0
         version: 0.20.5(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(workbox-build@7.1.0)(workbox-window@7.1.0)
@@ -203,10 +203,10 @@ importers:
         version: 7.4.5(rollup@4.21.3)(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue@3.5.4(typescript@5.6.2))
       vite-plugin-vue-layouts:
         specifier: ^0.11.0
-        version: 0.11.0(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.4(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2))
+        version: 0.11.0(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.5(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2))
       vite-ssg:
         specifier: ^0.23.7
-        version: 0.23.8(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.4(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2))
+        version: 0.23.8(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.5(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2))
       vite-ssg-sitemap:
         specifier: ^0.8.0
         version: 0.8.1
@@ -5226,8 +5226,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  vue-router@4.4.4:
-    resolution: {integrity: sha512-3MlnDqwRwZwCQVbtVfpsU+nrNymNjnXSsQtXName5925NVC1+326VVfYH9vSrA0N13teGEo8z5x7gbRnGjCDiQ==}
+  vue-router@4.4.5:
+    resolution: {integrity: sha512-4fKZygS8cH1yCyuabAXGUAsyi1b2/o/OKgu/RUb+znIYOxPRxdkytJEx+0wGcpBE1pX6vUgh5jwWOKRGvuA/7Q==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -11036,7 +11036,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-pages@0.32.3(@vue/compiler-sfc@3.5.4)(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.4(vue@3.5.4(typescript@5.6.2))):
+  vite-plugin-pages@0.32.3(@vue/compiler-sfc@3.5.4)(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.5(vue@3.5.4(typescript@5.6.2))):
     dependencies:
       '@types/debug': 4.1.12
       debug: 4.3.5
@@ -11050,7 +11050,7 @@ snapshots:
       yaml: 2.4.5
     optionalDependencies:
       '@vue/compiler-sfc': 3.5.4
-      vue-router: 4.4.4(vue@3.5.4(typescript@5.6.2))
+      vue-router: 4.4.5(vue@3.5.4(typescript@5.6.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -11096,19 +11096,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-vue-layouts@0.11.0(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.4(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2)):
+  vite-plugin-vue-layouts@0.11.0(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.5(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2)):
     dependencies:
       debug: 4.3.4
       fast-glob: 3.3.2
       vite: 5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0)
       vue: 3.5.4(typescript@5.6.2)
-      vue-router: 4.4.4(vue@3.5.4(typescript@5.6.2))
+      vue-router: 4.4.5(vue@3.5.4(typescript@5.6.2))
     transitivePeerDependencies:
       - supports-color
 
   vite-ssg-sitemap@0.8.1: {}
 
-  vite-ssg@0.23.8(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.4(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2)):
+  vite-ssg@0.23.8(vite@5.4.5(@types/node@20.16.5)(sass@1.78.0)(terser@5.32.0))(vue-router@4.4.5(vue@3.5.4(typescript@5.6.2)))(vue@3.5.4(typescript@5.6.2)):
     dependencies:
       '@unhead/dom': 1.9.15
       '@unhead/vue': 1.11.2(vue@3.5.4(typescript@5.6.2))
@@ -11122,7 +11122,7 @@ snapshots:
       vue: 3.5.4(typescript@5.6.2)
       yargs: 17.7.2
     optionalDependencies:
-      vue-router: 4.4.4(vue@3.5.4(typescript@5.6.2))
+      vue-router: 4.4.5(vue@3.5.4(typescript@5.6.2))
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -11239,7 +11239,7 @@ snapshots:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.4(typescript@5.6.2)
 
-  vue-router@4.4.4(vue@3.5.4(typescript@5.6.2)):
+  vue-router@4.4.5(vue@3.5.4(typescript@5.6.2)):
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.4(typescript@5.6.2)
