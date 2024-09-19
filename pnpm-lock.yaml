@@ -131,7 +131,7 @@ importers:
         version: 9.1.6
       inferred-types:
         specifier: ^0.50.0
-        version: 0.50.1
+        version: 0.50.2
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -3288,8 +3288,8 @@ packages:
   inferred-types@0.37.6:
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
 
-  inferred-types@0.50.1:
-    resolution: {integrity: sha512-3asfEW+0xG3nii5Lyuu3OfUIdMJzmVzrLfh0EUaXqFv+mv7cR5Z8H7vp7b3L43IZ2htNPFxiALiSm21WLlX0RQ==}
+  inferred-types@0.50.2:
+    resolution: {integrity: sha512-PLVxSPpFzhViUE/6DrLU9QFkWdp24+7rwQBloDFq3t3jlLAaeONWJsTyAakbGO0E6stEcAdvR1oUVsT8wSUTDg==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -9105,7 +9105,7 @@ snapshots:
       - supports-color
       - terser
 
-  inferred-types@0.50.1: {}
+  inferred-types@0.50.2: {}
 
   inflight@1.0.6:
     dependencies:
