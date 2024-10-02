@@ -131,7 +131,7 @@ importers:
         version: 9.1.6
       inferred-types:
         specifier: ^0.50.0
-        version: 0.50.6
+        version: 0.50.8
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -3276,8 +3276,8 @@ packages:
   inferred-types@0.37.6:
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
 
-  inferred-types@0.50.6:
-    resolution: {integrity: sha512-st/K2G2GsQpYpRQrCIOLRajVwJMCRosegHhICXqKBKn2IdR4RHscM1iyKH9UHkJ5FvPKA/KxeCdnqOhjk5XWpQ==}
+  inferred-types@0.50.8:
+    resolution: {integrity: sha512-1HQmPblHoEzQ3BhM+w6urGwcgUHs9U74z/uvK3sU3qkcu7XuuUaFuq7MrYyBcqK26XCthzB3BrDKY/EZ3YPEeg==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -7443,7 +7443,7 @@ snapshots:
 
   '@yankeeinlondon/gray-matter@6.1.1(happy-dom@15.7.4)(jsdom@24.1.0)(sass@1.79.4)(terser@5.34.1)':
     dependencies:
-      inferred-types: 0.37.6(happy-dom@15.7.4)(jsdom@24.1.0)(sass@1.79.4)(terser@5.34.1)
+      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@24.1.0)(sass@1.79.4)(terser@5.34.1)
       js-yaml: 4.1.0
       kind-of: 6.0.3
       section-matter: 1.0.0
@@ -9070,7 +9070,7 @@ snapshots:
       - supports-color
       - terser
 
-  inferred-types@0.50.6: {}
+  inferred-types@0.50.8: {}
 
   inflight@1.0.6:
     dependencies:
