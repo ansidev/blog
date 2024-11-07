@@ -54,7 +54,7 @@
     "feed": "^4.2.2",
     "fp-ts": "^2.16.5",
     "gray-matter": "^4.0.3",
-    "happy-dom": "^15.0.0",
+    "happy-dom": "^15.10.2",
     "husky": "^9.0.11",
     "inferred-types": "^0.50.0",
     "markdown-it": "^14.1.0",
