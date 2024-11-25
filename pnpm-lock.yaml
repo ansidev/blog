@@ -86,7 +86,7 @@ importers:
         version: 8.15.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.7.2)
       '@unhead/vue':
         specifier: ^1.9.10
-        version: 1.11.11(vue@3.5.13(typescript@5.7.2))
+        version: 1.11.12(vue@3.5.13(typescript@5.7.2))
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.2.0(vite@5.4.11(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))
@@ -1877,14 +1877,23 @@ packages:
   '@unhead/dom@1.11.11':
     resolution: {integrity: sha512-4YwziCH5CmjvUzSGdZ4Klj6BqhLSTNZooA9kt47yDxj4Qw9uHqVnXwWWupYsVdIYPNsw1tR2AkHveg82y1Fn3A==}
 
+  '@unhead/dom@1.11.12':
+    resolution: {integrity: sha512-coPpA0xf9w3L2Dcvc3lqoSpqZV7SLNq0/RDrAixO2hGWpzpOsXGta8xba6ElogYOYJMq2lpElC450EML6XVsbg==}
+
   '@unhead/schema@1.11.11':
     resolution: {integrity: sha512-xSGsWHPBYcMV/ckQeImbrVu6ddeRnrdDCgXUKv3xIjGBY+ob/96V80lGX8FKWh8GwdFSwhblISObKlDAt5K9ZQ==}
+
+  '@unhead/schema@1.11.12':
+    resolution: {integrity: sha512-roQiJNp/5Kp9YUDpQXLkNwGNFbgB4CmO7eQBb9n1tyRSDWChJcF+Ztos0yMMwlYZ3qMI4rNXAHNSAJUO27DFWQ==}
 
   '@unhead/shared@1.11.11':
     resolution: {integrity: sha512-RfdvUskPn90ipO+PmR98jKZ8Lsx1uuzscOenO5xcrMrtWGhlLWaEBIrbvFOvX5PZ/u8/VNMJChTXGDUjEtHmlg==}
 
-  '@unhead/vue@1.11.11':
-    resolution: {integrity: sha512-AxsHHauZ+w0m2irwDHqkc3GdNChMLBtolk8CN3IAZM6vTwH0EbPXlFCFcIk4WwkH0opG+R2GlKTThr5H0HLm7g==}
+  '@unhead/shared@1.11.12':
+    resolution: {integrity: sha512-RhpUexVrYiccmPQ/ckAr6xPql/89VmiNIqLjT+eIIiu4il3FeQ/Ac7Ix1TfcduArq56Ar70TFUDjO5SlnZxIxg==}
+
+  '@unhead/vue@1.11.12':
+    resolution: {integrity: sha512-C5/qeaf21b353+YjkFAeM4StFuCdTa7hyx9wKDKLpD50w0fQEUp7HF//zz/1or3GnI4z1G596n8po9tRBWxCzg==}
     peerDependencies:
       vue: '>=2.7 || >=3'
 
@@ -4885,8 +4894,8 @@ packages:
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
-  unhead@1.11.11:
-    resolution: {integrity: sha512-98tM2R8OWJhvS6uqTewkfIrsPqFU/VwnKpU2tVZ+jPXSWgWSLmM3K2Y2v5AEM4bZjmC/XH8pLVGzbqB7xzFI/Q==}
+  unhead@1.11.12:
+    resolution: {integrity: sha512-O/yE2KfaqJW+4lpbPXBLlvHJksiYTgkTz0UZwvDbQHxjQhzBG4GbvmXU1rDUXax9aJYfoz6xx1Lr9f1lUmaMbQ==}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
@@ -7125,7 +7134,17 @@ snapshots:
       '@unhead/schema': 1.11.11
       '@unhead/shared': 1.11.11
 
+  '@unhead/dom@1.11.12':
+    dependencies:
+      '@unhead/schema': 1.11.12
+      '@unhead/shared': 1.11.12
+
   '@unhead/schema@1.11.11':
+    dependencies:
+      hookable: 5.5.3
+      zhead: 2.2.4
+
+  '@unhead/schema@1.11.12':
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
@@ -7134,13 +7153,17 @@ snapshots:
     dependencies:
       '@unhead/schema': 1.11.11
 
-  '@unhead/vue@1.11.11(vue@3.5.13(typescript@5.7.2))':
+  '@unhead/shared@1.11.12':
     dependencies:
-      '@unhead/schema': 1.11.11
-      '@unhead/shared': 1.11.11
+      '@unhead/schema': 1.11.12
+
+  '@unhead/vue@1.11.12(vue@3.5.13(typescript@5.7.2))':
+    dependencies:
+      '@unhead/schema': 1.11.12
+      '@unhead/shared': 1.11.12
       defu: 6.1.4
       hookable: 5.5.3
-      unhead: 1.11.11
+      unhead: 1.11.12
       vue: 3.5.13(typescript@5.7.2)
 
   '@vitejs/plugin-vue@5.2.0(vite@5.4.11(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))':
@@ -10749,11 +10772,11 @@ snapshots:
 
   undici-types@6.19.8: {}
 
-  unhead@1.11.11:
+  unhead@1.11.12:
     dependencies:
-      '@unhead/dom': 1.11.11
-      '@unhead/schema': 1.11.11
-      '@unhead/shared': 1.11.11
+      '@unhead/dom': 1.11.12
+      '@unhead/schema': 1.11.12
+      '@unhead/shared': 1.11.12
       hookable: 5.5.3
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
@@ -11033,7 +11056,7 @@ snapshots:
   vite-ssg@0.24.1(vite@5.4.11(@types/node@22.9.3)(sass@1.81.0)(terser@5.36.0))(vue-router@4.4.5(vue@3.5.13(typescript@5.7.2)))(vue@3.5.13(typescript@5.7.2)):
     dependencies:
       '@unhead/dom': 1.11.11
-      '@unhead/vue': 1.11.11(vue@3.5.13(typescript@5.7.2))
+      '@unhead/vue': 1.11.12(vue@3.5.13(typescript@5.7.2))
       fs-extra: 11.2.0
       html-minifier-terser: 7.2.0
       html5parser: 2.0.2
