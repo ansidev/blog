@@ -11,7 +11,7 @@
     "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "gen:feed": "tsx ./src/cli/genFeed.ts",
     "build": "cross-env NODE_ENV=production vite-ssg build && pnpm run gen:feed",
-    "prepare": "husky || true"
+    "prepare": "husky"
   },
   "dependencies": {
     "@vueuse/core": "^11.0.0",
@@ -55,7 +55,7 @@
     "fp-ts": "^2.16.5",
     "gray-matter": "^4.0.3",
     "happy-dom": "^15.0.0",
-    "husky": "^9.0.11",
+    "husky": "^9.1.7",
     "inferred-types": "^0.51.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.0.0",
