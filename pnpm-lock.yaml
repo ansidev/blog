@@ -185,7 +185,7 @@ importers:
         version: 1.1.1(vite@6.0.1(@types/node@22.10.0)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
       unplugin-vue-components:
         specifier: ^0.27.0
-        version: 0.27.4(@babel/parser@7.26.2)(rollup@4.27.4)(vue@3.5.13(typescript@5.7.2))
+        version: 0.27.5(@babel/parser@7.26.2)(rollup@4.27.4)(vue@3.5.13(typescript@5.7.2))
       unplugin-vue-markdown:
         specifier: ^0.26.2
         version: 0.26.3(rollup@4.27.4)(vite@6.0.1(@types/node@22.10.0)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
@@ -3592,10 +3592,6 @@ packages:
     resolution: {integrity: sha512-SFppqq5p42fe2qcZQqqEOiVRXl+WCP1MdT6k7BDEW1j++sp5fIY+/fdRQitvKgB5BrBcmrs5m/L0v2FrU5MY1g==}
     engines: {node: '>=14'}
 
-  local-pkg@0.5.0:
-    resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
-    engines: {node: '>=14'}
-
   local-pkg@0.5.1:
     resolution: {integrity: sha512-9rrA30MRRP3gBD3HTGnC6cDFpaE1kVDWxWgqWJUN0RvDNAo+Nz/9GxB+nHOH0ifbVFy0hSA1V6vFDvnx54lTEQ==}
     engines: {node: '>=14'}
@@ -3679,9 +3675,6 @@ packages:
 
   magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
-
-  magic-string@0.30.12:
-    resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
   magic-string@0.30.14:
     resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
@@ -3909,9 +3902,6 @@ packages:
 
   mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
-
-  mlly@1.7.2:
-    resolution: {integrity: sha512-tN3dvVHYVz4DhSXinXIk7u9syPYaJvio118uomkovAtWBT+RdbP6Lfh/5Lvo519YMmwBafwlh20IPTXIStscpA==}
 
   mlly@1.7.3:
     resolution: {integrity: sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==}
@@ -4959,8 +4949,8 @@ packages:
       '@nuxt/kit':
         optional: true
 
-  unplugin-vue-components@0.27.4:
-    resolution: {integrity: sha512-1XVl5iXG7P1UrOMnaj2ogYa5YTq8aoh5jwDPQhemwO/OrXW+lPQKDXd1hMz15qxQPxgb/XXlbgo3HQ2rLEbmXQ==}
+  unplugin-vue-components@0.27.5:
+    resolution: {integrity: sha512-m9j4goBeNwXyNN8oZHHxvIIYiG8FQ9UfmKWeNllpDvhU7btKNNELGPt+o3mckQKuPwrE7e0PvCsx+IWuDSD9Vg==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -9265,11 +9255,6 @@ snapshots:
 
   local-pkg@0.4.3: {}
 
-  local-pkg@0.5.0:
-    dependencies:
-      mlly: 1.7.3
-      pkg-types: 1.2.1
-
   local-pkg@0.5.1:
     dependencies:
       mlly: 1.7.3
@@ -9341,10 +9326,6 @@ snapshots:
   magic-string@0.25.9:
     dependencies:
       sourcemap-codec: 1.4.8
-
-  magic-string@0.30.12:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.0
 
   magic-string@0.30.14:
     dependencies:
@@ -9742,13 +9723,6 @@ snapshots:
   minipass@7.1.2: {}
 
   mitt@3.0.1: {}
-
-  mlly@1.7.2:
-    dependencies:
-      acorn: 8.14.0
-      pathe: 1.1.2
-      pkg-types: 1.2.1
-      ufo: 1.5.4
 
   mlly@1.7.3:
     dependencies:
@@ -10863,25 +10837,24 @@ snapshots:
     transitivePeerDependencies:
       - webpack-sources
 
-  unplugin-vue-components@0.27.4(@babel/parser@7.26.2)(rollup@4.27.4)(vue@3.5.13(typescript@5.7.2)):
+  unplugin-vue-components@0.27.5(@babel/parser@7.26.2)(rollup@4.27.4)(vue@3.5.13(typescript@5.7.2)):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.3(rollup@4.27.4)
       chokidar: 3.6.0
       debug: 4.3.7
       fast-glob: 3.3.2
-      local-pkg: 0.5.0
-      magic-string: 0.30.12
+      local-pkg: 0.5.1
+      magic-string: 0.30.14
       minimatch: 9.0.5
-      mlly: 1.7.2
-      unplugin: 1.15.0
+      mlly: 1.7.3
+      unplugin: 1.16.0
       vue: 3.5.13(typescript@5.7.2)
     optionalDependencies:
       '@babel/parser': 7.26.2
     transitivePeerDependencies:
       - rollup
       - supports-color
-      - webpack-sources
 
   unplugin-vue-markdown@0.26.3(rollup@4.27.4)(vite@6.0.1(@types/node@22.10.0)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1)):
     dependencies:
