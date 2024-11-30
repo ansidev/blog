@@ -187,8 +187,8 @@ importers:
         specifier: ^0.27.0
         version: 0.27.5(@babel/parser@7.26.2)(rollup@4.27.4)(vue@3.5.13(typescript@5.7.2))
       unplugin-vue-markdown:
-        specifier: ^0.26.2
-        version: 0.26.3(rollup@4.27.4)(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
+        specifier: ^0.27.0
+        version: 0.27.0(rollup@4.27.4)(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
       vite:
         specifier: ^6.0.0
         version: 6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1)
@@ -3711,6 +3711,9 @@ packages:
       '@types/markdown-it': '*'
       markdown-it: '*'
 
+  markdown-it-async@0.1.3:
+    resolution: {integrity: sha512-R0oC5NCrGhAZGZXQ923+RUNbv6vAFCyHebC2SA9Q2TR7yYBowAboLhrsRJrfB9s9cL3epF+JaHrg5WSeoh+CRA==}
+
   markdown-it-link-attributes@4.0.1:
     resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
 
@@ -4982,8 +4985,8 @@ packages:
       '@nuxt/kit':
         optional: true
 
-  unplugin-vue-markdown@0.26.3:
-    resolution: {integrity: sha512-F70u5BuXLn/08jlcp2iUmU60yBLxRwvUZQ4Ys6y9TPS+VkEqlVBXYHc+1dHjycQZK13LAsMWN3FofeXJlJpzdg==}
+  unplugin-vue-markdown@0.27.0:
+    resolution: {integrity: sha512-kMFYrmIRbLaiZAchDgLgIeVcAPYkEWK8mGA2qrh13j1nFeBsOiLyprIfDiB5I3OXAuCMUYPAu5kDAyiDAoszHw==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0 || ^6.0.0
 
@@ -9373,6 +9376,11 @@ snapshots:
       '@types/markdown-it': 14.1.2
       markdown-it: 14.1.0
 
+  markdown-it-async@0.1.3:
+    dependencies:
+      '@types/markdown-it': 14.1.2
+      markdown-it: 14.1.0
+
   markdown-it-link-attributes@4.0.1: {}
 
   markdown-it-shiki@0.8.1:
@@ -10888,7 +10896,7 @@ snapshots:
       - rollup
       - supports-color
 
-  unplugin-vue-markdown@0.26.3(rollup@4.27.4)(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1)):
+  unplugin-vue-markdown@0.27.0(rollup@4.27.4)(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1)):
     dependencies:
       '@mdit-vue/plugin-component': 2.1.3
       '@mdit-vue/plugin-frontmatter': 2.1.3
@@ -10896,6 +10904,7 @@ snapshots:
       '@rollup/pluginutils': 5.1.3(rollup@4.27.4)
       '@types/markdown-it': 14.1.2
       markdown-it: 14.1.0
+      markdown-it-async: 0.1.3
       unplugin: 1.16.0
       vite: 6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1)
     transitivePeerDependencies:
