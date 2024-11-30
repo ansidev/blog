@@ -131,7 +131,7 @@ importers:
         version: 9.1.7
       inferred-types:
         specifier: ^0.52.0
-        version: 0.52.4
+        version: 0.52.5
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -3257,8 +3257,8 @@ packages:
   inferred-types@0.37.6:
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
 
-  inferred-types@0.52.4:
-    resolution: {integrity: sha512-umiMhO51IkIPRZQb0M1dvYqlLW5cl294rKbdhkQ5Ou8VmuAoQDzVN9K/R0FbYZNi+2dOydig1jX6OJrvNXd64w==}
+  inferred-types@0.52.5:
+    resolution: {integrity: sha512-KuHq7PgoV7OlrvS+eyI41PFr9Gkhx1gdki5Dd5W8Xg1ipKF3NrMZ3rrv1YA1MnGiiQPtD1iPCw8ELcOdSwQXYg==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -7341,6 +7341,28 @@ snapshots:
       - terser
       - vite
 
+  '@yankeeinlondon/builder-api@1.4.1(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)':
+    dependencies:
+      '@types/markdown-it': 12.2.3
+      '@yankeeinlondon/happy-wrapper': 2.10.1(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
+      fp-ts: 2.16.9
+      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
+      markdown-it: 13.0.2
+      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@5.2.1(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2)))(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - encoding
+      - jsdom
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
   '@yankeeinlondon/gray-matter@6.2.1(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)':
     dependencies:
       inferred-types: 0.37.6(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
@@ -7404,7 +7426,7 @@ snapshots:
 
   '@yankeeinlondon/meta-builder@1.4.0(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)':
     dependencies:
-      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@5.2.1(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2)))(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
+      '@yankeeinlondon/builder-api': 1.4.1(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
       inferred-types: 0.37.6(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
@@ -8964,7 +8986,7 @@ snapshots:
       - supports-color
       - terser
 
-  inferred-types@0.52.4:
+  inferred-types@0.52.5:
     dependencies:
       error-stack-parser-es: 0.1.5
       pathe: 1.1.2
