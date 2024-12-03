@@ -131,7 +131,7 @@ importers:
         version: 9.1.7
       inferred-types:
         specifier: ^0.52.0
-        version: 0.52.5
+        version: 0.52.6
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -3288,8 +3288,8 @@ packages:
   inferred-types@0.37.6:
     resolution: {integrity: sha512-CfL5g1wR5rVwX2K5S6wSL+h9eODScum/LBwlhGRrcBIvfYppvUQM0aeRJ1BZS+QE38kGzd3v+U526+nQR7ZUkg==}
 
-  inferred-types@0.52.5:
-    resolution: {integrity: sha512-KuHq7PgoV7OlrvS+eyI41PFr9Gkhx1gdki5Dd5W8Xg1ipKF3NrMZ3rrv1YA1MnGiiQPtD1iPCw8ELcOdSwQXYg==}
+  inferred-types@0.52.6:
+    resolution: {integrity: sha512-uleMBgQKItUe/KbSW4SqjFHlReUBCRWQhVRDVa4z7UPqL7WwiCLADUAs1VPPTvAkypg0HemI1w/6Q03XBJbZYQ==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -3324,8 +3324,9 @@ packages:
     resolution: {integrity: sha512-Y1JXKrfykRJGdlDwdKlLpLyMIiWqWvuSd17TvZk68PLAOGOoF4Xyav1z0Xhoi+gCYjZVeC5SI+hYFOfvXmGRCA==}
     engines: {node: '>= 0.4'}
 
-  is-bigint@1.0.4:
-    resolution: {integrity: sha512-zB9CruMamjym81i2JZ3UMn54PKGsQzsJeo6xvN3HJJ4CAsQNB6iRutp2To77OfCNuoxspsIhzaPoO1zyCEhFOg==}
+  is-bigint@1.1.0:
+    resolution: {integrity: sha512-n4ZT37wG78iz03xPRKJrHTdZbe3IicyucEtdRsV5yglwc3GyUfbAfpSeD0FJ41NbUNSt5wbhqfp1fS+BgnvDFQ==}
+    engines: {node: '>= 0.4'}
 
   is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
@@ -3455,8 +3456,8 @@ packages:
     resolution: {integrity: sha512-PlfzajuF9vSo5wErv3MJAKD/nqf9ngAs1NFQYm16nUYFO2IzxJ2hcm+IOCg+EEopdykNNUhVq5cz35cAUxU8+g==}
     engines: {node: '>= 0.4'}
 
-  is-symbol@1.0.4:
-    resolution: {integrity: sha512-C/CPBqKWnvdcxqIARxyOh4v1UUEOCHpgDa0WYgpKDFMszcrPcffg5uhwSgPCLD2WWxmq6isisz87tzT01tuGhg==}
+  is-symbol@1.1.0:
+    resolution: {integrity: sha512-qS8KkNNXUZ/I+nX6QT8ZS1/Yx0A444yhzdTKxCzKkNjQ9sHErBxJnJAgh+f5YhusYECEcjo4XcyH87hn6+ks0A==}
     engines: {node: '>= 0.4'}
 
   is-text-path@2.0.0:
@@ -5316,8 +5317,9 @@ packages:
   whatwg-url@7.1.0:
     resolution: {integrity: sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==}
 
-  which-boxed-primitive@1.0.2:
-    resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
+  which-boxed-primitive@1.1.0:
+    resolution: {integrity: sha512-Ei7Miu/AXe2JJ4iNF5j/UphAgRoma4trE6PtisM09bPygb3egMH3YLW/befsWb1A1AxvNSFidOFTB18XtnIIng==}
+    engines: {node: '>= 0.4'}
 
   which-builtin-type@1.2.0:
     resolution: {integrity: sha512-I+qLGQ/vucCby4tf5HsLmGueEla4ZhwTBSqaooS+Y0BuxN4Cp+okmGuV+8mXZ84KDI9BA+oklo+RzKg0ONdSUA==}
@@ -7406,6 +7408,28 @@ snapshots:
       - terser
       - vite
 
+  '@yankeeinlondon/builder-api@1.4.1(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)':
+    dependencies:
+      '@types/markdown-it': 12.2.3
+      '@yankeeinlondon/happy-wrapper': 2.10.1(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
+      fp-ts: 2.16.9
+      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
+      markdown-it: 13.0.2
+      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@5.2.1(vite@6.0.2(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2)))(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)(vite@6.0.2(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - encoding
+      - jsdom
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
   '@yankeeinlondon/gray-matter@6.2.1(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)':
     dependencies:
       inferred-types: 0.37.6(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
@@ -7469,7 +7493,7 @@ snapshots:
 
   '@yankeeinlondon/meta-builder@1.4.0(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)':
     dependencies:
-      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@5.2.1(vite@6.0.2(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2)))(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)(vite@6.0.2(@types/node@22.10.1)(jiti@1.21.6)(sass@1.81.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
+      '@yankeeinlondon/builder-api': 1.4.1(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
       inferred-types: 0.37.6(happy-dom@15.11.7)(jsdom@25.0.1)(sass@1.81.0)(terser@5.36.0)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
@@ -8188,7 +8212,7 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
       is-date-object: 1.0.5
-      is-symbol: 1.0.4
+      is-symbol: 1.1.0
 
   esbuild@0.18.20:
     optionalDependencies:
@@ -9031,7 +9055,7 @@ snapshots:
       - supports-color
       - terser
 
-  inferred-types@0.52.5:
+  inferred-types@0.52.6:
     dependencies:
       error-stack-parser-es: 0.1.5
       pathe: 1.1.2
@@ -9082,7 +9106,7 @@ snapshots:
     dependencies:
       has-tostringtag: 1.0.2
 
-  is-bigint@1.0.4:
+  is-bigint@1.1.0:
     dependencies:
       has-bigints: 1.0.2
 
@@ -9184,9 +9208,11 @@ snapshots:
       call-bind: 1.0.7
       has-tostringtag: 1.0.2
 
-  is-symbol@1.0.4:
+  is-symbol@1.1.0:
     dependencies:
+      call-bind: 1.0.7
       has-symbols: 1.1.0
+      safe-regex-test: 1.0.3
 
   is-text-path@2.0.0:
     dependencies:
@@ -10841,7 +10867,7 @@ snapshots:
       call-bind: 1.0.7
       has-bigints: 1.0.2
       has-symbols: 1.1.0
-      which-boxed-primitive: 1.0.2
+      which-boxed-primitive: 1.1.0
 
   undici-types@6.19.8: {}
 
@@ -11316,13 +11342,13 @@ snapshots:
       tr46: 1.0.1
       webidl-conversions: 4.0.2
 
-  which-boxed-primitive@1.0.2:
+  which-boxed-primitive@1.1.0:
     dependencies:
-      is-bigint: 1.0.4
+      is-bigint: 1.1.0
       is-boolean-object: 1.2.0
       is-number-object: 1.1.0
       is-string: 1.1.0
-      is-symbol: 1.0.4
+      is-symbol: 1.1.0
 
   which-builtin-type@1.2.0:
     dependencies:
@@ -11336,7 +11362,7 @@ snapshots:
       is-regex: 1.2.0
       is-weakref: 1.0.2
       isarray: 2.0.5
-      which-boxed-primitive: 1.0.2
+      which-boxed-primitive: 1.1.0
       which-collection: 1.0.2
       which-typed-array: 1.1.16
 
