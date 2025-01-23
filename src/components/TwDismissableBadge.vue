@@ -77,7 +77,7 @@ const remove = (e: Event) => emit('removed', e)
       `dark:text-${darkTextColor}`,
       `text-${fontSize}`,
       `font-${fontWeight}`,
-      rounded ? 'rounded' : '',
+      rounded ? 'rounded-sm' : '',
     ]"
   >
     <slot />
@@ -88,7 +88,7 @@ const remove = (e: Event) => emit('removed', e)
         `hover:bg-${buttonHoverBackgroundColor}`,
         `dark:hover:bg-${buttonDarkHoverBackgroundColor}`,
         `text-${fontSize}`,
-        rounded ? 'rounded' : '',
+        rounded ? 'rounded-sm' : '',
       ]"
       :data-dismiss-target="`#${computedId}`"
       :aria-label="t('button.remove')"

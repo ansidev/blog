@@ -48,7 +48,7 @@ defineProps({
       `dark:text-${darkTextColor}`,
       `text-${fontSize}`,
       `font-${fontWeight}`,
-      rounded ? 'rounded' : '',
+      rounded ? 'rounded-sm' : '',
     ]"
   >
     <slot />

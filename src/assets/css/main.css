@@ -1,3 +1,6 @@
+@import 'tailwindcss';
+@config '../../../tailwind.config.cjs';
+
 @import './markdown.css';
 
 html,
@@ -18,6 +21,10 @@ html.dark {
 
 #nprogress {
   pointer-events: none;
+}
+
+@utility bg-blue-500 {
+  background-color: var(--color-blue-500);
 }
 
 #nprogress .bar {

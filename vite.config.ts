@@ -19,10 +19,11 @@ import Shiki from 'markdown-it-shiki'
 import Anchor from 'markdown-it-anchor'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import generateSitemap from 'vite-ssg-sitemap'
+import TailwindCss from '@tailwindcss/vite'
 // import frontmatterToc from './src/builders/frontmatter-toc'
 // import excerpt from './src/builders/excerpt'
-import { getPostMeta } from './src/helpers/post'
-import siteConfig from './src/site.config'
+import { getPostMeta } from './src/helpers/post.js'
+import siteConfig from './src/site.config.js'
 
 if (process.env.NODE_ENV === 'development') {
   dns.setDefaultResultOrder('verbatim')
@@ -43,7 +44,6 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       Vue({
-        reactivityTransform: true,
         include: [/\.vue$/, /\.md$/],
       }),
 
@@ -260,6 +260,7 @@ export default defineConfig(({ mode }) => {
 
       // https://github.com/webfansplz/vite-plugin-vue-devtools
       VueDevTools(),
+      TailwindCss(),
     ],
     // https://github.com/antfu/vite-ssg
     ssgOptions: {

@@ -22,7 +22,7 @@ const { t } = useI18n()
       </p>
       <Link href="/">
         <button
-          class="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg shadow focus:outline-none focus:shadow-outline-blue hover:bg-blue-700 dark:hover:bg-blue-500"
+          class="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg shadow-sm focus:outline-hidden focus:shadow-outline-blue hover:bg-blue-700 dark:hover:bg-blue-500"
         >
           {{ t('back_to_home') }}
         </button>
