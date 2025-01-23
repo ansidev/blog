@@ -40,7 +40,7 @@ const sortedTags = computed(() => Object.keys(tags.value).sort((a, b) => tags.va
       <div v-if="Object.keys(tags).length === 0" class="mt-2 mb-2 mr-5">
         {{ t('no_tag') }}
       </div>
-      <div v-for="tag in sortedTags" :key="tag" class="mt-2 mb-2 mr-2 px-2 py-1 border border-gray-500 rounded">
+      <div v-for="tag in sortedTags" :key="tag" class="mt-2 mb-2 mr-2 px-2 py-1 border border-gray-500 rounded-sm">
         <Tag :text="tag" />
         <Link
           class="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"

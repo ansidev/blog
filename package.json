@@ -14,6 +14,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.0",
     "@vueuse/core": "^12.0.0",
     "counter-analytics-vue": "^1.0.0",
     "github-slugger": "^2.0.0",
@@ -62,13 +63,11 @@
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-shiki": "^0.8.1",
     "markdown-it-toc-done-right": "^4.2.0",
-    "postcss": "^8.4.38",
-    "postcss-nested": "^7.0.0",
     "prettier": "^3.2.5",
     "rollup": "^4.17.2",
     "sass": "^1.77.0",
     "shiki": "^2.0.0",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^4.0.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.9.3",
     "typescript": "^5.4.5",

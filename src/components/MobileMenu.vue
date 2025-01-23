@@ -16,7 +16,7 @@ useServerHead({
   <div class="md:hidden">
     <button
       type="button"
-      class="w-8 h-8 py-1 ml-1 mr-1 rounded"
+      class="w-8 h-8 py-1 ml-1 mr-1 rounded-sm"
       :aria-label="t('button.toggle_mobile_menu')"
       @click="onToggleMobileMenu"
     >
@@ -33,7 +33,7 @@ useServerHead({
       <button
         type="button"
         aria-label="toggle modal"
-        class="fixed w-full h-full cursor-auto focus:outline-none"
+        class="fixed w-full h-full cursor-auto focus:outline-hidden"
         @click="onToggleMobileMenu"
       />
       <nav class="fixed h-full mt-8">

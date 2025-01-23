@@ -40,7 +40,7 @@ const sortedCategories = computed(() => Object.keys(categories.value).sort((a, b
       <div v-if="Object.keys(categories).length === 0" class="mt-2 mb-2 mr-5">
         {{ t('no_category') }}
       </div>
-      <div v-for="category in sortedCategories" :key="category" class="mt-2 mb-2 mr-2 px-2 py-1 border border-gray-500 rounded">
+      <div v-for="category in sortedCategories" :key="category" class="mt-2 mb-2 mr-2 px-2 py-1 border border-gray-500 rounded-sm">
         <Category :text="category" />
         <Link
           class="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
