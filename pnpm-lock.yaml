@@ -185,7 +185,7 @@ importers:
         version: 28.0.0(@babel/parser@7.26.7)(rollup@4.32.1)(vue@3.5.13(typescript@5.7.3))
       unplugin-vue-markdown:
         specifier: ^28.0.0
-        version: 28.2.0(rollup@4.32.1)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
+        version: 28.3.0(rollup@4.32.1)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
       vite:
         specifier: ^6.0.0
         version: 6.0.11(@types/node@22.12.0)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
@@ -5115,8 +5115,8 @@ packages:
       '@nuxt/kit':
         optional: true
 
-  unplugin-vue-markdown@28.2.0:
-    resolution: {integrity: sha512-/m4EvirYQW1cI8+TxDhJ5KYZ2e8Ra2CBF+r+VBeksiXC5GHFtojhFSA+RR+vmEqybkdL+AyTD7GyT0ONmeZqLg==}
+  unplugin-vue-markdown@28.3.0:
+    resolution: {integrity: sha512-N84cKGjyzGYIxuew+Oxnf7SulbNZjbdh0mJt1i2tuUMvplPGYIyafHueTMIi+nu47DBn+BV+CwjBkVbHh0L4Ug==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0 || ^6.0.0
 
@@ -11238,7 +11238,7 @@ snapshots:
       - rollup
       - supports-color
 
-  unplugin-vue-markdown@28.2.0(rollup@4.32.1)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)):
+  unplugin-vue-markdown@28.3.0(rollup@4.32.1)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.83.4)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)):
     dependencies:
       '@mdit-vue/plugin-component': 2.1.3
       '@mdit-vue/plugin-frontmatter': 2.1.3
