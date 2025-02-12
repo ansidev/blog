@@ -37,7 +37,7 @@ importers:
         version: 3.5.13(typescript@5.7.3)
       vue-gtag:
         specifier: ^2.0.1
-        version: 2.0.1(vue@3.5.13(typescript@5.7.3))
+        version: 2.1.0(vue@3.5.13(typescript@5.7.3))
       vue-i18n:
         specifier: ^11.0.0
         version: 11.1.1(vue@3.5.13(typescript@5.7.3))
@@ -5286,8 +5286,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  vue-gtag@2.0.1:
-    resolution: {integrity: sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==}
+  vue-gtag@2.1.0:
+    resolution: {integrity: sha512-lnEiHtNkw37lUug36n023uYWRaFz7s2Wk12G+hdzrTKwWwTBuq0Mcd5e0zH65aKPZRWT+51C6LUHZShpTPiMng==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -7473,28 +7473,6 @@ snapshots:
       - terser
       - vite
 
-  '@yankeeinlondon/builder-api@1.4.1(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)':
-    dependencies:
-      '@types/markdown-it': 12.2.3
-      '@yankeeinlondon/happy-wrapper': 2.10.1(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)
-      fp-ts: 2.16.9
-      inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)
-      markdown-it: 13.0.2
-      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@5.2.1(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3)))(happy-dom@17.1.0)(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))
-    transitivePeerDependencies:
-      - '@edge-runtime/vm'
-      - '@vitest/browser'
-      - '@vitest/ui'
-      - encoding
-      - jsdom
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
   '@yankeeinlondon/gray-matter@6.2.1(happy-dom@17.1.0)(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)':
     dependencies:
       inferred-types: 0.37.6(happy-dom@17.1.0)(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)
@@ -7558,7 +7536,7 @@ snapshots:
 
   '@yankeeinlondon/meta-builder@1.4.0(happy-dom@17.1.0)(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)':
     dependencies:
-      '@yankeeinlondon/builder-api': 1.4.1(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)
+      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@5.2.1(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3)))(happy-dom@17.1.0)(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))
       inferred-types: 0.37.6(happy-dom@17.1.0)(jsdom@25.0.1)(lightningcss@1.29.1)(sass@1.84.0)(terser@5.38.2)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
@@ -11347,7 +11325,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-gtag@2.0.1(vue@3.5.13(typescript@5.7.3)):
+  vue-gtag@2.1.0(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       vue: 3.5.13(typescript@5.7.3)
 
