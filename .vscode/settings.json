@@ -1,0 +1,21 @@
+{
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ],
+  "vite.autoStart": true,
+  "vite.buildCommand": "pnpm build",
+  "vite.devCommand": "pnpm dev",
+  "vite.port": 5173,
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "cSpell.words": [
+    "unplugin"
+  ],
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "vue.server.includeLanguages": [
+    "vue",
+    "markdown"
+  ],
+  "typescript.format.semicolons": "remove",
+}
