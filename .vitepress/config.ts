@@ -1,4 +1,7 @@
+import { writeFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { defineWithDefaultThemeConfig } from '@ansidev-oss/vitepress-theme-ansidev/config'
+import { createContentLoader, type HeadConfig } from 'vitepress'
 import { type RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
 
 globalThis.__VUE_PROD_DEVTOOLS__ = process.env.NODE_ENV === 'development'
@@ -12,10 +15,105 @@ const rssOptions: RSSOptions = {
 
 console.log('Site URL', siteURL)
 
+const siteDescription = 'Personal blog of ansidev'
+const authorName = 'Le Minh Tri'
+const authorAlias = 'ansidev'
+const authorSameAs = [
+  'https://github.com/ansidev',
+  'https://linkedin.com/in/ansidev/',
+  'https://x.com/ansidev',
+  'https://t.me/ansidev',
+]
+const ogImage = `${siteURL}/pwa-512x512.png`
+// Thin listing pages: keep them crawlable for link discovery, but out of the index and sitemap.
+const noindexPrefixes = ['tags/', 'projects-by-tech/']
+const isNoindex = (relativePath: string) => noindexPrefixes.some((prefix) => relativePath.startsWith(prefix))
+
+// relativePath -> clean path ('' for home, 'posts/foo' otherwise)
+const toCleanPath = (relativePath: string) => relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+const toPageUrl = (relativePath: string) => `${siteURL}/${toCleanPath(relativePath)}`
+
+const ogLocale = (lang: string) => (lang === 'vi' ? 'vi_VN' : lang.replace('-', '_'))
+
+const firstParagraph = (html: string, max = 160): string => {
+  const match = html.match(/<p>([\s\S]*?)<\/p>/)
+  if (!match) return ''
+  const text = match[1]
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim()
+  return text.length > max ? `${text.slice(0, max - 1).trimEnd()}…` : text
+}
+
+const author = {
+  '@type': 'Person',
+  name: authorName,
+  alternateName: authorAlias,
+  url: `${siteURL}/about`,
+  sameAs: authorSameAs,
+}
+
+// relativePath -> ISO date, filled while pages render and read by the sitemap.
+const pageDates = new Map<string, string>()
+
+const toDay = (value: unknown) => new Date(value as string | Date).toISOString().slice(0, 10)
+
+const stripFrontmatter = (src: string) => src.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim()
+
+const generateLlmsFiles = async (outDir: string) => {
+  const posts = (
+    await createContentLoader('posts/**/!(index).md', { includeSrc: true, render: false, excerpt: false }).load()
+  ).sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+
+  const lines = [
+    `# ${siteTitle}`,
+    '',
+    `> ${siteDescription}. Notes on code, tools and shipping software: tips and tricks, DevOps notes, and side projects by ${authorName} (${authorAlias}).`,
+    '',
+    '## Pages',
+    '',
+    `- [About](${siteURL}/about): who writes this blog and how to reach me`,
+    `- [Projects](${siteURL}/projects): side projects and open-source work`,
+    `- [Categories](${siteURL}/categories)`,
+    `- [Archives](${siteURL}/archives)`,
+    `- [RSS feed](${siteURL}/feed.rss)`,
+    '',
+    '## Posts',
+    '',
+    ...posts.map((post) => `- [${post.frontmatter.title}](${siteURL}${post.url}): ${toDay(post.frontmatter.date)}`),
+    '',
+  ]
+  writeFileSync(join(outDir, 'llms.txt'), lines.join('\n'))
+
+  const full = [
+    `# ${siteTitle}`,
+    '',
+    `> ${siteDescription}`,
+    '',
+    ...posts.flatMap((post) => [
+      `## ${post.frontmatter.title}`,
+      '',
+      `URL: ${siteURL}${post.url}`,
+      `Date: ${toDay(post.frontmatter.date)}`,
+      '',
+      stripFrontmatter(post.src ?? ''),
+      '',
+    ]),
+  ]
+  writeFileSync(join(outDir, 'llms-full.txt'), full.join('\n'))
+}
+
 export default defineWithDefaultThemeConfig({
   srcDir: 'content',
   outDir: 'dist',
   lang: 'en-US',
+  cleanUrls: true,
+  lastUpdated: false,
   appearance: 'dark',
   title: siteTitle,
   description: 'Personal blog of ansidev',
@@ -106,6 +204,92 @@ export default defineWithDefaultThemeConfig({
   sitemap: {
     hostname: siteURL as string,
     lastmodDateOnly: false,
+    transformItems: (items) =>
+      items
+        .filter((item) => !isNoindex(item.url))
+        .map((item) => {
+          const lastmod = pageDates.get(item.url.replace(/\.html$/, '').replace(/\/$/, ''))
+          return lastmod ? { ...item, lastmod } : item
+        }),
+  },
+  transformHead: ({ pageData, title, description, content }) => {
+    if (pageData.isNotFound) return [['meta', { name: 'robots', content: 'noindex' }]] as HeadConfig[]
+
+    const { relativePath, frontmatter } = pageData
+    const url = toPageUrl(relativePath)
+    const isPost = frontmatter.type === 'post'
+    const isHome = relativePath === 'index.md'
+    const pageDescription =
+      (frontmatter.description as string | undefined) ||
+      (isPost ? firstParagraph(content) : '') ||
+      description ||
+      siteDescription
+    const date = frontmatter.date ? new Date(frontmatter.date as string).toISOString() : undefined
+    if (date) pageDates.set(toCleanPath(relativePath).replace(/\/$/, ''), date)
+
+    const head: HeadConfig[] = [
+      ['link', { rel: 'canonical', href: url }],
+      ['meta', { name: 'description', content: pageDescription }],
+      ['meta', { property: 'og:site_name', content: siteTitle }],
+      ['meta', { property: 'og:locale', content: ogLocale((frontmatter.lang as string | undefined) || 'en-US') }],
+      ['meta', { property: 'og:type', content: isPost ? 'article' : 'website' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: pageDescription }],
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:image', content: ogImage }],
+      ['meta', { name: 'twitter:card', content: 'summary' }],
+      ['meta', { name: 'twitter:site', content: '@ansidev' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: pageDescription }],
+      ['meta', { name: 'twitter:image', content: ogImage }],
+    ]
+    if (isPost && date) {
+      head.push(['meta', { property: 'article:published_time', content: date }])
+      head.push(['meta', { property: 'article:author', content: authorName }])
+    }
+    if (isNoindex(relativePath)) head.push(['meta', { name: 'robots', content: 'noindex,follow' }])
+
+    let jsonLd: Record<string, unknown> | undefined
+    if (isPost) {
+      jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: title,
+        description: pageDescription,
+        datePublished: date,
+        dateModified: date,
+        inLanguage: (frontmatter.lang as string | undefined) || 'en-US',
+        mainEntityOfPage: url,
+        url,
+        image: ogImage,
+        author,
+        publisher: author,
+        keywords: Array.isArray(frontmatter.tags) ? frontmatter.tags.join(', ') : undefined,
+      }
+    } else if (isHome) {
+      jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: siteTitle,
+        url: `${siteURL}/`,
+        description: siteDescription,
+        inLanguage: 'en-US',
+        author,
+      }
+    } else if (relativePath === 'about.md') {
+      jsonLd = { '@context': 'https://schema.org', ...author, '@id': `${siteURL}/about` }
+    }
+    if (jsonLd) head.push(['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)])
+
+    return head
+  },
+  // VitePress renders <html lang> from the site-level lang; apply the per-page front matter lang to the static HTML.
+  transformHtml: (code, _id, { pageData }) => {
+    const lang = pageData.frontmatter.lang as string | undefined
+    return lang ? code.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`) : code
+  },
+  buildEnd: async (siteConfig) => {
+    await generateLlmsFiles(siteConfig.outDir)
   },
   vite: {
     plugins: [RssPlugin(rssOptions)],

@@ -1,5 +1,6 @@
 ---
 type: post
+lang: vi
 title: Xác định biến được khai báo ở đâu (*nix system)
 date: 2021-02-09T19:08:12+07:00
 author: ansidev

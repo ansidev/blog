@@ -1,6 +1,7 @@
 ---
 outline: deep
 type: post
+lang: vi
 title: Thay đổi theme trong Alacritty
 date: 2021-02-06T03:22:43+07:00
 author: ansidev

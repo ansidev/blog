@@ -1,5 +1,6 @@
 ---
 type: post
+lang: vi
 title: Kiểm tra xem prop có được truyền giá trị hay không trong Vue
 date: 2021-03-04T16:10:03+07:00
 author: ansidev

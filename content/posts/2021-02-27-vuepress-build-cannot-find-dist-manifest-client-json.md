@@ -1,5 +1,6 @@
 ---
 type: post
+lang: vi
 title: Lỗi không tìm thấy file manifest/client.json khi build project VuePress
 date: 2021-02-27T13:14:13+07:00
 author: ansidev
