@@ -22,7 +22,7 @@ Four approval modes and command-level security restrictions for the Pi coding ag
 
 I use the [Pi coding agent](https://github.com/earendil-works/pi) a lot, and I want to control what the agent is allowed to do: sometimes full permissions, sometimes read-only planning, and always a hard block for dangerous commands.
 
-`pi-permission-suite` is an enhanced fork of [`@gotgenes/pi-permission-system`](https://www.npmjs.com/package/@gotgenes/pi-permission-system).
+`pi-permission-suite` is a fork with this lineage: [`@gotgenes/pi-permission-system`](https://www.npmjs.com/package/@gotgenes/pi-permission-system) → [`Eddie0521/pi-permission-suite`](https://github.com/Eddie0521/pi-permission-suite) → [`ansidev/pi-permission-suite`](https://github.com/ansidev/pi-permission-suite). My fork adds a pluggable Decision API, wildcard and argument-based tool rules, and a debug command.
 
 ## Technologies
 
@@ -38,12 +38,17 @@ I use the [Pi coding agent](https://github.com/earendil-works/pi) a lot, and I w
 - `set_approval_mode` tool, so the agent can switch modes by itself.
 - Rule engine to block dangerous commands and protect paths in all modes.
 - Subagent-based auto-approval for uncertain tool calls.
+- Pluggable Decision API for Auto mode (subagent, Jev or HTTP providers) with a JSONL audit log and fail-closed behavior.
+- Wildcard and argument-based `tools` allow/deny rules.
+- `/pi-permission-suite debug on|off` to log Decision API calls.
 
 ## Installation
 
 ```bash
-pi install npm:pi-permission-suite
+pi install git:github.com/ansidev/pi-permission-suite
 ```
+
+Don't use `npm:pi-permission-suite`: that package is published from the upstream project and doesn't include this fork's changes.
 
 ## Usage
 
