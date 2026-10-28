@@ -257,3 +257,98 @@ p.flex.flex-wrap > a.border.m-1:hover {
   border-color: var(--accent);
   background-color: color-mix(in srgb, var(--accent) 14%, transparent);
 }
+
+/* Mobile */
+@media (max-width: 639px) {
+  /* Post cards: stack the date above the title instead of a fixed 80px side column */
+  .component-border.flex:has(> .text-center) {
+    flex-direction: column;
+  }
+  .component-border > .text-center {
+    min-width: 0 !important;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  .component-border > .text-center .text-6xl {
+    font-size: 1.75rem;
+  }
+  .component-border > .pl-8 {
+    padding-left: 0;
+  }
+
+  /* Technology filter: one horizontally scrollable row instead of 40 wrapped buttons */
+  p.flex.flex-wrap:has(> a.border.m-1) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-inline: -0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  p.flex.flex-wrap:has(> a.border.m-1)::-webkit-scrollbar {
+    display: none;
+  }
+  p.flex.flex-wrap > a.border.m-1 {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    min-height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Tighter gap under page headings (theme adds pt-6 pb-8 + mb-6) */
+  div.pt-6.pb-8 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+  div.pt-6.pb-8 > h1.mb-6 {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Larger tap targets for category / tech chips */
+  a.link-alt.uppercase,
+  .component-border a.uppercase {
+    padding: 6px 12px;
+    margin-bottom: 6px;
+  }
+}
+
+/* Donation buttons: equal-size slots, even spacing. The theme sets img width/height
+   inline with !important and uses space-y-4 (sidebar) or space-x-4 (home page, wraps
+   unevenly), so reset its margins and size the link box instead. */
+div.flex.flex-wrap.py-4.items-center.justify-center:has(> a[href*='ko-fi.com']) {
+  gap: 12px;
+}
+div.flex.flex-wrap.py-4.items-center.justify-center:has(> a[href*='ko-fi.com']) > a {
+  margin: 0 !important;
+  width: 200px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.flex.flex-wrap.py-4.items-center.justify-center:has(> a[href*='ko-fi.com']) > a img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+/* Sidebar variant: single column */
+div.flex.flex-wrap.py-4.items-center.justify-center.space-y-4:has(> a[href*='ko-fi.com']) {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* Footer variant (home page): 2x2 grid of equal slots */
+div.flex.flex-wrap.py-4.items-center.justify-center.space-x-4:has(> a[href*='ko-fi.com']) {
+  display: grid;
+  grid-template-columns: repeat(2, 168px);
+  justify-content: center;
+  gap: 12px;
+}
+div.flex.flex-wrap.py-4.items-center.justify-center.space-x-4:has(> a[href*='ko-fi.com']) > a {
+  width: 168px;
+  height: 52px;
+}
