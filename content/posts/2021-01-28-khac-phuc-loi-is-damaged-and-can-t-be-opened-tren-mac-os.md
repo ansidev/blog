@@ -1,6 +1,7 @@
 ---
 outline: deep
 type: post
+lang: vi
 title: Khắc phục lỗi "is damaged and can't be opened" trên macOS
 date: 2021-01-28T18:11:54+07:00
 author: ansidev

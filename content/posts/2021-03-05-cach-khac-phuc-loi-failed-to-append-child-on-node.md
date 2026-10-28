@@ -1,5 +1,6 @@
 ---
 type: post
+lang: vi
 title: Cách khắc phục lỗi Failed to execute 'appendChild' on 'Node'
 date: 2021-03-05T16:10:03+07:00
 author: ansidev

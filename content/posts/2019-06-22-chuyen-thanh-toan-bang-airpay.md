@@ -1,6 +1,7 @@
 ---
 outline: deep
 type: post
+lang: vi
 title: Chuyện thanh toán bằng AirPay
 date: 2019-06-22T14:28:00+07:00
 author: ansidev
