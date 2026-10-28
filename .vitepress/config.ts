@@ -16,6 +16,7 @@ export default defineWithDefaultThemeConfig({
   srcDir: 'content',
   outDir: 'dist',
   lang: 'en-US',
+  appearance: 'dark',
   title: siteTitle,
   description: 'Personal blog of ansidev',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
