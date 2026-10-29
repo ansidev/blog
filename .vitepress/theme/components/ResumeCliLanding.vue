@@ -28,7 +28,7 @@ const features = [
     text: 'Write themes in Handlebars, Mustache, Pug, Django, Ace, Amber, Jet, Slim or plain HTML.',
   },
   { icon: '>_', title: 'Live dev server', text: 'resume-cli dev serves your resume and reloads while you edit.' },
-  { icon: 'PDF', title: 'PDF export', text: 'A headless Chrome (chromedp) renders the page to a print-ready PDF.' },
+  { icon: 'PDF', title: 'PDF export', text: 'Turn your resume into a clean, print-ready PDF with a single command.' },
   {
     icon: 'Go',
     title: 'Go theme helpers',
