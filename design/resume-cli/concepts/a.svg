@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 256 256"
+   width="256"
+   height="256"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <title
+     id="title1">Resume CLI concept A</title>
+  <path
+     id="path1"
+     d="M 56 40 L 56 216 L 88 216 L 88 136 L 140 136 L 168 216 L 208 216 L 180 136 L 208 108 L 208 72 L 176 40 L 56 40 z M 88 72 L 176 72 L 176 104 L 88 104 L 88 72 z " />
+</svg>
