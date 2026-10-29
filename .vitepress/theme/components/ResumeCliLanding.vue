@@ -27,7 +27,11 @@ const features = [
     title: 'Your choice of template engine',
     text: 'Write themes in Handlebars, Mustache, Pug, Django, Ace, Amber, Jet, Slim or plain HTML.',
   },
-  { icon: '>_', title: 'Live dev server', text: 'resume-cli dev serves your resume and reloads while you edit.' },
+  {
+    icon: 'HTML',
+    title: 'HTML export',
+    text: 'Generate a standalone HTML resume you can host anywhere, from GitHub Pages to your own site.',
+  },
   { icon: 'PDF', title: 'PDF export', text: 'Turn your resume into a clean, print-ready PDF with a single command.' },
   {
     icon: 'Go',
