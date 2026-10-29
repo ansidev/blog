@@ -1,44 +1,50 @@
 <script setup lang="ts">
 import AnsidevTheme from '@ansidev-oss/vitepress-theme-ansidev'
-import { useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import { computed, onMounted, watch } from 'vue'
 
 const ThemeLayout = AnsidevTheme.Layout
 const { frontmatter } = useData()
+const route = useRoute()
 // Pages under /products/<name> can replace the site title in the nav bar via `navTitle` front matter.
 const navTitle = computed(() => frontmatter.value.navTitle as string | undefined)
 // ...and the nav bar logo via `navLogo` front matter.
 const navLogo = computed(() => frontmatter.value.navLogo as string | undefined)
-// ...and the favicon via `navFavicon` front matter (a folder holding favicon.ico/.svg, favicon-32.png, apple-touch-icon.png).
-// transformHtml covers the first page load; this keeps the tab icon in sync during client-side navigation.
+// ...and the favicon via `navFavicon` front matter (a folder holding favicon.ico and apple-touch-icon.png).
+// transformHtml covers the built HTML; this keeps the tab icon right on every route, in dev and during client-side navigation.
 const navFavicon = computed(() => frontmatter.value.navFavicon as string | undefined)
-const DEFAULT_ICON = '/favicon.ico'
-const setIcons = (dir?: string) => {
-  const links: Record<string, string>[] = dir
-    ? [
-        { rel: 'icon', href: `${dir}/favicon.ico`, sizes: '48x48' },
-        { rel: 'icon', href: `${dir}/favicon.svg`, type: 'image/svg+xml' },
-        { rel: 'icon', href: `${dir}/favicon-32.png`, type: 'image/png', sizes: '32x32' },
-        { rel: 'apple-touch-icon', href: `${dir}/apple-touch-icon.png` },
-      ]
-    : // A fresh query string makes browsers re-fetch instead of keeping the previous page's cached tab icon.
-      [{ rel: 'icon', href: `${DEFAULT_ICON}?v=${Date.now()}` }]
-  for (const el of document.head.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]')) el.remove()
-  for (const attrs of links) {
-    const el = document.createElement('link')
-    for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v)
-    document.head.appendChild(el)
-  }
+const SITE_ICON = '/favicon.ico'
+const upsertLink = (rel: string, href: string | undefined, extra: Record<string, string> = {}) => {
+  const links = [...document.head.querySelectorAll<HTMLLinkElement>(`link[rel="${rel}"]`)]
+  const [first, ...rest] = links
+  for (const el of rest) el.remove()
+  if (!href) return first?.remove()
+  // One stable element, updated in place: browsers re-read the tab icon when its href changes.
+  const el = first ?? document.head.appendChild(Object.assign(document.createElement('link'), { rel }))
+  for (const name of ['type', 'sizes']) el.removeAttribute(name)
+  for (const [k, v] of Object.entries(extra)) el.setAttribute(k, v)
+  if (el.getAttribute('href') !== href) el.setAttribute('href', href)
+}
+const syncIcons = () => {
+  const dir = navFavicon.value
+  const wantedIcon = dir ? `${dir}/favicon.ico` : SITE_ICON
+  const wantedTouch = dir ? `${dir}/apple-touch-icon.png` : undefined
+  const icons = document.head.querySelectorAll<HTMLLinkElement>('link[rel="icon"]')
+  const touch = document.head.querySelectorAll<HTMLLinkElement>('link[rel="apple-touch-icon"]')
+  const iconOk = icons.length === 1 && icons[0].getAttribute('href')?.split('?')[0] === wantedIcon
+  const touchOk = wantedTouch ? touch.length === 1 && touch[0].getAttribute('href') === wantedTouch : touch.length === 0
+  if (!iconOk) upsertLink('icon', `${wantedIcon}?v=${Date.now()}`, { type: 'image/x-icon' })
+  if (!touchOk) upsertLink('apple-touch-icon', wantedTouch)
 }
 onMounted(() => {
-  let current: string | undefined = navFavicon.value
-  // Dev server and any unprocessed HTML: apply the page's icons on first load too.
-  if (current) setIcons(current)
-  watch(navFavicon, (dir) => {
-    if (dir === current) return
-    current = dir
-    setIcons(dir)
-  })
+  syncIcons()
+  // post flush + a frame: VitePress rewrites <head> on navigation, so re-check after it has finished.
+  watch(navFavicon, () => requestAnimationFrame(syncIcons), { flush: 'post' })
+  watch(
+    () => route.path,
+    () => requestAnimationFrame(() => requestAnimationFrame(syncIcons)),
+    { flush: 'post' },
+  )
 })
 const navVars = computed(() => ({
   ...(navTitle.value ? { '--nav-title': JSON.stringify(navTitle.value) } : {}),
