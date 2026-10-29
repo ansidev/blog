@@ -29,9 +29,15 @@ brew install --HEAD macmade/tap/trash
 You can alias the default rm command to trash, using the following line into your shell profile file:
 
 ```shell
-if [ -f /usr/local/bin/trash ]; then alias rm="/usr/local/bin/trash"; fi
+# Homebrew installs to /opt/homebrew/bin (Apple Silicon) or /usr/local/bin (Intel),
+# so look the command up instead of hard-coding the path.
+if command -v trash >/dev/null 2>&1; then alias rm="trash"; fi
 ```
 
 Then restart the terminal application.
 
 Now, the command `rm` will move your files/folder to Trash instead of delete them permanently.
+
+> **Update (2026-10):** the alias used the Intel-only path `/usr/local/bin/trash`, which does not exist on Apple Silicon
+> where Homebrew lives in `/opt/homebrew`; it now uses `command -v trash`. I only re-checked the shell snippet, I did
+> not reinstall the `macmade/tap/trash` formula, so check that the tap still builds before relying on it.

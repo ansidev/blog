@@ -53,3 +53,8 @@ We see how to disable telemetry.
    ```
    127.0.0.1 telemetry.astro.build
    ```
+
+## Related posts
+
+- [How to init Astro project using yarn berry?](./2022-12-20-how-to-init-astro-project-using-yarn-berry.md)
+- [How to read environment variables in astro.config.mjs?](./2022-12-12-how-to-read-environment-variables-in-astro-config.md)

@@ -134,7 +134,9 @@ config.keys = {
         TERM = 'screen-256color',
       },
       args = {
-        '/usr/local/bin/nvim',
+        -- Homebrew path: /opt/homebrew/bin/nvim on Apple Silicon, /usr/local/bin/nvim on Intel.
+        -- Run `command -v nvim` to find yours.
+        '/opt/homebrew/bin/nvim',
         os.getenv('WEZTERM_CONFIG_FILE'),
       },
     },

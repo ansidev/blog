@@ -242,6 +242,9 @@ button:focus-visible {
 .VPSkipLink,
 .keys,
 button.copy,
+.VPMenu,
+.VPMenu .VPMenuLink a,
+.VPFlyout .button,
 .VPSwitch,
 .VPSwitch .check {
   border-radius: 0 !important;

@@ -80,3 +80,9 @@ Steps:
    ```
 
 You can checkout the demo source code [here](https://github.com/ansidev/astro-demo-loading-environment-variables).
+
+## Related posts
+
+- [How to set environment variable?](./2023-02-02-how-to-set-environment-variable.md)
+- [How to init Astro project using yarn berry?](./2022-12-20-how-to-init-astro-project-using-yarn-berry.md)
+- [How to disable telemetry in Astro project?](./2022-12-31-how-to-disable-astro-telemetry.md)

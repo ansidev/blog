@@ -33,3 +33,8 @@ For more information, you can read the manual:
 ```sh
 man ssh-keygen
 ```
+
+## Related posts
+
+- [Force SSH client to use given private key](./2021-04-23-force-ssh-client-to-use-given-private-key-identity-file.md)
+- [How to work with multiple git accounts on a single machine?](./2022-10-10-how-to-work-with-multiple-git-accounts-on-a-single-machine.md)

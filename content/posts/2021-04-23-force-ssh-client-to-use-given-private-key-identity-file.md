@@ -48,3 +48,8 @@ Host server_name
   IdentitiesOnly yes
   IdentityFile /path/to/private_key
 ```
+
+## Related posts
+
+- [How to work with multiple git accounts on a single machine?](./2022-10-10-how-to-work-with-multiple-git-accounts-on-a-single-machine.md)
+- [How to generate the public key in another format from SSH private key](./2022-11-12-how-to-generate-the-public-key-in-another-format-from-ssh-private-key.md)
