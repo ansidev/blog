@@ -21,7 +21,8 @@ const setIcons = (dir?: string) => {
         { rel: 'icon', href: `${dir}/favicon-32.png`, type: 'image/png', sizes: '32x32' },
         { rel: 'apple-touch-icon', href: `${dir}/apple-touch-icon.png` },
       ]
-    : [{ rel: 'icon', href: DEFAULT_ICON }]
+    : // A fresh query string makes browsers re-fetch instead of keeping the previous page's cached tab icon.
+      [{ rel: 'icon', href: `${DEFAULT_ICON}?v=${Date.now()}` }]
   for (const el of document.head.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]')) el.remove()
   for (const attrs of links) {
     const el = document.createElement('link')
