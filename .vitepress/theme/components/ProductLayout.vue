@@ -31,6 +31,8 @@ const setIcons = (dir?: string) => {
 }
 onMounted(() => {
   let current: string | undefined = navFavicon.value
+  // Dev server and any unprocessed HTML: apply the page's icons on first load too.
+  if (current) setIcons(current)
   watch(navFavicon, (dir) => {
     if (dir === current) return
     current = dir
