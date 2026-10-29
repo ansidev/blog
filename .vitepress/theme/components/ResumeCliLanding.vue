@@ -576,7 +576,11 @@ const onTabKeydown = async (event: KeyboardEvent, index: number) => {
 .rc-themes {
   display: grid;
   gap: 16px;
-  margin-top: 40px;
+}
+.rc .rc-steps,
+.rc .rc-grid,
+.rc .rc-themes {
+  margin-top: 48px;
 }
 .rc-step-n,
 .rc-icon {
