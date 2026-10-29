@@ -4,10 +4,12 @@ import { useData } from 'vitepress'
 import { onMounted, watchEffect } from 'vue'
 import '@ansidev-oss/vitepress-theme-ansidev/styles.css'
 import './custom.css'
+import ProductLayout from './components/ProductLayout.vue'
 import ResumeCliLanding from './components/ResumeCliLanding.vue'
 
 export default {
   extends: AnsidevTheme,
+  Layout: ProductLayout,
   enhanceApp({ app }) {
     app.component('ResumeCliLanding', ResumeCliLanding)
   },

@@ -126,6 +126,7 @@ export default defineWithDefaultThemeConfig({
       { link: '/tags', text: 'Tags' },
       { link: '/archives', text: 'Archives' },
       { link: '/projects', text: 'Projects' },
+      { text: 'Products', items: [{ link: '/products/resume-cli', text: 'Resume CLI' }] },
       { link: '/about', text: 'About' },
       { link: '/feed.rss', text: 'RSS' },
     ],

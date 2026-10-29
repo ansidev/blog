@@ -51,17 +51,6 @@ const tabs = [
 
 const techs = ['Go', 'urfave/cli', 'Fiber', 'Handlebars']
 
-const posts = [
-  {
-    title: 'How to create a dynamic help command for Makefile?',
-    url: '/tips-and-tricks/how-to-create-a-dynamic-help-command-for-makefile/',
-  },
-  {
-    title: 'How to publish releases of a private GitHub repository to a public repository?',
-    url: '/tips-and-tricks/how-to-publish-releases-of-a-private-github-repository-to-a-public-repository/',
-  },
-]
-
 // Copy buttons: one shared "copied" key so only one button shows the state at a time.
 const copiedKey = ref('')
 let copiedTimer: ReturnType<typeof setTimeout> | undefined
@@ -271,10 +260,6 @@ const onTabKeydown = async (event: KeyboardEvent, index: number) => {
         <a class="rc-btn rc-btn-primary" :href="GITHUB_URL" target="_blank" rel="noopener noreferrer">Star on GitHub</a>
         <a class="rc-btn" :href="PROJECT_URL">Project page</a>
       </div>
-      <p class="rc-sub">Related posts</p>
-      <ul class="rc-posts">
-        <li v-for="p in posts" :key="p.url"><a :href="p.url">{{ p.title }}</a></li>
-      </ul>
     </section>
   </div>
 </template>
@@ -702,11 +687,6 @@ const onTabKeydown = async (event: KeyboardEvent, index: number) => {
 /* Footer CTA */
 .rc-final {
   text-align: center;
-}
-.rc-posts {
-  display: grid;
-  gap: 8px;
-  margin-top: 12px;
 }
 
 @media (min-width: 640px) {
