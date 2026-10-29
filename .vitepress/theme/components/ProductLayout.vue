@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AnsidevTheme from '@ansidev-oss/vitepress-theme-ansidev'
 import { useData } from 'vitepress'
-import { computed } from 'vue'
+import { computed, onMounted, watch } from 'vue'
 
 const ThemeLayout = AnsidevTheme.Layout
 const { frontmatter } = useData()
@@ -9,6 +9,34 @@ const { frontmatter } = useData()
 const navTitle = computed(() => frontmatter.value.navTitle as string | undefined)
 // ...and the nav bar logo via `navLogo` front matter.
 const navLogo = computed(() => frontmatter.value.navLogo as string | undefined)
+// ...and the favicon via `navFavicon` front matter (a folder holding favicon.ico/.svg, favicon-32.png, apple-touch-icon.png).
+// transformHtml covers the first page load; this keeps the tab icon in sync during client-side navigation.
+const navFavicon = computed(() => frontmatter.value.navFavicon as string | undefined)
+const DEFAULT_ICON = '/favicon.ico'
+const setIcons = (dir?: string) => {
+  const links: Record<string, string>[] = dir
+    ? [
+        { rel: 'icon', href: `${dir}/favicon.ico`, sizes: '48x48' },
+        { rel: 'icon', href: `${dir}/favicon.svg`, type: 'image/svg+xml' },
+        { rel: 'icon', href: `${dir}/favicon-32.png`, type: 'image/png', sizes: '32x32' },
+        { rel: 'apple-touch-icon', href: `${dir}/apple-touch-icon.png` },
+      ]
+    : [{ rel: 'icon', href: DEFAULT_ICON }]
+  for (const el of document.head.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]')) el.remove()
+  for (const attrs of links) {
+    const el = document.createElement('link')
+    for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v)
+    document.head.appendChild(el)
+  }
+}
+onMounted(() => {
+  let current: string | undefined = navFavicon.value
+  watch(navFavicon, (dir) => {
+    if (dir === current) return
+    current = dir
+    setIcons(dir)
+  })
+})
 const navVars = computed(() => ({
   ...(navTitle.value ? { '--nav-title': JSON.stringify(navTitle.value) } : {}),
   ...(navLogo.value ? { '--nav-logo': `url(${JSON.stringify(navLogo.value)})` } : {}),
