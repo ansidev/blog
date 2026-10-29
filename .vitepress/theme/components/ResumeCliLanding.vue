@@ -14,7 +14,7 @@ const steps = [
   },
   {
     title: 'Pick a theme',
-    text: 'Use the default theme or your own Handlebars theme. Preview changes live while you edit.',
+    text: 'Use the default theme or your own theme. Preview changes live while you edit.',
   },
   {
     title: 'Run generate',
@@ -25,15 +25,15 @@ const steps = [
 const features = [
   {
     icon: '{{ }}',
-    title: 'Handlebars themes',
-    text: 'Themes are plain Handlebars templates. Copy one, change it, done.',
+    title: 'Your choice of template engine',
+    text: 'Write themes in Handlebars, Mustache, Pug, Django, Ace, Amber, Jet, Slim or plain HTML.',
   },
   { icon: '>_', title: 'Live dev server', text: 'resume-cli dev serves your resume and reloads while you edit.' },
   { icon: 'PDF', title: 'PDF export', text: 'A headless Chrome (chromedp) renders the page to a print-ready PDF.' },
   {
     icon: 'Go',
     title: 'Go theme helpers',
-    text: 'Write template helpers in Go. They are interpreted at runtime by yaegi.',
+    text: 'Extend your templates with custom helper functions written in Go. No build step needed.',
   },
   { icon: '{ }', title: 'Data, not documents', text: 'JSON Resume-inspired data. Diff it, review it, keep it in git.' },
   { icon: 'bin', title: 'Single binary', text: 'One executable, installed with Homebrew. No runtime to manage.' },
@@ -49,7 +49,7 @@ const tabs = [
   { id: 'generate', label: 'Generate', code: 'resume-cli generate' },
 ]
 
-const techs = ['Go', 'urfave/cli', 'Fiber', 'Handlebars']
+const techs = ['Go', 'urfave/cli', 'Fiber', 'Handlebars', 'Mustache', 'Pug']
 
 // Copy buttons: one shared "copied" key so only one button shows the state at a time.
 const copiedKey = ref('')
@@ -235,7 +235,7 @@ const onTabKeydown = async (event: KeyboardEvent, index: number) => {
         </article>
         <article class="rc-card">
           <h3>Build your own theme</h3>
-          <p>A theme is a set of Handlebars templates plus optional Go helpers. Start from the default theme.</p>
+          <p>A theme is a set of templates in your favorite engine plus optional Go helpers. Start from the default theme.</p>
           <p class="rc-links">
             <a :href="THEME_URL" target="_blank" rel="noopener noreferrer">Start from the default theme</a>
           </p>
@@ -572,7 +572,7 @@ const onTabKeydown = async (event: KeyboardEvent, index: number) => {
 .rc-themes {
   display: grid;
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 40px;
 }
 .rc-step-n,
 .rc-icon {
