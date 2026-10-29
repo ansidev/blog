@@ -4,9 +4,13 @@ import { useData } from 'vitepress'
 import { onMounted, watchEffect } from 'vue'
 import '@ansidev-oss/vitepress-theme-ansidev/styles.css'
 import './custom.css'
+import ResumeCliLanding from './components/ResumeCliLanding.vue'
 
 export default {
   extends: AnsidevTheme,
+  enhanceApp({ app }) {
+    app.component('ResumeCliLanding', ResumeCliLanding)
+  },
   setup() {
     const { frontmatter, lang } = useData()
     // VitePress resets <html lang> to the site-level lang on mount, which wipes the
