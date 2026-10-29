@@ -44,3 +44,8 @@ Where:
 ## Reference links
 
 - [Environment Variables in Windows/macOS/Linux](https://www3.ntu.edu.sg/home/ehchua/programming/howto/Environment_Variables.html)
+
+## Related posts
+
+- [How to install OpenJDK on macOS?](./2023-07-11-how-to-install-openjdk-on-macos.md) (setting `JAVA_HOME`)
+- [How to read environment variables in astro.config.mjs?](./2022-12-12-how-to-read-environment-variables-in-astro-config.md)

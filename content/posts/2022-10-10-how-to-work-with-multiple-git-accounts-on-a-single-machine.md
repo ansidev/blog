@@ -75,3 +75,9 @@ If you find my articles and projects useful to you, consider donating to me at:
 - [Ko-fi](https://ko-fi.com/ansidev)
 - [Buy me a coffee](https://buymeacoffee.com/ansidev)
 - [Momo](https://me.momo.vn/ansidev)
+
+## Related posts
+
+- [Force SSH client to use given private key](./2021-04-23-force-ssh-client-to-use-given-private-key-identity-file.md)
+- [How to generate the public key in another format from SSH private key](./2022-11-12-how-to-generate-the-public-key-in-another-format-from-ssh-private-key.md)
+- [How to gpgsign git commit using lazygit?](./2023-06-16-how-to-gpgsign-git-commit-using-lazygit.md) (signing the commits of each account)

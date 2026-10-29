@@ -40,3 +40,8 @@ GitHub issue: [#5637](https://github.com/withastro/astro/issues/5637).
    - Run `yarn install`.
    - Run `yarn dev`
    - Refresh the Astro page.
+
+## Related posts
+
+- [How to disable telemetry in Astro project?](./2022-12-31-how-to-disable-astro-telemetry.md)
+- [How to read environment variables in astro.config.mjs?](./2022-12-12-how-to-read-environment-variables-in-astro-config.md)

@@ -115,3 +115,8 @@ fi
 ```markdown
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ```
+
+## Related posts
+
+- [How to gpgsign git commit using lazygit?](./2023-06-16-how-to-gpgsign-git-commit-using-lazygit.md)
+- [How to work with multiple git accounts on a single machine?](./2022-10-10-how-to-work-with-multiple-git-accounts-on-a-single-machine.md)
