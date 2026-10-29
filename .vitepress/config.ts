@@ -33,6 +33,13 @@ const isNoindex = (relativePath: string) => noindexPrefixes.some((prefix) => rel
 const toCleanPath = (relativePath: string) => relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
 const toPageUrl = (relativePath: string) => `${siteURL}/${toCleanPath(relativePath)}`
 
+const resumeCliIcons = [
+  '<link rel="icon" href="/imgs/resume-cli/favicon.ico" sizes="48x48">',
+  '<link rel="icon" href="/imgs/resume-cli/favicon.svg" type="image/svg+xml">',
+  '<link rel="icon" href="/imgs/resume-cli/favicon-32.png" type="image/png" sizes="32x32">',
+  '<link rel="apple-touch-icon" href="/imgs/resume-cli/apple-touch-icon.png">',
+].join('')
+
 const ogLocale = (lang: string) => (lang === 'vi' ? 'vi_VN' : lang.replace('-', '_'))
 
 const firstParagraph = (html: string, max = 160): string => {
@@ -287,7 +294,11 @@ export default defineWithDefaultThemeConfig({
   // VitePress renders <html lang> from the site-level lang; apply the per-page front matter lang to the static HTML.
   transformHtml: (code, _id, { pageData }) => {
     const lang = pageData.frontmatter.lang as string | undefined
-    return lang ? code.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`) : code
+    let html = lang ? code.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`) : code
+    // Resume CLI has its own brand: swap the blog favicon for its icons on this page only.
+    if (pageData.relativePath === 'products/resume-cli.md')
+      html = html.replace(/<link rel="icon" href="\/favicon\.ico">/, resumeCliIcons)
+    return html
   },
   buildEnd: async (siteConfig) => {
     await generateLlmsFiles(siteConfig.outDir)
