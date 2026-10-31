@@ -23,9 +23,9 @@ My personal blog.
 ## Result
 
 This is test result from Google Page Speed. I have not optimized yet.
-<img class="medium-zoom" src="/uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-mobile.webp" alt="" />
+<img class="medium-zoom" src="/uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-mobile.webp" alt=""  width="740" height="498" />
 <figcaption>Google Page Speed Result for ansidev.xyz (Mobile)</figcaption>
-<img class="medium-zoom" src="/uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-desktop.webp" alt="" />
+<img class="medium-zoom" src="/uploads/2019/06/ansidev-dot-xyz-google-page-speed-result-desktop.webp" alt=""  width="740" height="498" />
 <figcaption>Google Page Speed Result for ansidev.xyz (Desktop)</figcaption>
 
 ## Technologies

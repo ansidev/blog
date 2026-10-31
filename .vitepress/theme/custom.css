@@ -353,3 +353,32 @@ div.flex.flex-wrap.py-4.items-center.justify-center.space-x-4:has(> a[href*='ko-
   width: 168px;
   height: 52px;
 }
+
+/* ---- Reserve layout space for images (BLOG-10): explicit dimensions to avoid CLS / Lighthouse unsized-images ---- */
+.VPNavBarTitle img.VPImage.logo,
+img.VPImage.logo {
+  width: 24px !important;
+  height: 24px !important;
+  aspect-ratio: 1 / 1;
+}
+img[src*="momo_icon_rectangle_pinkbg_RGB.png"],
+img[alt="momo"] {
+  aspect-ratio: 2113 / 755;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+}
+img[src*="kofi_bg_tag_white.png"],
+img[alt="kofi"] {
+  aspect-ratio: 341 / 129;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+}
+img[src*="btn_donateCC_LG.gif"],
+img[alt="paypal"] {
+  aspect-ratio: 147 / 47;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+}

@@ -19,7 +19,7 @@ tags:
 
 After locking screen on Ubuntu, the next time you login, you see the message "Authentication error" on login screen and cannot type your password anymore to login.
 
-<img class="medium-zoom mx-auto" src="/uploads/2022/08/24/authentication-error.webp" alt="Authentication Error" />
+<img class="medium-zoom mx-auto" src="/uploads/2022/08/24/authentication-error.webp" alt="Authentication Error"  width="573" height="203" />
 
 ## Solution
 

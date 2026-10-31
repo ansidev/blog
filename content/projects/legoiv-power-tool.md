@@ -27,15 +27,15 @@ This is a simple power tool with ModernUI design.
 
 ## Screenshots
 
-<img class="medium-zoom" src="/uploads/2019/02/main-window.webp" alt="" />
+<img class="medium-zoom" src="/uploads/2019/02/main-window.webp" alt=""  width="671" height="432" />
 <figcaption>Main window</figcaption>
-<img class="medium-zoom" src="/uploads/2019/02/about-dialog.webp" alt="" />
+<img class="medium-zoom" src="/uploads/2019/02/about-dialog.webp" alt=""  width="380" height="337" />
 <figcaption>About dialog</figcaption>
-<img class="medium-zoom" src="/uploads/2019/02/check-for-update.webp" alt="" />
+<img class="medium-zoom" src="/uploads/2019/02/check-for-update.webp" alt=""  width="671" height="432" />
 <figcaption>Check for updates</figcaption>
-<img class="medium-zoom" src="/uploads/2019/02/system-tray-menu.webp" alt="" />
+<img class="medium-zoom" src="/uploads/2019/02/system-tray-menu.webp" alt=""  width="452" height="269" />
 <figcaption>System tray menu</figcaption>
-<img class="medium-zoom" src="/uploads/2019/02/jump-list-menu.webp" alt="" />
+<img class="medium-zoom" src="/uploads/2019/02/jump-list-menu.webp" alt=""  width="263" height="316" />
 <figcaption>Jump List Menu</figcaption>
 
 Source code: <https://github.com/ansidev/legoivpowertool>
