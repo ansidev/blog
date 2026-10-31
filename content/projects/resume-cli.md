@@ -40,6 +40,8 @@ This project is inspired by [JSON Resume](https://jsonresume.org/).
 
 ## Themes
 
+- [resume-theme-simple](https://github.com/ansidev/resume-theme-simple): a simple theme built with Bootstrap.
+  - Demo: https://resume-theme-simple-demo.pages.dev/
 - [resume-theme-default](https://github.com/ansidev/resume-theme-default): the default theme.
   - Demo: https://resume-theme-default-demo.pages.dev/
 

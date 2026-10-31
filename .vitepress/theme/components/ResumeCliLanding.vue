@@ -4,6 +4,8 @@ import { nextTick, onBeforeUnmount, ref } from 'vue'
 const GITHUB_URL = 'https://github.com/ansidev/resume-cli-ce'
 const DEMO_URL = 'https://resume-theme-default-demo.pages.dev/'
 const THEME_URL = 'https://github.com/ansidev/resume-theme-default'
+const SIMPLE_THEME_URL = 'https://github.com/ansidev/resume-theme-simple'
+const SIMPLE_DEMO_URL = 'https://resume-theme-simple-demo.pages.dev/'
 const BREW_INSTALL = 'brew install resume-cli'
 
 const steps = [
@@ -228,6 +230,14 @@ const onTabKeydown = async (event: KeyboardEvent, index: number) => {
     <section class="rc-section" aria-labelledby="rc-themes">
       <h2 id="rc-themes">Themes</h2>
       <div class="rc-themes">
+        <article class="rc-card">
+          <h3>resume-theme-simple</h3>
+          <p>A simple theme built with Bootstrap.</p>
+          <p class="rc-links">
+            <a :href="SIMPLE_THEME_URL" target="_blank" rel="noopener noreferrer">Repository</a>
+            <a :href="SIMPLE_DEMO_URL" target="_blank" rel="noopener noreferrer">Demo</a>
+          </p>
+        </article>
         <article class="rc-card">
           <h3>resume-theme-default</h3>
           <p>The default theme: clean, printable and ready to use.</p>
