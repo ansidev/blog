@@ -72,12 +72,19 @@ body {
   background-color: rgba(40, 42, 54, 0.8);
 }
 
-/* Cards (post list, project cards, term chips) */
+.VPLocaleSwitcher {
+  /* The theme transitions color here (non-composited; flagged by Lighthouse) */
+  transition: none !important;
+}
+
+/* Cards (post list, project cards, term chips)
+   No transitions on border-color/box-shadow/background-color: they are all
+   non-composited (main-thread paint) and Lighthouse flags every element that
+   declares one — 50+ post cards and 100+ chips on the home page alone. */
 .component-border {
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 0;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 .component-border:hover,
 .component-border:focus-within {
@@ -93,10 +100,8 @@ body {
   font-weight: 600;
   letter-spacing: -0.02em;
 }
-/* Card hover only glows; the link itself gets its own hover/pressed feedback */
-.component-border a.text-2xl {
-  transition: color 0.15s ease, text-shadow 0.15s ease;
-}
+/* Card hover only glows; the link itself gets its own hover/pressed feedback.
+   No transitions on color/text-shadow — non-composited (paint), flagged by Lighthouse. */
 .component-border a.text-2xl:hover {
   color: var(--accent);
   text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 45%, transparent);
@@ -127,7 +132,6 @@ a.link-alt.uppercase,
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.04em;
-  transition: border-color 0.2s ease;
 }
 a.link-alt.uppercase:hover {
   border-color: var(--accent);
@@ -221,13 +225,6 @@ button:focus-visible {
   line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .component-border,
-  a.link-alt.uppercase {
-    transition: none;
-  }
-}
-
 /* Square corners everywhere (theme uses Tailwind rounded-* utilities) */
 [class*='rounded'],
 .VPNavBarSearchButton,
@@ -252,7 +249,6 @@ button.copy,
 p.flex.flex-wrap > a.border.m-1 {
   padding: 0.25rem 0.875rem;
   margin: 0.25rem;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 p.flex.flex-wrap > a.border.m-1:hover {
   border-color: var(--accent);

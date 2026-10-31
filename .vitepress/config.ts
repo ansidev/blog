@@ -8,6 +8,9 @@ import { type RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
 globalThis.__VUE_PROD_DEVTOOLS__ = process.env.NODE_ENV === 'development'
 const siteURL = process.env.VITE_BASE_URL || 'http://localhost:5173'
 const siteTitle: string = "ansidev's blog"
+// Loading gtag during hydration creates ~230 ms of long tasks on mobile and hurts
+// TBT. Defer it to the first pointer/key interaction instead (inline script in transformHead).
+const gaId = process.env.VITE_GA_ID
 const rssOptions: RSSOptions = {
   title: siteTitle,
   baseUrl: siteURL,
@@ -146,6 +149,11 @@ export default defineWithDefaultThemeConfig({
   ],
   themeConfig: {
     siteURL,
+    // The theme's own GoogleAnalytics component loads gtag during hydration
+    // (~230 ms of long main-thread tasks on mobile). mergeConfig only lets scalars
+    // override objects, so `false` disables the theme's loader entirely; gtag is
+    // instead injected after the first interaction via transformHead below.
+    googleAnalytics: false,
     logo: '/pwa-192x192.png',
     nav: [
       { link: '/categories', text: 'Categories' },
@@ -304,6 +312,16 @@ export default defineWithDefaultThemeConfig({
       jsonLd = { '@context': 'https://schema.org', ...author, '@id': `${siteURL}/about` }
     }
     if (jsonLd) head.push(['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)])
+
+    // The theme loads gtag during hydration (~230 ms of long main-thread tasks on
+    // mobile). Load it after the first pointer/key interaction instead.
+    if (gaId) {
+      head.push([
+        'script',
+        {},
+        `(function(){var g=0;function l(){if(g)return;g=1;var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=${gaId}';s.async=true;document.head.appendChild(s);var i=document.createElement('script');i.textContent="window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${gaId}');";document.head.appendChild(i)}['pointerdown','keydown','touchstart'].forEach(function(e){addEventListener(e,l,{once:true,passive:true})})})();`,
+      ])
+    }
 
     return head
   },
