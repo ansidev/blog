@@ -1,4 +1,5 @@
-import { writeFileSync } from 'node:fs'
+import { PurgeCSS } from 'purgecss'
+import { writeFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { defineWithDefaultThemeConfig } from '@ansidev-oss/vitepress-theme-ansidev/config'
 import { createContentLoader, type HeadConfig } from 'vitepress'
@@ -7,6 +8,9 @@ import { type RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
 globalThis.__VUE_PROD_DEVTOOLS__ = process.env.NODE_ENV === 'development'
 const siteURL = process.env.VITE_BASE_URL || 'http://localhost:5173'
 const siteTitle: string = "ansidev's blog"
+// Loading gtag during hydration creates ~230 ms of long tasks on mobile and hurts
+// TBT. Defer it to the first pointer/key interaction instead (inline script in transformHead).
+const gaId = process.env.VITE_GA_ID
 const rssOptions: RSSOptions = {
   title: siteTitle,
   baseUrl: siteURL,
@@ -124,9 +128,32 @@ export default defineWithDefaultThemeConfig({
   appearance: 'dark',
   title: siteTitle,
   description: 'Personal blog of ansidev',
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap',
+        media: 'print',
+        onload: "this.media='all'",
+      },
+    ],
+    [
+      'noscript',
+      {},
+      "<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap'>",
+    ],
+  ],
   themeConfig: {
     siteURL,
+    // The theme's own GoogleAnalytics component loads gtag during hydration
+    // (~230 ms of long main-thread tasks on mobile). mergeConfig only lets scalars
+    // override objects, so `false` disables the theme's loader entirely; gtag is
+    // instead injected after the first interaction via transformHead below.
+    googleAnalytics: false,
     logo: '/pwa-192x192.png',
     nav: [
       { link: '/categories', text: 'Categories' },
@@ -201,9 +228,6 @@ export default defineWithDefaultThemeConfig({
       title: 'Share this post',
       networks: ['email', 'facebook', 'twitter', 'linkedin', 'telegram', 'whatsapp'],
       displayMode: 'icon',
-    },
-    mediumZoom: {
-      selector: '.medium-zoom',
     },
     footer: {
       copyright: 'Copyright © 2019-#{present} Le Minh Tri (a.k.a ansidev)',
@@ -289,6 +313,16 @@ export default defineWithDefaultThemeConfig({
     }
     if (jsonLd) head.push(['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)])
 
+    // The theme loads gtag during hydration (~230 ms of long main-thread tasks on
+    // mobile). Load it after the first pointer/key interaction instead.
+    if (gaId) {
+      head.push([
+        'script',
+        {},
+        `(function(){var g=0;function l(){if(g)return;g=1;var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=${gaId}';s.async=true;document.head.appendChild(s);var i=document.createElement('script');i.textContent="window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${gaId}');";document.head.appendChild(i)}['pointerdown','keydown','touchstart'].forEach(function(e){addEventListener(e,l,{once:true,passive:true})})})();`,
+      ])
+    }
+
     return head
   },
   // VitePress renders <html lang> from the site-level lang; apply the per-page front matter lang to the static HTML.
@@ -302,8 +336,30 @@ export default defineWithDefaultThemeConfig({
   },
   buildEnd: async (siteConfig) => {
     await generateLlmsFiles(siteConfig.outDir)
+    const assetsDir = join(siteConfig.outDir, 'assets')
+    if (existsSync(assetsDir)) {
+      const files = readdirSync(assetsDir).filter((f) => f.endsWith('.css'))
+      for (const file of files) {
+        const cssPath = join(assetsDir, file)
+        const result = await new PurgeCSS().purge({
+          content: [join(siteConfig.outDir, '**/*.html'), join(siteConfig.outDir, 'assets/**/*.js')],
+          css: [cssPath],
+          safelist: { standard: [/^vp-/, /^VP/, /medium-zoom/, /donation/, /sharing/, /^carbon/], greedy: [/data-v-/, /dark/] },
+        })
+        if (result[0]?.css) writeFileSync(cssPath, result[0].css)
+      }
+    }
   },
   vite: {
+    build: {
+      target: 'es2022',
+      cssTarget: 'es2022',
+      cssCodeSplit: true,
+      minify: 'esbuild',
+      rollupOptions: {
+        treeshake: { preset: 'recommended' },
+      },
+    },
     plugins: [RssPlugin(rssOptions)],
   },
 })

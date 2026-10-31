@@ -44,6 +44,6 @@ Sau khi search trên Google thì mình tổng hợp được một số tool h�
 
 Dưới đây là hình demo:
 
-<img class="medium-zoom" src="/uploads/2021/02/06/alacritty-themes.webp" alt="alacritty-themes" />
+<img class="medium-zoom" src="/uploads/2021/02/06/alacritty-themes.webp" alt="alacritty-themes"  width="170" height="178" />
 
 Hết bài rồi!

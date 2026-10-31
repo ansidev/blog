@@ -36,7 +36,7 @@ sudo spctl --master-disable
 - Nhập mật khẩu và nhấn `Enter`.
 - Mở ứng dụng **System Preferences** và truy cập **Security & Privacy**, kiểm tra xem có hiện mục **Anywhere** không, nếu hiện là OK.
 
-<img class="medium-zoom" :src="withBase('/uploads/2021/01/28/System_Preferences.webp')" alt="System Preferences" />
+<img class="medium-zoom" :src="withBase('/uploads/2021/01/28/System_Preferences.webp')" alt="System Preferences"  width="780" height="699" />
 
 - Tắt và chạy lại ứng dụng.
 
