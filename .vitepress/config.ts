@@ -1,4 +1,5 @@
-import { writeFileSync } from 'node:fs'
+import { PurgeCSS } from 'purgecss'
+import { writeFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { defineWithDefaultThemeConfig } from '@ansidev-oss/vitepress-theme-ansidev/config'
 import { createContentLoader, type HeadConfig } from 'vitepress'
@@ -302,8 +303,30 @@ export default defineWithDefaultThemeConfig({
   },
   buildEnd: async (siteConfig) => {
     await generateLlmsFiles(siteConfig.outDir)
+    const assetsDir = join(siteConfig.outDir, 'assets')
+    if (existsSync(assetsDir)) {
+      const files = readdirSync(assetsDir).filter((f) => f.endsWith('.css'))
+      for (const file of files) {
+        const cssPath = join(assetsDir, file)
+        const result = await new PurgeCSS().purge({
+          content: [join(siteConfig.outDir, '**/*.html'), join(siteConfig.outDir, 'assets/**/*.js')],
+          css: [cssPath],
+          safelist: { standard: [/^vp-/, /^VP/, /medium-zoom/, /donation/, /sharing/, /^carbon/], greedy: [/data-v-/, /dark/] },
+        })
+        if (result[0]?.css) writeFileSync(cssPath, result[0].css)
+      }
+    }
   },
   vite: {
+    build: {
+      target: 'es2022',
+      cssTarget: 'es2022',
+      cssCodeSplit: true,
+      minify: 'esbuild',
+      rollupOptions: {
+        treeshake: { preset: 'recommended' },
+      },
+    },
     plugins: [RssPlugin(rssOptions)],
   },
 })
