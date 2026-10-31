@@ -1,5 +1,5 @@
 import { PurgeCSS } from 'purgecss'
-import { writeFileSync, existsSync, readdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { defineWithDefaultThemeConfig } from '@ansidev-oss/vitepress-theme-ansidev/config'
 import { createContentLoader, type HeadConfig } from 'vitepress'
@@ -341,6 +341,17 @@ export default defineWithDefaultThemeConfig({
       const files = readdirSync(assetsDir).filter((f) => f.endsWith('.css'))
       for (const file of files) {
         const cssPath = join(assetsDir, file)
+        // The theme CSS inlines ~860 KB of base64 Inter variable-font subsets plus a
+        // Google Fonts @import. The site already loads Inter via a deferred Google
+        // Fonts stylesheet, so the inline copy is render-blocking dead weight that
+        // dominates mobile LCP on Slow 4G.
+        let css = readFileSync(cssPath, 'utf8')
+        const stripped = css.replace(/@import"https:\/\/fonts\.googleapis\.com[^"]*";/g, '').replace(/@font-face\{font-family:Inter;[^}]*?src:url\(data:font\/woff2;base64,[^}]*?\}/g, '')
+        if (stripped !== css) {
+          css = stripped
+          writeFileSync(cssPath, css)
+          console.log(`Stripped inline Inter fonts from ${file}`)
+        }
         const result = await new PurgeCSS().purge({
           content: [join(siteConfig.outDir, '**/*.html'), join(siteConfig.outDir, 'assets/**/*.js')],
           css: [cssPath],
