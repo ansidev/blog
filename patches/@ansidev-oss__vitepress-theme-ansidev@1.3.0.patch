@@ -1,0 +1,44 @@
+diff --git a/dist/client/index.js b/dist/client/index.js
+index 936500e4b5f3a405f78855cb94042b6cbe750b53..7e47d14b4cced30c0382567fd318f9ee570f80e0 100644
+--- a/dist/client/index.js
++++ b/dist/client/index.js
+@@ -3397,14 +3397,15 @@ var Ba = (e, t) => {
+ 		}
+ 	},
+ 	setup(e) {
+-		let t = e, n = c(() => $a(t.text)), r = c(() => `${t.basePath}${n.value}`);
++		let t = e, n = c(() => $a(t.text)), r = c(() => `${t.basePath}${n.value}`), i = c(() => t.basePath === "/categories/" ? `View all posts in category ${t.text}` : `View all projects using ${t.text}`);
+ 		return (t, n) => (T(), l(qa, {
+ 			to: r.value,
++			"aria-label": i.value,
+ 			class: "mr-2 text-sm font-medium uppercase link-alt"
+ 		}, {
+ 			default: O(() => [p(E(e.text), 1)]),
+ 			_: 1
+-		}, 8, ["to"]));
++		}, 8, ["to", "aria-label"]));
+ 	}
+ }), _o = { class: "flex p-4 component-border" }, vo = {
+ 	class: "text-center",
+diff --git a/src/client/components/TermLink.vue b/src/client/components/TermLink.vue
+index 47136ad963efbf4182860c6174205b948911264a..fcdd48ebcb93e36290ff50e84b1ee330b927821d 100644
+--- a/src/client/components/TermLink.vue
++++ b/src/client/components/TermLink.vue
+@@ -16,10 +16,16 @@ const props = defineProps({
+ 
+ const slug = computed(() => useSlug(props.text))
+ const link = computed(() => `${props.basePath}${slug.value}`)
++const label = computed(() => {
++  if (props.basePath === '/categories/') {
++    return `View all posts in category ${props.text}`
++  }
++  return `View all projects using ${props.text}`
++})
+ </script>
+ 
+ <template>
+-  <RouterLink :to="link" class="mr-2 text-sm font-medium uppercase link-alt">
++  <RouterLink :to="link" :aria-label="label" class="mr-2 text-sm font-medium uppercase link-alt">
+     {{ text }}
+   </RouterLink>
+ </template>
