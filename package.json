@@ -19,7 +19,7 @@
     "preview": "NODE_ENV=production vitepress preview"
   },
   "devDependencies": {
-    "@ansidev-oss/vitepress-theme-ansidev": "^1.0.12",
+    "@ansidev-oss/vitepress-theme-ansidev": "^1.3.0",
     "@biomejs/biome": "^2.4.4",
     "@fullhuman/postcss-purgecss": "^8.0.0",
     "purgecss": "^8.0.0",
