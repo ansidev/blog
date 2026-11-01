@@ -1,7 +1,7 @@
-import { PurgeCSS } from 'purgecss'
-import { writeFileSync, existsSync, readdirSync } from 'node:fs'
+import { existsSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { defineWithDefaultThemeConfig } from '@ansidev-oss/vitepress-theme-ansidev/config'
+import { PurgeCSS } from 'purgecss'
 import { createContentLoader, type HeadConfig } from 'vitepress'
 import { type RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
 
@@ -71,6 +71,11 @@ const author = {
 
 // relativePath -> ISO date, filled while pages render and read by the sitemap.
 const pageDates = new Map<string, string>()
+
+// VitePress always emits a render-blocking <link> for vp-icons.css. This site
+// uses inline SVGs for every social icon, so the file is empty (0 bytes) and
+// the link only delays first paint — strip it when no vpi-social class is used.
+const vpIconsUsed = new Set<string>()
 
 const toDay = (value: unknown) => new Date(value as string | Date).toISOString().slice(0, 10)
 
@@ -329,6 +334,8 @@ export default defineWithDefaultThemeConfig({
   transformHtml: (code, _id, { pageData }) => {
     const lang = pageData.frontmatter.lang as string | undefined
     let html = lang ? code.replace(/<html lang="[^"]*"/, `<html lang="${lang}"`) : code
+    if (html.includes('vpi-social-')) vpIconsUsed.add(pageData.relativePath)
+    else html = html.replace(/<link rel="preload stylesheet" href="\/vp-icons\.css" as="style">\n?/, '')
     // Resume CLI has its own brand: swap the blog favicon for its icons on this page only.
     if (pageData.relativePath === 'products/resume-cli.md')
       html = html.replace(/<link rel="icon" href="\/favicon\.ico">/, resumeCliIcons)
@@ -336,6 +343,7 @@ export default defineWithDefaultThemeConfig({
   },
   buildEnd: async (siteConfig) => {
     await generateLlmsFiles(siteConfig.outDir)
+    if (vpIconsUsed.size === 0) rmSync(join(siteConfig.outDir, 'vp-icons.css'))
     const assetsDir = join(siteConfig.outDir, 'assets')
     if (existsSync(assetsDir)) {
       const files = readdirSync(assetsDir).filter((f) => f.endsWith('.css'))
@@ -344,7 +352,10 @@ export default defineWithDefaultThemeConfig({
         const result = await new PurgeCSS().purge({
           content: [join(siteConfig.outDir, '**/*.html'), join(siteConfig.outDir, 'assets/**/*.js')],
           css: [cssPath],
-          safelist: { standard: [/^vp-/, /^VP/, /medium-zoom/, /donation/, /sharing/, /^carbon/], greedy: [/data-v-/, /dark/] },
+          safelist: {
+            standard: [/^vp-/, /^VP/, /medium-zoom/, /donation/, /sharing/, /^carbon/],
+            greedy: [/data-v-/, /dark/],
+          },
         })
         if (result[0]?.css) writeFileSync(cssPath, result[0].css)
       }
