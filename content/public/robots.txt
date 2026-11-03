@@ -3,7 +3,7 @@
 
 User-agent: *
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+Content-Signal: search=yes ai-input=yes ai-train=no
 
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
