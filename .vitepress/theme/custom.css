@@ -250,6 +250,11 @@ p.flex.flex-wrap > a.border.m-1 {
   padding: 0.25rem 0.875rem;
   margin: 0.25rem;
 }
+div.flex.flex-wrap.pt-4 > a.component-border[href^='/categories/'],
+div.flex.flex-wrap.pt-4 > a.component-border[href^='/tags/'],
+div.flex.flex-wrap.pt-4 > a.component-border[href^='/archives/'] {
+  padding: 0.25rem 0.875rem;
+}
 p.flex.flex-wrap > a.border.m-1:hover {
   border-color: var(--accent);
   background-color: color-mix(in srgb, var(--accent) 14%, transparent);
@@ -288,7 +293,10 @@ p.flex.flex-wrap > a.border.m-1:hover {
   p.flex.flex-wrap:has(> a.border.m-1)::-webkit-scrollbar {
     display: none;
   }
-  p.flex.flex-wrap > a.border.m-1 {
+  p.flex.flex-wrap > a.border.m-1,
+  div.flex.flex-wrap.pt-4 > a.component-border[href^='/categories/'],
+  div.flex.flex-wrap.pt-4 > a.component-border[href^='/tags/'],
+  div.flex.flex-wrap.pt-4 > a.component-border[href^='/archives/'] {
     flex: 0 0 auto;
     white-space: nowrap;
     min-height: 2.25rem;
