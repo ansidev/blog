@@ -352,6 +352,11 @@ export default defineWithDefaultThemeConfig({
         const result = await new PurgeCSS().purge({
           content: [join(siteConfig.outDir, '**/*.html'), join(siteConfig.outDir, 'assets/**/*.js')],
           css: [cssPath],
+          // href values are generated URLs (e.g. `/categories/foo`), so PurgeCSS can
+          // never resolve their literal form from content tokens; declaring href as a
+          // dynamic attribute keeps href-conditioned selectors instead of dropping
+          // them (BLOG-1).
+          dynamicAttributes: ['href'],
           safelist: {
             standard: [/^vp-/, /^VP/, /medium-zoom/, /donation/, /sharing/, /^carbon/],
             greedy: [/data-v-/, /dark/],
