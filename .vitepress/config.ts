@@ -1,4 +1,5 @@
-import { existsSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
+import { existsSync, readdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { defineWithDefaultThemeConfig } from '@ansidev-oss/vitepress-theme-ansidev/config'
 import { PurgeCSS } from 'purgecss'
@@ -346,9 +347,21 @@ export default defineWithDefaultThemeConfig({
     if (vpIconsUsed.size === 0) rmSync(join(siteConfig.outDir, 'vp-icons.css'))
     const assetsDir = join(siteConfig.outDir, 'assets')
     if (existsSync(assetsDir)) {
+      // HTML (and JS) files are the only places that reference the emitted CSS URLs.
+      const collectReferrers = (dir: string): string[] => {
+        const found: string[] = []
+        for (const entry of readdirSync(dir, { withFileTypes: true })) {
+          const path = join(dir, entry.name)
+          if (entry.isDirectory()) found.push(...collectReferrers(path))
+          else if (entry.name.endsWith('.html') || entry.name.endsWith('.js')) found.push(path)
+        }
+        return found
+      }
+      const referrers = collectReferrers(siteConfig.outDir)
       const files = readdirSync(assetsDir).filter((f) => f.endsWith('.css'))
       for (const file of files) {
         const cssPath = join(assetsDir, file)
+        const originalCss = readFileSync(cssPath, 'utf8')
         const result = await new PurgeCSS().purge({
           content: [join(siteConfig.outDir, '**/*.html'), join(siteConfig.outDir, 'assets/**/*.js')],
           css: [cssPath],
@@ -362,7 +375,25 @@ export default defineWithDefaultThemeConfig({
             greedy: [/data-v-/, /dark/],
           },
         })
-        if (result[0]?.css) writeFileSync(cssPath, result[0].css)
+        const css = result[0]?.css
+        if (!css) continue
+        writeFileSync(cssPath, css)
+        if (css === originalCss) continue
+        // The asset URL Vite picked reflects pre-purge content, so the purged output
+        // can change while the filename stays identical. CDNs in front of the site
+        // (e.g. Cloudflare in front of Netlify) honor the immutable cache-control on
+        // /assets and would keep serving stale CSS under that URL. Rename the file to
+        // a hash of its final content and rewrite the references so every content
+        // change gets a fresh, never-cached URL (BLOG-1).
+        const hash = createHash('sha256').update(css).digest('hex').slice(0, 8)
+        const dot = file.lastIndexOf('.')
+        const renamed = `${file.slice(0, dot)}.${hash}${file.slice(dot)}`
+        if (renamed === file) continue
+        renameSync(cssPath, join(assetsDir, renamed))
+        for (const referrer of referrers) {
+          const text = readFileSync(referrer, 'utf8')
+          if (text.includes(file)) writeFileSync(referrer, text.replaceAll(file, renamed))
+        }
       }
     }
   },
