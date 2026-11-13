@@ -2,12 +2,12 @@
 layout: doc
 outline: deep
 type: post
-title: What We Learned Fixing Stale Production CSS
+title: What I Learned Fixing Stale Production CSS
 date: 2026-11-13T12:00:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
-permalink: /tips-and-tricks/what-we-learned-fixing-stale-production-css/
+permalink: /tips-and-tricks/what-i-learned-fixing-stale-production-css/
 categories:
   - CI/CD
   - DevOps
