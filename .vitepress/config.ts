@@ -20,7 +20,8 @@ const rssOptions: RSSOptions = {
 
 console.log('Site URL', siteURL)
 
-const siteDescription = 'Personal blog of ansidev'
+const siteDescription =
+  'Personal blog of Le Minh Tri (ansidev): notes on code, tools and shipping software — practical tips and tricks, DevOps notes, and the side projects built along the way.'
 const authorName = 'Le Minh Tri'
 const authorAlias = 'ansidev'
 const authorSameAs = [
@@ -133,7 +134,7 @@ export default defineWithDefaultThemeConfig({
   lastUpdated: false,
   appearance: 'dark',
   title: siteTitle,
-  description: 'Personal blog of ansidev',
+  description: siteDescription,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -160,7 +161,8 @@ export default defineWithDefaultThemeConfig({
     // override objects, so `false` disables the theme's loader entirely; gtag is
     // instead injected after the first interaction via transformHead below.
     googleAnalytics: false,
-    logo: '/pwa-192x192.png',
+    // ThemeableImage object form so VPImage emits a real alt instead of alt="".
+    logo: { src: '/pwa-192x192.png', alt: siteTitle },
     nav: [
       { link: '/categories', text: 'Categories' },
       { link: '/tags', text: 'Tags' },
