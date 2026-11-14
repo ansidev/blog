@@ -1,6 +1,9 @@
 ---
 home: true
 layout: home
+title: "ansidev's blog – Notes on code, tools and shipping software"
+# No site-title suffix on the homepage: the title already starts with the site name.
+titleTemplate: false
 ---
 
 <script setup>

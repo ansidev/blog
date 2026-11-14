@@ -4,6 +4,7 @@ import { useData } from 'vitepress'
 import { onMounted, watchEffect } from 'vue'
 import '@ansidev-oss/vitepress-theme-ansidev/styles.css'
 import './custom.css'
+import HomePage from './components/HomePage.vue'
 import ProductLayout from './components/ProductLayout.vue'
 import ResumeCliLanding from './components/ResumeCliLanding.vue'
 
@@ -12,6 +13,9 @@ export default {
   Layout: ProductLayout,
   enhanceApp({ app }) {
     app.component('ResumeCliLanding', ResumeCliLanding)
+    // Override the theme's HomePage: its posts heading renders as a second <h1>
+    // on the homepage; the local copy fixes the heading semantics (BLOG-4).
+    app.component('HomePage', HomePage)
   },
   setup() {
     const { frontmatter, lang } = useData()
