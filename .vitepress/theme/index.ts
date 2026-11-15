@@ -7,12 +7,14 @@ import './custom.css'
 import HomePage from './components/HomePage.vue'
 import ProductLayout from './components/ProductLayout.vue'
 import ResumeCliLanding from './components/ResumeCliLanding.vue'
+import SkillManagerCliLanding from './components/SkillManagerCliLanding.vue'
 
 export default {
   extends: AnsidevTheme,
   Layout: ProductLayout,
   enhanceApp({ app }) {
     app.component('ResumeCliLanding', ResumeCliLanding)
+    app.component('SkillManagerCliLanding', SkillManagerCliLanding)
     // Override the theme's HomePage: its posts heading renders as a second <h1>
     // on the homepage; the local copy fixes the heading semantics (BLOG-4).
     app.component('HomePage', HomePage)

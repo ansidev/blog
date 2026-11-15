@@ -46,6 +46,13 @@ const resumeCliIcons = [
   '<link rel="apple-touch-icon" href="/imgs/resume-cli/apple-touch-icon.png">',
 ].join('')
 
+const skillManagerCliIcons = [
+  '<link rel="icon" href="/imgs/skill-manager-cli/favicon.ico" sizes="48x48">',
+  '<link rel="icon" href="/imgs/skill-manager-cli/favicon.svg" type="image/svg+xml">',
+  '<link rel="icon" href="/imgs/skill-manager-cli/favicon-32.png" type="image/png" sizes="32x32">',
+  '<link rel="apple-touch-icon" href="/imgs/skill-manager-cli/apple-touch-icon.png">',
+].join('')
+
 const ogLocale = (lang: string) => (lang === 'vi' ? 'vi_VN' : lang.replace('-', '_'))
 
 const firstParagraph = (html: string, max = 160): string => {
@@ -168,7 +175,13 @@ export default defineWithDefaultThemeConfig({
       { link: '/tags', text: 'Tags' },
       { link: '/archives', text: 'Archives' },
       { link: '/projects', text: 'Projects' },
-      { text: 'Products', items: [{ link: '/products/resume-cli', text: 'Resume CLI' }] },
+      {
+        text: 'Products',
+        items: [
+          { link: '/products/resume-cli', text: 'Resume CLI' },
+          { link: '/products/skill-manager-cli', text: 'Skill Manager CLI' },
+        ],
+      },
       { link: '/about', text: 'About' },
       { link: '/feed.rss', text: 'RSS' },
     ],
@@ -342,6 +355,9 @@ export default defineWithDefaultThemeConfig({
     // Resume CLI has its own brand: swap the blog favicon for its icons on this page only.
     if (pageData.relativePath === 'products/resume-cli.md')
       html = html.replace(/<link rel="icon" href="\/favicon\.ico">/, resumeCliIcons)
+    // Same for skill-manager-cli.
+    if (pageData.relativePath === 'products/skill-manager-cli.md')
+      html = html.replace(/<link rel="icon" href="\/favicon\.ico">/, skillManagerCliIcons)
     return html
   },
   buildEnd: async (siteConfig) => {
