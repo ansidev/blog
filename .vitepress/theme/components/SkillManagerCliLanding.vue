@@ -4,7 +4,7 @@ import { nextTick, onBeforeUnmount, ref } from 'vue'
 const GITHUB_URL = 'https://github.com/ansidev/skill-manager-cli'
 const RELEASES_URL = 'https://github.com/ansidev/skill-manager-cli/releases'
 const LICENSE_URL = 'https://github.com/ansidev/skill-manager-cli/blob/main/LICENSE'
-const BREW_INSTALL = 'brew install skill-manager-cli'
+const BREW_SETUP = 'brew tap ansidev/skill-manager-cli https://github.com/ansidev/skill-manager-cli\nbrew trust --formula ansidev/skill-manager-cli/skill-manager-cli\nbrew install skill-manager-cli'
 
 const steps = [
   {
@@ -122,8 +122,8 @@ const onTabKeydown = async (event: KeyboardEvent, index: number) => {
           <a class="smc-btn" :href="RELEASES_URL" target="_blank" rel="noopener noreferrer">Download release</a>
         </div>
         <div class="smc-snippet">
-          <code>$ {{ BREW_INSTALL }}</code>
-          <button type="button" class="smc-copy" :aria-label="`Copy ${BREW_INSTALL}`" @click="copy('hero', BREW_INSTALL)">
+          <code>{{ BREW_SETUP }}</code>
+          <button type="button" class="smc-copy" aria-label="Copy install commands" @click="copy('hero', BREW_SETUP)">
             {{ copiedKey === 'hero' ? 'Copied' : 'Copy' }}
           </button>
         </div>
@@ -358,20 +358,20 @@ skills:
 }
 .smc-snippet {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  max-width: 30rem;
+  max-width: 34rem;
   margin-top: 20px;
-  padding: 8px 8px 8px 16px;
+  padding: 12px 12px 12px 16px;
   background: var(--smc-term-bg);
   color: var(--smc-term-fg);
   font-family: var(--vp-font-family-mono);
   font-size: 0.9rem;
 }
 .smc-snippet code {
-  overflow-x: auto;
-  white-space: nowrap;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
   background: none;
   color: inherit;
 }
