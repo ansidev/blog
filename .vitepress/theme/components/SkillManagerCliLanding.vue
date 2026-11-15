@@ -4,7 +4,7 @@ import { nextTick, onBeforeUnmount, ref } from 'vue'
 const GITHUB_URL = 'https://github.com/ansidev/skill-manager-cli'
 const RELEASES_URL = 'https://github.com/ansidev/skill-manager-cli/releases'
 const LICENSE_URL = 'https://github.com/ansidev/skill-manager-cli/blob/main/LICENSE'
-const BREW_INSTALL = 'brew install ansidev/tap/skill-manager-cli'
+const BREW_INSTALL = 'brew install skill-manager-cli'
 
 const steps = [
   {
@@ -58,7 +58,7 @@ const tabs = [
   {
     id: 'install',
     label: 'Install',
-    code: 'brew install ansidev/tap/skill-manager-cli',
+    code: 'brew tap ansidev/skill-manager-cli https://github.com/ansidev/skill-manager-cli\nbrew trust --formula ansidev/skill-manager-cli/skill-manager-cli\nbrew install skill-manager-cli',
   },
   { id: 'init', label: 'Init', code: 'skill-manager-cli init' },
   { id: 'preview', label: 'Preview', code: 'skill-manager-cli apply --dry-run' },

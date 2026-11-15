@@ -47,7 +47,9 @@ I use several coding assistants, and each one has its own skill directory. Insta
 ## Installation
 
 ```bash
-brew install ansidev/tap/skill-manager-cli
+brew tap ansidev/skill-manager-cli https://github.com/ansidev/skill-manager-cli
+brew trust --formula ansidev/skill-manager-cli/skill-manager-cli
+brew install skill-manager-cli
 ```
 
 ## Usage
