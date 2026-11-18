@@ -21,6 +21,8 @@ tags:
 
 How to reach a herdr session on your home Mac from a locked-down corporate Windows machine — no administrator rights required on the Windows side, and no monthly bills.
 
+<!-- more -->
+
 ## 0. Prerequisites
 
 Before starting, make sure you have:
