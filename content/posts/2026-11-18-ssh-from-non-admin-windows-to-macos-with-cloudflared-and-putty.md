@@ -72,7 +72,7 @@ Windows 10/11 ships OpenSSH client (`ssh.exe`), which you could pair with a `Pro
 - **Saved sessions** — connection settings live in per-user registry, which standard (non-admin) users can write; you don't need to maintain a `.ssh/config` and argue about `ProxyCommand` quoting.
 - **PuTTYgen** — a GUI for key generation that's friendlier than `ssh-keygen` if you don't live in a terminal.
 
-If you're comfortable with `ssh.exe` and config files, the same tunnel works fine with it — the macOS side below is identical.
+If you're comfortable with `ssh.exe` and config files, the same tunnel works fine with it — see the `ProxyCommand` variant in step 3.4 below; the macOS side is identical.
 
 ## 2. Remote macOS setup
 
@@ -197,6 +197,42 @@ Open `putty.exe` and create a session:
 - **Connection type**: SSH
 
 Under **Connection → Data**, set **Auto-login username** to your macOS username (`you`). Go back to **Session**, name it (e.g. `mac-herdr`), and click **Save** — PuTTY stores saved sessions in per-user registry, which standard users can write to. Next time, just double-click the saved session.
+
+### 3.4 Alternative: built-in OpenSSH with `ProxyCommand`
+
+If you'd rather skip PuTTY entirely, Windows' bundled OpenSSH client can drive cloudflared directly through a `ProxyCommand` — same portable `cloudflared.exe`, no admin rights, no manual proxy window to keep open.
+
+Create `%USERPROFILE%\.ssh\config` (create the `.ssh` folder first if it doesn't exist) with:
+
+```ssh-config
+Host mac-herdr
+    HostName ssh.example.com
+    User you
+    Port 22
+    ProxyCommand %USERPROFILE%\Tools\cloudflared.exe access ssh --hostname %h --stdio
+```
+
+Two things to know about this config:
+
+- `%h` in the `ProxyCommand` expands to the `HostName` — so keep the hostname on the `HostName` line, not `Host`, or the alias (`mac-herdr`) would leak into cloudflared.
+- `ProxyCommand` runs through `cmd.exe`, which expands `%USERPROFILE%`; some ssh builds handle quoting oddly, so if the path has spaces, use the short (`%USERPROFILE%\PROGRA~1\...`) form or move the binary somewhere space-free like `%USERPROFILE%\Tools`.
+
+Then connect — the proxy starts and stops with the connection automatically:
+
+```powershell
+ssh mac-herdr
+```
+
+For keys, use `ssh-keygen` (bundled with OpenSSH) instead of PuTTYgen:
+
+```powershell
+ssh-keygen -t ed25519 -f "$env:USERPROFILE\.ssh\mac-key"
+type "$env:USERPROFILE\.ssh\mac-key.pub"
+```
+
+and paste that line into `~/.ssh/authorized_keys` on the Mac exactly as shown in section 4, option B. With this setup there's no `.ppk` conversion and no Pageant — `ssh.exe` picks up the key from `%USERPROFILE%\.ssh\` by itself.
+
+The re-attach ritual from section 5 shrinks to a single command: `ssh mac-herdr`, then `herdr session attach work`.
 
 ## 4. Authentication
 
