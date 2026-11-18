@@ -211,6 +211,8 @@ Host mac-herdr
     Port 22
     IdentityFile ~/.ssh/mac-key
     IdentitiesOnly yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
     ProxyCommand %USERPROFILE%\Tools\cloudflared.exe access ssh --hostname %h --stdio
 ```
 
@@ -219,6 +221,7 @@ Two things to know about this config:
 - `%h` in the `ProxyCommand` expands to the `HostName` — so keep the hostname on the `HostName` line, not `Host`, or the alias (`mac-herdr`) would leak into cloudflared.
 - `ProxyCommand` runs through `cmd.exe`, which expands `%USERPROFILE%`; some ssh builds handle quoting oddly, so if the path has spaces, use the short (`%USERPROFILE%\PROGRA~1\...`) form or move the binary somewhere space-free like `%USERPROFILE%\Tools`.
 - `IdentityFile` + `IdentitiesOnly yes` pin the connection to exactly `mac-key` instead of trying every key in `%USERPROFILE%\.ssh\` first. Without it, corporate machines with several keys often burn through them and trip the server's `MaxAuthTries` — you'll see `Too many authentication failures` before the right key is ever offered.
+- `ServerAliveInterval 30` + `ServerAliveCountMax 3` keep the connection from silently rotting: ssh sends a keepalive every 30 s and gives up after 3 misses (~90 s), instead of hanging on a dead TCP session until you type and nothing happens. This matters more than usual over a tunnel — intermediate Cloudflare edges and NAT devices drop idle connections aggressively. Note that the client-side keepalives travel over the tunnel, so they also keep the cloudflared relay path warm; if the connection does drop anyway, herdr's session survives on the Mac (section 5) and you simply reconnect.
 
 Then connect — the proxy starts and stops with the connection automatically:
 
