@@ -390,7 +390,7 @@ export default defineWithDefaultThemeConfig({
           dynamicAttributes: ['href'],
           safelist: {
             standard: [/^vp-/, /^VP/, /medium-zoom/, /donation/, /sharing/, /^carbon/],
-            greedy: [/data-v-/, /dark/],
+            greedy: [/data-v-/, /dark/, /lg\\?:grid-cols-2/],
           },
         })
         const css = result[0]?.css
