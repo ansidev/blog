@@ -9,7 +9,7 @@ techs:
   - CodeBuddy
   - Herdr
 developmentStatus: active
-date: 2026-01-15T10:00:00+07:00
+date: 2026-11-19T16:03:04+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
