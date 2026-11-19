@@ -9,7 +9,7 @@ techs:
   - ZCode (zcode-app-cli)
   - Herdr
 developmentStatus: active
-date: 2026-10-11T20:25:14+07:00
+date: 2026-11-17T00:34:34+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
 twitter: "@ansidev"
