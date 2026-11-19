@@ -8,7 +8,7 @@ techs:
   - Node.js
   - CodeBuddy
   - Herdr
-developmentStatus: beta
+developmentStatus: active
 date: 2026-01-15T10:00:00+07:00
 author: ansidev
 gravatar: a2ac3c4477e717c7fa15041d907e71fd
